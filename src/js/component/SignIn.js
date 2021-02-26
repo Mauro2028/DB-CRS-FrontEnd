@@ -1,15 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
-// import "../../styles/home.scss";
-import { useHistory } from "react-router-dom";
 
-export const Home = () => {
-	const initialState = { user_name: "", password: "" };
+const SignIn = () => {
+	const initialState = { user_name: "", full_name: "", password: "" };
 	const [datos, setDatos] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
-	let history = useHistory();
 
 	const handleChange = e => {
 		setDatos({
@@ -18,17 +14,15 @@ export const Home = () => {
 		});
 		console.log(datos);
 	};
-	const handleSubmit = async e => {
-		if (datos.user_name.trim() === "" || datos.password.trim() === "") {
+	const handleSubmit = e => {
+		if (datos.user_name.trim() === "" || datos.full_name.trim() === "" || datos.password.trim() === "") {
 			setError(true);
+
 			return;
 		} else {
 			console.log("enviamos formulario");
 			setError(false);
-			let succes = await actions.login(datos);
-			if (succes) {
-				history.push("/Selection");
-			}
+			actions.registroManager(datos);
 		}
 	};
 
@@ -36,8 +30,11 @@ export const Home = () => {
 		<div>
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
+					<h1>Registro</h1>
+					<h2> Datos del gerente de RRHH</h2>
+					<p> Por favor especifica tus datos para registrarte en nuestra plataforma</p>
 					<div className="form-group">
-						<label>Usuario: </label>
+						<label>Nombre de Usuario:</label>
 						<br />
 						<input
 							type="text"
@@ -47,6 +44,17 @@ export const Home = () => {
 							value={datos.user_name}
 						/>
 						<br />
+						<label>Nombre y Apellido: </label>
+						<br />
+						<input
+							type="text"
+							className="form-control"
+							name="full_name"
+							onChange={handleChange}
+							value={datos.full_name}
+						/>
+						<br />
+
 						<label>Contraseña: </label>
 						<br />
 						<input
@@ -57,25 +65,22 @@ export const Home = () => {
 							value={datos.password}
 						/>
 						<br />
+						<br />
 
 						<button
 							className="btn btn-primary"
 							onClick={() => {
 								handleSubmit();
 							}}>
-							Iniciar Sesión
+							Registrarse
 						</button>
-
 						<br />
 						{error ? <div>Todos los campos deben ser validos</div> : null}
-						<div className="linea" />
-						<br />
-						<Link to="/SignIn">
-							<button className="btn btn-primary">Registrate</button>
-						</Link>
 					</div>
 				</div>
 			</div>
 		</div>
 	);
 };
+
+export default SignIn;

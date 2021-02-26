@@ -9,6 +9,11 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import SignIn from "./component/SignIn";
+import Selection from "./component/Selection";
+// import WorkerData from "./component/Worker-data";
+// import DetailCard from "./component/Detail-Card";
+// import WorkerCard from "./component/Worker-list";
 
 //create your first component
 const Layout = () => {
@@ -28,6 +33,21 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
+						<Route exact path="/SignIn">
+							<SignIn />
+						</Route>
+						<Route exact path="/Selection">
+							<Selection />
+						</Route>
+						{/* <Route exact path="/Worker-Data">
+							<Worker-Data />
+						</Route>
+						<Route exact path="/Worker-List">
+							<WorkerCard />
+						</Route>
+						<Route exact path="Detail-Card"> */}
+						{/* <DetailCard />
+						</Route> */}
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
