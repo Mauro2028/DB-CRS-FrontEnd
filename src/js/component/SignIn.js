@@ -17,13 +17,7 @@ const SignIn = () => {
 		console.log(datos);
 	};
 	const handleSubmit = async e => {
-		if (
-			datos.user_name.trim() === "" ||
-			datos.full_name.trim() === "" ||
-			datos.password.trim() === ""
-			// datos.password.trim() === "" ||
-			// datos.company_id.trim() === ""
-		) {
+		if (datos.user_name.trim() === "" || datos.full_name.trim() === "" || datos.password.trim() === "") {
 			setError(true);
 		} else {
 			console.log("enviamos formulario");
@@ -32,7 +26,7 @@ const SignIn = () => {
 			if (success) {
 				history.push("/");
 			} else {
-				alert("NOT!");
+				history.push("/");
 			}
 		}
 	};
@@ -45,16 +39,6 @@ const SignIn = () => {
 					<h2> Datos del gerente de RRHH</h2>
 					<p> Por favor especifica tus datos para registrarte en nuestra plataforma</p>
 					<div className="form-group">
-						<label>Nombre de Usuario:</label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="user_name"
-							onChange={handleChange}
-							value={datos.user_name}
-						/>
-						<br />
 						<label>Nombre y Apellido: </label>
 						<br />
 						<input
@@ -65,7 +49,16 @@ const SignIn = () => {
 							value={datos.full_name}
 						/>
 						<br />
-
+						<label>Nombre de Usuario:</label>
+						<br />
+						<input
+							type="text"
+							className="form-control"
+							name="user_name"
+							onChange={handleChange}
+							value={datos.user_name}
+						/>
+						<br />
 						<label>Contraseña: </label>
 						<br />
 						<input
