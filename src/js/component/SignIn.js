@@ -1,11 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
+import { Link, useHistory } from "react-router-dom";
 
 const SignIn = () => {
 	const initialState = { user_name: "", full_name: "", password: "" };
 	const [datos, setDatos] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
+	const history = useHistory();
 
 	const handleChange = e => {
 		setDatos({
@@ -14,15 +16,24 @@ const SignIn = () => {
 		});
 		console.log(datos);
 	};
-	const handleSubmit = e => {
-		if (datos.user_name.trim() === "" || datos.full_name.trim() === "" || datos.password.trim() === "") {
+	const handleSubmit = async e => {
+		if (
+			datos.user_name.trim() === "" ||
+			datos.full_name.trim() === "" ||
+			datos.password.trim() === ""
+			// datos.password.trim() === "" ||
+			// datos.company_id.trim() === ""
+		) {
 			setError(true);
-
-			return;
 		} else {
 			console.log("enviamos formulario");
 			setError(false);
-			actions.registroManager(datos);
+			let success = await actions.registroManager(datos);
+			if (success) {
+				history.push("/");
+			} else {
+				alert("NOT!");
+			}
 		}
 	};
 
