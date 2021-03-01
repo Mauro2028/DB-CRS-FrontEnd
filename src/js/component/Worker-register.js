@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 
-
 const Register = () => {
-	// const initialState = { null };
-	const [datos, setDatos] = useState(null);
+	const initialState = { datos: "" };
+	const [datos, setDatos] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
 
@@ -27,11 +26,11 @@ const Register = () => {
 			setError(true);
 			return;
 		} else {
-		console.log("enviamos formulario");
-		setError(false);
-		actions.registroWorker(datos);
+			console.log("enviamos formulario");
+			setError(false);
+			actions.registroWorker(datos);
+		}
 	};
-	}
 	return (
 		<div>
 			<div className="containerPrincipal">
@@ -79,8 +78,8 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.nationality}
 						/>
-						
-                        <br />
+
+						<br />
 						<label>Cedula: </label>
 						<br />
 						<input
@@ -121,7 +120,7 @@ const Register = () => {
 							value={datos.email}
 						/>
 						<br />
-                        
+
 						<label>Fuente de captacion: </label>
 						<br />
 						<input
@@ -142,7 +141,7 @@ const Register = () => {
 							value={datos.managment}
 						/>
 						<br />
-            
+
 						<label>Vacante: </label>
 						<br />
 						<input
@@ -163,7 +162,7 @@ const Register = () => {
 							value={datos.branch_office}
 						/>
 						<br />
-                        <label>Fecha de entrevista laboral y pruebas: </label>
+						<label>Fecha de entrevista laboral y pruebas: </label>
 						<br />
 						<input
 							type="text"
@@ -173,7 +172,7 @@ const Register = () => {
 							value={datos.interview_date}
 						/>
 						<br />
-                        <label>Fecha de entrevista tecnica: </label>
+						<label>Fecha de entrevista tecnica: </label>
 						<br />
 						<input
 							type="text"
@@ -182,7 +181,7 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.Technical_Interview_date}
 						/>
-                        <label>Fecha de oferta salarial: </label>
+						<label>Fecha de oferta salarial: </label>
 						<br />
 						<input
 							type="text"
@@ -192,7 +191,7 @@ const Register = () => {
 							value={datos.salary_offer_date}
 						/>
 						<br />
-                        <label>Fecha de examen pre-empleo: </label>
+						<label>Fecha de examen pre-empleo: </label>
 						<br />
 						<input
 							type="text"
@@ -202,7 +201,7 @@ const Register = () => {
 							value={datos.preemployment_test_date}
 						/>
 						<br />
-                        <label>Chequeo de Referencias Civiles y Laborales: </label>
+						<label>Chequeo de Referencias Civiles y Laborales: </label>
 						<br />
 						<input
 							type="text"
@@ -212,7 +211,7 @@ const Register = () => {
 							value={datos.References_Check_date}
 						/>
 						<br />
-                        <label>Fecha de ingreso: </label>
+						<label>Fecha de ingreso: </label>
 						<br />
 						<input
 							type="text"
@@ -222,7 +221,7 @@ const Register = () => {
 							value={datos.admission_date}
 						/>
 						<br />
-                        <label>Tipo de contratacion actual: </label>
+						<label>Tipo de contratacion actual: </label>
 						<br />
 						<input
 							type="text"
@@ -232,7 +231,7 @@ const Register = () => {
 							value={datos.current_employment_contract}
 						/>
 						<br />
-                        <label>Participo en otro proceso Softech: </label>
+						<label>Participo en otro proceso Softech: </label>
 						<br />
 						<input
 							type="Boolean"
@@ -242,7 +241,7 @@ const Register = () => {
 							value={datos.Participation_at_Softech}
 						/>
 						<br />
-                        <label>Motivo de retiro/Búsqueda de empleo/interes escuchar propuesta: </label>
+						<label>Motivo de retiro/Búsqueda de empleo/interes escuchar propuesta: </label>
 						<br />
 						<input
 							type="text"
@@ -252,7 +251,7 @@ const Register = () => {
 							value={datos.Reason}
 						/>
 						<br />
-                        <label>Aspiraciones Salariales : </label>
+						<label>Aspiraciones Salariales : </label>
 						<br />
 						<input
 							type="text"
@@ -262,7 +261,7 @@ const Register = () => {
 							value={datos.Salary_Aspirations}
 						/>
 						<br />
-                        <label>Nivel Academico: </label>
+						<label>Nivel Academico: </label>
 						<br />
 						<input
 							type="text"
@@ -272,7 +271,7 @@ const Register = () => {
 							value={datos.Academic_level}
 						/>
 						<br />
-                        <label>Donde se encuentra residenciado: </label>
+						<label>Donde se encuentra residenciado: </label>
 						<br />
 						<input
 							type="text"
@@ -282,7 +281,7 @@ const Register = () => {
 							value={datos.Place_of_residence}
 						/>
 						<br />
-                        <label>Años de experiencia: </label>
+						<label>Años de experiencia: </label>
 						<br />
 						<input
 							type="text"
@@ -292,7 +291,7 @@ const Register = () => {
 							value={datos.experience_yearsl}
 						/>
 						<br />
-                        <label>Disponibilidad: </label>
+						<label>Disponibilidad: </label>
 						<br />
 						<input
 							type="text"
@@ -302,7 +301,7 @@ const Register = () => {
 							value={datos.availability}
 						/>
 						<br />
-                        <label>Cursos actuales: </label>
+						<label>Cursos actuales: </label>
 						<br />
 						<input
 							type="text"
@@ -312,7 +311,7 @@ const Register = () => {
 							value={datos.Current_courses}
 						/>
 						<br />
-                        <label>Dominio de Software/Hardware/ERP: </label>
+						<label>Dominio de Software/Hardware/ERP: </label>
 						<br />
 						<input
 							type="text"
@@ -322,7 +321,7 @@ const Register = () => {
 							value={datos.Software_Hardware_ERP_knowledge}
 						/>
 						<br />
-                        <label>¿Conoce alguien en la empresa?: </label>
+						<label>¿Conoce alguien en la empresa?: </label>
 						<br />
 						<input
 							type="boolean"
@@ -332,17 +331,17 @@ const Register = () => {
 							value={datos.know_someone_company}
 						/>
 						<br />
-                        <label>Nombre y área de trabajo de la persona conocida en Softech: </label>
+						<label>Nombre y área de trabajo de la persona conocida en Softech: </label>
 						<br />
 						<input
-							type="text"
+							type="boolean"
 							className="form-control"
 							name="name_work_person"
 							onChange={handleChange}
 							value={datos.name_work_person}
 						/>
 						<br />
-                        <label>Cargo actual del candidato: </label>
+						<label>Cargo actual del candidato: </label>
 						<br />
 						<input
 							type="text"
