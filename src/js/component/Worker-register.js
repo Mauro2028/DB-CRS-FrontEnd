@@ -7,9 +7,9 @@ const Register = () => {
 		Consultor: "",
 		candidate: "",
 		nationality: "",
-		cedula: 0,
+		cedula: null,
 		status: "",
-		phone_number: 0,
+		phone_number: null,
 		email: "",
 		catchment_source: "",
 		managment: "",
@@ -75,13 +75,13 @@ const Register = () => {
 		birth_bonus: false,
 		Vehicle_Credit: false,
 		Mortgage_credit: false,
-		Psychological_Test: 0,
-		Technical_knowledge_test: 0,
-		Business_knowledge_test: 0,
-		Other_tests: 0,
-		Global_Average: 0,
+		Psychological_Test: null,
+		Technical_knowledge_test: null,
+		Business_knowledge_test: null,
+		Other_tests: null,
+		Global_Average: null,
 		References_Check: "",
-		Technical_Test_Results: 0,
+		Technical_Test_Results: null,
 		Observations: "",
 		Days_passed_requisition_interviewGH: "",
 		Days_passed_interviewGH_Techinterview: "",
@@ -105,9 +105,9 @@ const Register = () => {
 	const handleSubmit = e => {
 		if (
 			datos.candidate.trim() === "" ||
-			datos.cedula.trim() === 0 ||
+			datos.cedula.trim() === null ||
 			datos.email.trim() === "" ||
-			datos.phone_number.trim() === 0 ||
+			datos.phone_number.trim() === null ||
 			datos.Consultor.trim() === "" ||
 			datos.vacant.trim() === ""
 		) {
@@ -127,16 +127,6 @@ const Register = () => {
 					<h2>Datos del trabajador</h2>
 					<p> Por favor especifica los datos para registrarlos en nuestra plataforma</p>
 					<div className="form-group">
-						<label>Fecha de Inicio:</label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="init_date"
-							onChange={handleChange}
-							value={datos.init_date}
-						/>
-						<br />
 						<label>Consultor (Obligatorio): </label>
 						<br />
 						<input
@@ -195,6 +185,16 @@ const Register = () => {
 							name="vacant"
 							onChange={handleChange}
 							value={datos.vacant}
+						/>
+						<br />
+						<label>Fecha de Inicio:</label>
+						<br />
+						<input
+							type="text"
+							className="form-control"
+							name="init_date"
+							onChange={handleChange}
+							value={datos.init_date}
 						/>
 						<br />
 						<label>Nacionalidad: </label>
@@ -856,7 +856,7 @@ const Register = () => {
 							type="checkbox"
 							className="form-control"
 							name="Mortgage_credit"
-							onChange={handleChange}
+							onClick={handleChange}
 							value={datos.Mortgage_credit}
 						/>
 						<br />
