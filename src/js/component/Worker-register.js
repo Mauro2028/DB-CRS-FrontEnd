@@ -7,9 +7,9 @@ const Register = () => {
 		Consultor: "",
 		candidate: "",
 		nationality: "",
-		cedula: "",
+		cedula: 0,
 		status: "",
-		phone_number: "",
+		phone_number: 0,
 		email: "",
 		catchment_source: "",
 		managment: "",
@@ -22,7 +22,7 @@ const Register = () => {
 		References_Check_date: "",
 		admission_date: "",
 		current_employment_contract: "",
-		Participation_at_Softech: "",
+		Participation_at_Softech: false,
 		Reason: "",
 		Salary_Aspirations: "",
 		Academic_level: "",
@@ -31,7 +31,7 @@ const Register = () => {
 		availability: "",
 		Current_courses: "",
 		Software_Hardware_ERP_knowledge: "",
-		know_someone_company: "",
+		know_someone_company: false,
 		name_work_person: "",
 		actual_charge: "",
 		company: "",
@@ -48,40 +48,40 @@ const Register = () => {
 		Estimated_annual_package: "",
 		Mixed_mothly_compensation: "",
 		Mixed_anual_compensation: "",
-		Assistance_bonus: "",
-		Production_bonus: "",
-		Transport_bonus: "",
-		Savings_Bank: "",
-		sales_commissions: "",
-		parking_payment: "",
-		full_H_C_M_Emp_Family: "",
-		partial_H_C_M_Emp_Family: "",
-		Funeral_Insurance: "",
-		Vehicle_insurance: "",
-		life_insurance: "",
-		dinning_room: "",
-		food_bags: "",
-		uniform: "",
-		birthday_bonus: "",
-		vacational_plans: "",
-		Seniority_premium: "",
-		children_premium: "",
-		proffesion_premium: "",
-		december_gift: "",
-		Gym: "",
-		School_scholarships: "",
-		school_supplies: "",
-		marriage_bonus: "",
-		birth_bonus: "",
-		Vehicle_Credit: "",
-		Mortgage_credit: "",
-		Psychological_Test: "",
-		Technical_knowledge_test: "",
-		Business_knowledge_test: "",
-		Other_tests: "",
-		Global_Average: "",
+		Assistance_bonus: false,
+		Production_bonus: false,
+		Transport_bonus: false,
+		Savings_Bank: false,
+		sales_commissions: false,
+		parking_payment: false,
+		full_H_C_M_Emp_Family: false,
+		partial_H_C_M_Emp_Family: false,
+		Funeral_Insurance: false,
+		Vehicle_insurance: false,
+		life_insurance: false,
+		dinning_room: false,
+		food_bags: false,
+		uniform: false,
+		birthday_bonus: false,
+		vacational_plans: false,
+		Seniority_premium: false,
+		children_premium: false,
+		proffesion_premium: false,
+		december_gift: false,
+		Gym: false,
+		School_scholarships: false,
+		school_supplies: false,
+		marriage_bonus: false,
+		birth_bonus: false,
+		Vehicle_Credit: false,
+		Mortgage_credit: false,
+		Psychological_Test: 0,
+		Technical_knowledge_test: 0,
+		Business_knowledge_test: 0,
+		Other_tests: 0,
+		Global_Average: 0,
 		References_Check: "",
-		Technical_Test_Results: "",
+		Technical_Test_Results: 0,
 		Observations: "",
 		Days_passed_requisition_interviewGH: "",
 		Days_passed_interviewGH_Techinterview: "",
@@ -105,9 +105,9 @@ const Register = () => {
 	const handleSubmit = e => {
 		if (
 			datos.candidate.trim() === "" ||
-			datos.cedula.trim() === "" ||
+			datos.cedula.trim() === 0 ||
 			datos.email.trim() === "" ||
-			datos.phone_number.trim() === "" ||
+			datos.phone_number.trim() === 0 ||
 			datos.Consultor.trim() === "" ||
 			datos.vacant.trim() === ""
 		) {
@@ -171,7 +171,7 @@ const Register = () => {
 						<label>Cedula: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="cedula"
 							onChange={handleChange}
@@ -320,7 +320,7 @@ const Register = () => {
 						<label>Participo en otro proceso Softech: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Participation_at_Softech"
 							onChange={handleChange}
@@ -410,7 +410,7 @@ const Register = () => {
 						<label>¿Conoce alguien en la empresa?: </label>
 						<br />
 						<input
-							type="boolean"
+							type="checkbox"
 							className="form-control"
 							name="know_someone_company"
 							onChange={handleChange}
@@ -590,7 +590,7 @@ const Register = () => {
 						<label>Bono de asistencia: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Assistance_bonus"
 							onChange={handleChange}
@@ -600,7 +600,7 @@ const Register = () => {
 						<label>Bono de produccion: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Production_bonus"
 							onChange={handleChange}
@@ -610,7 +610,7 @@ const Register = () => {
 						<label>Bono de transporte: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Transport_bonus"
 							onChange={handleChange}
@@ -620,7 +620,7 @@ const Register = () => {
 						<label>Caja de ahorro: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Saving_Bank"
 							onChange={handleChange}
@@ -630,7 +630,7 @@ const Register = () => {
 						<label>Comision por ventas: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="sales_commissionss"
 							onChange={handleChange}
@@ -640,7 +640,7 @@ const Register = () => {
 						<label>Pago de estacionamiento: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="parking_payment"
 							onChange={handleChange}
@@ -650,7 +650,7 @@ const Register = () => {
 						<label>H.C.M 100% Emp./Fmlia.: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="full_H_C_M_Emp_Family"
 							onChange={handleChange}
@@ -660,7 +660,7 @@ const Register = () => {
 						<label>H.C.M parcial Emp./Fmlia: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="partial_H_C_M_Emp_Family"
 							onChange={handleChange}
@@ -670,7 +670,7 @@ const Register = () => {
 						<label>Seguros Funerarios: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Funeral_Insurance"
 							onChange={handleChange}
@@ -680,7 +680,7 @@ const Register = () => {
 						<label>Seguro de Vehículo: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Vehicle_insurance"
 							onChange={handleChange}
@@ -690,7 +690,7 @@ const Register = () => {
 						<label>Seguro de Vida: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="life_insurance"
 							onChange={handleChange}
@@ -700,7 +700,7 @@ const Register = () => {
 						<label>Comedor: </label>
 						<br />
 						<input
-							type="boolean"
+							type="checkbox"
 							className="form-control"
 							name="dinning_room"
 							onChange={handleChange}
@@ -710,7 +710,7 @@ const Register = () => {
 						<label>Bolsas alimenticias: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="food_bags"
 							onChange={handleChange}
@@ -720,7 +720,7 @@ const Register = () => {
 						<label>Uniforme: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="uniform"
 							onChange={handleChange}
@@ -730,7 +730,7 @@ const Register = () => {
 						<label>Bono de cumpleanos: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="birthday_bonus"
 							onChange={handleChange}
@@ -740,7 +740,7 @@ const Register = () => {
 						<label>Planes vacacionales: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="vacational_plans"
 							onChange={handleChange}
@@ -750,7 +750,7 @@ const Register = () => {
 						<label>Prima por antiguedad: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Seniority_premium"
 							onChange={handleChange}
@@ -760,7 +760,7 @@ const Register = () => {
 						<label>Prima por hijos: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="children_premium"
 							onChange={handleChange}
@@ -770,7 +770,7 @@ const Register = () => {
 						<label>Prima por profesion: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="proffesion_premium"
 							onChange={handleChange}
@@ -780,7 +780,7 @@ const Register = () => {
 						<label>Regalos decembrinos: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Seniority_premium"
 							onChange={handleChange}
@@ -790,7 +790,7 @@ const Register = () => {
 						<label>Gimnasio: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Gym"
 							onChange={handleChange}
@@ -800,7 +800,7 @@ const Register = () => {
 						<label>Becas escolares: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="School_scholarships"
 							onChange={handleChange}
@@ -810,7 +810,7 @@ const Register = () => {
 						<label>utiles escolares: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="school_supplies"
 							onChange={handleChange}
@@ -820,7 +820,7 @@ const Register = () => {
 						<label>Bono por matrimonio: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="marriage_bonus"
 							onChange={handleChange}
@@ -830,7 +830,7 @@ const Register = () => {
 						<label>Bono por nacimiento: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="birth_bonus"
 							onChange={handleChange}
@@ -840,7 +840,7 @@ const Register = () => {
 						<label>Credito de vehiculo: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Vehicle_Credit"
 							onChange={handleChange}
@@ -850,7 +850,7 @@ const Register = () => {
 						<label>Credito hipotecario: </label>
 						<br />
 						<input
-							type="Boolean"
+							type="checkbox"
 							className="form-control"
 							name="Mortgage_credit"
 							onChange={handleChange}
@@ -860,7 +860,7 @@ const Register = () => {
 						<label>Prueba psicologica: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="Psychological_Test"
 							onChange={handleChange}
@@ -870,7 +870,7 @@ const Register = () => {
 						<label>Prueba de conocimientos tecnico: </label>
 						<br />
 						<input
-							type="Boolea"
+							type="number"
 							className="form-control"
 							name="Technical_knowledge_test"
 							onChange={handleChange}
@@ -880,7 +880,7 @@ const Register = () => {
 						<label>Prueba de conocimientos de negocio: </label>
 						<br />
 						<input
-							type="Boolea"
+							type="number"
 							className="form-control"
 							name="Business_knowledge_test"
 							onChange={handleChange}
@@ -890,7 +890,7 @@ const Register = () => {
 						<label>Otras pruebas: </label>
 						<br />
 						<input
-							type="Boolea"
+							type="number"
 							className="form-control"
 							name="Other_tests"
 							onChange={handleChange}
@@ -900,7 +900,7 @@ const Register = () => {
 						<label>Promedio global: </label>
 						<br />
 						<input
-							type="Boolea"
+							type="number"
 							className="form-control"
 							name="Global_Average"
 							onChange={handleChange}
@@ -910,7 +910,7 @@ const Register = () => {
 						<label>Chequeo de referencias: </label>
 						<br />
 						<input
-							type="Boolea"
+							type="text"
 							className="form-control"
 							name="References_Check"
 							onChange={handleChange}
@@ -920,7 +920,7 @@ const Register = () => {
 						<label>Resultados Pruebas Técnicas: </label>
 						<br />
 						<input
-							type="Boolea"
+							type="number"
 							className="form-control"
 							name="Technical_Test_Results"
 							onChange={handleChange}
@@ -977,7 +977,7 @@ const Register = () => {
 							value={datos.Days_passed_requisition_entry}
 						/>
 						<br />
-						{/* <label>Días Transcurridos con el candidato(Sólo con estatus "Abierto"): </label>
+						<label>Días Transcurridos con el candidato(Sólo con estatus Abierto): </label>
 						<br />
 						<input
 							type="Text"
@@ -985,7 +985,7 @@ const Register = () => {
 							name="Days_passed_open_status"
 							onChange={handleChange}
 							value={datos.Days_passed_open_status}
-						/> */}
+						/>
 						<br />
 						<label>Chequeo de Registros con Detalle: </label>
 						<br />
