@@ -137,7 +137,7 @@ const Register = () => {
 							value={datos.init_date}
 						/>
 						<br />
-						<label>Consultor: </label>
+						<label>Consultor (Obligatorio): </label>
 						<br />
 						<input
 							type="text"
@@ -147,7 +147,7 @@ const Register = () => {
 							value={datos.Consultor}
 						/>
 						<br />
-						<label>Candidato: </label>
+						<label>Nombre del Candidato (Obligatorio): </label>
 						<br />
 						<input
 							type="text"
@@ -155,6 +155,46 @@ const Register = () => {
 							name="candidate"
 							onChange={handleChange}
 							value={datos.candidate}
+						/>
+						<br />
+						<label>Cedula (Obligatorio): </label>
+						<br />
+						<input
+							type="number"
+							className="form-control"
+							name="cedula"
+							onChange={handleChange}
+							value={datos.cedula}
+						/>
+						<br />
+						<label>Telefono (Obligatorio): </label>
+						<br />
+						<input
+							type="number"
+							className="form-control"
+							name="phone_number"
+							onChange={handleChange}
+							value={datos.phone_number}
+						/>
+						<br />
+						<label>Correo electronico (Obligatorio): </label>
+						<br />
+						<input
+							type="text"
+							className="form-control"
+							name="email"
+							onChange={handleChange}
+							value={datos.email}
+						/>
+						<br />
+						<label>Vacante (Obligatorio): </label>
+						<br />
+						<input
+							type="text"
+							className="form-control"
+							name="vacant"
+							onChange={handleChange}
+							value={datos.vacant}
 						/>
 						<br />
 						<label>Nacionalidad: </label>
@@ -168,16 +208,7 @@ const Register = () => {
 						/>
 
 						<br />
-						<label>Cedula: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="cedula"
-							onChange={handleChange}
-							value={datos.cedula}
-						/>
-						<br />
+
 						<label>Estatus: </label>
 						<br />
 						<input
@@ -188,26 +219,7 @@ const Register = () => {
 							value={datos.status}
 						/>
 						<br />
-						<label>Telefono: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="phone_number"
-							onChange={handleChange}
-							value={datos.phone_number}
-						/>
-						<br />
-						<label>Correo electronico: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="email"
-							onChange={handleChange}
-							value={datos.email}
-						/>
-						<br />
+
 						<label>Fuente de captacion: </label>
 						<br />
 						<input
@@ -228,16 +240,7 @@ const Register = () => {
 							value={datos.managment}
 						/>
 						<br />
-						<label>Vacante: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="vacant"
-							onChange={handleChange}
-							value={datos.vacant}
-						/>
-						<br />
+
 						<label>Sucursal: </label>
 						<br />
 						<input
