@@ -1,5 +1,5 @@
-// const BASE_URL = "http://localhost:5000";
-const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
+const BASE_URL = "http://localhost:8080";
+// const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -63,6 +63,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return true;
 					}
 					return false;
+				} catch (error) {
+					console.log("explote", error);
+				}
+			},
+
+			registroSalary: async datos => {
+				try {
+					const respuesta = await fetch(`${BASE_URL}/salary`, {
+						method: "GET",
+						body: JSON.stringify(datos),
+						headers: { "Content-Type": "application/json" }
+					});
+					let resultado = await respuesta.json();
+					console.log(resultado);
 				} catch (error) {
 					console.log("explote", error);
 				}

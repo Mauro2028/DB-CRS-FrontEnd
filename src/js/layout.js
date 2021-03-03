@@ -15,6 +15,7 @@ import Selection from "./component/Selection";
 // import DetailCard from "./component/Detail-Card";
 // import WorkerCard from "./component/Worker-list";
 import Register from "./component/Worker-register";
+import Salary from "./component/Salary";
 
 //create your first component
 const Layout = () => {
@@ -36,6 +37,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/SignIn">
 							<SignIn />
+						</Route>
+						<Route exact path="/salary">
+							<Salary />
 						</Route>
 						<Route exact path="/worker-register">
 							<Register />
