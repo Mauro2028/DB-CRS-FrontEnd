@@ -2,6 +2,12 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 
 const Register = () => {
+	// const lista = document.getElementById("opciones");
+	// const indiceSeleccionado = lista.selectedIndex;
+	// const opcionSeleccionada = lista.options[indiceSeleccionado];
+	// const textoSeleccionado = opcionSeleccionada.text;
+	// const valorSeleccionado = opcionSeleccionada.value;
+
 	const initialState = {
 		init_date: "",
 		Consultor: "",
@@ -206,9 +212,7 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.nationality}
 						/>
-
 						<br />
-
 						<label>Estatus: </label>
 						<br />
 						<input
@@ -219,7 +223,6 @@ const Register = () => {
 							value={datos.status}
 						/>
 						<br />
-
 						<label>Fuente de captacion: </label>
 						<br />
 						<input
@@ -240,7 +243,6 @@ const Register = () => {
 							value={datos.managment}
 						/>
 						<br />
-
 						<label>Sucursal: </label>
 						<br />
 						<input
@@ -463,12 +465,20 @@ const Register = () => {
 						<label>sector: </label>
 						<br />
 						<input
-							type="text"
+							type="list"
 							className="form-control"
 							name="sector"
 							onChange={handleChange}
 							value={datos.sector}
 						/>
+
+						{/* <select id="opciones" name="opciones">
+							<option value="1">Primer valor</option>
+							<option value="2">Segundo valor</option>
+							<option value="3">Tercer valor</option>
+							<option value="4">Cuarto valor</option>
+						</select> */}
+
 						<br />
 						<label>Moneda: </label>
 						<br />
@@ -555,7 +565,7 @@ const Register = () => {
 						<input
 							type="text"
 							className="form-control"
-							name="factor"
+							name="Factor"
 							onChange={handleChange}
 							value={datos.Factor}
 						/>
