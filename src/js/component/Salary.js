@@ -1,22 +1,68 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Context } from "../store/appContext";
-import { basic_salary } from "../store/appContext";
+// import React, { useContext, useState, useEffect } from "react";
+// import { Context } from "../store/appContext";
+// import { basic_salary } from "../store/appContext";
 
-const Salary = () => {
-	const initialState = useState(null);
-	const [datos, setDatos] = useState(initialState);
-	const [error, setError] = useState(false);
+// const Salary = () => {
+// 	const initialState = useState(null);
+// 	const [datos, setDatos] = useState(initialState);
+// 	const [error, setError] = useState(false);
+// 	const { store, actions } = useContext(Context);
+// 	const salarios = [];
+// 	const handleSubmit = e => {
+// 		console.log("enviamos formulario");
+// 		setError(false);
+// 		actions.registroSalary();
+// 	};
+// 	return (
+// 		<div>
+// 			<label>
+// 				<button onClick={handleSubmit}>salarios</button>
+// 			</label>
+// 			<div>
+// 				<basic_salary />
+// 			</div>
+// 		</div>
+// 	);
+// };
+
+// export default Salary;
+
+import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+
+import { SalaryCard } from "../component/SalaryCard.js";
+
+import { Context } from "../store/appContext.js";
+
+export const Salary = () => {
+	const [state, setState] = useState({
+		// showModal: false,
+		// idToDelete: null
+	});
+
 	const { store, actions } = useContext(Context);
-	console.log("enviamos formulario");
-	setError(false);
-	actions.registroSalary(datos);
+
 	return (
-		<div>
-			<label>
-				<basic_salary />
-			</label>
+		<div className="container">
+			<div>
+				<p className="text-right my-3">
+					<Link className="btn btn-success" to="/salary">
+						Add new contact
+					</Link>
+				</p>
+				<div id="salary" className="panel-collapse collapse show" aria-expanded="true">
+					<ul className="list-group pull-down" id="salarys">
+						{store.basic_salary.map(Worker => (
+							<SalaryCard key={Worker.id} Worker={Worker} />
+						))}
+					</ul>
+				</div>
+			</div>
+			{/* <Modal
+				show={state.showModal}
+				onClose={() => setState({ showModal: false, idToDelete: null })}
+				idToDelete={state.idToDelete}
+			/> */}
 		</div>
 	);
 };
-
-export default Salary;

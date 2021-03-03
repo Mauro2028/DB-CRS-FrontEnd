@@ -1,9 +1,11 @@
-// const BASE_URL = "http://localhost:8080";
-const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
+const BASE_URL = "http://localhost:5000";
+// const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			basic_salary: [],
+			variable_salary: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -68,24 +70,45 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
+			// registroSalary: async datos => {
+			// 	try {
+			// 		const respuesta = await fetch(`${BASE_URL}/salary`, {
+			// 			method: "GET",
+			// 			body: JSON.stringify(datos),
+			// 			headers: { "Content-Type": "application/json" }
+			// 		});
+			// 		if (respuesta.ok) {
+			// 			let resultado = await respuesta.json();
+			// 			console.log(resultado);
+			// 			setStore({
+			// 				basic_salary: Worker.basic_salary
+			// 			});
+			// 			return true;
+			// 		}
+			// 		return false;
+			// 	} catch (error) {
+			// 		console.log("explote", error);
+			// 	}
+			// },
+
 			registroSalary: async datos => {
-				try {
-					const respuesta = await fetch(`${BASE_URL}/salary`, {
-						method: "GET",
-						body: JSON.stringify(datos),
-						headers: { "Content-Type": "application/json" }
-					});
-					if (respuesta.ok) {
-						let resultado = await respuesta.json();
-						console.log(resultado);
+				let url = BASE_URL + "/salary";
+
+				let response = await fetch(url);
+				if (response.ok) {
+					let body = await response.json();
+					if (datos == null) {
 						setStore({
-							basic_salary: Worker.basic_salary
+							basic_salary: body,
+							variable_salary: body
 						});
-						return true;
+					} else {
+						setStore({ basic_salary: body });
 					}
+					return true;
+				} else {
+					console.log(response.status);
 					return false;
-				} catch (error) {
-					console.log("explote", error);
 				}
 			},
 

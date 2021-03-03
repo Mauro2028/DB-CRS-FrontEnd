@@ -12,7 +12,7 @@ const Register = () => {
 		init_date: "",
 		Consultor: "",
 		candidate: "",
-		nationality: "",
+		// nationality: "",
 		cedula: null,
 		status: "",
 		phone_number: null,
@@ -20,25 +20,25 @@ const Register = () => {
 		catchment_source: "",
 		managment: "",
 		vacant: "",
-		branch_office: "",
-		interview_date: "",
-		Technical_Interview_date: "",
-		salary_offer_date: "",
-		preemployment_test_date: "",
-		References_Check_date: "",
-		admission_date: "",
-		current_employment_contract: "",
-		Participation_at_Softech: false,
-		Reason: "",
+		// branch_office: "",
+		// interview_date: "",
+		// Technical_Interview_date: "",
+		// salary_offer_date: "",
+		// preemployment_test_date: "",
+		// References_Check_date: "",
+		// admission_date: "",
+		// current_employment_contract: "",
+		// Participation_at_Softech: false,
+		// Reason: "",
 		Salary_Aspirations: "",
-		Academic_level: "",
-		Place_of_residence: "",
-		experience_years: "",
-		availability: "",
-		Current_courses: "",
-		Software_Hardware_ERP_knowledge: "",
-		know_someone_company: false,
-		name_work_person: "",
+		// Academic_level: "",
+		// Place_of_residence: "",
+		// experience_years: "",
+		// availability: "",
+		// Current_courses: "",
+		// Software_Hardware_ERP_knowledge: "",
+		// know_someone_company: false,
+		// name_work_person: "",
 		actual_charge: "",
 		company: "",
 		sector: "",
@@ -53,48 +53,48 @@ const Register = () => {
 		Factor: "",
 		Estimated_annual_package: "",
 		Mixed_mothly_compensation: "",
-		Mixed_anual_compensation: "",
-		Assistance_bonus: false,
-		Production_bonus: false,
-		Transport_bonus: false,
-		Savings_Bank: false,
-		sales_commissions: false,
-		parking_payment: false,
-		full_H_C_M_Emp_Family: false,
-		partial_H_C_M_Emp_Family: false,
-		Funeral_Insurance: false,
-		Vehicle_insurance: false,
-		life_insurance: false,
-		dinning_room: false,
-		food_bags: false,
-		uniform: false,
-		birthday_bonus: false,
-		vacational_plans: false,
-		Seniority_premium: false,
-		children_premium: false,
-		proffesion_premium: false,
-		december_gift: false,
-		Gym: false,
-		School_scholarships: false,
-		school_supplies: false,
-		marriage_bonus: false,
-		birth_bonus: false,
-		Vehicle_Credit: false,
-		Mortgage_credit: false,
-		Psychological_Test: null,
-		Technical_knowledge_test: null,
-		Business_knowledge_test: null,
-		Other_tests: null,
-		Global_Average: null,
-		References_Check: "",
-		Technical_Test_Results: null,
-		Observations: "",
-		Days_passed_requisition_interviewGH: "",
-		Days_passed_interviewGH_Techinterview: "",
-		Days_passed_Techinterview_entry: "",
-		Days_passed_requisition_entry: "",
-		Days_passed_open_status: "",
-		Checking_Records_Detail: ""
+		Mixed_anual_compensation: ""
+		// Assistance_bonus: false,
+		// Production_bonus: false,
+		// Transport_bonus: false,
+		// Savings_Bank: false,
+		// sales_commissions: false,
+		// parking_payment: false,
+		// full_H_C_M_Emp_Family: false,
+		// partial_H_C_M_Emp_Family: false,
+		// Funeral_Insurance: false,
+		// Vehicle_insurance: false,
+		// life_insurance: false,
+		// dinning_room: false,
+		// food_bags: false,
+		// uniform: false,
+		// birthday_bonus: false,
+		// vacational_plans: false,
+		// Seniority_premium: false,
+		// children_premium: false,
+		// proffesion_premium: false,
+		// december_gift: false,
+		// Gym: false,
+		// School_scholarships: false,
+		// school_supplies: false,
+		// marriage_bonus: false,
+		// birth_bonus: false,
+		// Vehicle_Credit: false,
+		// Mortgage_credit: false,
+		// Psychological_Test: null,
+		// Technical_knowledge_test: null,
+		// Business_knowledge_test: null,
+		// Other_tests: null,
+		// Global_Average: null,
+		// References_Check: "",
+		// Technical_Test_Results: null,
+		// Observations: "",
+		// Days_passed_requisition_interviewGH: "",
+		// Days_passed_interviewGH_Techinterview: "",
+		// Days_passed_Techinterview_entry: "",
+		// Days_passed_requisition_entry: "",
+		// Days_passed_open_status: "",
+		// Checking_Records_Detail: ""
 	};
 
 	const [datos, setDatos] = useState(initialState);
@@ -203,7 +203,7 @@ const Register = () => {
 							value={datos.init_date}
 						/>
 						<br />
-						<label>Nacionalidad: </label>
+						{/* <label>Nacionalidad: </label>
 						<br />
 						<input
 							type="text"
@@ -211,7 +211,7 @@ const Register = () => {
 							name="nationality"
 							onChange={handleChange}
 							value={datos.nationality}
-						/>
+						/> */}
 						<br />
 						<label>Estatus: </label>
 						<br />
@@ -243,104 +243,6 @@ const Register = () => {
 							value={datos.managment}
 						/>
 						<br />
-						<label>Sucursal: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="branch_office"
-							onChange={handleChange}
-							value={datos.branch_office}
-						/>
-						<br />
-						<label>Fecha de entrevista laboral y pruebas: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="interview_date"
-							onChange={handleChange}
-							value={datos.interview_date}
-						/>
-						<br />
-						<label>Fecha de entrevista tecnica: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Technical_Interview_date"
-							onChange={handleChange}
-							value={datos.Technical_Interview_date}
-						/>
-						<label>Fecha de oferta salarial: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="salary_offer_date"
-							onChange={handleChange}
-							value={datos.salary_offer_date}
-						/>
-						<br />
-						<label>Fecha de examen pre-empleo: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="preemployment_test_date"
-							onChange={handleChange}
-							value={datos.preemployment_test_date}
-						/>
-						<br />
-						<label>Chequeo de Referencias Civiles y Laborales: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="References_Check_date"
-							onChange={handleChange}
-							value={datos.References_Check_date}
-						/>
-						<br />
-						<label>Fecha de ingreso: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="admission_date"
-							onChange={handleChange}
-							value={datos.admission_date}
-						/>
-						<br />
-						<label>Tipo de contratacion actual: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="current_employment_contract"
-							onChange={handleChange}
-							value={datos.current_employment_contract}
-						/>
-						<br />
-						<label>Participo en otro proceso Softech: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Participation_at_Softech"
-							onChange={handleChange}
-							value={datos.Participation_at_Softech}
-						/>
-						<br />
-						<label>Motivo de retiro/Búsqueda de empleo/interes escuchar propuesta: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Reason"
-							onChange={handleChange}
-							value={datos.Reason}
-						/>
 						<br />
 						<label>Aspiraciones Salariales : </label>
 						<br />
@@ -352,96 +254,7 @@ const Register = () => {
 							value={datos.Salary_Aspirations}
 						/>
 						<br />
-						<label>Nivel Academico: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Academic_level"
-							onChange={handleChange}
-							value={datos.Academic_level}
-						/>
-						<br />
-						<label>Donde se encuentra residenciado: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Place_of_residence"
-							onChange={handleChange}
-							value={datos.Place_of_residence}
-						/>
-						<br />
-						<label>Años de experiencia: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="experience_years"
-							onChange={handleChange}
-							value={datos.experience_years}
-						/>
-						<br />
-						<label>Disponibilidad: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="availability"
-							onChange={handleChange}
-							value={datos.availability}
-						/>
-						<br />
-						<label>Cursos actuales: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Current_courses"
-							onChange={handleChange}
-							value={datos.Current_courses}
-						/>
-						<br />
-						<label>Dominio de Software/Hardware/ERP: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Software_Hardware_ERP_knowledge"
-							onChange={handleChange}
-							value={datos.Software_Hardware_ERP_knowledge}
-						/>
-						<br />
-						<label>¿Conoce alguien en la empresa?: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="know_someone_company"
-							onChange={handleChange}
-							value={datos.know_someone_company}
-						/>
-						<br />
-						<label>Nombre y área de trabajo de la persona conocida en Softech: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="name_work_person"
-							onChange={handleChange}
-							value={datos.name_work_person}
-						/>
-						<br />
-						<label>Cargo actual del candidato: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="actual_charge"
-							onChange={handleChange}
-							value={datos.actual_charge}
-						/>
-						<br />
+
 						<label>Cargo actual del candidato: </label>
 						<br />
 						<input
@@ -520,16 +333,6 @@ const Register = () => {
 							value={datos.cesta_ticket}
 						/>
 						<br />
-						<label>Flujo de Caja Mensual: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Monthly_Cash_Flow"
-							onChange={handleChange}
-							value={datos.Monthly_Cash_Flow}
-						/>
-						<br />
 						<label>Dias de utilidades: </label>
 						<br />
 						<input
@@ -599,417 +402,6 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.Mixed_anual_compensation}
 						/>
-						<br />
-						<label>Bono de asistencia: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Assistance_bonus"
-							onChange={handleChange}
-							value={datos.Assistance_bonus}
-						/>
-						<br />
-						<label>Bono de produccion: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Production_bonus"
-							onChange={handleChange}
-							value={datos.Production_bonus}
-						/>
-						<br />
-						<label>Bono de transporte: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Transport_bonus"
-							onChange={handleChange}
-							value={datos.Transport_bonus}
-						/>
-						<br />
-						<label>Caja de ahorro: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Saving_Bank"
-							onChange={handleChange}
-							value={datos.Savings_Bank}
-						/>
-						<br />
-						<label>Comision por ventas: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="sales_commissionss"
-							onChange={handleChange}
-							value={datos.sales_commissions}
-						/>
-						<br />
-						<label>Pago de estacionamiento: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="parking_payment"
-							onChange={handleChange}
-							value={datos.parking_payment}
-						/>
-						<br />
-						<label>H.C.M 100% Emp./Fmlia.: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="full_H_C_M_Emp_Family"
-							onChange={handleChange}
-							value={datos.full_H_C_M_Emp_Family}
-						/>
-						<br />
-						<label>H.C.M parcial Emp./Fmlia: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="partial_H_C_M_Emp_Family"
-							onChange={handleChange}
-							value={datos.partial_H_C_M_Emp_Family}
-						/>
-						<br />
-						<label>Seguros Funerarios: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Funeral_Insurance"
-							onChange={handleChange}
-							value={datos.Funeral_Insurance}
-						/>
-						<br />
-						<label>Seguro de Vehículo: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Vehicle_insurance"
-							onChange={handleChange}
-							value={datos.Vehicle_insurance}
-						/>
-						<br />
-						<label>Seguro de Vida: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="life_insurance"
-							onChange={handleChange}
-							value={datos.life_insurance}
-						/>
-						<br />
-						<label>Comedor: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="dinning_room"
-							onChange={handleChange}
-							value={datos.dinning_room}
-						/>
-						<br />
-						<label>Bolsas alimenticias: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="food_bags"
-							onChange={handleChange}
-							value={datos.food_bags}
-						/>
-						<br />
-						<label>Uniforme: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="uniform"
-							onChange={handleChange}
-							value={datos.uniform}
-						/>
-						<br />
-						<label>Bono de cumpleanos: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="birthday_bonus"
-							onChange={handleChange}
-							value={datos.birthday_bonus}
-						/>
-						<br />
-						<label>Planes vacacionales: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="vacational_plans"
-							onChange={handleChange}
-							value={datos.vacational_plans}
-						/>
-						<br />
-						<label>Prima por antiguedad: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Seniority_premium"
-							onChange={handleChange}
-							value={datos.Seniority_premium}
-						/>
-						<br />
-						<label>Prima por hijos: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="children_premium"
-							onChange={handleChange}
-							value={datos.children_premium}
-						/>
-						<br />
-						<label>Prima por profesion: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="proffesion_premium"
-							onChange={handleChange}
-							value={datos.proffesion_premium}
-						/>
-						<br />
-						<label>Regalos decembrinos: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Seniority_premium"
-							onChange={handleChange}
-							value={datos.december_gift}
-						/>
-						<br />
-						<label>Gimnasio: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Gym"
-							onChange={handleChange}
-							value={datos.Gym}
-						/>
-						<br />
-						<label>Becas escolares: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="School_scholarships"
-							onChange={handleChange}
-							value={datos.School_scholarships}
-						/>
-						<br />
-						<label>utiles escolares: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="school_supplies"
-							onChange={handleChange}
-							value={datos.school_supplies}
-						/>
-						<br />
-						<label>Bono por matrimonio: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="marriage_bonus"
-							onChange={handleChange}
-							value={datos.marriage_bonus}
-						/>
-						<br />
-						<label>Bono por nacimiento: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="birth_bonus"
-							onChange={handleChange}
-							value={datos.birth_bonus}
-						/>
-						<br />
-						<label>Credito de vehiculo: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Vehicle_Credit"
-							onChange={handleChange}
-							value={datos.Vehicle_Credit}
-						/>
-						<br />
-						<label>Credito hipotecario: </label>
-						<br />
-						<input
-							type="checkbox"
-							className="form-control"
-							name="Mortgage_credit"
-							onClick={handleChange}
-							value={datos.Mortgage_credit}
-						/>
-						<br />
-						<label>Prueba psicologica: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="Psychological_Test"
-							onChange={handleChange}
-							value={datos.Psychological_Test}
-						/>
-						<br />
-						<label>Prueba de conocimientos tecnico: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="Technical_knowledge_test"
-							onChange={handleChange}
-							value={datos.Technical_knowledge_test}
-						/>
-						<br />
-						<label>Prueba de conocimientos de negocio: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="Business_knowledge_test"
-							onChange={handleChange}
-							value={datos.Business_knowledge_test}
-						/>
-						<br />
-						<label>Otras pruebas: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="Other_tests"
-							onChange={handleChange}
-							value={datos.Other_tests}
-						/>
-						<br />
-						<label>Promedio global: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="Global_Average"
-							onChange={handleChange}
-							value={datos.Global_Average}
-						/>
-						<br />
-						<label>Chequeo de referencias: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="References_Check"
-							onChange={handleChange}
-							value={datos.References_Check}
-						/>
-						<br />
-						<label>Resultados Pruebas Técnicas: </label>
-						<br />
-						<input
-							type="number"
-							className="form-control"
-							name="Technical_Test_Results"
-							onChange={handleChange}
-							value={datos.Technical_Test_Results}
-						/>
-						<br />
-						<label>Observaciones: </label>
-						<br />
-						<input
-							type="Text"
-							className="form-control"
-							name="Observations"
-							onChange={handleChange}
-							value={datos.Observations}
-						/>
-						<br />
-						<label>Dias Transcurridos(Requisición a Entrevista G.H.): </label>
-						<br />
-						<input
-							type="Text"
-							className="form-control"
-							name="Days_passed_requisition_interviewGH"
-							onChange={handleChange}
-							value={datos.Days_passed_requisition_interviewGH}
-						/>
-						<br />
-						<label>Dias Transcurridos(Entrevista GH. a Entrevista Técnica): </label>
-						<br />
-						<input
-							type="Text"
-							className="form-control"
-							name="Days_passed_interviewGH_Techinterview"
-							onChange={handleChange}
-							value={datos.Days_passed_interviewGH_Techinterview}
-						/>
-						<br />
-						<label>Dias Transcurridos(Entrevista T. a Ingreso): </label>
-						<br />
-						<input
-							type="Text"
-							className="form-control"
-							name="Days_passed_Techinterview_entry"
-							onChange={handleChange}
-							value={datos.Days_passed_Techinterview_entry}
-						/>
-						<br />
-						<label>Dias Transcurridos(Requisición a Ingreso): </label>
-						<br />
-						<input
-							type="Text"
-							className="form-control"
-							name="Days_passed_requisition_entry"
-							onChange={handleChange}
-							value={datos.Days_passed_requisition_entry}
-						/>
-						<br />
-						<label>Días Transcurridos con el candidato(Sólo con estatus Abierto): </label>
-						<br />
-						<input
-							type="Text"
-							className="form-control"
-							name="Days_passed_open_status"
-							onChange={handleChange}
-							value={datos.Days_passed_open_status}
-						/>
-						<br />
-						<label>Chequeo de Registros con Detalle: </label>
-						<br />
-						<input
-							type="Text"
-							className="form-control"
-							name="Checking_Records_Detail"
-							onChange={handleChange}
-							value={datos.Checking_Records_Detail}
-						/>
-						<br />
 						<br />
 						<button
 							className="btn btn-primary"
