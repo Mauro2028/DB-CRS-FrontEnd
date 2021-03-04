@@ -81,9 +81,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			fetchWorker: async (id = null) => {
 				let url = BASE_URL + "/workers";
-				if (id != null) {
-					url += "/" + id;
-				}
+				
 				let response = await fetch(url);
 				if (response.ok) {
 					let body = await response.json();
