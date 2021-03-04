@@ -46,17 +46,16 @@ export const Salary = () => {
 		<div className="container">
 			<div>
 				<p className="text-right my-3">
-					<Link className="btn btn-success" to="/salary">
-						Add new contact
+					<Link className="btn btn-success" to="/Worker-register">
+						Registrar Trabajador
 					</Link>
 				</p>
-				<div id="salary" className="panel-collapse collapse show" aria-expanded="true">
-					<ul className="list-group pull-down" id="salarys">
-						{store.basic_salary.map(Worker => (
-							<SalaryCard key={Worker.id} Worker={Worker} />
-						))}
-					</ul>
-				</div>
+
+				<ul className="list-group" id="salarys">
+					{store.workers.map(Worker => (
+						<SalaryCard key={Worker.id} Worker={Worker} />
+					))}
+				</ul>
 			</div>
 			{/* <Modal
 				show={state.showModal}

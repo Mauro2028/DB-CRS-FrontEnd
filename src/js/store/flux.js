@@ -1,23 +1,11 @@
-const BASE_URL = "http://localhost:5000";
-// const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
+// const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			basic_salary: [],
-			variable_salary: [],
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			worker: {},
+			workers: []
 		},
 		actions: {
 			registroWorker: async datos => {
@@ -91,19 +79,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	}
 			// },
 
-			registroSalary: async datos => {
-				let url = BASE_URL + "/salary";
-
+			fetchWorker: async (id = null) => {
+				let url = BASE_URL + "/workers";
+				if (id != null) {
+					url += "/" + id;
+				}
 				let response = await fetch(url);
 				if (response.ok) {
 					let body = await response.json();
-					if (datos == null) {
+					if (id == null) {
 						setStore({
-							basic_salary: body,
-							variable_salary: body
+							workers: body
 						});
 					} else {
-						setStore({ basic_salary: body });
+						setStore({ worker: body });
 					}
 					return true;
 				} else {

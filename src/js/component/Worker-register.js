@@ -21,7 +21,7 @@ const Register = () => {
 		managment: "",
 		vacant: "",
 		// branch_office: "",
-		// interview_date: "",
+		interview_date: "",
 		// Technical_Interview_date: "",
 		// salary_offer_date: "",
 		// preemployment_test_date: "",
@@ -30,7 +30,7 @@ const Register = () => {
 		// current_employment_contract: "",
 		// Participation_at_Softech: false,
 		// Reason: "",
-		Salary_Aspirations: "",
+		// Salary_Aspirations: "",
 		// Academic_level: "",
 		// Place_of_residence: "",
 		// experience_years: "",
@@ -244,14 +244,14 @@ const Register = () => {
 						/>
 						<br />
 						<br />
-						<label>Aspiraciones Salariales : </label>
+						<label>Fecha de cita a entrevista : </label>
 						<br />
 						<input
 							type="text"
 							className="form-control"
-							name="Salary_Aspirations"
+							name="interview_date"
 							onChange={handleChange}
-							value={datos.Salary_Aspirations}
+							value={datos.interview_date}
 						/>
 						<br />
 
@@ -383,25 +383,7 @@ const Register = () => {
 							value={datos.Estimated_annual_package}
 						/>
 						<br />
-						<label>Compensacion mensual mixta: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Mixed_mothly_compensation"
-							onChange={handleChange}
-							value={datos.Mixed_mothly_compensation}
-						/>
-						<br />
-						<label>Compensacion anual mixta: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="Mixed_anual_compensation"
-							onChange={handleChange}
-							value={datos.Mixed_anual_compensation}
-						/>
+
 						<br />
 						<button
 							className="btn btn-primary"
