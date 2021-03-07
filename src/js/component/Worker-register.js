@@ -97,32 +97,32 @@ const Register = () => {
 		// Checking_Records_Detail: ""
 	};
 
-	const [datos, setDatos] = useState(initialState);
+	const [worker, setworker] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
 
 	const handleChange = e => {
-		setDatos({
-			...datos,
+		setWorker({
+			...worker,
 			[e.target.name]: e.target.value
 		});
-		console.log(datos);
+		console.log(worker);
 	};
 	const handleSubmit = e => {
 		if (
-			datos.candidate.trim() === "" ||
-			datos.cedula.trim() === null ||
-			datos.email.trim() === "" ||
-			datos.phone_number.trim() === null ||
-			datos.Consultor.trim() === "" ||
-			datos.vacant.trim() === ""
+			worker.candidate.trim() === "" ||
+			worker.cedula.trim() === null ||
+			worker.email.trim() === "" ||
+			worker.phone_number.trim() === null ||
+			worker.Consultor.trim() === "" ||
+			worker.vacant.trim() === ""
 		) {
 			setError(true);
 			return;
 		} else {
 			console.log("enviamos formulario");
 			setError(false);
-			actions.registroWorker(datos);
+			actions.registroWorker(worker);
 		}
 	};
 	return (
@@ -130,8 +130,8 @@ const Register = () => {
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
 					<h1>Registro</h1>
-					<h2>Datos del trabajador</h2>
-					<p> Por favor especifica los datos para registrarlos en nuestra plataforma</p>
+					<h2>worker del trabajador</h2>
+					<p> Por favor especifica los worker para registrarlos en nuestra plataforma</p>
 					<div className="form-group">
 						<label>Consultor (Obligatorio): </label>
 						<br />
@@ -140,7 +140,7 @@ const Register = () => {
 							className="form-control"
 							name="Consultor"
 							onChange={handleChange}
-							value={datos.Consultor}
+							value={worker.Consultor}
 						/>
 						<br />
 						<label>Nombre del Candidato (Obligatorio): </label>
@@ -150,7 +150,7 @@ const Register = () => {
 							className="form-control"
 							name="candidate"
 							onChange={handleChange}
-							value={datos.candidate}
+							value={worker.candidate}
 						/>
 						<br />
 						<label>Cedula (Obligatorio): </label>
@@ -160,7 +160,7 @@ const Register = () => {
 							className="form-control"
 							name="cedula"
 							onChange={handleChange}
-							value={datos.cedula}
+							value={worker.cedula}
 						/>
 						<br />
 						<label>Telefono (Obligatorio): </label>
@@ -170,7 +170,7 @@ const Register = () => {
 							className="form-control"
 							name="phone_number"
 							onChange={handleChange}
-							value={datos.phone_number}
+							value={worker.phone_number}
 						/>
 						<br />
 						<label>Correo electronico (Obligatorio): </label>
@@ -180,7 +180,7 @@ const Register = () => {
 							className="form-control"
 							name="email"
 							onChange={handleChange}
-							value={datos.email}
+							value={worker.email}
 						/>
 						<br />
 						<label>Vacante (Obligatorio): </label>
@@ -190,7 +190,7 @@ const Register = () => {
 							className="form-control"
 							name="vacant"
 							onChange={handleChange}
-							value={datos.vacant}
+							value={worker.vacant}
 						/>
 						<br />
 						<label>Fecha de Inicio:</label>
@@ -200,7 +200,7 @@ const Register = () => {
 							className="form-control"
 							name="init_date"
 							onChange={handleChange}
-							value={datos.init_date}
+							value={worker.init_date}
 						/>
 						<br />
 						{/* <label>Nacionalidad: </label>
@@ -210,7 +210,7 @@ const Register = () => {
 							className="form-control"
 							name="nationality"
 							onChange={handleChange}
-							value={datos.nationality}
+							value={worker.nationality}
 						/> */}
 						<br />
 						<label>Estatus: </label>
@@ -220,7 +220,7 @@ const Register = () => {
 							className="form-control"
 							name="status"
 							onChange={handleChange}
-							value={datos.status}
+							value={worker.status}
 						/>
 						<br />
 						<label>Fuente de captacion: </label>
@@ -230,7 +230,7 @@ const Register = () => {
 							className="form-control"
 							name="catchment_source"
 							onChange={handleChange}
-							value={datos.catchment_source}
+							value={worker.catchment_source}
 						/>
 						<br />
 						<label>Gerencia: </label>
@@ -240,7 +240,7 @@ const Register = () => {
 							className="form-control"
 							name="managment"
 							onChange={handleChange}
-							value={datos.managment}
+							value={worker.managment}
 						/>
 						<br />
 						<br />
@@ -251,7 +251,7 @@ const Register = () => {
 							className="form-control"
 							name="interview_date"
 							onChange={handleChange}
-							value={datos.interview_date}
+							value={worker.interview_date}
 						/>
 						<br />
 
@@ -262,7 +262,7 @@ const Register = () => {
 							className="form-control"
 							name="actual_charge"
 							onChange={handleChange}
-							value={datos.actual_charge}
+							value={worker.actual_charge}
 						/>
 						<br />
 						<label>empresa: </label>
@@ -272,7 +272,7 @@ const Register = () => {
 							className="form-control"
 							name="company"
 							onChange={handleChange}
-							value={datos.company}
+							value={worker.company}
 						/>
 						<br />
 						<label>sector: </label>
@@ -282,7 +282,7 @@ const Register = () => {
 							className="form-control"
 							name="sector"
 							onChange={handleChange}
-							value={datos.sector}
+							value={worker.sector}
 						/>
 
 						{/* <select id="opciones" name="opciones">
@@ -300,7 +300,7 @@ const Register = () => {
 							className="form-control"
 							name="coin"
 							onChange={handleChange}
-							value={datos.coin}
+							value={worker.coin}
 						/>
 						<br />
 						<label>Sueldo basico: </label>
@@ -310,7 +310,7 @@ const Register = () => {
 							className="form-control"
 							name="basic_salary"
 							onChange={handleChange}
-							value={datos.basic_salary}
+							value={worker.basic_salary}
 						/>
 						<br />
 						<label>Sueldo variable: </label>
@@ -320,7 +320,7 @@ const Register = () => {
 							className="form-control"
 							name="variable_salary"
 							onChange={handleChange}
-							value={datos.variable_salary}
+							value={worker.variable_salary}
 						/>
 						<br />
 						<label>cesta ticket: </label>
@@ -330,7 +330,7 @@ const Register = () => {
 							className="form-control"
 							name="cesta_ticket"
 							onChange={handleChange}
-							value={datos.cesta_ticket}
+							value={worker.cesta_ticket}
 						/>
 						<br />
 						<label>Dias de utilidades: </label>
@@ -340,7 +340,7 @@ const Register = () => {
 							className="form-control"
 							name="Profit_Days"
 							onChange={handleChange}
-							value={datos.Profit_Days}
+							value={worker.Profit_Days}
 						/>
 						<br />
 						<label>Disfrute de vacaciones: </label>
@@ -350,7 +350,7 @@ const Register = () => {
 							className="form-control"
 							name="vacations"
 							onChange={handleChange}
-							value={datos.vacations}
+							value={worker.vacations}
 						/>
 						<br />
 						<label>Bono vacacional: </label>
@@ -360,7 +360,7 @@ const Register = () => {
 							className="form-control"
 							name="Vacation_Bonus"
 							onChange={handleChange}
-							value={datos.Vacation_Bonus}
+							value={worker.Vacation_Bonus}
 						/>
 						<br />
 						<label>Factor: </label>
@@ -370,7 +370,7 @@ const Register = () => {
 							className="form-control"
 							name="Factor"
 							onChange={handleChange}
-							value={datos.Factor}
+							value={worker.Factor}
 						/>
 						<br />
 						<label>Paquete anual estimado: </label>
@@ -380,7 +380,7 @@ const Register = () => {
 							className="form-control"
 							name="Estimated_annual_package"
 							onChange={handleChange}
-							value={datos.Estimated_annual_package}
+							value={worker.Estimated_annual_package}
 						/>
 						<br />
 

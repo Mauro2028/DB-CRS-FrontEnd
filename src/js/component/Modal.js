@@ -71,4 +71,5 @@ Modal.propTypes = {
  **/
 Modal.defaultProps = {
 	show: false,
-	onClose: null};
+	onClose: null
+};

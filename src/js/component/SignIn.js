@@ -36,7 +36,7 @@ const SignIn = () => {
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
 					<h1>Registro</h1>
-					<h2> Datos del gerente de RRHH</h2>
+					<h2> datos del gerente de RRHH</h2>
 					<p> Por favor especifica tus datos para registrarte en nuestra plataforma</p>
 					<div className="form-group">
 						<label>Nombre y Apellido: </label>
