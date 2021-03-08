@@ -28,7 +28,7 @@ const Workers = () => {
 								console.log(workers),
 								(
 									<SalaryCard
-										key={workers.id}
+										key={worker.id}
 										worker={workers.candidate}
 										phone={workers.phone_number}
 										onDelete={() => setState({ showModal: true, idToDelete: workers.id })}
