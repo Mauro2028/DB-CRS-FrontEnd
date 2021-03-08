@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { store, actions } from "../store/appContext";
 
-export const SalaryCard = worker => {
+export const SalaryCard = workers => {
 	const [state, setState] = useState({});
 	debugger;
 	console.log(workers);
@@ -19,7 +19,7 @@ export const SalaryCard = worker => {
 						<i className="fas fa-map-marker-alt text-muted mr-3" />
 						<label className="text-muted">{workers.basic_salary}</label>
 						<br />
-						<label className="phone">{workes.phone_number}</label>
+						<label className="phone">{workers.phone_number}</label>
 						<span
 							className="fa fa-phone fa-fw text-muted mr-3"
 							data-toggle="tooltip"
