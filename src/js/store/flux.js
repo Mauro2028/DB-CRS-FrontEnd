@@ -1,5 +1,5 @@
-const BASE_URL = "http://localhost:5000";
-// const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
+// const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -79,13 +79,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	}
 			// },
 
-			fetchWorker: async datos => {
+			fetchWorker: async (id = null) => {
 				let url = BASE_URL + "/workers";
-
+				if (id != null) {
+					url += "/" + id;
+				}
 				let response = await fetch(url);
 				if (response.ok) {
 					let body = await response.json();
-					if (datos == null) {
+					if (id == null) {
 						setStore({
 							workers: body
 						});

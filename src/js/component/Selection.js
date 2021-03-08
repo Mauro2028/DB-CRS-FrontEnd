@@ -23,7 +23,7 @@ const Selection = () => {
 						<Link to="/workers">
 							<button className="btn btn-primary">Ver registros</button>
 						</Link>
-						<Link to="/Worker-register">
+						<Link to="/worker-register">
 							<button className="btn btn-primary">Registrar personas</button>
 						</Link>
 						<Link to="/Data-report">
