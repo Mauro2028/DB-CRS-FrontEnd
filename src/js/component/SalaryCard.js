@@ -27,7 +27,7 @@ export const SalaryCard = workers => {
 							data-original-title="(870) 288-4149"
 						/>
 						<br />
-						<label className="text small text-truncate">{worker.email}</label>
+						<label className="text small text-truncate">{workers.email}</label>
 						<span
 							className="fa fa-envelope fa-fw text-muted mr-3"
 							data-toggle="tooltip"
@@ -47,7 +47,7 @@ export const SalaryCard = workers => {
  **/
 SalaryCard.propTypes = {
 	history: PropTypes.object,
-	worker: PropTypes.object
+	workers: PropTypes.object
 };
 
 /**
