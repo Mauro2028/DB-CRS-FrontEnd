@@ -25,12 +25,12 @@ const Workers = () => {
 					<ul className="list-group pull-down" id="contact-list">
 						{store.workers.map(
 							worker => (
-								console.log(worker.id),
+								console.log(workers),
 								(
 									<SalaryCard
-										key={worker.id}
-										worker={worker.candidate}
-										phone={worker.phone_number}
+										key={workers.id}
+										worker={workers.candidate}
+										phone={workers.phone_number}
 										onDelete={() => setState({ showModal: true, idToDelete: workers.id })}
 									/>
 								)
