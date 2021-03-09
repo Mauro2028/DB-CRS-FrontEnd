@@ -50,7 +50,7 @@ const Register = () => {
 		Profit_Days: "",
 		vacations: "",
 		Vacation_Bonus: "",
-		Factor: "",
+		Factor: null,
 		Estimated_annual_package: "",
 		Mixed_mothly_compensation: "",
 		Mixed_anual_compensation: ""
@@ -203,15 +203,6 @@ const Register = () => {
 							value={datos.init_date}
 						/>
 						<br />
-						{/* <label>Nacionalidad: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="nationality"
-							onChange={handleChange}
-							value={datos.nationality}
-						/> */}
 						<br />
 						<label>Estatus: </label>
 						<br />
@@ -275,7 +266,7 @@ const Register = () => {
 							value={datos.company}
 						/>
 						<br />
-						<label>sector: </label>
+						{/* <label>sector: </label>
 						<br />
 						<input
 							type="list"
@@ -283,14 +274,19 @@ const Register = () => {
 							name="sector"
 							onChange={handleChange}
 							value={datos.sector}
-						/>
+						/> */}
 
-						{/* <select id="opciones" name="opciones">
-							<option value="1">Primer valor</option>
-							<option value="2">Segundo valor</option>
-							<option value="3">Tercer valor</option>
-							<option value="4">Cuarto valor</option>
-						</select> */}
+						<label>
+							Sector:
+							<select name="sector" value={datos.sector} onChange={handleChange}>
+								<option value="">Vacio</option>
+								<option value="Financiero">Financiero</option>
+								<option value="Tecnologico">Tecnologico</option>
+								<option value="Consultoria">Consultoria</option>
+								<option value="Educativo">Educativo</option>
+								<option value="Servicios">Servicios</option>
+							</select>
+						</label>
 
 						<br />
 						<label>Moneda: </label>

@@ -28,12 +28,6 @@ const WorkersList = () => {
 								worker => (
 									console.log(worker.candidate),
 									(
-										// <SalaryCard
-										// 	key={worker.id}
-										// 	worker={worker.candidate}
-										// 	phone={worker.phone_number}
-										// 	onDelete={() => setState({ showModal: true, idToDelete: workers.id })}
-										// />
 										<li>
 											<div className="list-group-item">
 												<div className="row w-100">
@@ -47,7 +41,7 @@ const WorkersList = () => {
 															fecha de inicio: {worker.init_date}
 														</label>
 														<br />
-														{/* <i className="fas fa-map-marker-alt text-muted mr-3" /> */}
+
 														<label className="text small text-truncate">
 															Consultor: {worker.Consultor}
 														</label>
@@ -55,25 +49,13 @@ const WorkersList = () => {
 														<label className="text small text-truncate">
 															Nombre del candidato: {worker.candidate}
 														</label>
-														{
-															/* <span */
-															// className="fa fa-phone fa-fw text-muted mr-3"
-															// data-toggle="tooltip"
-															// title=""
-															// data-original-title="(870) 288-4149"
-															/* /> */
-														}
+
 														<br />
 														<label className="text small text-truncate">
 															Numero de cedula: {worker.cedula}
 														</label>
 														<br />
-														{/* <span
-														// className="fa fa-envelope fa-fw text-muted mr-3"
-														data-toggle="tooltip"
-														data-original-title=""
-														title=""
-													/> */}
+
 														<label className="text small text-truncate">
 															Status: {worker.status}
 														</label>
@@ -143,11 +125,19 @@ const WorkersList = () => {
 														</label>
 														<br />
 														<label className="text small text-truncate">
-															Factor: {worker.basic_salary + worker.variable_salary} Bs
+															Factor:{" "}
+															{worker.Profit_Days / 30 +
+																worker.Vacation_Bonus / 30 +
+																worker.basic_salary}{" "}
+															Bs
 														</label>
 														<br />
 														<label className="text small text-truncate">
-															Compesacion anual mixta: {worker.Estimated_annual_package} $
+															Compesacion anual mixta:{" "}
+															{worker.basic_salary * worker.Factor +
+																worker.cesta_ticket * 12 +
+																worker.variable_salary * 12}{" "}
+															$
 														</label>
 													</div>
 												</div>

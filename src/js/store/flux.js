@@ -58,26 +58,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			// registroSalary: async datos => {
-			// 	try {
-			// 		const respuesta = await fetch(`${BASE_URL}/salary`, {
-			// 			method: "GET",
-			// 			body: JSON.stringify(datos),
-			// 			headers: { "Content-Type": "application/json" }
-			// 		});
-			// 		if (respuesta.ok) {
-			// 			let resultado = await respuesta.json();
-			// 			console.log(resultado);
-			// 			setStore({
-			// 				basic_salary: Worker.basic_salary
-			// 			});
-			// 			return true;
-			// 		}
-			// 		return false;
-			// 	} catch (error) {
-			// 		console.log("explote", error);
-			// 	}
-			// },
+			registroSalary: async (id = null) => {
+				let url = BASE_URL + "/salary";
+				if (id != null) {
+					url += "/" + id;
+				}
+				let response = await fetch(url);
+				if (response.ok) {
+					let body = await response.json();
+					if (id == null) {
+						setStore({
+							workers: body
+						});
+					} else {
+						setStore({ worker: body });
+					}
+					return true;
+				} else {
+					console.log(response.status);
+					return false;
+				}
+			},
 
 			fetchWorker: async (id = null) => {
 				let url = BASE_URL + "/workers";
