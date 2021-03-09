@@ -10,6 +10,7 @@ const WorkersList = () => {
 		showModal: false,
 		idToDelete: null
 	});
+	
 
 	const { store, actions } = useContext(Context);
 	// debugger;
@@ -27,7 +28,9 @@ const WorkersList = () => {
 							{store.workers.map(
 								worker => (
 									console.log(worker.candidate),
-									(
+									(let( vsa) = worker.variable_salary * 12,
+	                                    let (sbf) = (worker.basic_salary * worker.Factor),
+	                                    let (cta) = (worker.cesta_ticket * 12)
 										<li>
 											<div className="list-group-item">
 												<div className="row w-100">
@@ -133,11 +136,7 @@ const WorkersList = () => {
 														</label>
 														<br />
 														<label className="text small text-truncate">
-															Compesacion anual mixta:{" "}
-															{worker.basic_salary * worker.Factor +
-																worker.cesta_ticket * 12 +
-																worker.variable_salary * 12}{" "}
-															$
+															Compesacion anual mixta: {sbf + cta + vsa} $
 														</label>
 													</div>
 												</div>
