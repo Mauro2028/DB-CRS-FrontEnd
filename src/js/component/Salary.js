@@ -14,124 +14,132 @@ const Workers = () => {
 	const { store, actions } = useContext(Context);
 	// debugger;
 	return (
-		<div className="container">
-			<div>
-				<p className="text-right my-3">
-					<Link className="btn btn-success" to="/worker-register">
-						Add new worker
-					</Link>
-				</p>
-				<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-					<ul className="list-group pull-down" id="contact-list">
-						{store.workers.map(
-							worker => (
-								console.log(worker.candidate),
-								(
-									// <SalaryCard
-									// 	key={worker.id}
-									// 	worker={worker.candidate}
-									// 	phone={worker.phone_number}
-									// 	onDelete={() => setState({ showModal: true, idToDelete: workers.id })}
-									// />
-									<li>
-										<div className="list-group-item">
-											<div className="row w-100">
-												<div className="col-12 col-sm-6 col-md-3 px-0" />
-												<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
-													<label className="candidate">{worker.id}</label>
-													<br />
-													<label className="candidate">{worker.init_date}</label>
-													<br />
-													{/* <i className="fas fa-map-marker-alt text-muted mr-3" /> */}
-													<label className="text-muted">{worker.Consultor}</label>
-													<br />
-													<label className="phone">{worker.candidate}</label>
-													{
-														/* <span */
-														// className="fa fa-phone fa-fw text-muted mr-3"
-														// data-toggle="tooltip"
-														// title=""
-														// data-original-title="(870) 288-4149"
-														/* /> */
-													}
-													<br />
-													<label className="text small text-truncate">{worker.cedula}</label>
-													<br />
-													{/* <span
-														// className="fa fa-envelope fa-fw text-muted mr-3"
-														data-toggle="tooltip"
-														data-original-title=""
-														title=""
-													/> */}
-													<label className="text small text-truncate">{worker.status}</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.phone_number}
-													</label>
-													<br />
-													<label className="text small text-truncate">{worker.email}</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.catchment_source}
-													</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.managment}
-													</label>
-													<br />
-													<label className="text small text-truncate">{worker.vacant}</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.interview_date}
-													</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.actual_charge}
-													</label>
-													<br />
-													<label className="text small text-truncate">{worker.company}</label>
-													<br />
-													<label className="text small text-truncate">{worker.sector}</label>
-													<br />
-													<label className="text small text-truncate">{worker.coin}</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.basic_salary}
-													</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.variable_salary}
-													</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.cesta_ticket}
-													</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.Profit_Days}
-													</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.vacations}
-													</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.Vacation_Bonus}
-													</label>
-													<br />
-													<label className="text small text-truncate">{worker.Factor}</label>
-													<br />
-													<label className="text small text-truncate">
-														{worker.Estimated_annual_package}
-													</label>
+		<div>
+			<div className="container">
+				<div>
+					<p className="text-right my-3">
+						<Link className="btn btn-success" to="/worker-register">
+							Add new worker
+						</Link>
+					</p>
+					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+						<ul className="list-group pull-down" id="contact-list">
+							{store.workers.map(
+								worker => (
+									console.log(worker.candidate),
+									(
+										<li>
+											<div className="list-group-item">
+												<div className="row w-100">
+													<div className="col-12 col-sm-6 col-md-3 px-0" />
+													<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+														<label className="text small text-truncate">
+															Numero: {worker.id}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															fecha de inicio: {worker.init_date}
+														</label>
+														<br />
+
+														<label className="text small text-truncate">
+															Consultor: {worker.Consultor}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Nombre del candidato: {worker.candidate}
+														</label>
+
+														<br />
+														<label className="text small text-truncate">
+															Numero de cedula: {worker.cedula}
+														</label>
+														<br />
+
+														<label className="text small text-truncate">
+															Status: {worker.status}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Numero de telefono: {worker.phone_number}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Email: {worker.email}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Fuente de captacion: {worker.catchment_source}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Gerencia: {worker.managment}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Vacante: {worker.vacant}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Fecha de cita a entrevista: {worker.interview_date}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Cargo actual: {worker.actual_charge}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Empresa: {worker.company}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Sector: {worker.sector}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Moneda extranjera: {worker.coin}
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Sueldo basico: {worker.basic_salary} Bs
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Sueldo Variable : {worker.variable_salary} Bs
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Cesta ticket: {worker.cesta_ticket} Bs
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Dias de utilidades: {worker.Profit_Days} dias
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Disfrute de vacaciones: {worker.vacations} dias
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Bono de vacaciones: {worker.Vacation_Bonus} Bs
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Factor: {worker.basic_salary + worker.variable_salary} Bs
+														</label>
+														<br />
+														<label className="text small text-truncate">
+															Compesacion anual mixta: {worker.Estimated_annual_package} $
+														</label>
+													</div>
 												</div>
 											</div>
-										</div>
-									</li>
+										</li>
+									)
 								)
-							)
-						)}
-					</ul>
+							)}
+						</ul>
+					</div>
 				</div>
 			</div>
 			<Modal

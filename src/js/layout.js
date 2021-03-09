@@ -13,7 +13,7 @@ import SignIn from "./component/SignIn";
 import Selection from "./component/Selection";
 // import WorkerData from "./component/Worker-data";
 // import DetailCard from "./component/Detail-Card";
-// import WorkerCard from "./component/Worker-list";
+import WorkersList from "./component/Worker-list";
 import Register from "./component/Worker-register";
 import Workers from "./component/Salary";
 import { SalaryCard } from "./component/SalaryCard";
@@ -40,7 +40,6 @@ const Layout = () => {
 						<Route exact path="/salarycard">
 							<SalaryCard />
 						</Route>
-
 						<Route exact path="/SignIn">
 							<SignIn />
 						</Route>
@@ -56,13 +55,13 @@ const Layout = () => {
 						<Route exact path="/Selection">
 							<Selection />
 						</Route>
-						{/* <Route exact path="/Worker-Data">
+						{/* /* <Route exact path="/Worker-Data">
 							<Worker-Data />
-						</Route>
+						</Route> */}
 						<Route exact path="/Worker-List">
-							<WorkerCard />
+							<WorkersList />
 						</Route>
-						<Route exact path="Detail-Card"> */}
+						{/* <Route exact path="Detail-Card"> 
 						{/* <DetailCard />
 						</Route> */}
 						<Route exact path="/single/:theid">
