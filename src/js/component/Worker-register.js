@@ -43,17 +43,17 @@ const Register = () => {
 		company: "",
 		sector: "",
 		coin: "",
-		basic_salary: "",
-		variable_salary: "",
-		cesta_ticket: "",
-		Monthly_Cash_Flow: "",
-		Profit_Days: "",
-		vacations: "",
-		Vacation_Bonus: "",
+		basic_salary: null,
+		variable_salary: null,
+		cesta_ticket: null,
+		Monthly_Cash_Flow: null,
+		Profit_Days: null,
+		vacations: null,
+		Vacation_Bonus: null,
 		Factor: null,
-		Estimated_annual_package: "",
-		Mixed_mothly_compensation: "",
-		Mixed_anual_compensation: ""
+		Estimated_annual_package: null
+		// Mixed_mothly_compensation: "",
+		// Mixed_anual_compensation: ""
 		// Assistance_bonus: false,
 		// Production_bonus: false,
 		// Transport_bonus: false,
@@ -100,6 +100,12 @@ const Register = () => {
 	const [datos, setDatos] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
+	let pdm = parseInt(datos.Profit_Days / 30);
+	let vbm = parseInt(datos.Vacation_Bonus / 30, 10);
+	let sum = parseInt(datos.basic_salary, 10) + pdm + vbm;
+	let cta = parseInt(datos.cesta_ticket * 12, 10);
+	let sva = parseInt(datos.variable_salary * 12, 10);
+	let eap = parseInt(datos.basic_salary * datos.Factor + cta + sva);
 
 	const handleChange = e => {
 		setDatos({
@@ -266,15 +272,6 @@ const Register = () => {
 							value={datos.company}
 						/>
 						<br />
-						{/* <label>sector: </label>
-						<br />
-						<input
-							type="list"
-							className="form-control"
-							name="sector"
-							onChange={handleChange}
-							value={datos.sector}
-						/> */}
 
 						<label>
 							Sector:
@@ -302,7 +299,7 @@ const Register = () => {
 						<label>Sueldo basico: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="basic_salary"
 							onChange={handleChange}
@@ -312,7 +309,7 @@ const Register = () => {
 						<label>Sueldo variable: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="variable_salary"
 							onChange={handleChange}
@@ -322,7 +319,7 @@ const Register = () => {
 						<label>cesta ticket: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="cesta_ticket"
 							onChange={handleChange}
@@ -332,51 +329,53 @@ const Register = () => {
 						<label>Dias de utilidades: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="Profit_Days"
 							onChange={handleChange}
 							value={datos.Profit_Days}
 						/>
 						<br />
-						<label>Disfrute de vacaciones: </label>
-						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="vacations"
-							onChange={handleChange}
-							value={datos.vacations}
-						/>
-						<br />
+
 						<label>Bono vacacional: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="Vacation_Bonus"
 							onChange={handleChange}
 							value={datos.Vacation_Bonus}
 						/>
 						<br />
+						<label>Disfrute de vacaciones: </label>
+						<br />
+						<input
+							type="number"
+							className="form-control"
+							name="vacations"
+							onChange={handleChange}
+							value={datos.vacations}
+						/>
+
+						<br />
 						<label>Factor: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="Factor"
 							onChange={handleChange}
-							value={datos.Factor}
+							value={(datos.Factor = sum)}
 						/>
 						<br />
 						<label>Paquete anual estimado: </label>
 						<br />
 						<input
-							type="text"
+							type="number"
 							className="form-control"
 							name="Estimated_annual_package"
 							onChange={handleChange}
-							value={datos.Estimated_annual_package}
+							value={(datos.Estimated_annual_package = eap)}
 						/>
 						<br />
 
