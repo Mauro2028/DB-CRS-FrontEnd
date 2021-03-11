@@ -10,38 +10,33 @@ const Workers = () => {
 		showModal: false,
 		idToDelete: null
 	});
-	const [filter,setFilter]= useState("")
+	const [filter, setFilter] = useState("");
 
-	const handleChange=(value, e)=>{
-		//Handle Change Event Input
-		console.log('-->', filter); 
-		setFilter({filter: value}); //Set State
-	  }
+	const handleChange = e => {
+		console.log("-->", filter);
 
-	
+		setFilter(e.target.value);
+	};
+
 	const { store, actions } = useContext(Context);
 	// debugger;
 
-
 	return (
 		<div>
-			
-			
 			<div className="container">
 				<div>
-				<input type="text" onChange={ e => this.props.handleChange(filter.value)} />
+					<input type="text" onChange={e => handleChange(filter.value)} />
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
 						<ul className="list-group pull-down" id="contact-list">
-							{store.workers.filter(worker =>worker.id.includes(setFilter.filter)).map(
+							{store.workers.filter(worker => worker.sector.includes(filter)).map(
 								worker => (
-									worker.sector == "Finaciero",
 									console.log(worker.candidate),
 									(
 										<div className="list-group-item">
 											<div className="row w-100">
 												<div className="col-12 col-sm-6 col-md-3 px-0" />
 												<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
-													<label className="text small text-truncate">
+													<label className="text small text-truncate" value={worker.id}>
 														Numero: {worker.id}
 													</label>
 													<br />
@@ -49,7 +44,7 @@ const Workers = () => {
 														fecha de inicio: {worker.init_date}
 													</label>
 													<br />
-													
+
 													<label className="text small text-truncate">
 														Consultor: {worker.Consultor}
 													</label>
@@ -100,7 +95,7 @@ const Workers = () => {
 														Empresa: {worker.company}
 													</label>
 													<br /> */}
-													<label className="text small text-truncate">
+													<label className="text small text-truncate" value={worker.id}>
 														Sector: {worker.sector}
 													</label>
 													<br />
@@ -166,3 +161,5 @@ const Workers = () => {
 };
 
 export default Workers;
+
+// https://mauriciogc.medium.com/react-map-filter-y-reduce-54777359d94
