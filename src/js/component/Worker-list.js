@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { SalaryCard } from "../component/SalaryCard.js";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
 

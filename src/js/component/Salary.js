@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { SalaryCard } from "../component/SalaryCard.js";
+// import { SalaryCard } from "../component/SalaryCard.js";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
 
@@ -10,15 +10,15 @@ const Workers = () => {
 		showModal: false,
 		idToDelete: null
 	});
-	const onChange = e => {
-		this.context.applyFilters(parseInt(e.target.value));
-	};
+	// const onChange = e => {
+	// 	this.context.applyFilters(parseInt(e.target.value));
+	// };
 	const { store, actions } = useContext(Context);
 	// debugger;
 
 	return (
 		<div>
-			Filters.contextTypes = applyFilters: {PropTypes.func};
+			{/* Filters.contextTypes = applyFilters: {PropTypes.func}; */}
 			<div className="container">
 				<div>
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
@@ -39,7 +39,7 @@ const Workers = () => {
 														fecha de inicio: {worker.init_date}
 													</label>
 													<br />
-													
+
 													<label className="text small text-truncate">
 														Consultor: {worker.Consultor}
 													</label>
@@ -47,7 +47,6 @@ const Workers = () => {
 													{/* <label className="text small text-truncate">
 														Nombre del candidato: {worker.candidate}
 													</label>
-
 													<br /> */}
 													{/* <label className="text small text-truncate">
 														Numero de cedula: {worker.cedula}
@@ -137,12 +136,12 @@ const Workers = () => {
 							)}
 						</ul>
 
-						<button
+						{/* <button
 							className="sector financiero"
 							onClick={() => {
 								handleChange();
 							}}
-						/>
+						/> */}
 					</div>
 				</div>
 			</div>
