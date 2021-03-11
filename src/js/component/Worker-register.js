@@ -212,13 +212,28 @@ const Register = () => {
 						<br />
 						<label>Estatus: </label>
 						<br />
-						<input
-							type="text"
-							className="form-control"
-							name="status"
-							onChange={handleChange}
-							value={datos.status}
-						/>
+						<select className="form-control" name="status" onChange={handleChange} value={datos.status}>
+							<option value="">Vacio</option>
+							<option value="Citado a entrevista">Citado a entrevista</option>
+							<option value="El area no lo quiso evaluar">El area no lo quiso evaluar</option>
+							<option value="Elegible entrevista tecnica">Elegible entrevista tecnica</option>
+							<option value="En proceso">En proceso</option>
+							<option value="No acepto oferta laboral">No acepto oferta laboral</option>
+							<option value="No asistio a entrevista laboral">No asistio a entrevista laboral</option>
+							<option value="No elegible entrevista laboral">No elegible entrevista laboral</option>
+							<option value="No elegible entrevista tecnica">No elegible entrevista tecnica</option>
+							<option value="No elegible entrevista GH">No elegible entrevista GH</option>
+							<option value="No interesado">No interesado</option>
+							<option value="No responde contacto para entrevista GH">
+								No responde contacto para entrevista GH
+							</option>
+							<option value="No responde contacto para entrevista tecnica">
+								No responde contacto para entrevista tecnica
+							</option>
+							<option value="Por agendar entrevsita">Por agendar entrevsita</option>
+							<option value="Pre-empleo">Pre-empleo</option>
+						</select>
+
 						<br />
 						<label>Fuente de captacion: </label>
 						<br />
