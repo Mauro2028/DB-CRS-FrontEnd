@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 import { SalaryCard } from "../component/SalaryCard.js";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
@@ -10,11 +10,15 @@ const Workers = () => {
 		showModal: false,
 		idToDelete: null
 	});
-
+	const onChange = e => {
+		this.context.applyFilters(parseInt(e.target.value));
+	};
 	const { store, actions } = useContext(Context);
 	// debugger;
+
 	return (
 		<div>
+			Filters.contextTypes = applyFilters: {PropTypes.func};
 			<div className="container">
 				<div>
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
@@ -35,33 +39,33 @@ const Workers = () => {
 														fecha de inicio: {worker.init_date}
 													</label>
 													<br />
-
+													
 													<label className="text small text-truncate">
 														Consultor: {worker.Consultor}
 													</label>
 													<br />
-													<label className="text small text-truncate">
+													{/* <label className="text small text-truncate">
 														Nombre del candidato: {worker.candidate}
 													</label>
 
-													<br />
-													<label className="text small text-truncate">
+													<br /> */}
+													{/* <label className="text small text-truncate">
 														Numero de cedula: {worker.cedula}
 													</label>
-													<br />
+													<br /> */}
 
 													<label className="text small text-truncate">
 														Status: {worker.status}
 													</label>
-													<br />
+													{/* <br />
 													<label className="text small text-truncate">
 														Numero de telefono: {worker.phone_number}
-													</label>
+													</label> */}
 													<br />
-													<label className="text small text-truncate">
+													{/* <label className="text small text-truncate">
 														Email: {worker.email}
 													</label>
-													<br />
+													<br /> */}
 													<label className="text small text-truncate">
 														Fuente de captacion: {worker.catchment_source}
 													</label>
@@ -74,26 +78,26 @@ const Workers = () => {
 														Vacante: {worker.vacant}
 													</label>
 													<br />
-													<label className="text small text-truncate">
+													{/* <label className="text small text-truncate">
 														Fecha de cita a entrevista: {worker.interview_date}
 													</label>
-													<br />
-													<label className="text small text-truncate">
+													<br /> */}
+													{/* <label className="text small text-truncate">
 														Cargo actual: {worker.actual_charge}
 													</label>
-													<br />
-													<label className="text small text-truncate">
+													<br /> */}
+													{/* <label className="text small text-truncate">
 														Empresa: {worker.company}
 													</label>
-													<br />
+													<br /> */}
 													<label className="text small text-truncate">
 														Sector: {worker.sector}
 													</label>
 													<br />
-													<label className="text small text-truncate">
+													{/* <label className="text small text-truncate">
 														Moneda extranjera: {worker.coin}
 													</label>
-													<br />
+													<br /> */}
 													<label className="text small text-truncate">
 														Sueldo basico: {worker.basic_salary} Bs
 													</label>
@@ -119,7 +123,7 @@ const Workers = () => {
 													</label>
 													<br />
 													<label className="text small text-truncate">
-														Factor: {worker.basic_salary + worker.variable_salary} Bs
+														Factor: {worker.Factor} Bs
 													</label>
 													<br />
 													<label className="text small text-truncate">
@@ -132,6 +136,13 @@ const Workers = () => {
 								)
 							)}
 						</ul>
+
+						<button
+							className="sector financiero"
+							onClick={() => {
+								handleChange();
+							}}
+						/>
 					</div>
 				</div>
 			</div>
