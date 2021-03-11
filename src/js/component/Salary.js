@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-// import { SalaryCard } from "../component/SalaryCard.js";
+
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
 
@@ -10,21 +10,31 @@ const Workers = () => {
 		showModal: false,
 		idToDelete: null
 	});
-	// const onChange = e => {
-	// 	this.context.applyFilters(parseInt(e.target.value));
-	// };
+	const [filter,setFilter]= useState("")
+
+	const handleChange=(value, e)=>{
+		//Handle Change Event Input
+		console.log('-->', filter); 
+		setFilter({filter: value}); //Set State
+	  }
+
+	
 	const { store, actions } = useContext(Context);
 	// debugger;
 
+
 	return (
 		<div>
-			{/* Filters.contextTypes = applyFilters: {PropTypes.func}; */}
+			
+			
 			<div className="container">
 				<div>
+				<input type="text" onChange={ e => this.props.handleChange(filter.value)} />
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
 						<ul className="list-group pull-down" id="contact-list">
-							{store.workers.map(
+							{store.workers.filter(worker =>worker.id.includes(setFilter.filter)).map(
 								worker => (
+									worker.sector == "Finaciero",
 									console.log(worker.candidate),
 									(
 										<div className="list-group-item">
@@ -39,7 +49,7 @@ const Workers = () => {
 														fecha de inicio: {worker.init_date}
 													</label>
 													<br />
-
+													
 													<label className="text small text-truncate">
 														Consultor: {worker.Consultor}
 													</label>
@@ -47,6 +57,7 @@ const Workers = () => {
 													{/* <label className="text small text-truncate">
 														Nombre del candidato: {worker.candidate}
 													</label>
+
 													<br /> */}
 													{/* <label className="text small text-truncate">
 														Numero de cedula: {worker.cedula}
@@ -140,8 +151,8 @@ const Workers = () => {
 							className="sector financiero"
 							onClick={() => {
 								handleChange();
-							}}
-						/> */}
+							}} */}
+						{/* /> */}
 					</div>
 				</div>
 			</div>
