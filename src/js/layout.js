@@ -16,7 +16,7 @@ import Selection from "./component/Selection";
 import WorkersList from "./component/Worker-list";
 import Register from "./component/Worker-register";
 import Workers from "./component/Salary";
-
+import { SalaryCard } from "./component/SalaryCard";
 import { Modal } from "./component/Modal";
 
 //create your first component
@@ -37,7 +37,6 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-
 						<Route exact path="/SignIn">
 							<SignIn />
 						</Route>
@@ -59,9 +58,10 @@ const Layout = () => {
 						<Route exact path="/Worker-List">
 							<WorkersList />
 						</Route>
-						{/* <Route exact path="Detail-Card"> 
-						{/* <DetailCard />
-						</Route> */}
+						<Route exact path="/SalaryCard">
+							<SalaryCard />
+						</Route>{" "}
+						*/
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
