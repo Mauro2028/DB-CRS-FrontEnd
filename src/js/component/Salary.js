@@ -28,18 +28,21 @@ const Workers = () => {
 			<div className="container">
 				<div>
 					{/* <input type="text" onChange={e => setFilter(handleChange({ filter }))} /> */}
-					<select>
-						<option
-							className={filter.name == "Tecnologico"}
-							name="Tecnologico"
-							onClick={e => setFilter({ name: e.target.name })}>
+					<select onClick={e => setFilter({ name: e.target.name })}>
+						<option className={filter.name == "Tecnologico"} name="Tecnologico">
 							Sector Tecnologico
 						</option>
-						<option
-							className={filter.name == "Financiero"}
-							name="Financiero"
-							onClick={e => setFilter({ name: e.target.name })}>
+						<option className={filter.name == "Financiero"} name="Financiero">
 							Sector Financiero
+						</option>
+						<option className={filter.name == "Consultoria"} name="Consultoria">
+							Consultoria
+						</option>
+						<option className={filter.name == "Educativo"} name="Educativo">
+							Educativo
+						</option>
+						<option className={filter.name == "Servicios"} name="Servicioso">
+							Servicios
 						</option>
 					</select>
 
