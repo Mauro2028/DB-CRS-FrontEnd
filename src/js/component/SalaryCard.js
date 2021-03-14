@@ -63,8 +63,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 					<label className="text small text-truncate">
 						Compesacion anual mixta: {worker.Estimated_annual_package} $
 					</label>
-					{/* name=
-													{worker.Consultor} */}
+					{/* <label className={e => setFilter({ name: e.target.value })} value={filter.name} /> */}
 				</div>
 			</div>
 		</div>

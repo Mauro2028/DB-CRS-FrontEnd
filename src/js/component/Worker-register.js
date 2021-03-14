@@ -146,7 +146,7 @@ const Register = () => {
 							className="form-control"
 							name="Consultor"
 							onChange={handleChange}
-							value={datos.Consultor}
+							value={datos.Consultor.toLowerCase()}
 						/>
 						<br />
 						<label>Nombre del Candidato (Obligatorio): </label>
@@ -156,7 +156,7 @@ const Register = () => {
 							className="form-control"
 							name="candidate"
 							onChange={handleChange}
-							value={datos.candidate}
+							value={datos.candidate.toLowerCase()}
 						/>
 						<br />
 						<label>Cedula (Obligatorio): </label>
@@ -196,7 +196,7 @@ const Register = () => {
 							className="form-control"
 							name="vacant"
 							onChange={handleChange}
-							value={datos.vacant}
+							value={datos.vacant.toLowerCase()}
 						/>
 						<br />
 						<label>Fecha de Inicio:</label>
@@ -242,7 +242,7 @@ const Register = () => {
 							className="form-control"
 							name="catchment_source"
 							onChange={handleChange}
-							value={datos.catchment_source}
+							value={datos.catchment_source.toLowerCase()}
 						/>
 						<br />
 						<label>Gerencia: </label>
@@ -252,7 +252,7 @@ const Register = () => {
 							className="form-control"
 							name="managment"
 							onChange={handleChange}
-							value={datos.managment}
+							value={datos.managment.toLowerCase()}
 						/>
 						<br />
 						<br />
@@ -274,17 +274,17 @@ const Register = () => {
 							className="form-control"
 							name="actual_charge"
 							onChange={handleChange}
-							value={datos.actual_charge}
+							value={datos.actual_charge.toLowerCase()}
 						/>
 						<br />
-						<label>empresa: </label>
+						<label>Empresa: </label>
 						<br />
 						<input
 							type="text"
 							className="form-control"
 							name="company"
 							onChange={handleChange}
-							value={datos.company}
+							value={datos.company.toLowerCase()}
 						/>
 						<br />
 
@@ -301,7 +301,7 @@ const Register = () => {
 						</label>
 
 						<br />
-						<label>Moneda: </label>
+						<label>Sueldo en moneda extranjera: </label>
 						<br />
 						<input
 							type="text"
