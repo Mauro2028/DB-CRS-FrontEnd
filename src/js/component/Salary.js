@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { SalaryCard } from "./SalaryCard";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
-import { Suma } from "./Suma";
 
 const Workers = () => {
 	const [state, setState] = useState({
@@ -13,7 +12,7 @@ const Workers = () => {
 	});
 	const [filter, setFilter] = useState("");
 	const [bailar, setBailar] = useState("");
-	const [suma, setSuma] = useState(null);
+	const [puesto, setPuesto] = useState("");
 
 	const handleChange = e => {
 		setFilter({
@@ -29,9 +28,9 @@ const Workers = () => {
 		});
 		console.log(bailar);
 	};
-	const total = e => {
-		setSuma({
-			...suma,
+	const hanldePuesto = e => {
+		setPuesto({
+			...puesto,
 			[e.target.name]: e.target.value
 		});
 		// 	console.log(bailar);
@@ -66,6 +65,12 @@ const Workers = () => {
 						onChange={e => setBailar({ name: e.target.value.toLowerCase() })}
 						value={bailar.name}
 					/>
+					<input
+						type="text"
+						placeholder="Cargo actual"
+						onChange={e => setPuesto({ name: e.target.value.toLowerCase() })}
+						value={puesto.name}
+					/>
 					{/* <button
 						name="Suma"
 						value="suma"
@@ -84,19 +89,18 @@ const Workers = () => {
 						<option value="Educativo">Educativo</option>
 						<option value="Servicios">Servicios</option>
 					</select>
-					{/* <select onChange={e => setSuma({ name: e.target.value })} value={suma.name}>
-						<option defaultValue="">Sector</option>
-						<option value="Tecnologico">Salario basico</option>
-						<option value="Financiero">Sector Financiero</option>
-						<option value="Consultoria">Consultoria</option>
-						<option value="Educativo">Educativo</option>
-						<option value="Servicios">Servicios</option>
-					</select> */}
+
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
 						<ul className="list-group pull-down" id="contact-list">
 							{store.workers
 
-								.filter(worker => worker.sector == filter.name || worker.vacant == bailar.name)
+								.filter(
+									worker =>
+										worker.sector == filter.name ||
+										worker.vacant == bailar.name ||
+										worker.actual_charge == puesto.name
+								)
+
 								.map(worker => (
 									<div key={worker.id}>
 										<li id="worker" key={worker.id}>
@@ -114,9 +118,36 @@ const Workers = () => {
 										</label> */}
 									</div>
 								))}
-							{store.workers.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
 						</ul>
-
+						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+							Salario basico:
+							{store.workers
+								.filter(worker => worker.sector == filter.name || worker.vacant == bailar.name)
+								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
+						</div>
+						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+							Salario Variable:
+							{store.workers
+								.filter(worker => worker.sector == filter.name || worker.vacant == bailar.name)
+								.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)}
+						</div>
+						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+							Cesta ticket:
+							{store.workers
+								.filter(worker => worker.sector == filter.name || worker.vacant == bailar.name)
+								.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
+						</div>
+						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+							Factor:
+							{store.workers
+								.filter(
+									worker =>
+										worker.sector == filter.name ||
+										worker.vacant == bailar.name ||
+										worker.actual_charge == puesto.name
+								)
+								.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
+						</div>
 						{/* <button
 							className="sector financiero"
 							onClick={() => {
