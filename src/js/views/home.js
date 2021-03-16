@@ -36,8 +36,15 @@ export const Home = () => {
 		<div>
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
-					<div className="form-group">
-						<label>Usuario: </label>
+					<div className="justify-content:center ">
+						<label
+							style={{
+								width: "180px",
+								fontweight: "bold",
+								display: "inlineblock"
+							}}>
+							Usuario:{" "}
+						</label>
 						<br />
 						<input
 							type="text"
@@ -45,9 +52,26 @@ export const Home = () => {
 							name="user_name"
 							onChange={handleChange}
 							value={datos.user_name}
+							style={{
+								width: "180px",
+								padding: "3px 10px",
+								border: "1px solid #f6f6f6",
+								borderradius: "3px",
+								backgroundcolor: "#f6f6f6",
+								margin: "8px 0",
+								display: "inlineblock",
+								borderColor: "black"
+							}}
 						/>
 						<br />
-						<label>Contraseña: </label>
+						<label
+							style={{
+								width: "180px",
+								fontweight: "bold",
+								display: "inlineblock"
+							}}>
+							Contraseña:{" "}
+						</label>
 						<br />
 						<input
 							type="password"
@@ -55,11 +79,31 @@ export const Home = () => {
 							name="password"
 							onChange={handleChange}
 							value={datos.password}
+							style={{
+								width: "180px",
+								padding: "3px 10px",
+								border: "1px solid #f6f6f6",
+								borderradius: "3px",
+								backgroundcolor: "#f6f6f6",
+								margin: "8px 0",
+								display: "inlineblock",
+								borderColor: "black"
+							}}
 						/>
 						<br />
 
 						<button
 							className="btn btn-primary"
+							style={{
+								width: "30%",
+								padding: "8px 16px",
+								margintop: "32px",
+								border: "1px solid #000",
+								borderradius: "5px",
+								display: "block",
+								color: "#fff",
+								backgroundcolor: "#000"
+							}}
 							onClick={() => {
 								handleSubmit();
 							}}>
@@ -71,7 +115,20 @@ export const Home = () => {
 						<div className="linea" />
 						<br />
 						<Link to="/SignIn">
-							<button className="btn btn-primary">Registrate</button>
+							<button
+								className="btn btn-primary"
+								style={{
+									width: "30%",
+									padding: "8px 16px",
+									margintop: "32px",
+									border: "1px solid #000",
+									borderradius: "5px",
+									display: "block",
+									color: "#fff",
+									backgroundcolor: "#000"
+								}}>
+								Registrate
+							</button>
 						</Link>
 					</div>
 				</div>

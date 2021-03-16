@@ -33,27 +33,10 @@ const Workers = () => {
 			...puesto,
 			[e.target.name]: e.target.value
 		});
-		// 	console.log(bailar);
-		// 	e = worker.basic_salary;
-		// 	let val = parseInt(worker.basic_salary);
-		// 	i += val;
-		// 	console.log(total);
 	};
-
-	// const Suma = worker => {
-	// 	Suma = length(worker.basic_salary);
-	// };
-	// console.log(Suma());
 
 	const { store, actions } = useContext(Context);
 	// debugger;
-
-	// const total = store.workers.map((x, i) => {
-	// 	let val = parseInt(worker.basic_salary);
-	// 	i += val;
-	// 	return i;
-	// 	console.log("suma ", i);
-	// });
 
 	return (
 		<div>
@@ -71,16 +54,7 @@ const Workers = () => {
 						onChange={e => setPuesto({ name: e.target.value.toLowerCase() })}
 						value={puesto.name}
 					/>
-					{/* <button
-						name="Suma"
-						value="suma"
-						onClick={store.workers.map((x, i) => {
-							let val = parseInt(worker.basic_salary);
-							i += val;
-							return i;
-						})}>
-						Suma
-					</button> */}
+
 					<select onChange={e => setFilter({ name: e.target.value })} value={filter.name}>
 						<option defaultValue="">Sector</option>
 						<option value="Tecnologico">Sector Tecnologico</option>
@@ -111,11 +85,6 @@ const Workers = () => {
 												onDelete={() => setState({ showModal: true, idToDelete: contact.id })}
 											/>
 										</li>
-										{/* <label
-											className={e => setSuma({ name: e.target.value })}
-											value={worker.basic_salary}>
-											Suma {suma}{" "}
-										</label> */}
 									</div>
 								))}
 						</ul>
@@ -148,12 +117,6 @@ const Workers = () => {
 								)
 								.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
 						</div>
-						{/* <button
-							className="sector financiero"
-							onClick={() => {
-								handleChange();
-							}} */}
-						{/* /> */}
 					</div>
 				</div>
 			</div>

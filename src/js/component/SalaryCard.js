@@ -31,7 +31,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}>
 							ID
 						</th>
-						<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>candidato</th>
+						<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>Fecha de inicio</th>
 						<th
 							style={{
 								padding: "0.3em",
@@ -39,7 +39,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								width: "35%",
 								background: "#eee"
 							}}>
-							Fecha de inicio
+							Consultor
 						</th>
 						<th
 							style={{
@@ -47,7 +47,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								border: "1px solid #000",
 								width: "25%"
 							}}>
-							Consultor
+							Candidato
 						</th>
 						<th
 							style={{

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
+import { useHistory } from "react-router-dom";
 
 const Register = () => {
 	// const lista = document.getElementById("opciones");
@@ -106,6 +107,7 @@ const Register = () => {
 	let cta = parseInt(datos.cesta_ticket * 12, 10);
 	let sva = parseInt(datos.variable_salary * 12, 10);
 	let eap = parseInt(datos.basic_salary * datos.Factor + cta + sva);
+	let history = useHistory();
 
 	const handleChange = e => {
 		setDatos({
@@ -129,6 +131,7 @@ const Register = () => {
 			console.log("enviamos formulario");
 			setError(false);
 			actions.registroWorker(datos);
+			history.push("/Worker-list");
 		}
 	};
 	return (

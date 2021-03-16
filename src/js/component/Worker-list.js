@@ -50,7 +50,7 @@ const WorkersList = () => {
 											ID
 										</th>
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>
-											candidato
+											Fecha de inicio
 										</th>
 										<th
 											style={{
@@ -59,7 +59,7 @@ const WorkersList = () => {
 												width: "35%",
 												background: "#eee"
 											}}>
-											Fecha de inicio
+											Consultor
 										</th>
 										<th
 											style={{
@@ -67,7 +67,7 @@ const WorkersList = () => {
 												border: "1px solid #000",
 												width: "25%"
 											}}>
-											Consultor
+											Candidato
 										</th>
 										<th
 											style={{
@@ -537,7 +537,7 @@ const WorkersList = () => {
 													borderright: " 1px solid #000"
 												}}
 												className="text small text-truncate">
-												{worker.Vacation_Bonus} Bs
+												{worker.Vacation_Bonus} dias
 											</td>
 
 											<td

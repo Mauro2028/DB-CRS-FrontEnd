@@ -39,7 +39,14 @@ const SignIn = () => {
 					<h2> datos del gerente de RRHH</h2>
 					<p> Por favor especifica tus datos para registrarte en nuestra plataforma</p>
 					<div className="form-group">
-						<label>Nombre y Apellido: </label>
+						<label
+							style={{
+								width: "180px",
+								fontweight: "bold",
+								display: "inlineblock"
+							}}>
+							Nombre y Apellido:{" "}
+						</label>
 						<br />
 						<input
 							type="text"
@@ -47,9 +54,26 @@ const SignIn = () => {
 							name="full_name"
 							onChange={handleChange}
 							value={datos.full_name}
+							style={{
+								width: "180px",
+								padding: "3px 10px",
+								border: "1px solid #f6f6f6",
+								borderradius: "3px",
+								backgroundcolor: "#f6f6f6",
+								margin: "8px 0",
+								display: "inlineblock",
+								borderColor: "black"
+							}}
 						/>
 						<br />
-						<label>Nombre de Usuario:</label>
+						<label
+							style={{
+								width: "180px",
+								fontweight: "bold",
+								display: "inlineblock"
+							}}>
+							Nombre de Usuario:
+						</label>
 						<br />
 						<input
 							type="text"
@@ -57,9 +81,26 @@ const SignIn = () => {
 							name="user_name"
 							onChange={handleChange}
 							value={datos.user_name}
+							style={{
+								width: "180px",
+								padding: "3px 10px",
+								border: "1px solid #f6f6f6",
+								borderradius: "3px",
+								backgroundcolor: "#f6f6f6",
+								margin: "8px 0",
+								display: "inlineblock",
+								borderColor: "black"
+							}}
 						/>
 						<br />
-						<label>Contraseña: </label>
+						<label
+							style={{
+								width: "180px",
+								fontweight: "bold",
+								display: "inlineblock"
+							}}>
+							Contraseña:{" "}
+						</label>
 						<br />
 						<input
 							type="password"
@@ -67,12 +108,32 @@ const SignIn = () => {
 							name="password"
 							onChange={handleChange}
 							value={datos.password}
+							style={{
+								width: "180px",
+								padding: "3px 10px",
+								border: "1px solid #f6f6f6",
+								borderradius: "3px",
+								backgroundcolor: "#f6f6f6",
+								margin: "8px 0",
+								display: "inlineblock",
+								borderColor: "black"
+							}}
 						/>
 						<br />
 						<br />
 
 						<button
 							className="btn btn-primary"
+							style={{
+								width: "30%",
+								padding: "8px 16px",
+								margintop: "32px",
+								border: "1px solid #000",
+								borderradius: "5px",
+								display: "block",
+								color: "#fff",
+								backgroundcolor: "#000"
+							}}
 							onClick={() => {
 								handleSubmit();
 							}}>
