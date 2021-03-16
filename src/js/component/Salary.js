@@ -19,14 +19,12 @@ const Workers = () => {
 			...filter,
 			[e.target.name]: e.target.value
 		});
-		console.log(filter);
 	};
 	const handleCambio = e => {
 		setBailar({
 			...bailar,
 			[e.target.name]: e.target.value
 		});
-		console.log(bailar);
 	};
 	const hanldePuesto = e => {
 		setPuesto({
@@ -67,12 +65,13 @@ const Workers = () => {
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
 						<ul className="list-group pull-down" id="contact-list">
 							{store.workers
-
 								.filter(
-									worker =>
+									worker => (
+										console.log(worker.length),
 										worker.sector == filter.name ||
-										worker.vacant == bailar.name ||
-										worker.actual_charge == puesto.name
+											worker.vacant == bailar.name ||
+											worker.actual_charge == puesto.name
+									)
 								)
 
 								.map(worker => (

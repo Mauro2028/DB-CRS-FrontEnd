@@ -35,8 +35,15 @@ export const Home = () => {
 	return (
 		<div>
 			<div className="containerPrincipal">
-				<div className="containerSecundario">
-					<div className="justify-content:center ">
+				<div
+					className="containerSecundario"
+					style={{
+						justifyContent: "center"
+					}}>
+					<div
+						style={{
+							justifyContent: "center"
+						}}>
 						<label
 							style={{
 								width: "180px",
@@ -60,7 +67,8 @@ export const Home = () => {
 								backgroundcolor: "#f6f6f6",
 								margin: "8px 0",
 								display: "inlineblock",
-								borderColor: "black"
+								borderColor: "black",
+								alignSelf: "center"
 							}}
 						/>
 						<br />
