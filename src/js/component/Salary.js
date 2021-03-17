@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import PropTypes, { object } from "prop-types";
 import { SalaryCard } from "./SalaryCard";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
+import { Suma } from "./Suma";
 
 const Workers = () => {
 	const [state, setState] = useState({
 		showModal: false,
 		idToDelete: null
 	});
+
 	const [filter, setFilter] = useState("");
 	const [bailar, setBailar] = useState("");
 	const [puesto, setPuesto] = useState("");
@@ -20,6 +22,7 @@ const Workers = () => {
 			[e.target.name]: e.target.value
 		});
 	};
+
 	const handleCambio = e => {
 		setBailar({
 			...bailar,
@@ -65,48 +68,37 @@ const Workers = () => {
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
 						<ul className="list-group pull-down" id="contact-list">
 							{store.workers
+
 								.filter(
-									worker => (
-										console.log(worker.length),
+									worker =>
 										worker.sector == filter.name ||
-											worker.vacant == bailar.name ||
-											worker.actual_charge == puesto.name
-									)
+										worker.vacant == bailar.name ||
+										worker.actual_charge == puesto.name
+									// console.log(age)
 								)
 
-								.map(worker => (
-									<div key={worker.id}>
-										<li id="worker" key={worker.id}>
-											<SalaryCard
-												name={worker.candidate}
-												value={worker.sector}
-												worker={worker}
-												onDelete={() => setState({ showModal: true, idToDelete: contact.id })}
-											/>
-										</li>
-									</div>
-								))}
+								.map(
+									worker => (
+										console.log(Object.keys(worker).length),
+										(
+											<div>
+												<li id="worker" key={worker.id}>
+													<SalaryCard
+														name={worker.candidate}
+														key={workers.id}
+														worker={worker}
+														onDelete={() =>
+															setState({ showModal: true, idToDelete: contact.id })
+														}
+													/>
+												</li>
+											</div>
+										)
+									)
+								)}
 						</ul>
 						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
 							Salario basico:
-							{store.workers
-								.filter(worker => worker.sector == filter.name || worker.vacant == bailar.name)
-								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
-						</div>
-						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-							Salario Variable:
-							{store.workers
-								.filter(worker => worker.sector == filter.name || worker.vacant == bailar.name)
-								.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)}
-						</div>
-						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-							Cesta ticket:
-							{store.workers
-								.filter(worker => worker.sector == filter.name || worker.vacant == bailar.name)
-								.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
-						</div>
-						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-							Factor:
 							{store.workers
 								.filter(
 									worker =>
@@ -114,16 +106,55 @@ const Workers = () => {
 										worker.vacant == bailar.name ||
 										worker.actual_charge == puesto.name
 								)
-								.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
+								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
+						</div>
+
+						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+							Salario Variable:
+							{store.workers
+								.filter(
+									worker =>
+										worker.sector == filter.name ||
+										worker.vacant == bailar.name ||
+										worker.actual_charge == puesto.name
+								)
+
+								.reduce(
+									(prevValue, worker) =>
+										(worker.variable_salary + prevValue) / Object.keys(worker).length,
+									0
+								)}
+							<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+								Cesta ticket:
+								{store.workers
+									.filter(
+										worker =>
+											worker.sector == filter.name ||
+											worker.vacant == bailar.name ||
+											worker.actual_charge == puesto.name
+									)
+									.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
+							</div>
+							<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
+								Factor:
+								{store.workers
+									.filter(
+										worker =>
+											worker.sector == filter.name ||
+											worker.vacant == bailar.name ||
+											worker.actual_charge == puesto.name
+									)
+									.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
+							</div>
 						</div>
 					</div>
 				</div>
+				<Modal
+					show={state.showModal}
+					onClose={() => setState({ showModal: false, idToDelete: null })}
+					idToDelete={state.idToDelete}
+				/>
 			</div>
-			<Modal
-				show={state.showModal}
-				onClose={() => setState({ showModal: false, idToDelete: null })}
-				idToDelete={state.idToDelete}
-			/>
 		</div>
 	);
 };

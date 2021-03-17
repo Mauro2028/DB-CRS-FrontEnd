@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
+import { useHistory } from "react-router-dom";
 
 export const SalaryCard = ({ worker, onDelete }) => {
 	const [state, setState] = useState({
 		//initialize state here
 	});
+	const { store, actions } = useContext(Context);
 	console.log(worker.id);
 	return (
 		<div style={{ marginRight: "30px" }}>

@@ -101,14 +101,10 @@ const Register = () => {
 	const [datos, setDatos] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
-	let pdm = parseInt(datos.Profit_Days, 10);
-	let vbm = parseInt(datos.Vacation_Bonus, 10);
-	let www = vbm.toFixed(2);
-	let sum = parseInt(12, 10 + pdm, 10 + vbm, 10);
+	let pdm = datos.Profit_Days / 30;
+	let vbm = datos.Vacation_Bonus / 30;
+	let sum = (12 + pdm + vbm).toFixed(2);
 	let cta = parseInt(datos.cesta_ticket * 12, 10);
-	console.log(vbm);
-	console.log(pdm);
-	console.log(www);
 	let sva = parseInt(datos.variable_salary * 12, 10);
 	let eap = parseInt(datos.basic_salary * datos.Factor + cta + sva);
 	let history = useHistory();
