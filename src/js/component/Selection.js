@@ -16,15 +16,55 @@ const Selection = () => {
 							Que deseas hacer?
 						</p>
 					</div>
-					<div className="bottons">
+					<div
+						style={{
+							display: "block"
+						}}
+						className=" bottons">
 						<Link to="/Worker-list">
-							<button className="btn btn-primary">Ver lista de personas</button>
+							<button
+								style={{
+									padding: "10px",
+									fontweight: "600",
+									fontsize: "20px",
+									color: "#ffffff",
+									backgroundcolor: "#1883ba",
+									borderradius: "6px",
+									border: "2px solid #0016b0"
+								}}
+								className="btn btn-primary">
+								Ver lista de personas
+							</button>
 						</Link>
 						<Link to="/workers">
-							<button className="btn btn-primary">Ver registros</button>
+							<button
+								style={{
+									padding: "10px",
+									fontweight: "600",
+									fontsize: "20px",
+									color: "#ffffff",
+									backgroundcolor: "#1883ba",
+									borderradius: "6px",
+									border: "2px solid #0016b0"
+								}}
+								className="btn btn-primary">
+								Ver registros
+							</button>
 						</Link>
 						<Link to="/worker-register">
-							<button className="btn btn-primary">Registrar personas</button>
+							<button
+								style={{
+									padding: "10px",
+									fontweight: "600",
+									fontsize: "20px",
+									color: "#ffffff",
+									backgroundcolor: "#1883ba",
+									borderradius: "6px",
+									border: "2px solid #0016b0"
+								}}
+								className="btn btn-primary">
+								Registrar personas
+							</button>
 						</Link>
 					</div>
 				</div>
