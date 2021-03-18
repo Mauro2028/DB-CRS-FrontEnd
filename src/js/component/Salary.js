@@ -15,6 +15,8 @@ const Workers = () => {
 	const [filter, setFilter] = useState("");
 	const [bailar, setBailar] = useState("");
 	const [puesto, setPuesto] = useState("");
+	const [fecha, setFecha] = useState("");
+	const [gerencia, setGerencia] = useState("");
 
 	const handleChange = e => {
 		setFilter({
@@ -32,6 +34,12 @@ const Workers = () => {
 	const hanldePuesto = e => {
 		setPuesto({
 			...puesto,
+			[e.target.name]: e.target.value
+		});
+	};
+	const hanldeFecha = e => {
+		setFecha({
+			...fecha,
 			[e.target.name]: e.target.value
 		});
 	};
@@ -56,6 +64,15 @@ const Workers = () => {
 						value={puesto.name}
 					/>
 
+					<select onChange={e => setGerencia({ name: e.target.value })} value={gerencia.name}>
+						<option defaultValue="">Gerencia</option>
+						<option value="Tecnologico">Sector Tecnologico</option>
+						<option value="Financiero">Mercadeo y ventas</option>
+						<option value="Consultoria">Servicio al cliente</option>
+						<option value="Educativo">Tecnologia funcional</option>
+						<option value="Servicios">Tecnologia tecnica</option>
+					</select>
+
 					<select onChange={e => setFilter({ name: e.target.value })} value={filter.name}>
 						<option defaultValue="">Sector</option>
 						<option value="Tecnologico">Sector Tecnologico</option>
@@ -63,6 +80,22 @@ const Workers = () => {
 						<option value="Consultoria">Consultoria</option>
 						<option value="Educativo">Educativo</option>
 						<option value="Servicios">Servicios</option>
+					</select>
+
+					<select onChange={e => setFecha({ name: e.target.value })} value={fecha.name}>
+						<option defaultValue="">Mes de inicio</option>
+						<option value="Enero">Enero</option>
+						<option value="Febrero">Febrero</option>
+						<option value="Marzo">Marzo</option>
+						<option value="Abril">Abril</option>
+						<option value="Mayo">Mayo</option>
+						<option value="Junio">Junio</option>
+						<option value="Julio">Julio</option>
+						<option value="Agosto">Agosto</option>
+						<option value="Septiembre">Septiembre</option>
+						<option value="Mayo">Octubre</option>
+						<option value="Mayo">Noviembre</option>
+						<option value="Mayo">Diciembre</option>
 					</select>
 
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
@@ -73,13 +106,14 @@ const Workers = () => {
 									worker =>
 										worker.sector == filter.name ||
 										worker.vacant == bailar.name ||
+										worker.init_date == fecha.name ||
 										worker.actual_charge == puesto.name
 									// console.log(age)
 								)
 
 								.map(
 									worker => (
-										console.log(Object.keys(worker).length),
+										console.log(worker.id),
 										(
 											<div>
 												<li id="worker" key={worker.id}>
@@ -104,8 +138,11 @@ const Workers = () => {
 									worker =>
 										worker.sector == filter.name ||
 										worker.vacant == bailar.name ||
+										worker.init_date == fecha.name ||
+										worker.management == gerencia.name ||
 										worker.actual_charge == puesto.name
 								)
+
 								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
 						</div>
 
@@ -116,14 +153,12 @@ const Workers = () => {
 									worker =>
 										worker.sector == filter.name ||
 										worker.vacant == bailar.name ||
+										worker.init_date == fecha.name ||
+										worker.management == gerencia.name ||
 										worker.actual_charge == puesto.name
 								)
 
-								.reduce(
-									(prevValue, worker) =>
-										(worker.variable_salary + prevValue) / Object.keys(worker).length,
-									0
-								)}
+								.reduce((prevValue, worker) => worker.variable_salary + prevValue, 0)}
 							<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
 								Cesta ticket:
 								{store.workers
@@ -131,6 +166,8 @@ const Workers = () => {
 										worker =>
 											worker.sector == filter.name ||
 											worker.vacant == bailar.name ||
+											worker.init_date == fecha.name ||
+											worker.management == gerencia.name ||
 											worker.actual_charge == puesto.name
 									)
 									.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
@@ -142,6 +179,8 @@ const Workers = () => {
 										worker =>
 											worker.sector == filter.name ||
 											worker.vacant == bailar.name ||
+											worker.init_date == fecha.name ||
+											worker.management == gerencia.name ||
 											worker.actual_charge == puesto.name
 									)
 									.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}

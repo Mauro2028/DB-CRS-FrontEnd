@@ -202,15 +202,30 @@ const Register = () => {
 							value={datos.vacant.toLowerCase()}
 						/>
 						<br />
-						<label>Fecha de Inicio:</label>
+						<label>Mes de inicio:</label>
 						<br />
-						<input
-							type="text"
-							className="form-control"
+
+						<select name="init_date" value={datos.init_date} onChange={handleChange}>
+							<option value="">Vacio</option>
+							<option value="Enero">Enero</option>
+							<option value="Febrero">Febrero</option>
+							<option value="Marzo">Marzo</option>
+							<option value="Abril">Abril</option>
+							<option value="Mayo">Mayo</option>
+							<option value="Junio">Junio</option>
+							<option value="Julio">Julio</option>
+							<option value="Agosto">Agosto</option>
+							<option value="Septiembre">Septiembre</option>
+							<option value="Octubre">Octubre</option>
+							<option value="Noviembre">Noviembre</option>
+							<option value="Diciembre">Diciembre</option>
+						</select>
+
+						{/* className="form-control"
 							name="init_date"
 							onChange={handleChange}
-							value={datos.init_date}
-						/>
+							value={datos.init_date} /> */}
+
 						<br />
 						<br />
 						<label>Estatus: </label>
@@ -236,7 +251,6 @@ const Register = () => {
 							<option value="Por agendar entrevsita">Por agendar entrevsita</option>
 							<option value="Pre-empleo">Pre-empleo</option>
 						</select>
-
 						<br />
 						<label>Fuente de captacion: </label>
 						<br />
@@ -250,14 +264,25 @@ const Register = () => {
 						<br />
 						<label>Gerencia: </label>
 						<br />
-						<input
+						<select
+							className="form-control"
+							name="management"
+							onChange={handleChange}
+							value={datos.management}>
+							<option value="">Vacio</option>
+							<option value="Mercadeo y ventas">Mercadeo y ventas</option>
+							<option value="Servicio al cliente">Servicio al cliente</option>
+							<option value="Tecnologia funcional">Tecnologia funcional</option>
+							<option value="Tecnologia tecnica">Tecnologia tecnica</option>
+						</select>
+						{/* <input
 							type="text"
 							className="form-control"
 							name="managment"
 							onChange={handleChange}
 							value={datos.managment.toLowerCase()}
 						/>
-						<br />
+						<br /> */}
 						<br />
 						<label>Fecha de cita a entrevista : </label>
 						<br />
@@ -269,7 +294,6 @@ const Register = () => {
 							value={datos.interview_date}
 						/>
 						<br />
-
 						<label>Cargo actual del candidato: </label>
 						<br />
 						<input
@@ -290,7 +314,6 @@ const Register = () => {
 							value={datos.company.toLowerCase()}
 						/>
 						<br />
-
 						<label>
 							Sector:
 							<select name="sector" value={datos.sector} onChange={handleChange}>
@@ -302,7 +325,6 @@ const Register = () => {
 								<option value="Servicios">Servicios</option>
 							</select>
 						</label>
-
 						<br />
 						<label>Sueldo en moneda extranjera: </label>
 						<br />
@@ -354,7 +376,6 @@ const Register = () => {
 							value={datos.Profit_Days}
 						/>
 						<br />
-
 						<label>Bono vacacional: </label>
 						<br />
 						<input
@@ -374,7 +395,6 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.vacations}
 						/>
-
 						<br />
 						<label>Factor: </label>
 						<br />
@@ -396,7 +416,6 @@ const Register = () => {
 							value={(datos.Estimated_annual_package = eap)}
 						/>
 						<br />
-
 						<br />
 						<button
 							className="btn btn-primary"
