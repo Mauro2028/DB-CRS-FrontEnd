@@ -41,12 +41,13 @@ const Register = () => {
 		basic_salary: null,
 		variable_salary: null,
 		cesta_ticket: null,
-		Monthly_Cash_Flow: null,
+		// Monthly_Cash_Flow: null,
 		Profit_Days: null,
 		vacations: null,
 		Vacation_Bonus: null,
 		Factor: null,
-		Estimated_annual_package: null
+		Estimated_annual_package: null,
+		Observations: ""
 		// Mixed_mothly_compensation: "",
 		// Mixed_anual_compensation: ""
 		// Assistance_bonus: false,
@@ -83,7 +84,7 @@ const Register = () => {
 		// Global_Average: null,
 		// References_Check: "",
 		// Technical_Test_Results: null,
-		// Observations: "",
+
 		// Days_passed_requisition_interviewGH: "",
 		// Days_passed_interviewGH_Techinterview: "",
 		// Days_passed_Techinterview_entry: "",
@@ -358,9 +359,9 @@ const Register = () => {
 						<br />
 						<select
 							className="form-control"
-							name="management"
+							name="managment"
 							onChange={handleChange}
-							value={datos.management}>
+							value={datos.managment}>
 							<option value="">Vacio</option>
 							<option value="Mercadeo y ventas">Mercadeo y ventas</option>
 							<option value="Servicio al cliente">Servicio al cliente</option>
@@ -644,6 +645,27 @@ const Register = () => {
 							name="Estimated_annual_package"
 							onChange={handleChange}
 							value={(datos.Estimated_annual_package = eap)}
+						/>
+						<br />
+						<label
+							style={{
+								float: "left",
+								width: "200px",
+								paddingright: "24px"
+							}}>
+							Observaciones:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "100%"
+							}}
+							type="text"
+							className="form-control"
+							name="Observations"
+							onChange={handleChange}
+							value={datos.Observations}
 						/>
 						<br />
 						<br />

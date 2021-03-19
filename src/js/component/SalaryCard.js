@@ -9,7 +9,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 		//initialize state here
 	});
 	const { store, actions } = useContext(Context);
-	console.log(worker.id);
+
 	return (
 		<div style={{ marginRight: "30px" }}>
 			<table
@@ -177,6 +177,15 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						</th>
 						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 							Compesacion anual mixta
+						</th>
+						<th
+							style={{
+								padding: "0.3em",
+								border: "1px solid #000",
+								width: "35%",
+								background: "#eee"
+							}}>
+							Observaciones
 						</th>
 					</tr>
 				</thead>
@@ -540,6 +549,20 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{worker.Estimated_annual_package} $
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderbottom: "1px solid #000",
+								bordercollapse: "collapse",
+								padding: "0.3em",
+								background: "#eee",
+								captionside: "bottom",
+								border: "1px solid #000",
+								borderright: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.Observations}
 						</td>
 					</tr>
 				</tbody>

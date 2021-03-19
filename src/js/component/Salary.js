@@ -44,6 +44,13 @@ const Workers = () => {
 		});
 	};
 
+	// const handleSuma = (worker, i = 0) => {
+	// 	while (i < worker) {
+	// 		i = i + 1;
+	// 		console.log(handleSuma());
+	// 	}
+	// };
+
 	const { store, actions } = useContext(Context);
 	// debugger;
 
@@ -66,11 +73,11 @@ const Workers = () => {
 
 					<select onChange={e => setGerencia({ name: e.target.value })} value={gerencia.name}>
 						<option defaultValue="">Gerencia</option>
-						<option value="Tecnologico">Sector Tecnologico</option>
-						<option value="Financiero">Mercadeo y ventas</option>
-						<option value="Consultoria">Servicio al cliente</option>
-						<option value="Educativo">Tecnologia funcional</option>
-						<option value="Servicios">Tecnologia tecnica</option>
+						<option value="Tecnologico">Tecnologia</option>
+						<option value="Mercadeo y ventas">Mercadeo y ventas</option>
+						<option value="Servicio al cliente">Servicio al cliente</option>
+						<option value="Tecnologia funcional">Tecnologia funcional</option>
+						<option value="Tecnologia tecnica">Tecnologia tecnica</option>
 					</select>
 
 					<select onChange={e => setFilter({ name: e.target.value })} value={filter.name}>
@@ -107,12 +114,15 @@ const Workers = () => {
 										worker.sector == filter.name ||
 										worker.vacant == bailar.name ||
 										worker.init_date == fecha.name ||
+										worker.managment == gerencia.name ||
 										worker.actual_charge == puesto.name
 									// console.log(age)
 								)
 
 								.map(
 									worker => (
+										// console.log(worker.id),
+
 										console.log(worker.id),
 										(
 											<div>
@@ -139,11 +149,11 @@ const Workers = () => {
 										worker.sector == filter.name ||
 										worker.vacant == bailar.name ||
 										worker.init_date == fecha.name ||
-										worker.management == gerencia.name ||
+										worker.managment == gerencia.name ||
 										worker.actual_charge == puesto.name
 								)
 
-								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
+								.reduce((prevValue, worker) => worker.basic_salary + prevValue, 0)}
 						</div>
 
 						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
@@ -154,7 +164,7 @@ const Workers = () => {
 										worker.sector == filter.name ||
 										worker.vacant == bailar.name ||
 										worker.init_date == fecha.name ||
-										worker.management == gerencia.name ||
+										worker.managment == gerencia.name ||
 										worker.actual_charge == puesto.name
 								)
 
@@ -167,7 +177,7 @@ const Workers = () => {
 											worker.sector == filter.name ||
 											worker.vacant == bailar.name ||
 											worker.init_date == fecha.name ||
-											worker.management == gerencia.name ||
+											worker.managment == gerencia.name ||
 											worker.actual_charge == puesto.name
 									)
 									.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
@@ -180,7 +190,7 @@ const Workers = () => {
 											worker.sector == filter.name ||
 											worker.vacant == bailar.name ||
 											worker.init_date == fecha.name ||
-											worker.management == gerencia.name ||
+											worker.managment == gerencia.name ||
 											worker.actual_charge == puesto.name
 									)
 									.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}

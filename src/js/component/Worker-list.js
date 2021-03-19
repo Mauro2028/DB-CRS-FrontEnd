@@ -205,6 +205,9 @@ const WorkersList = () => {
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 											Compesacion anual mixta
 										</th>
+										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+											Observaciones
+										</th>
 									</tr>
 								</thead>
 								<tbody
@@ -568,6 +571,19 @@ const WorkersList = () => {
 												}}
 												className="text small text-truncate">
 												{worker.Estimated_annual_package} $
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderbottom: "1px solid #000",
+													bordercollapse: "collapse",
+													padding: "0.3em",
+													captionside: "bottom",
+													border: "1px solid #000",
+													borderright: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.Observations}
 											</td>
 										</tr>
 									))}
