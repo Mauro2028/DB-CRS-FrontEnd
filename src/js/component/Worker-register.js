@@ -140,8 +140,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Consultor (Obligatorio):{" "}
 						</label>
@@ -149,7 +150,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -161,8 +164,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "100%",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Nombre del Candidato (Obligatorio):{" "}
 						</label>
@@ -170,7 +174,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -182,8 +188,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Cedula (Obligatorio):{" "}
 						</label>
@@ -191,7 +198,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -203,8 +212,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Telefono (Obligatorio):{" "}
 						</label>
@@ -212,7 +222,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -224,8 +236,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "100%",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Correo electronico (Obligatorio):{" "}
 						</label>
@@ -233,7 +246,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -245,8 +260,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "100%",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Vacante (Obligatorio):{" "}
 						</label>
@@ -254,7 +270,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -266,14 +284,24 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Mes de inicio:
 						</label>
 						<br />
-
-						<select name="init_date" value={datos.init_date} onChange={handleChange}>
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
+							}}
+							className="form-control"
+							name="init_date"
+							value={datos.init_date}
+							onChange={handleChange}>
 							<option value="">Vacio</option>
 							<option value="Enero">Enero</option>
 							<option value="Febrero">Febrero</option>
@@ -289,23 +317,27 @@ const Register = () => {
 							<option value="Diciembre">Diciembre</option>
 						</select>
 
-						{/* className="form-control"
-							name="init_date"
-							onChange={handleChange}
-							value={datos.init_date} /> */}
-
-						<br />
 						<br />
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
-							Estatus:{" "}
+							Estatus: <br />
 						</label>
-						<br />
-						<select className="form-control" name="status" onChange={handleChange} value={datos.status}>
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
+							}}
+							className="form-control"
+							name="status"
+							onChange={handleChange}
+							value={datos.status}>
 							<option value="">Vacio</option>
 							<option value="Citado a entrevista">Citado a entrevista</option>
 							<option value="El area no lo quiso evaluar">El area no lo quiso evaluar</option>
@@ -326,12 +358,14 @@ const Register = () => {
 							<option value="Por agendar entrevsita">Por agendar entrevsita</option>
 							<option value="Pre-empleo">Pre-empleo</option>
 						</select>
+
 						<br />
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Fuente de captacion:{" "}
 						</label>
@@ -339,7 +373,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -351,13 +387,20 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
-							Gerencia:{" "}
+							Gerencia:
 						</label>
 						<br />
 						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
+							}}
 							className="form-control"
 							name="managment"
 							onChange={handleChange}
@@ -368,8 +411,9 @@ const Register = () => {
 							<option value="Tecnologia funcional">Tecnologia funcional</option>
 							<option value="Tecnologia tecnica">Tecnologia tecnica</option>
 						</select>
+
 						{/* 				<input style={{ float: "left",
-    						width: "200px"}}
+    						width: "80%"}}
 							type="text"
 							className="form-control"
 							name="managment"
@@ -381,8 +425,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Fecha de cita a entrevista :{" "}
 						</label>
@@ -390,7 +435,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -402,8 +449,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Cargo actual del candidato:{" "}
 						</label>
@@ -411,7 +459,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -423,8 +473,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Empresa:{" "}
 						</label>
@@ -432,7 +483,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -444,25 +497,38 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Sector:
-							<select name="sector" value={datos.sector} onChange={handleChange}>
-								<option value="">Vacio</option>
-								<option value="Financiero">Financiero</option>
-								<option value="Tecnologico">Tecnologico</option>
-								<option value="Consultoria">Consultoria</option>
-								<option value="Educativo">Educativo</option>
-								<option value="Servicios">Servicios</option>
-							</select>
 						</label>
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
+							}}
+							className="form-control"
+							name="sector"
+							value={datos.sector}
+							onChange={handleChange}>
+							<option value="">Vacio</option>
+							<option value="Financiero">Financiero</option>
+							<option value="Tecnologico">Tecnologico</option>
+							<option value="Consultoria">Consultoria</option>
+							<option value="Educativo">Educativo</option>
+							<option value="Servicios">Servicios</option>
+						</select>
+
 						<br />
 						<label
 							style={{
 								float: "left",
-								width: "100%",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Sueldo en moneda extranjera:{" "}
 						</label>
@@ -470,7 +536,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -482,8 +550,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Sueldo basico:{" "}
 						</label>
@@ -491,7 +560,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -503,8 +574,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Sueldo variable:{" "}
 						</label>
@@ -512,7 +584,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -524,8 +598,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							cesta ticket:{" "}
 						</label>
@@ -533,7 +608,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -545,8 +622,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Dias de utilidades:{" "}
 						</label>
@@ -554,7 +632,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -566,8 +646,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Bono vacacional:{" "}
 						</label>
@@ -575,7 +656,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -587,8 +670,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Disfrute de vacaciones:{" "}
 						</label>
@@ -596,7 +680,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -608,8 +694,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Factor:{" "}
 						</label>
@@ -617,7 +704,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -629,8 +718,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Compensacion anual mixta:{" "}
 						</label>
@@ -638,7 +728,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="number"
 							className="form-control"
@@ -650,8 +742,9 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "200px",
-								paddingright: "24px"
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Observaciones:{" "}
 						</label>
@@ -659,7 +752,9 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "100%"
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6"
 							}}
 							type="text"
 							className="form-control"
@@ -669,12 +764,17 @@ const Register = () => {
 						/>
 						<br />
 						<br />
+						<br />
 						<button
 							style={{
 								float: "right",
-								width: "200px"
+								width: "200px",
+								marginTop: "20px",
+								color: "#ffffff",
+								backgroundColor: "#1883ba",
+								marginRight: "20px"
 							}}
-							className="btn btn-primary"
+							className="btn"
 							onClick={() => {
 								handleSubmit();
 							}}>

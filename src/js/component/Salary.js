@@ -100,9 +100,9 @@ const Workers = () => {
 						<option value="Julio">Julio</option>
 						<option value="Agosto">Agosto</option>
 						<option value="Septiembre">Septiembre</option>
-						<option value="Mayo">Octubre</option>
-						<option value="Mayo">Noviembre</option>
-						<option value="Mayo">Diciembre</option>
+						<option value="Octubre">Octubre</option>
+						<option value="Noviembre">Noviembre</option>
+						<option value="Diciembre">Diciembre</option>
 					</select>
 
 					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
@@ -121,8 +121,6 @@ const Workers = () => {
 
 								.map(
 									worker => (
-										// console.log(worker.id),
-
 										console.log(worker.id),
 										(
 											<div>

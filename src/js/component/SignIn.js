@@ -41,9 +41,13 @@ const SignIn = () => {
 					<div className="form-group">
 						<label
 							style={{
-								width: "180px",
-								fontweight: "bold",
-								display: "inlineblock"
+								float: "left",
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px",
+
+								display: "inlineblock",
+								borderColor: "black"
 							}}>
 							Nombre y Apellido:{" "}
 						</label>
@@ -55,12 +59,10 @@ const SignIn = () => {
 							onChange={handleChange}
 							value={datos.full_name}
 							style={{
-								width: "180px",
-								padding: "3px 10px",
-								border: "1px solid #f6f6f6",
-								borderradius: "3px",
-								backgroundcolor: "#f6f6f6",
-								margin: "8px 0",
+								float: "left",
+								width: "50%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
 								borderColor: "black"
 							}}
@@ -68,9 +70,13 @@ const SignIn = () => {
 						<br />
 						<label
 							style={{
-								width: "180px",
-								fontweight: "bold",
-								display: "inlineblock"
+								float: "left",
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px",
+
+								display: "inlineblock",
+								borderColor: "black"
 							}}>
 							Nombre de Usuario:
 						</label>
@@ -82,12 +88,10 @@ const SignIn = () => {
 							onChange={handleChange}
 							value={datos.user_name}
 							style={{
-								width: "180px",
-								padding: "3px 10px",
-								border: "1px solid #f6f6f6",
-								borderradius: "3px",
-								backgroundcolor: "#f6f6f6",
-								margin: "8px 0",
+								float: "left",
+								width: "50%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
 								borderColor: "black"
 							}}
@@ -95,8 +99,11 @@ const SignIn = () => {
 						<br />
 						<label
 							style={{
-								width: "180px",
-								fontweight: "bold",
+								float: "left",
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px",
+
 								display: "inlineblock"
 							}}>
 							Contraseña:{" "}
@@ -109,30 +116,29 @@ const SignIn = () => {
 							onChange={handleChange}
 							value={datos.password}
 							style={{
-								width: "180px",
-								padding: "3px 10px",
-								border: "1px solid #f6f6f6",
-								borderradius: "3px",
-								backgroundcolor: "#f6f6f6",
-								margin: "8px 0",
+								float: "left",
+								width: "50%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
 								borderColor: "black"
 							}}
 						/>
 						<br />
 						<br />
-
+						<br />
 						<button
 							className="btn btn-primary"
 							style={{
 								width: "30%",
 								padding: "8px 16px",
-								margintop: "32px",
+								marginTop: "50px",
 								border: "1px solid #000",
-								borderradius: "5px",
+								borderRadius: "5px",
 								display: "block",
 								color: "#fff",
-								backgroundcolor: "#000"
+								backgroundColor: "#556",
+								marginLeft: "30px"
 							}}
 							onClick={() => {
 								handleSubmit();

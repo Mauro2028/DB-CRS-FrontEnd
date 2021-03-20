@@ -8,7 +8,12 @@ const Selection = () => {
 				<div>
 					<navbar />
 				</div>
-				<div className="containerSecundario">
+				<div
+					className="containerSecundario"
+					style={{
+						display: "inline",
+						alignItems: "center"
+					}}>
 					<div className="parrafo">
 						<p>
 							Bienvenido a la aplicaion de captacion, reclutamiento y seleccion.
@@ -18,9 +23,10 @@ const Selection = () => {
 					</div>
 					<div
 						style={{
-							display: "block"
+							display: "flex",
+							justifyContent: "space-evenly"
 						}}
-						className=" bottons">
+						className=" buttons">
 						<Link to="/Worker-list">
 							<button
 								style={{
@@ -28,11 +34,14 @@ const Selection = () => {
 									fontweight: "600",
 									fontsize: "20px",
 									color: "#ffffff",
-									backgroundcolor: "#1883ba",
-									borderradius: "6px",
-									border: "2px solid #0016b0"
+									backgroundColor: "#1883ba",
+									borderRadius: "6px",
+									border: "2px solid #0016b0",
+									display: "display-flex",
+									justifyContent: "space-around",
+									width: "200px"
 								}}
-								className="btn btn-primary">
+								className="btn">
 								Ver lista de personas
 							</button>
 						</Link>
@@ -43,9 +52,12 @@ const Selection = () => {
 									fontweight: "600",
 									fontsize: "20px",
 									color: "#ffffff",
-									backgroundcolor: "#1883ba",
-									borderradius: "6px",
-									border: "2px solid #0016b0"
+									backgroundColor: "#1883ba",
+									borderRadius: "6px",
+									border: "2px solid #0016b0",
+									display: "flex",
+									justifyContent: "space-around",
+									width: "200px"
 								}}
 								className="btn btn-primary">
 								Ver registros
@@ -58,9 +70,12 @@ const Selection = () => {
 									fontweight: "600",
 									fontsize: "20px",
 									color: "#ffffff",
-									backgroundcolor: "#1883ba",
-									borderradius: "6px",
-									border: "2px solid #0016b0"
+									backgroundColor: "#1883ba",
+									borderRadius: "6px",
+									border: "2px solid #0016b0",
+									display: "flex",
+									justifyContent: "space-around",
+									width: "200px"
 								}}
 								className="btn btn-primary">
 								Registrar personas

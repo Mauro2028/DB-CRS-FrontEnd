@@ -18,25 +18,64 @@ const WorkersList = () => {
 			<div>
 				<div className="container">
 					<div>
-						<p className="text-right my-3">
-							<Link className="btn btn-success" to="/worker-register">
-								Add new worker
+						<div
+							style={{
+								display: "inline-flex",
+								justifyContent: "left",
+								marginRight: "50px"
+							}}>
+							<Link to="/worker-register">
+								<button
+									className="btn"
+									style={{
+										width: "80%",
+										padding: "8px 16px",
+										marginTop: "50px",
+										border: "1px solid #000",
+										borderRadius: "5px",
+										display: "flex",
+										color: "#fff",
+										backgroundColor: "#1883ba",
+										marginRight: "30px"
+									}}>
+									Anadir trabajador
+								</button>
 							</Link>
-						</p>
+							<Link to="/workers">
+								<button
+									className="btn"
+									style={{
+										width: "80%",
+										padding: "8px 16px",
+										marginTop: "50px",
+										border: "1px solid #000",
+										borderRadius: "5px",
+										display: "flex",
+										color: "#fff",
+										backgroundColor: "#1883ba",
+										marginRight: "30px"
+									}}>
+									Ver reportes
+								</button>
+							</Link>
+						</div>
 
-						{/* <div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-							<ul className="list-group pull-down" id="contact-list"> */}
-						<div style={{ marginRight: "30px" }}>
+						<div
+							style={{
+								marginLeft: "900px",
+								boxSizing: "border-box",
+								display: "flex",
+								justifyContent: "center"
+							}}>
 							<table
 								className="table"
 								style={{
 									width: "100%",
 									textalign: "left",
 									bordercollapse: "collapse",
-
+									boxSizing: "border-box",
 									captionside: "top",
-									border: "1px solid #000",
-									marginRight: "30px"
+									border: "1px solid #000"
 								}}>
 								<thead>
 									<tr>

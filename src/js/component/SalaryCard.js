@@ -11,7 +11,15 @@ export const SalaryCard = ({ worker, onDelete }) => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div style={{ marginRight: "30px" }}>
+		<div
+		// style={{
+		// 	marginLeft: "900px",
+		// 	width: "auto",
+		// 	boxSizing: "border-box",
+		// 	display: "flex",
+		// 	justifyContent: "center"
+		// }}
+		>
 			<table
 				className="table"
 				style={{
@@ -412,7 +420,6 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderbottom: "1px solid #000",
 								bordercollapse: "collapse",
 								padding: "0.3em",
-								background: "#eee",
 								captionside: "bottom",
 								border: "1px solid #000",
 								borderright: " 1px solid #000"
@@ -534,7 +541,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.Factor} Bs
+							{worker.Factor} dias
 						</td>
 
 						<td

@@ -46,9 +46,10 @@ export const Home = () => {
 						}}>
 						<label
 							style={{
-								width: "180px",
-								fontweight: "bold",
-								display: "inlineblock"
+								float: "left",
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px"
 							}}>
 							Usuario:{" "}
 						</label>
@@ -60,23 +61,27 @@ export const Home = () => {
 							onChange={handleChange}
 							value={datos.user_name}
 							style={{
-								width: "180px",
 								padding: "3px 10px",
 								border: "1px solid #f6f6f6",
-								borderradius: "3px",
-								backgroundcolor: "#f6f6f6",
-								margin: "8px 0",
+								borderRadius: "3px",
+								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
 								borderColor: "black",
-								alignSelf: "center"
+								alignSelf: "center",
+								float: "left",
+								width: "50%",
+								marginLeft: "20px"
 							}}
 						/>
 						<br />
+
 						<label
 							style={{
-								width: "180px",
-								fontweight: "bold",
-								display: "inlineblock"
+								float: "left",
+								width: "80%",
+								paddingright: "24px",
+								marginLeft: "20px",
+								marginTop: "20px"
 							}}>
 							Contraseña:{" "}
 						</label>
@@ -88,29 +93,32 @@ export const Home = () => {
 							onChange={handleChange}
 							value={datos.password}
 							style={{
-								width: "180px",
 								padding: "3px 10px",
 								border: "1px solid #f6f6f6",
-								borderradius: "3px",
-								backgroundcolor: "#f6f6f6",
-								margin: "8px 0",
+								borderRadius: "3px",
+								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
-								borderColor: "black"
+								borderColor: "black",
+								alignSelf: "center",
+								float: "left",
+								width: "50%",
+								marginLeft: "20px"
 							}}
 						/>
 						<br />
 
 						<button
-							className="btn btn-primary"
+							className="btn"
 							style={{
 								width: "30%",
 								padding: "8px 16px",
-								margintop: "32px",
+								marginTop: "100px",
 								border: "1px solid #000",
-								borderradius: "5px",
+								borderRadius: "5px",
 								display: "block",
 								color: "#fff",
-								backgroundcolor: "#000"
+								backgroundColor: "#1883ba",
+								marginLeft: "30px"
 							}}
 							onClick={() => {
 								handleSubmit();
@@ -119,21 +127,21 @@ export const Home = () => {
 						</button>
 
 						<br />
-						{error ? <div>Todos los campos deben ser validos</div> : null}
+						{error ? <div style={{ marginLeft: "50px" }}>Todos los campos deben ser validos</div> : null}
 						<div className="linea" />
 						<br />
 						<Link to="/SignIn">
 							<button
-								className="btn btn-primary"
 								style={{
 									width: "30%",
 									padding: "8px 16px",
-									margintop: "32px",
+									marginTop: "10px",
 									border: "1px solid #000",
-									borderradius: "5px",
+									borderRadius: "5px",
 									display: "block",
 									color: "#fff",
-									backgroundcolor: "#000"
+									backgroundColor: "#1883ba",
+									marginLeft: "30px"
 								}}>
 								Registrate
 							</button>
