@@ -49,7 +49,8 @@ export const Home = () => {
 								float: "left",
 								width: "80%",
 								paddingright: "24px",
-								marginLeft: "20px"
+								marginLeft: "20px",
+								fontSize: "17px"
 							}}>
 							Usuario:{" "}
 						</label>
@@ -69,7 +70,7 @@ export const Home = () => {
 								borderColor: "black",
 								alignSelf: "center",
 								float: "left",
-								width: "50%",
+								width: "45%",
 								marginLeft: "20px"
 							}}
 						/>
@@ -81,7 +82,8 @@ export const Home = () => {
 								width: "80%",
 								paddingright: "24px",
 								marginLeft: "20px",
-								marginTop: "20px"
+								marginTop: "20px",
+								fontSize: "17px"
 							}}>
 							Contraseña:{" "}
 						</label>
@@ -101,7 +103,7 @@ export const Home = () => {
 								borderColor: "black",
 								alignSelf: "center",
 								float: "left",
-								width: "50%",
+								width: "45%",
 								marginLeft: "20px"
 							}}
 						/>
@@ -112,7 +114,7 @@ export const Home = () => {
 							style={{
 								width: "30%",
 								padding: "8px 16px",
-								marginTop: "100px",
+								marginTop: "110px",
 								border: "1px solid #000",
 								borderRadius: "5px",
 								display: "block",
@@ -135,9 +137,9 @@ export const Home = () => {
 								style={{
 									width: "30%",
 									padding: "8px 16px",
-									marginTop: "10px",
+									marginTop: "5px",
 									border: "1px solid #000",
-									borderRadius: "5px",
+									borderRadius: "-20px",
 									display: "block",
 									color: "#fff",
 									backgroundColor: "#1883ba",

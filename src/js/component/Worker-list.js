@@ -21,8 +21,8 @@ const WorkersList = () => {
 						<div
 							style={{
 								display: "inline-flex",
-								justifyContent: "left",
-								marginRight: "50px"
+								justifyContent: "end",
+								marginLeft: "-100px"
 							}}>
 							<Link to="/worker-register">
 								<button
@@ -38,14 +38,14 @@ const WorkersList = () => {
 										backgroundColor: "#1883ba",
 										marginRight: "30px"
 									}}>
-									Anadir trabajador
+									Añadir trabajador
 								</button>
 							</Link>
 							<Link to="/workers">
 								<button
 									className="btn"
 									style={{
-										width: "80%",
+										width: "100%",
 										padding: "8px 16px",
 										marginTop: "50px",
 										border: "1px solid #000",
@@ -53,7 +53,8 @@ const WorkersList = () => {
 										display: "flex",
 										color: "#fff",
 										backgroundColor: "#1883ba",
-										marginRight: "30px"
+										alignItems: "center",
+										height: "60%"
 									}}>
 									Ver reportes
 								</button>
@@ -62,10 +63,11 @@ const WorkersList = () => {
 
 						<div
 							style={{
-								marginLeft: "900px",
+								marginLeft: "700px",
 								boxSizing: "border-box",
 								display: "flex",
-								justifyContent: "center"
+								justifyContent: "center",
+								marginTop: "10px"
 							}}>
 							<table
 								className="table"

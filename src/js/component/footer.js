@@ -10,7 +10,8 @@ export const Footer = () => (
 			backgroundColor: "#305282",
 			color: "white",
 			textalign: "center",
-			fontSize: "20px"
+			fontSize: "20px",
+			height: "65px"
 		}}
 		className="footer mt-auto py-3 text-center">
 		<p>Gestion Humana</p>

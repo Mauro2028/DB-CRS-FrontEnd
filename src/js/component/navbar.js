@@ -1,13 +1,15 @@
 import React from "react";
 import softech from "../../img/softech.jpeg";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
 		<nav>
-			<img src={softech} width="200px" height="80px" marginLeft="5px" />
+			<Link to="/selection">
+				<img src={softech} width="250px" height="80px" marginLeft="5px" />
+			</Link>
 
-			<h2 style={{ marginLeft: "10px" }}>Base de datos captacion, reclutamiento y seleccion</h2>
+			<h2 style={{ marginLeft: "10px" }}>Base de datos captación, reclutamiento y selección</h2>
 		</nav>
 	);
 };

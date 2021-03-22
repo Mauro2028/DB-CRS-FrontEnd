@@ -51,18 +51,18 @@ const Register = () => {
 		// Mixed_mothly_compensation: "",
 		// Mixed_anual_compensation: ""
 		// Assistance_bonus: false,
-		// Production_bonus: false,
-		// Transport_bonus: false,
-		// Savings_Bank: false,
-		// sales_commissions: false,
-		// parking_payment: false,
-		// full_H_C_M_Emp_Family: false,
-		// partial_H_C_M_Emp_Family: false,
+		// Production_bonus: "No",
+		// Transport_bonus: "No",
+		// Savings_Bank: "No",
+		// sales_commissions: "No",
+		// parking_payment: "No",
+		// full_HCM_Emp_Family: "No",
+		// partial_HCM_Emp_Family: "No",
 		// Funeral_Insurance: false,
-		// Vehicle_insurance: false,
-		// life_insurance: false,
-		// dinning_room: false,
-		// food_bags: false,
+		// Vehicle_insurance: "No",
+		// life_insurance: "No",
+		// dinning_room: "No",
+		// food_bags: "No"
 		// uniform: false,
 		// birthday_bonus: false,
 		// vacational_plans: false,
@@ -136,6 +136,7 @@ const Register = () => {
 					<h2 style={{ marginLeft: "10px" }}>Datos del trabajador</h2>
 					<p
 						style={{
+							marginTop: "10px",
 							fontSize: "25px",
 							marginLeft: "10px",
 							fontFamily: "inherit"
@@ -148,8 +149,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Consultor (Obligatorio):{" "}
 						</label>
@@ -159,7 +162,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -172,8 +176,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Nombre del Candidato (Obligatorio):{" "}
 						</label>
@@ -183,7 +189,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -196,8 +203,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Cedula (Obligatorio):{" "}
 						</label>
@@ -207,7 +216,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -220,8 +230,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Telefono (Obligatorio):{" "}
 						</label>
@@ -231,7 +243,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -244,8 +257,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Correo electronico (Obligatorio):{" "}
 						</label>
@@ -255,7 +270,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -268,8 +284,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Vacante (Obligatorio):{" "}
 						</label>
@@ -279,7 +297,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -292,8 +311,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Mes de inicio:
 						</label>
@@ -303,7 +324,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							className="form-control"
 							name="init_date"
@@ -329,8 +351,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Estatus: <br />
 						</label>
@@ -339,7 +363,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							className="form-control"
 							name="status"
@@ -371,8 +396,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Fuente de captacion:{" "}
 						</label>
@@ -382,7 +409,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -395,8 +423,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Gerencia:
 						</label>
@@ -406,7 +436,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							className="form-control"
 							name="managment"
@@ -418,23 +449,15 @@ const Register = () => {
 							<option value="Tecnologia funcional">Tecnologia funcional</option>
 							<option value="Tecnologia tecnica">Tecnologia tecnica</option>
 						</select>
-
-						{/* 				<input style={{ float: "left",
-    						width: "80%"}}
-							type="text"
-							className="form-control"
-							name="managment"
-							onChange={handleChange}
-							value={datos.managment.toLowerCase()}
-						/>
-						<br /> */}
 						<br />
 						<label
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Fecha de cita a entrevista :{" "}
 						</label>
@@ -444,7 +467,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -457,8 +481,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Cargo actual del candidato:{" "}
 						</label>
@@ -468,7 +494,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -481,8 +508,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Empresa:{" "}
 						</label>
@@ -492,7 +521,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -505,8 +535,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Sector:
 						</label>
@@ -515,7 +547,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							className="form-control"
 							name="sector"
@@ -534,8 +567,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Sueldo en moneda extranjera:{" "}
 						</label>
@@ -545,7 +580,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -558,8 +594,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Sueldo basico:{" "}
 						</label>
@@ -569,7 +607,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -582,8 +621,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Sueldo variable:{" "}
 						</label>
@@ -593,7 +634,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -606,8 +648,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							cesta ticket:{" "}
 						</label>
@@ -617,7 +661,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -630,8 +675,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Dias de utilidades:{" "}
 						</label>
@@ -641,7 +688,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -654,8 +702,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Bono vacacional:{" "}
 						</label>
@@ -665,7 +715,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -678,8 +729,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Disfrute de vacaciones:{" "}
 						</label>
@@ -689,7 +742,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -702,8 +756,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Factor:{" "}
 						</label>
@@ -713,7 +769,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -726,8 +783,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Compensacion anual mixta:{" "}
 						</label>
@@ -737,7 +796,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="number"
 							className="form-control"
@@ -750,8 +810,10 @@ const Register = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
-								marginLeft: "20px"
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
 							}}>
 							Observaciones:{" "}
 						</label>
@@ -761,7 +823,8 @@ const Register = () => {
 								float: "left",
 								width: "80%",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6"
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
 							}}
 							type="text"
 							className="form-control"
@@ -770,16 +833,334 @@ const Register = () => {
 							value={datos.Observations}
 						/>
 						<br />
+						{/* <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Bono de produccion:{" "}
+						</label>
 						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.production_bonus}
+						/>
+                                                <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Bono de transporte:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.transport_bonus}
+						/>
+                                                <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Caja de ahorro:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.Savings_Bank}
+						/>
+                                                <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Comisiones por ventas:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.sales_commissions}
+						/>
+                                                <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							H.C.M 100% Emp./Fmlia.:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.full_HCM_Emp_Family}
+						/>
+						<br />
+                          <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							H.C.M 100% Emp./Fmlia.:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.full_HCM_Emp_Family}
+						/>
+						<br />
+                          <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							H.C.M 100% Emp./Fmlia.:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.full_HCM_Emp_Family}
+						/>
+						<br />
+                          <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							H.C.M parcial Emp./Fmlia.:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.partial_HCM_Emp_Family}
+						/>
+						<br />
+                         <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Seguro de Vehículo:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.Vehicle_insurance}
+						/>
+						<br />
+                         <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Seguro de Vida:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.life_insurance}
+						/>
+						<br />
+                         <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Comedor:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.dinning_room}
+						/>
+						<br />
+                        <label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Subsidios alimenticios:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							type="checkbox"
+							className="form-control"
+							name="catchment_source"
+							checked={handleChange}
+							value={datos.food_bags}
+						/> */}
 						<br />
 						<button
 							style={{
 								float: "right",
-								width: "200px",
-								marginTop: "70px",
+								width: "250px",
+								marginTop: "40px",
 								color: "#ffffff",
 								backgroundColor: "#1883ba",
-								marginRight: "20px",
+								marginRight: "70px",
 								marginBottom: "100px"
 							}}
 							className="btn"

@@ -47,7 +47,7 @@ const SignIn = () => {
 								width: "80%",
 								paddingright: "24px",
 								marginLeft: "20px",
-
+								fontSize: "17px",
 								display: "inlineblock",
 								borderColor: "black"
 							}}>
@@ -66,7 +66,8 @@ const SignIn = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "17px"
 							}}
 						/>
 						<br />
@@ -78,7 +79,8 @@ const SignIn = () => {
 								marginLeft: "20px",
 
 								display: "inlineblock",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "17px"
 							}}>
 							Nombre de Usuario:
 						</label>
