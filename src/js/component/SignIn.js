@@ -34,10 +34,12 @@ const SignIn = () => {
 	return (
 		<div>
 			<div className="containerPrincipal">
-				<div className="containerSecundario">
-					<h1>Registro</h1>
-					<h2> datos del gerente de RRHH</h2>
-					<p> Por favor especifica tus datos para registrarte en nuestra plataforma</p>
+				<div style={{ marginLeft: "30px" }} className="containerSecundario">
+					<h2>Registro</h2>
+					<p style={{ fontSize: "22px" }}>
+						{" "}
+						Por favor especifica tus datos para registrarte en nuestra plataforma
+					</p>
 					<div className="form-group">
 						<label
 							style={{
@@ -137,7 +139,7 @@ const SignIn = () => {
 								borderRadius: "5px",
 								display: "block",
 								color: "#fff",
-								backgroundColor: "#556",
+								backgroundColor: "#1883ba",
 								marginLeft: "30px"
 							}}
 							onClick={() => {

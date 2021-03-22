@@ -133,9 +133,16 @@ const Register = () => {
 		<div>
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
-					<h1>Registro</h1>
-					<h2>datos del trabajador</h2>
-					<p> Por favor especifica los datos para registrarlos en nuestra plataforma</p>
+					<h2 style={{ marginLeft: "10px" }}>Datos del trabajador</h2>
+					<p
+						style={{
+							fontSize: "25px",
+							marginLeft: "10px",
+							fontFamily: "inherit"
+						}}>
+						{" "}
+						Por favor especifica los datos para registrarlos
+					</p>
 					<div className="form-group">
 						<label
 							style={{
@@ -769,10 +776,11 @@ const Register = () => {
 							style={{
 								float: "right",
 								width: "200px",
-								marginTop: "20px",
+								marginTop: "70px",
 								color: "#ffffff",
 								backgroundColor: "#1883ba",
-								marginRight: "20px"
+								marginRight: "20px",
+								marginBottom: "100px"
 							}}
 							className="btn"
 							onClick={() => {

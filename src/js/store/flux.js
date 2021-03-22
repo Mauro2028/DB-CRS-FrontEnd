@@ -36,7 +36,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			login: async datos => {
+			login: async (datos, jwt) => {
+				if (!jwt) {
+					const store = getStore();
+					jwt = store.jwt;
+				}
 				try {
 					const respuesta = await fetch(`${BASE_URL}/login`, {
 						method: "POST",

@@ -12,14 +12,14 @@ export const SalaryCard = ({ worker, onDelete }) => {
 
 	return (
 		<div
-		// style={{
-		// 	marginLeft: "900px",
-		// 	width: "auto",
-		// 	boxSizing: "border-box",
-		// 	display: "flex",
-		// 	justifyContent: "center"
-		// }}
-		>
+			style={{
+				// marginLeft: "850px",
+				width: "auto",
+				boxSizing: "border-box",
+				display: "inlineTable"
+				// marginRight: "100px",
+				// justifyContent: "center"
+			}}>
 			<table
 				className="table"
 				style={{

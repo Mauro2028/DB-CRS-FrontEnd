@@ -44,34 +44,51 @@ const Workers = () => {
 		});
 	};
 
-	// const handleSuma = (worker, i = 0) => {
-	// 	while (i < worker) {
-	// 		i = i + 1;
-	// 		console.log(handleSuma());
-	// 	}
-	// };
-
 	const { store, actions } = useContext(Context);
 	// debugger;
 
 	return (
 		<div>
 			<div className="container">
-				<div>
+				<div
+					style={{
+						marginBottom: "10px"
+					}}>
 					<input
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6",
+							marginBottom: "10px"
+						}}
 						type="text"
 						placeholder="vacante"
 						onChange={e => setBailar({ name: e.target.value.toLowerCase() })}
 						value={bailar.name}
 					/>
 					<input
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6"
+						}}
 						type="text"
 						placeholder="Cargo actual"
 						onChange={e => setPuesto({ name: e.target.value.toLowerCase() })}
 						value={puesto.name}
 					/>
 
-					<select onChange={e => setGerencia({ name: e.target.value })} value={gerencia.name}>
+					<select
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6"
+						}}
+						onChange={e => setGerencia({ name: e.target.value })}
+						value={gerencia.name}>
 						<option defaultValue="">Gerencia</option>
 						<option value="Tecnologico">Tecnologia</option>
 						<option value="Mercadeo y ventas">Mercadeo y ventas</option>
@@ -80,7 +97,15 @@ const Workers = () => {
 						<option value="Tecnologia tecnica">Tecnologia tecnica</option>
 					</select>
 
-					<select onChange={e => setFilter({ name: e.target.value })} value={filter.name}>
+					<select
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6"
+						}}
+						onChange={e => setFilter({ name: e.target.value })}
+						value={filter.name}>
 						<option defaultValue="">Sector</option>
 						<option value="Tecnologico">Sector Tecnologico</option>
 						<option value="Financiero">Sector Financiero</option>
@@ -89,7 +114,15 @@ const Workers = () => {
 						<option value="Servicios">Servicios</option>
 					</select>
 
-					<select onChange={e => setFecha({ name: e.target.value })} value={fecha.name}>
+					<select
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6"
+						}}
+						onChange={e => setFecha({ name: e.target.value })}
+						value={fecha.name}>
 						<option defaultValue="">Mes de inicio</option>
 						<option value="Enero">Enero</option>
 						<option value="Febrero">Febrero</option>
@@ -104,98 +137,142 @@ const Workers = () => {
 						<option value="Noviembre">Noviembre</option>
 						<option value="Diciembre">Diciembre</option>
 					</select>
-
-					<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-						<ul className="list-group pull-down" id="contact-list">
-							{store.workers
-
-								.filter(
-									worker =>
-										worker.sector == filter.name ||
-										worker.vacant == bailar.name ||
-										worker.init_date == fecha.name ||
-										worker.managment == gerencia.name ||
-										worker.actual_charge == puesto.name
-									// console.log(age)
-								)
-
-								.map(
-									worker => (
-										console.log(worker.id),
-										(
-											<div>
-												<li id="worker" key={worker.id}>
-													<SalaryCard
-														name={worker.candidate}
-														key={workers.id}
-														worker={worker}
-														onDelete={() =>
-															setState({ showModal: true, idToDelete: contact.id })
-														}
-													/>
-												</li>
-											</div>
-										)
-									)
-								)}
-						</ul>
-						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-							Salario basico:
-							{store.workers
-								.filter(
-									worker =>
-										worker.sector == filter.name ||
-										worker.vacant == bailar.name ||
-										worker.init_date == fecha.name ||
-										worker.managment == gerencia.name ||
-										worker.actual_charge == puesto.name
-								)
-
-								.reduce((prevValue, worker) => worker.basic_salary + prevValue, 0)}
-						</div>
-
-						<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-							Salario Variable:
-							{store.workers
-								.filter(
-									worker =>
-										worker.sector == filter.name ||
-										worker.vacant == bailar.name ||
-										worker.init_date == fecha.name ||
-										worker.managment == gerencia.name ||
-										worker.actual_charge == puesto.name
-								)
-
-								.reduce((prevValue, worker) => worker.variable_salary + prevValue, 0)}
-							<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-								Cesta ticket:
-								{store.workers
-									.filter(
-										worker =>
-											worker.sector == filter.name ||
-											worker.vacant == bailar.name ||
-											worker.init_date == fecha.name ||
-											worker.managment == gerencia.name ||
-											worker.actual_charge == puesto.name
-									)
-									.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
-							</div>
-							<div id="workers" className="panel-collapse collapse show" aria-expanded="true">
-								Factor:
-								{store.workers
-									.filter(
-										worker =>
-											worker.sector == filter.name ||
-											worker.vacant == bailar.name ||
-											worker.init_date == fecha.name ||
-											worker.managment == gerencia.name ||
-											worker.actual_charge == puesto.name
-									)
-									.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
-							</div>
-						</div>
-					</div>
 				</div>
+				<div id="workers" key={"Lista"} className="panel-collapse collapse show" aria-expanded="true">
+					<ul className="list-group pull-down" id="workers">
+						{store.workers
+
+							.filter(
+								worker =>
+									worker.sector == filter.name ||
+									worker.vacant == bailar.name ||
+									worker.init_date == fecha.name ||
+									worker.managment == gerencia.name ||
+									worker.actual_charge == puesto.name
+								// console.log(age)
+							)
+
+							.map(
+								worker => (
+									console.log(worker.id),
+									(
+										<div>
+											<li id="worker" key={worker.id}>
+												<SalaryCard
+													name={worker.candidate}
+													key={worker.id}
+													worker={worker}
+													onDelete={() =>
+														setState({ showModal: true, idToDelete: contact.id })
+													}
+												/>
+											</li>
+										</div>
+									)
+								)
+							)}
+					</ul>
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "25%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "18px"
+					}}
+					id="workers"
+					key={"Basic_salary"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Salario basico:
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
+				</div>
+
+				<div
+					style={{
+						float: "center",
+						width: "25%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "18px"
+					}}
+					id="workers"
+					key={"Variable_salary"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Salario Variable:
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "25%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "18px"
+					}}
+					id="workers"
+					key={"Cesta_ticket"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Cesta ticket:
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "25%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "18px"
+					}}
+					id="workers"
+					key={"Factor"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Factor:
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+						.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
+				</div>
+
 				<Modal
 					show={state.showModal}
 					onClose={() => setState({ showModal: false, idToDelete: null })}
