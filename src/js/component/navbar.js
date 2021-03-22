@@ -6,7 +6,7 @@ export const Navbar = () => {
 	return (
 		<nav>
 			<Link to="/selection">
-				<img src={softech} width="250px" height="80px" marginLeft="5px" />
+				<img src={softech} width="250px" height="80px" marginleft="5px" />
 			</Link>
 
 			<h2 style={{ marginLeft: "10px" }}>Base de datos captación, reclutamiento y selección</h2>

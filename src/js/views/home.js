@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-// import "../../styles/home.scss";
+
 import { useHistory } from "react-router-dom";
 
 export const Home = () => {
@@ -48,7 +48,7 @@ export const Home = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
+								paddingRight: "24px",
 								marginLeft: "20px",
 								fontSize: "17px"
 							}}>
@@ -71,7 +71,8 @@ export const Home = () => {
 								alignSelf: "center",
 								float: "left",
 								width: "45%",
-								marginLeft: "20px"
+								marginLeft: "20px",
+								height: "35px"
 							}}
 						/>
 						<br />
@@ -80,7 +81,7 @@ export const Home = () => {
 							style={{
 								float: "left",
 								width: "80%",
-								paddingright: "24px",
+								paddingRight: "24px",
 								marginLeft: "20px",
 								marginTop: "20px",
 								fontSize: "17px"
@@ -104,7 +105,8 @@ export const Home = () => {
 								alignSelf: "center",
 								float: "left",
 								width: "45%",
-								marginLeft: "20px"
+								marginLeft: "20px",
+								height: "37px"
 							}}
 						/>
 						<br />
@@ -120,7 +122,8 @@ export const Home = () => {
 								display: "block",
 								color: "#fff",
 								backgroundColor: "#1883ba",
-								marginLeft: "30px"
+								marginLeft: "30px",
+								fontSize: "18px"
 							}}
 							onClick={() => {
 								handleSubmit();
@@ -139,11 +142,12 @@ export const Home = () => {
 									padding: "8px 16px",
 									marginTop: "5px",
 									border: "1px solid #000",
-									borderRadius: "-20px",
+									borderRadius: "5px",
 									display: "block",
 									color: "#fff",
 									backgroundColor: "#1883ba",
-									marginLeft: "30px"
+									marginLeft: "30px",
+									fontSize: "18px"
 								}}>
 								Registrate
 							</button>
