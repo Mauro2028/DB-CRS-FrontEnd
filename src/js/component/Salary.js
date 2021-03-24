@@ -90,7 +90,8 @@ const Workers = () => {
 						onChange={e => setGerencia({ name: e.target.value })}
 						value={gerencia.name}>
 						<option defaultValue="">Gerencia</option>
-						<option value="Tecnologico">Tecnologia</option>
+						<option value="Otro">Otro</option>
+						<option value="Plataforma">Plataforma</option>
 						<option value="Mercadeo y ventas">Mercadeo y ventas</option>
 						<option value="Servicio al cliente">Servicio al cliente</option>
 						<option value="Tecnologia funcional">Tecnologia funcional</option>
@@ -126,7 +127,7 @@ const Workers = () => {
 						<option defaultValue="">Mes de inicio</option>
 						<option value="Enero">Enero</option>
 						<option value="Febrero">Febrero</option>
-						<option value="Marzo">Marzo</option>
+						<option value="marzo">Marzo</option>
 						<option value="Abril">Abril</option>
 						<option value="Mayo">Mayo</option>
 						<option value="Junio">Junio</option>

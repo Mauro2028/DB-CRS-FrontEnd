@@ -63,7 +63,7 @@ const WorkersList = () => {
 
 						<div
 							style={{
-								marginLeft: "700px",
+								marginLeft: "1430px",
 								boxSizing: "border-box",
 								display: "flex",
 								justifyContent: "center",
@@ -74,9 +74,9 @@ const WorkersList = () => {
 								style={{
 									width: "100%",
 									textalign: "left",
-									bordercollapse: "collapse",
+									borderCollapse: "collapse",
 									boxSizing: "border-box",
-									captionside: "top",
+									captionSide: "top",
 									border: "1px solid #000"
 								}}>
 								<thead>
@@ -244,7 +244,76 @@ const WorkersList = () => {
 											Factor
 										</th>
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
-											Compesacion anual mixta
+											Paquete anual estimado
+										</th>
+										<th
+											style={{
+												padding: "0.3em",
+												border: "1px solid #000",
+												width: "35%",
+												background: "#eee"
+											}}>
+											Bono de produccion
+										</th>
+										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+											Bono de transporte
+										</th>
+										<th
+											style={{
+												padding: "0.3em",
+												border: "1px solid #000",
+												width: "35%",
+												background: "#eee"
+											}}>
+											Caja de ahorro
+										</th>
+										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+											Pago de estacionamiento
+										</th>
+										<th
+											style={{
+												padding: "0.3em",
+												border: "1px solid #000",
+												width: "35%",
+												background: "#eee"
+											}}>
+											Comisiones por ventas
+										</th>
+										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+											H.C.M 100% Emp./Fmlia
+										</th>
+										<th
+											style={{
+												padding: "0.3em",
+												border: "1px solid #000",
+												width: "35%",
+												background: "#eee"
+											}}>
+											H.C.M parcial Emp./Fmlia
+										</th>
+										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+											Seguro de Vehículo
+										</th>
+										<th
+											style={{
+												padding: "0.3em",
+												border: "1px solid #000",
+												width: "35%",
+												background: "#eee"
+											}}>
+											Seguro de Vida
+										</th>
+										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+											Comedor
+										</th>
+										<th
+											style={{
+												padding: "0.3em",
+												border: "1px solid #000",
+												width: "35%",
+												background: "#eee"
+											}}>
+											Subsidios alimenticios
 										</th>
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 											Observaciones
@@ -254,21 +323,21 @@ const WorkersList = () => {
 								<tbody
 									style={{
 										bordertop: "1px solid #000",
-										borderbottom: "1px solid #000"
+										borderBottom: "1px solid #000"
 									}}>
 									{store.workers.map(worker => (
 										<tr key={worker.id}>
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													borderright: " 1px solid #000",
+													borderBottom: "1px solid #000",
+													borderRight: " 1px solid #000",
 													background: "#eee",
-													bordercollapse: "collapse",
+													borderCollapse: "collapse",
 													padding: "0.3em",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -278,12 +347,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.init_date}
@@ -292,13 +361,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -308,12 +377,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -323,13 +392,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.cedula}
@@ -338,12 +407,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -353,13 +422,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.phone_number}
@@ -368,12 +437,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.email}
@@ -382,13 +451,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.catchment_source}
@@ -396,12 +465,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -411,13 +480,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -427,13 +496,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.interview_date}
@@ -442,13 +511,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.actual_charge}
@@ -457,12 +526,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -472,13 +541,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.sector}
@@ -487,12 +556,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.coin}
@@ -501,13 +570,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.basic_salary} Bs
@@ -516,12 +585,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.variable_salary} Bs
@@ -529,13 +598,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
-													captionside: "bottom",
+													captionSide: "bottom",
 													background: "#eee",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.cesta_ticket} Bs
@@ -544,12 +613,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.Profit_Days} dias
@@ -558,13 +627,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
 													background: "#eee",
-													captionside: "bottom",
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.vacations} dias
@@ -573,12 +642,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.Vacation_Bonus} dias
@@ -587,13 +656,13 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
 													padding: "0.3em",
-													captionside: "bottom",
+													captionSide: "bottom",
 													background: "#eee",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{" "}
@@ -603,12 +672,12 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.Estimated_annual_package} $
@@ -616,12 +685,155 @@ const WorkersList = () => {
 											<td
 												style={{
 													padding: "0.3em",
-													borderbottom: "1px solid #000",
-													bordercollapse: "collapse",
-													padding: "0.3em",
-													captionside: "bottom",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
 													border: "1px solid #000",
-													borderright: " 1px solid #000"
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.Production_bonus}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.Transport_bonus}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.Savings_Bank}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.parking_payment}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.sales_commissions}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.full_HCM_Emp_Family}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.partial_HCM_Emp_Family}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.Vehicle_insurance}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.life_insurance}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.dinning_room}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
+												}}
+												className="text small text-truncate">
+												{worker.food_bags}
+											</td>
+											<td
+												style={{
+													padding: "0.3em",
+													borderBottom: "1px solid #000",
+													borderCollapse: "collapse",
+
+													captionSide: "bottom",
+													border: "1px solid #000",
+													borderRight: " 1px solid #000"
 												}}
 												className="text small text-truncate">
 												{worker.Observations}

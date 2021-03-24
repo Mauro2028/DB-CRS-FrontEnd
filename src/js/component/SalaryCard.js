@@ -25,9 +25,9 @@ export const SalaryCard = ({ worker, onDelete }) => {
 				style={{
 					width: "100%",
 					textalign: "left",
-					bordercollapse: "collapse",
+					borderCollapse: "collapse",
 
-					captionside: "top",
+					captionSide: "top",
 					border: "1px solid #000",
 					marginRight: "30px"
 				}}>
@@ -184,7 +184,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							Factor
 						</th>
 						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
-							Compesacion anual mixta
+							Paqute anual estimado
 						</th>
 						<th
 							style={{
@@ -193,6 +193,68 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								width: "35%",
 								background: "#eee"
 							}}>
+							Bono de produccion
+						</th>
+						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>Bono de transporte</th>
+						<th
+							style={{
+								padding: "0.3em",
+								border: "1px solid #000",
+								width: "35%",
+								background: "#eee"
+							}}>
+							Caja de ahorro
+						</th>
+						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+							Pago de estacionamiento
+						</th>
+						<th
+							style={{
+								padding: "0.3em",
+								border: "1px solid #000",
+								width: "35%",
+								background: "#eee"
+							}}>
+							Comisiones por ventas
+						</th>
+						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+							H.C.M 100% Emp./Fmlia
+						</th>
+						<th
+							style={{
+								padding: "0.3em",
+								border: "1px solid #000",
+								width: "35%",
+								background: "#eee"
+							}}>
+							H.C.M parcial Emp./Fmlia
+						</th>
+						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>Seguro de Vehículo</th>
+						<th
+							style={{
+								padding: "0.3em",
+								border: "1px solid #000",
+								width: "35%",
+								background: "#eee"
+							}}>
+							Seguro de Vida
+						</th>
+						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>Comedor</th>
+						<th
+							style={{
+								padding: "0.3em",
+								border: "1px solid #000",
+								width: "35%",
+								background: "#eee"
+							}}>
+							Subsidios alimenticios
+						</th>
+						<th
+							style={{
+								padding: "0.3em",
+								border: "1px solid #000",
+								width: "35%"
+							}}>
 							Observaciones
 						</th>
 					</tr>
@@ -200,20 +262,20 @@ export const SalaryCard = ({ worker, onDelete }) => {
 				<tbody
 					style={{
 						bordertop: "1px solid #000",
-						borderbottom: "1px solid #000"
+						borderBottom: "1px solid #000"
 					}}>
 					<tr key={worker.id}>
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								borderright: " 1px solid #000",
+								borderBottom: "1px solid #000",
+								borderRight: " 1px solid #000",
 								background: "#eee",
-								bordercollapse: "collapse",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -223,12 +285,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.init_date}
@@ -237,13 +299,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -253,12 +315,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -268,13 +330,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.cedula}
@@ -283,12 +345,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -298,13 +360,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.phone_number}
@@ -313,12 +375,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.email}
@@ -327,13 +389,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.catchment_source}
@@ -341,12 +403,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -356,13 +418,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -372,13 +434,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.interview_date}
@@ -387,13 +449,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.actual_charge}
@@ -402,12 +464,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -417,12 +479,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								background: "#eee",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.sector}
@@ -431,12 +494,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.coin}
@@ -445,13 +508,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.basic_salary} Bs
@@ -460,12 +523,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.variable_salary} Bs
@@ -473,13 +536,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								background: "#eee",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.cesta_ticket} Bs
@@ -488,12 +551,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.Profit_Days} dias
@@ -502,13 +565,13 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.vacations} dias
@@ -517,27 +580,27 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.Vacation_Bonus} Bs
+							{worker.Vacation_Bonus} dias
 						</td>
 
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								background: "#eee",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{" "}
@@ -547,12 +610,12 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								padding: "0.3em",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.Estimated_annual_package} $
@@ -560,13 +623,156 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<td
 							style={{
 								padding: "0.3em",
-								borderbottom: "1px solid #000",
-								bordercollapse: "collapse",
-								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
 								background: "#eee",
-								captionside: "bottom",
+								captionSide: "bottom",
 								border: "1px solid #000",
-								borderright: " 1px solid #000"
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.Production_bonus}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.Transport_bonus}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+								background: "#eee",
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.Savings_Bank}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.parking_payment}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+								background: "#eee",
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.sales_commissions}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.full_HCM_Emp_Family}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+								background: "#eee",
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.partial_HCM_Emp_Family}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.Vehicle_insurance}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+								background: "#eee",
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.life_insurance}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.dinning_room}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+								background: "#eee",
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
+							}}
+							className="text small text-truncate">
+							{worker.food_bags}
+						</td>
+						<td
+							style={{
+								padding: "0.3em",
+								borderBottom: "1px solid #000",
+								borderCollapse: "collapse",
+								padding: "0.3em",
+
+								captionSide: "bottom",
+								border: "1px solid #000",
+								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
 							{worker.Observations}
