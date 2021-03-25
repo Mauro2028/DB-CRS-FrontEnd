@@ -147,7 +147,8 @@ export const Home = () => {
 									color: "#fff",
 									backgroundColor: "#1883ba",
 									marginLeft: "30px",
-									fontSize: "18px"
+									fontSize: "18px",
+									marginBottom: "180px"
 								}}>
 								Registrate
 							</button>

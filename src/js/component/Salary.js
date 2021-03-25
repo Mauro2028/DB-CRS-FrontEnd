@@ -273,6 +273,31 @@ const Workers = () => {
 						)
 						.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
 				</div>
+				<div
+					style={{
+						float: "center",
+						width: "25%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "18px",
+						marginBottom: "30px"
+					}}
+					id="workers"
+					key={"Factor"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Paquete anual estimado:
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+						.reduce((prevValue, worker) => prevValue + worker.Estimated_annual_package, 0)}
+				</div>
 
 				<Modal
 					show={state.showModal}

@@ -1158,7 +1158,7 @@ const Register = () => {
 								color: "#ffffff",
 								backgroundColor: "#1883ba",
 								marginRight: "70px",
-								marginBottom: "100px"
+								marginBottom: "50px"
 							}}
 							className="btn"
 							onClick={() => {

@@ -63,7 +63,7 @@ const WorkersList = () => {
 
 						<div
 							style={{
-								marginLeft: "1430px",
+								marginLeft: "2200px",
 								boxSizing: "border-box",
 								display: "flex",
 								justifyContent: "center",

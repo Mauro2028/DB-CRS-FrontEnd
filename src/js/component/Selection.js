@@ -30,7 +30,8 @@ const Selection = () => {
 						style={{
 							display: "flex",
 							justifyContent: "space-evenly",
-							marginTop: "100px"
+							marginTop: "100px",
+							marginBottom: "280px"
 						}}
 						className=" buttons">
 						<Link to="/Worker-list">
