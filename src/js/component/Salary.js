@@ -17,12 +17,20 @@ const Workers = () => {
 	const [puesto, setPuesto] = useState("");
 	const [fecha, setFecha] = useState("");
 	const [gerencia, setGerencia] = useState("");
+	const [all, setAll] = useState("");
 
 	const handleChange = e => {
 		setFilter({
 			...filter,
 			[e.target.name]: e.target.value
 		});
+	};
+	const contar = worker => {
+		worker.sector == filter.name ||
+			worker.vacant == bailar.name ||
+			worker.init_date == fecha.name ||
+			worker.managment == gerencia.name ||
+			worker.actual_charge == puesto.name;
 	};
 
 	const handleCambio = e => {
@@ -105,6 +113,19 @@ const Workers = () => {
 							marginLeft: "20px",
 							backgroundColor: "#f6f6f6"
 						}}
+						onChange={e => setAll({ name: e.target.value })}
+						value={all.name}>
+						<option defaultValue="">Filtrado</option>
+						<option defaultValue="">Todo</option>
+					</select>
+
+					<select
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6"
+						}}
 						onChange={e => setFilter({ name: e.target.value })}
 						value={filter.name}>
 						<option defaultValue="">Sector</option>
@@ -142,7 +163,6 @@ const Workers = () => {
 				<div id="workers" key={"Lista"} className="panel-collapse collapse show" aria-expanded="true">
 					<ul className="list-group pull-down" id="workers">
 						{store.workers
-
 							.filter(
 								worker =>
 									worker.sector == filter.name ||
@@ -150,12 +170,10 @@ const Workers = () => {
 									worker.init_date == fecha.name ||
 									worker.managment == gerencia.name ||
 									worker.actual_charge == puesto.name
-								// console.log(age)
 							)
-
 							.map(
 								worker => (
-									console.log(worker.id),
+									console.log(),
 									(
 										<div>
 											<li id="worker" key={worker.id}>
@@ -190,14 +208,17 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector == filter.name ||
-								worker.vacant == bailar.name ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge == puesto.name
+								worker.sector.startsWith(filter.name) ||
+								worker.vacant.startsWith(bailar.name) ||
+								worker.init_date.startsWith(fecha.name) ||
+								worker.managment.startsWith(gerencia.name) ||
+								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)}
+						.reduce(
+							(prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.basic_salary),
+							0
+						)}
 				</div>
 
 				<div
@@ -216,14 +237,17 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector == filter.name ||
-								worker.vacant == bailar.name ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge == puesto.name
+								worker.sector.startsWith(filter.name) ||
+								worker.vacant.startsWith(bailar.name) ||
+								worker.init_date.startsWith(fecha.name) ||
+								worker.managment.startsWith(gerencia.name) ||
+								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)}
+						.reduce(
+							(prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.variable_salary),
+							0
+						)}
 				</div>
 				<div
 					style={{
@@ -241,13 +265,17 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector == filter.name ||
-								worker.vacant == bailar.name ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge == puesto.name
+								worker.sector.startsWith(filter.name) ||
+								worker.vacant.startsWith(bailar.name) ||
+								worker.init_date.startsWith(fecha.name) ||
+								worker.managment.startsWith(gerencia.name) ||
+								worker.actual_charge.startsWith(puesto.name)
 						)
-						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)}
+
+						.reduce(
+							(prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.cesta_ticket),
+							0
+						)}
 				</div>
 				<div
 					style={{
@@ -271,7 +299,7 @@ const Workers = () => {
 								worker.managment == gerencia.name ||
 								worker.actual_charge == puesto.name
 						)
-						.reduce((prevValue, worker) => prevValue + worker.Factor, 0)}
+						.reduce((prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.Factor), 0)}
 				</div>
 
 				<Modal

@@ -10,6 +10,10 @@ export const SalaryCard = ({ worker, onDelete }) => {
 	});
 	const { store, actions } = useContext(Context);
 
+	const number = worker => {
+		Intl.NumberFormat().format(worker.basic_salary);
+	};
+
 	return (
 		<div
 			style={{
@@ -517,7 +521,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.basic_salary} Bs
+							{new Intl.NumberFormat().format(worker.basic_salary)}
 						</td>
 
 						<td
@@ -531,7 +535,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.variable_salary} Bs
+							{new Intl.NumberFormat().format(worker.variable_salary)}
 						</td>
 						<td
 							style={{
@@ -545,7 +549,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.cesta_ticket} Bs
+							{new Intl.NumberFormat().format(worker.cesta_ticket)}
 						</td>
 
 						<td
@@ -559,7 +563,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.Profit_Days} dias
+							{worker.Profit_Days}
 						</td>
 
 						<td
@@ -574,7 +578,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.vacations} dias
+							{worker.vacations}
 						</td>
 
 						<td
@@ -588,7 +592,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.Vacation_Bonus} dias
+							{worker.Vacation_Bonus}
 						</td>
 
 						<td
@@ -604,7 +608,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.Factor} dias
+							{worker.Factor}
 						</td>
 
 						<td
@@ -618,7 +622,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.Estimated_annual_package} $
+							{new Intl.NumberFormat().format(worker.Estimated_annual_package)}
 						</td>
 						<td
 							style={{
