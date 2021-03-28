@@ -212,15 +212,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 							Pago de estacionamiento
 						</th>
-						<th
-							style={{
-								padding: "0.3em",
-								border: "1px solid #000",
-								width: "35%",
-								background: "#eee"
-							}}>
-							Comisiones por ventas
-						</th>
+
 						<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 							H.C.M 100% Emp./Fmlia
 						</th>
@@ -313,7 +305,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.Consultor}
+							{worker.Consultor.toUpperCase()}
 						</td>
 
 						<td
@@ -328,7 +320,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.candidate}
+							{worker.candidate.toUpperCase()}
 						</td>
 
 						<td
@@ -402,7 +394,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.catchment_source}
+							{worker.catchment_source.toUpperCase()}
 						</td>
 						<td
 							style={{
@@ -416,7 +408,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.managment}
+							{worker.managment.toUpperCase()}
 						</td>
 
 						<td
@@ -432,7 +424,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.vacant}
+							{worker.vacant.toUpperCase()}
 						</td>
 
 						<td
@@ -462,7 +454,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.actual_charge}
+							{worker.actual_charge.toUpperCase()}
 						</td>
 
 						<td
@@ -477,7 +469,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.company}
+							{worker.company.toUpperCase()}
 						</td>
 
 						<td
@@ -506,7 +498,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.coin}
+							{new Intl.NumberFormat("es-ES").format(worker.coin)}
 						</td>
 
 						<td
@@ -521,7 +513,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{new Intl.NumberFormat().format(worker.basic_salary)}
+							{new Intl.NumberFormat("es-ES").format(worker.basic_salary)}
 						</td>
 
 						<td
@@ -535,7 +527,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{new Intl.NumberFormat().format(worker.variable_salary)}
+							{new Intl.NumberFormat("es-ES").format(worker.variable_salary)}
 						</td>
 						<td
 							style={{
@@ -549,7 +541,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{new Intl.NumberFormat().format(worker.cesta_ticket)}
+							{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)}
 						</td>
 
 						<td
@@ -608,7 +600,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							}}
 							className="text small text-truncate">
 							{" "}
-							{worker.Factor}
+							{new Intl.NumberFormat("en-US").format(worker.Factor)}
 						</td>
 
 						<td
@@ -622,7 +614,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{new Intl.NumberFormat().format(worker.Estimated_annual_package)}
+							{new Intl.NumberFormat("es-ES").format(worker.Estimated_annual_package)}
 						</td>
 						<td
 							style={{
@@ -676,19 +668,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 							className="text small text-truncate">
 							{worker.parking_payment}
 						</td>
-						<td
-							style={{
-								padding: "0.3em",
-								borderBottom: "1px solid #000",
-								borderCollapse: "collapse",
-								background: "#eee",
-								captionSide: "bottom",
-								border: "1px solid #000",
-								borderRight: " 1px solid #000"
-							}}
-							className="text small text-truncate">
-							{worker.sales_commissions}
-						</td>
+
 						<td
 							style={{
 								padding: "0.3em",
@@ -779,7 +759,7 @@ export const SalaryCard = ({ worker, onDelete }) => {
 								borderRight: " 1px solid #000"
 							}}
 							className="text small text-truncate">
-							{worker.Observations}
+							{worker.Observations.toUpperCase()}
 						</td>
 					</tr>
 				</tbody>

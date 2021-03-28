@@ -63,7 +63,7 @@ const WorkersList = () => {
 
 						<div
 							style={{
-								marginLeft: "1430px",
+								marginLeft: "2200px",
 								boxSizing: "border-box",
 								display: "flex",
 								justifyContent: "center",
@@ -270,15 +270,7 @@ const WorkersList = () => {
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 											Pago de estacionamiento
 										</th>
-										<th
-											style={{
-												padding: "0.3em",
-												border: "1px solid #000",
-												width: "35%",
-												background: "#eee"
-											}}>
-											Comisiones por ventas
-										</th>
+
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 											H.C.M 100% Emp./Fmlia
 										</th>
@@ -327,7 +319,7 @@ const WorkersList = () => {
 									}}>
 									{store.workers.map(
 										worker => (
-											console.log(new Intl.NumberFormat().format(worker.basic_salary)),
+											console.log(new Intl.NumberFormat("en-US").format(worker.basic_salary)),
 											(
 												<tr key={worker.id}>
 													<td
@@ -374,7 +366,7 @@ const WorkersList = () => {
 														}}
 														className="text small text-truncate">
 														{" "}
-														{worker.Consultor}
+														{worker.Consultor.toUpperCase()}
 													</td>
 
 													<td
@@ -389,7 +381,7 @@ const WorkersList = () => {
 														}}
 														className="text small text-truncate">
 														{" "}
-														{worker.candidate}
+														{worker.candidate.toUpperCase()}
 													</td>
 
 													<td
@@ -463,7 +455,7 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{worker.catchment_source}
+														{worker.catchment_source.toUpperCase()}
 													</td>
 													<td
 														style={{
@@ -477,7 +469,7 @@ const WorkersList = () => {
 														}}
 														className="text small text-truncate">
 														{" "}
-														{worker.managment}
+														{worker.managment.toUpperCase()}
 													</td>
 
 													<td
@@ -493,7 +485,7 @@ const WorkersList = () => {
 														}}
 														className="text small text-truncate">
 														{" "}
-														{worker.vacant}
+														{worker.vacant.toUpperCase()}
 													</td>
 
 													<td
@@ -523,7 +515,7 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{worker.actual_charge}
+														{worker.actual_charge.toUpperCase()}
 													</td>
 
 													<td
@@ -538,7 +530,7 @@ const WorkersList = () => {
 														}}
 														className="text small text-truncate">
 														{" "}
-														{worker.company}
+														{worker.company.toUpperCase()}
 													</td>
 
 													<td
@@ -567,7 +559,7 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{worker.coin}
+														{new Intl.NumberFormat("es-ES").format(worker.coin)} $
 													</td>
 
 													<td
@@ -582,7 +574,7 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{new Intl.NumberFormat().format(worker.basic_salary)}
+														{new Intl.NumberFormat("es-ES").format(worker.basic_salary)} bs
 													</td>
 
 													<td
@@ -596,7 +588,8 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{new Intl.NumberFormat().format(worker.variable_salary)}
+														{new Intl.NumberFormat("es-ES").format(worker.variable_salary)}{" "}
+														bs
 													</td>
 													<td
 														style={{
@@ -610,7 +603,7 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{new Intl.NumberFormat().format(worker.cesta_ticket)}
+														{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)} bs
 													</td>
 
 													<td
@@ -669,7 +662,7 @@ const WorkersList = () => {
 														}}
 														className="text small text-truncate">
 														{" "}
-														{worker.Factor}
+														{new Intl.NumberFormat("es-ES").format(worker.Factor)} meses
 													</td>
 
 													<td
@@ -683,7 +676,7 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{new Intl.NumberFormat().format(
+														{new Intl.NumberFormat("es-ES").format(
 															worker.Estimated_annual_package
 														)}
 													</td>
@@ -739,19 +732,7 @@ const WorkersList = () => {
 														className="text small text-truncate">
 														{worker.parking_payment}
 													</td>
-													<td
-														style={{
-															padding: "0.3em",
-															borderBottom: "1px solid #000",
-															borderCollapse: "collapse",
 
-															captionSide: "bottom",
-															border: "1px solid #000",
-															borderRight: " 1px solid #000"
-														}}
-														className="text small text-truncate">
-														{worker.sales_commissions}
-													</td>
 													<td
 														style={{
 															padding: "0.3em",
@@ -841,7 +822,7 @@ const WorkersList = () => {
 															borderRight: " 1px solid #000"
 														}}
 														className="text small text-truncate">
-														{worker.Observations}
+														{worker.Observations.toUpperCase()}
 													</td>
 												</tr>
 											)

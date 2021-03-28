@@ -25,13 +25,13 @@ const Workers = () => {
 			[e.target.name]: e.target.value
 		});
 	};
-	const contar = worker => {
-		worker.sector == filter.name ||
-			worker.vacant == bailar.name ||
-			worker.init_date == fecha.name ||
-			worker.managment == gerencia.name ||
-			worker.actual_charge == puesto.name;
-	};
+	// const contar = worker => {
+	// 	worker.sector == filter.name ||
+	// 		worker.vacant == bailar.name ||
+	// 		worker.init_date == fecha.name ||
+	// 		worker.managment == gerencia.name ||
+	// 		worker.actual_charge == puesto.name;
+	// };
 
 	const handleCambio = e => {
 		setBailar({
@@ -42,12 +42,6 @@ const Workers = () => {
 	const hanldePuesto = e => {
 		setPuesto({
 			...puesto,
-			[e.target.name]: e.target.value
-		});
-	};
-	const hanldeFecha = e => {
-		setFecha({
-			...fecha,
 			[e.target.name]: e.target.value
 		});
 	};
@@ -72,7 +66,7 @@ const Workers = () => {
 						}}
 						type="text"
 						placeholder="vacante"
-						onChange={e => setBailar({ name: e.target.value.toLowerCase() })}
+						onChange={e => setBailar({ name: e.target.value.toUpperCase() })}
 						value={bailar.name}
 					/>
 					<input
@@ -84,7 +78,7 @@ const Workers = () => {
 						}}
 						type="text"
 						placeholder="Cargo actual"
-						onChange={e => setPuesto({ name: e.target.value.toLowerCase() })}
+						onChange={e => setPuesto({ name: e.target.value.toUpperCase() })}
 						value={puesto.name}
 					/>
 
@@ -98,25 +92,11 @@ const Workers = () => {
 						onChange={e => setGerencia({ name: e.target.value })}
 						value={gerencia.name}>
 						<option defaultValue="">Gerencia</option>
-						<option value="Otro">Otro</option>
-						<option value="Plataforma">Plataforma</option>
-						<option value="Mercadeo y ventas">Mercadeo y ventas</option>
-						<option value="Servicio al cliente">Servicio al cliente</option>
-						<option value="Tecnologia funcional">Tecnologia funcional</option>
-						<option value="Tecnologia tecnica">Tecnologia tecnica</option>
-					</select>
-
-					<select
-						style={{
-							float: "center",
-							width: "15%",
-							marginLeft: "20px",
-							backgroundColor: "#f6f6f6"
-						}}
-						onChange={e => setAll({ name: e.target.value })}
-						value={all.name}>
-						<option defaultValue="">Filtrado</option>
-						<option defaultValue="">Todo</option>
+						<option value="MERCADEO Y VENTAS">Mercadeo y ventas</option>
+						<option value="SERVICIO AL CLIENTE">Servicio al cliente</option>
+						<option value="TECNOLOGIA FUNCIONAL">Tecnologia funcional</option>
+						<option value="TECNOLOGIA TECNICA">Tecnologia tecnica</option>
+						<option value="PLATAFORMA">Plataforma</option>
 					</select>
 
 					<select
@@ -128,12 +108,13 @@ const Workers = () => {
 						}}
 						onChange={e => setFilter({ name: e.target.value })}
 						value={filter.name}>
-						<option defaultValue="">Sector</option>
-						<option value="Tecnologico">Sector Tecnologico</option>
-						<option value="Financiero">Sector Financiero</option>
-						<option value="Consultoria">Consultoria</option>
-						<option value="Educativo">Educativo</option>
-						<option value="Servicios">Servicios</option>
+						<option value="">Sector</option>
+						<option value="OTRO">Otro</option>
+						<option value="FINANCIERO">Financiero</option>
+						<option value="TECNOLOGICO">Tecnologico</option>
+						<option value="CONSULTORIA">Consultoria</option>
+						<option value="EDUCATIVO">Educativo</option>
+						<option value="SERVICIOS">Servicios</option>
 					</select>
 
 					<select
@@ -145,19 +126,19 @@ const Workers = () => {
 						}}
 						onChange={e => setFecha({ name: e.target.value })}
 						value={fecha.name}>
-						<option defaultValue="">Mes de inicio</option>
-						<option value="Enero">Enero</option>
-						<option value="Febrero">Febrero</option>
-						<option value="marzo">Marzo</option>
-						<option value="Abril">Abril</option>
-						<option value="Mayo">Mayo</option>
-						<option value="Junio">Junio</option>
-						<option value="Julio">Julio</option>
-						<option value="Agosto">Agosto</option>
-						<option value="Septiembre">Septiembre</option>
-						<option value="Octubre">Octubre</option>
-						<option value="Noviembre">Noviembre</option>
-						<option value="Diciembre">Diciembre</option>
+						<option value="">Mes de inicio</option>
+						<option value="ENERO">Enero</option>
+						<option value="FEBRERO">Febrero</option>
+						<option value="MARZO">Marzo</option>
+						<option value="ABRIL">Abril</option>
+						<option value="MAYO">Mayo</option>
+						<option value="JUNIO">Junio</option>
+						<option value="JULIO">Julio</option>
+						<option value="AGOSTO">Agosto</option>
+						<option value="SEPTIEMBRE">Septiembre</option>
+						<option value="OCTUBRE">Octubre</option>
+						<option value="NOVIEMBRE">Noviembre</option>
+						<option value="DICIEMBRE">Diciembre</option>
 					</select>
 				</div>
 				<div id="workers" key={"Lista"} className="panel-collapse collapse show" aria-expanded="true">
@@ -195,7 +176,33 @@ const Workers = () => {
 				<div
 					style={{
 						float: "center",
-						width: "25%",
+						width: "30%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "18px"
+					}}
+					id="workers"
+					key={"coin"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Sueldo en moneda extranjera:
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.coin, 0)
+						.toLocaleString("es")}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "30%",
 						marginLeft: "20px",
 						backgroundColor: "#f6f6f6",
 						fontSize: "18px"
@@ -208,23 +215,21 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector.startsWith(filter.name) ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date.startsWith(fecha.name) ||
-								worker.managment.startsWith(gerencia.name) ||
-								worker.actual_charge.startsWith(puesto.name)
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
 						)
 
-						.reduce(
-							(prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.basic_salary),
-							0
-						)}
+						.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)
+						.toLocaleString("es")}
 				</div>
 
 				<div
 					style={{
 						float: "center",
-						width: "25%",
+						width: "30%",
 						marginLeft: "20px",
 						backgroundColor: "#f6f6f6",
 						fontSize: "18px"
@@ -237,22 +242,20 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector.startsWith(filter.name) ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date.startsWith(fecha.name) ||
-								worker.managment.startsWith(gerencia.name) ||
-								worker.actual_charge.startsWith(puesto.name)
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
 						)
 
-						.reduce(
-							(prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.variable_salary),
-							0
-						)}
+						.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)
+						.toLocaleString("es")}
 				</div>
 				<div
 					style={{
 						float: "center",
-						width: "25%",
+						width: "30%",
 						marginLeft: "20px",
 						backgroundColor: "#f6f6f6",
 						fontSize: "18px"
@@ -265,22 +268,20 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector.startsWith(filter.name) ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date.startsWith(fecha.name) ||
-								worker.managment.startsWith(gerencia.name) ||
-								worker.actual_charge.startsWith(puesto.name)
+								worker.sector === filter.name ||
+								worker.vacant === bailar.name ||
+								worker.init_date === fecha.name ||
+								worker.managment === gerencia.name ||
+								worker.actual_charge === puesto.name
 						)
 
-						.reduce(
-							(prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.cesta_ticket),
-							0
-						)}
+						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)
+						.toLocaleString("es")}
 				</div>
 				<div
 					style={{
 						float: "center",
-						width: "25%",
+						width: "30%",
 						marginLeft: "20px",
 						backgroundColor: "#f6f6f6",
 						fontSize: "18px"
@@ -299,7 +300,35 @@ const Workers = () => {
 								worker.managment == gerencia.name ||
 								worker.actual_charge == puesto.name
 						)
-						.reduce((prevValue, worker) => new Intl.NumberFormat().format(prevValue + worker.Factor), 0)}
+						.reduce((prevValue, worker) => prevValue + parseFloat(worker.Factor), 0)
+						.toFixed(2)
+						.toLocaleString("es")}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "30%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "18px"
+					}}
+					id="workers"
+					key={"Estimated_annual_package"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Paquete anual estimado:
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+
+						.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package), 0)
+						.toLocaleString("es")}
 				</div>
 
 				<Modal

@@ -37,7 +37,7 @@ const Register = () => {
 		actual_charge: "",
 		company: "",
 		sector: "",
-		coin: "",
+		coin: null,
 		basic_salary: null,
 		variable_salary: null,
 		cesta_ticket: null,
@@ -54,7 +54,7 @@ const Register = () => {
 		Production_bonus: "No",
 		Transport_bonus: "No",
 		Savings_Bank: "No",
-		sales_commissions: "No",
+
 		parking_payment: "No",
 		full_HCM_Emp_Family: "No",
 		partial_HCM_Emp_Family: "No",
@@ -170,7 +170,7 @@ const Register = () => {
 							className="form-control"
 							name="Consultor"
 							onChange={handleChange}
-							value={datos.Consultor.toLowerCase()}
+							value={datos.Consultor.toUpperCase()}
 						/>
 						<br />
 						<label
@@ -197,7 +197,7 @@ const Register = () => {
 							className="form-control"
 							name="candidate"
 							onChange={handleChange}
-							value={datos.candidate.toLowerCase()}
+							value={datos.candidate.toUpperCase()}
 						/>
 						<br />
 						<label
@@ -305,7 +305,7 @@ const Register = () => {
 							className="form-control"
 							name="vacant"
 							onChange={handleChange}
-							value={datos.vacant.toLowerCase()}
+							value={datos.vacant.toUpperCase()}
 						/>
 						<br />
 						<label
@@ -333,18 +333,18 @@ const Register = () => {
 							value={datos.init_date}
 							onChange={handleChange}>
 							<option value="">Vacio</option>
-							<option value="Enero">Enero</option>
-							<option value="Febrero">Febrero</option>
-							<option value="Marzo">Marzo</option>
-							<option value="Abril">Abril</option>
-							<option value="Mayo">Mayo</option>
-							<option value="Junio">Junio</option>
-							<option value="Julio">Julio</option>
-							<option value="Agosto">Agosto</option>
-							<option value="Septiembre">Septiembre</option>
-							<option value="Octubre">Octubre</option>
-							<option value="Noviembre">Noviembre</option>
-							<option value="Diciembre">Diciembre</option>
+							<option value="ENERO">Enero</option>
+							<option value="FEBRERO">Febrero</option>
+							<option value="MARZO">Marzo</option>
+							<option value="ABRIL">Abril</option>
+							<option value="MAYO">Mayo</option>
+							<option value="JUNIO">Junio</option>
+							<option value="JULIO">Julio</option>
+							<option value="AGOSTO">Agosto</option>
+							<option value="SEPTIEMBRE">Septiembre</option>
+							<option value="OCTUBRE">Octubre</option>
+							<option value="NOVIEMBRE">Noviembre</option>
+							<option value="DICIEMBRE">Diciembre</option>
 						</select>
 						<br />
 						<label
@@ -371,24 +371,24 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.status}>
 							<option value="">Vacio</option>
-							<option value="Citado a entrevista">Citado a entrevista</option>
-							<option value="El area no lo quiso evaluar">El area no lo quiso evaluar</option>
-							<option value="Elegible entrevista tecnica">Elegible entrevista tecnica</option>
-							<option value="En proceso">En proceso</option>
-							<option value="No acepto oferta laboral">No acepto oferta laboral</option>
-							<option value="No asistio a entrevista laboral">No asistio a entrevista laboral</option>
-							<option value="No elegible entrevista laboral">No elegible entrevista laboral</option>
-							<option value="No elegible entrevista tecnica">No elegible entrevista tecnica</option>
-							<option value="No elegible entrevista GH">No elegible entrevista GH</option>
-							<option value="No interesado">No interesado</option>
-							<option value="No responde contacto para entrevista GH">
+							<option value="CITADO A ENTREVISTA">Citado a entrevista</option>
+							<option value="EL AREA NO LO QUISO EVALUAR">El area no lo quiso evaluar</option>
+							<option value="ELEGIBLE A ENTREVISTA TECNICA">Elegible entrevista tecnica</option>
+							<option value="EN PROCESO">En proceso</option>
+							<option value="NO ACEPTO OFERTA LABORAL">No acepto oferta laboral</option>
+							<option value="NO ASISTIO A ENTREVISTA LABORAL">No asistio a entrevista laboral</option>
+							<option value="NO ELEGIBLE A ENTREVISTA LABORAL">No elegible entrevista laboral</option>
+							<option value="NO ELEGIBLE A ENTREVISTA TECNICA">No elegible entrevista tecnica</option>
+							<option value="NO ELEGIBLE A ENTREVISTA GH">No elegible entrevista GH</option>
+							<option value="NO INTERESADO">No interesado</option>
+							<option value="NO RESPONDE CONTACTO PARA ENTREVISTA GH">
 								No responde contacto para entrevista GH
 							</option>
-							<option value="No responde contacto para entrevista tecnica">
+							<option value="NO RESPONDE CONTACTO PARA ENTREVISTA TECNICA">
 								No responde contacto para entrevista tecnica
 							</option>
-							<option value="Por agendar entrevsita">Por agendar entrevsita</option>
-							<option value="Pre-empleo">Pre-empleo</option>
+							<option value="POR AGENDAR ENTREVISTA">Por agendar entrevsita</option>
+							<option value="PRE-EMPLEO">Pre-empleo</option>
 						</select>
 						<br />
 						<label
@@ -415,7 +415,7 @@ const Register = () => {
 							className="form-control"
 							name="catchment_source"
 							onChange={handleChange}
-							value={datos.catchment_source.toLowerCase()}
+							value={datos.catchment_source.toUpperCase()}
 						/>
 						<br />
 						<label
@@ -443,11 +443,11 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.managment}>
 							<option value="">Vacio</option>
-							<option value="Mercadeo y ventas">Mercadeo y ventas</option>
-							<option value="Servicio al cliente">Servicio al cliente</option>
-							<option value="Tecnologia funcional">Tecnologia funcional</option>
-							<option value="Tecnologia tecnica">Tecnologia tecnica</option>
-							<option value="Plataforma">Plataforma</option>
+							<option value="MERCADEO Y VENTAS">Mercadeo y ventas</option>
+							<option value="SERVICIO AL CLIENTE">Servicio al cliente</option>
+							<option value="TECNOLOGIA FUNCIONAL">Tecnologia funcional</option>
+							<option value="TECNOLOGIA TECNICA">Tecnologia tecnica</option>
+							<option value="PLATAFORMA">Plataforma</option>
 						</select>
 						<br />
 						<label
@@ -501,7 +501,7 @@ const Register = () => {
 							className="form-control"
 							name="actual_charge"
 							onChange={handleChange}
-							value={datos.actual_charge.toLowerCase()}
+							value={datos.actual_charge.toUpperCase()}
 						/>
 						<br />
 						<label
@@ -528,7 +528,7 @@ const Register = () => {
 							className="form-control"
 							name="company"
 							onChange={handleChange}
-							value={datos.company.toLowerCase()}
+							value={datos.company.toUpperCase()}
 						/>
 						<br />
 						<label
@@ -555,12 +555,12 @@ const Register = () => {
 							value={datos.sector}
 							onChange={handleChange}>
 							<option value="">Vacio</option>
-							<option value="Otro">Otro</option>
-							<option value="Financiero">Financiero</option>
-							<option value="Tecnologico">Tecnologico</option>
-							<option value="Consultoria">Consultoria</option>
-							<option value="Educativo">Educativo</option>
-							<option value="Servicios">Servicios</option>
+							<option value="OTRO">Otro</option>
+							<option value="FINANCIERO">Financiero</option>
+							<option value="TECNOLOGICO">Tecnologico</option>
+							<option value="CONSULTORIA">Consultoria</option>
+							<option value="EDUCATIVO">Educativo</option>
+							<option value="SERVICIOS">Servicios</option>
 						</select>
 						<br />
 						<label
@@ -583,7 +583,7 @@ const Register = () => {
 								backgroundColor: "#f6f6f6",
 								borderColor: "black"
 							}}
-							type="text"
+							type="number"
 							className="form-control"
 							name="coin"
 							onChange={handleChange}
@@ -643,6 +643,7 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.variable_salary}
 						/>
+
 						<br />
 						<label
 							style={{
@@ -832,7 +833,7 @@ const Register = () => {
 							value={datos.Production_bonus}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 
 						<br />
@@ -861,7 +862,7 @@ const Register = () => {
 							value={datos.Transport_bonus}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 
 						<label
@@ -889,7 +890,7 @@ const Register = () => {
 							value={datos.Savings_Bank}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 
 						<label
@@ -917,7 +918,7 @@ const Register = () => {
 							value={datos.parking_payment}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 
 						<label
@@ -932,21 +933,6 @@ const Register = () => {
 							Comisiones por ventas::
 						</label>
 						<br />
-						<select
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							className="form-control"
-							name="sales_commissions"
-							value={datos.sales_commissions}
-							onChange={handleChange}>
-							<option value="No">No</option>
-							<option value="Si">Si</option>
-						</select>
 
 						<label
 							style={{
@@ -973,7 +959,7 @@ const Register = () => {
 							value={datos.full_HCM_Emp_Family}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 
 						<br />
@@ -1003,7 +989,7 @@ const Register = () => {
 							value={datos.partial_HCM_Emp_Family}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 
 						<br />
@@ -1033,7 +1019,7 @@ const Register = () => {
 							value={datos.Vehicle_insurance}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 
 						<label
@@ -1061,7 +1047,7 @@ const Register = () => {
 							value={datos.life_insurance}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 						<br />
 
@@ -1090,7 +1076,7 @@ const Register = () => {
 							value={datos.dinning_room}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 						<br />
 
@@ -1119,7 +1105,7 @@ const Register = () => {
 							value={datos.food_bags}
 							onChange={handleChange}>
 							<option value="No">No</option>
-							<option value="Si">Si</option>
+							<option value="X">Si</option>
 						</select>
 						<br />
 						<label
@@ -1146,7 +1132,7 @@ const Register = () => {
 							className="form-control"
 							name="Observations"
 							onChange={handleChange}
-							value={datos.Observations}
+							value={datos.Observations.toUpperCase()}
 						/>
 						<br />
 						<br />
@@ -1158,7 +1144,7 @@ const Register = () => {
 								color: "#ffffff",
 								backgroundColor: "#1883ba",
 								marginRight: "70px",
-								marginBottom: "100px"
+								marginBottom: "50px"
 							}}
 							className="btn"
 							onClick={() => {
