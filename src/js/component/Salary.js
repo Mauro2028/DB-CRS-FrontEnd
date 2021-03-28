@@ -318,6 +318,7 @@ const Workers = () => {
 					aria-expanded="true">
 					Paquete anual estimado:
 					{store.workers
+
 						.filter(
 							worker =>
 								worker.sector == filter.name ||

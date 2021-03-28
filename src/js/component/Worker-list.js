@@ -831,6 +831,97 @@ const WorkersList = () => {
 								</tbody>
 							</table>
 						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Basic_salary"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Salario basico:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Variable_salary"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Salario Variable:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Cesta_ticket"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Cesta ticket:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Factor"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Factor:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + parseFloat(worker.Factor), 0)
+								.toFixed(2)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Estimated_annual_package"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Paquete anual estimado:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package), 0)
+								.toLocaleString("es")}
+						</div>
 					</div>
 				</div>
 			</div>
