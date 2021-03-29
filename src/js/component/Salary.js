@@ -34,7 +34,7 @@ const Workers = () => {
 	const hanldePuesto = e => {
 		setPuesto({
 			...puesto,
-			[e.target.name]: e.target.value
+			[e.target.name]: e.target.values
 		});
 	};
 	const hanldeFecha = e => {
@@ -155,7 +155,7 @@ const Workers = () => {
 
 							.map(
 								worker => (
-									console.log(worker.id),
+									console.log(),
 									(
 										<div>
 											<li id="worker" key={worker.id}>
@@ -188,6 +188,7 @@ const Workers = () => {
 					aria-expanded="true">
 					Salario basico:
 					{store.workers
+
 						.filter(
 							worker =>
 								worker.sector == filter.name ||
@@ -283,7 +284,7 @@ const Workers = () => {
 						marginBottom: "30px"
 					}}
 					id="workers"
-					key={"Factor"}
+					key={"Estimated_anual_package"}
 					className="panel-collapse collapse show"
 					aria-expanded="true">
 					Paquete anual estimado:
