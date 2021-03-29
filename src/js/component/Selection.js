@@ -50,7 +50,7 @@ const Selection = () => {
 									height: "100px"
 								}}
 								className="btn">
-								Ver lista de personas
+								Ver lista de prospectos
 							</button>
 						</Link>
 						<Link to="/workers">
@@ -90,7 +90,7 @@ const Selection = () => {
 									alignItems: "center"
 								}}
 								className="btn btn-primary">
-								Registrar personas
+								Registrar prospectos
 							</button>
 						</Link>
 					</div>

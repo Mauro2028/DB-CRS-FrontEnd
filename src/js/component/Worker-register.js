@@ -37,14 +37,14 @@ const Register = () => {
 		actual_charge: "",
 		company: "",
 		sector: "",
-		coin: null,
-		basic_salary: null,
-		variable_salary: null,
-		cesta_ticket: null,
-		// Monthly_Cash_Flow: null,
-		Profit_Days: null,
-		vacations: null,
-		Vacation_Bonus: null,
+		coin: 0,
+		basic_salary: 0,
+		variable_salary: 0,
+		cesta_ticket: 0,
+		// Monthly_Cash_Flow: 0,
+		Profit_Days: 0,
+		vacations: 0,
+		Vacation_Bonus: 0,
 		Factor: null,
 		Estimated_annual_package: null,
 		Observations: "",
@@ -77,13 +77,13 @@ const Register = () => {
 		// birth_bonus: false,
 		// Vehicle_Credit: false,
 		// Mortgage_credit: false,
-		// Psychological_Test: null,
-		// Technical_knowledge_test: null,
-		// Business_knowledge_test: null,
-		// Other_tests: null,
-		// Global_Average: null,
+		// Psychological_Test: 0,
+		// Technical_knowledge_test: 0,
+		// Business_knowledge_test: 0,
+		// Other_tests: 0,
+		// Global_Average: 0,
 		// References_Check: "",
-		// Technical_Test_Results: null,
+		// Technical_Test_Results: 0,
 
 		// Days_passed_requisition_interviewGH: "",
 		// Days_passed_interviewGH_Techinterview: "",
@@ -113,14 +113,7 @@ const Register = () => {
 	};
 
 	const handleSubmit = e => {
-		if (
-			datos.candidate.trim() === "" ||
-			datos.cedula.trim() === null ||
-			datos.email.trim() === "" ||
-			datos.phone_number.trim() === null ||
-			datos.Consultor.trim() === "" ||
-			datos.vacant.trim() === ""
-		) {
+		if (datos.candidate.trim() === "" || datos.Consultor.trim() === "" || datos.vacant.trim() === "") {
 			setError(true);
 			return;
 		} else {
@@ -155,7 +148,7 @@ const Register = () => {
 								color: "black",
 								fontSize: "17px"
 							}}>
-							Consultor (Obligatorio):{" "}
+							Consultor{" "}
 						</label>
 						<br />
 						<input
@@ -182,7 +175,7 @@ const Register = () => {
 								color: "black",
 								fontSize: "17px"
 							}}>
-							Nombre del Candidato (Obligatorio):{" "}
+							Nombre del Candidato{" "}
 						</label>
 						<br />
 						<input
@@ -209,7 +202,7 @@ const Register = () => {
 								color: "black",
 								fontSize: "17px"
 							}}>
-							Cedula (Obligatorio):{" "}
+							Cedula{" "}
 						</label>
 						<br />
 						<input
@@ -236,7 +229,7 @@ const Register = () => {
 								color: "black",
 								fontSize: "17px"
 							}}>
-							Telefono (Obligatorio):{" "}
+							Telefono{" "}
 						</label>
 						<br />
 						<input
@@ -263,7 +256,7 @@ const Register = () => {
 								color: "black",
 								fontSize: "17px"
 							}}>
-							Correo electronico (Obligatorio):{" "}
+							Correo electronico{" "}
 						</label>
 						<br />
 						<input
@@ -290,7 +283,7 @@ const Register = () => {
 								color: "black",
 								fontSize: "17px"
 							}}>
-							Vacante (Obligatorio):{" "}
+							Vacante{" "}
 						</label>
 						<br />
 						<input
@@ -443,6 +436,10 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.managment}>
 							<option value="">Vacio</option>
+							<option value="ADMINISTRACION">Administracion</option>
+							<option value="GERENCIA GENERAL">Generencia General</option>
+							<option value="GESTION HUMANA">Generencia General</option>
+							<option value="INFRAESTRUCTURA">Generencia General</option>
 							<option value="MERCADEO Y VENTAS">Mercadeo y ventas</option>
 							<option value="SERVICIO AL CLIENTE">Servicio al cliente</option>
 							<option value="TECNOLOGIA FUNCIONAL">Tecnologia funcional</option>
@@ -561,6 +558,10 @@ const Register = () => {
 							<option value="CONSULTORIA">Consultoria</option>
 							<option value="EDUCATIVO">Educativo</option>
 							<option value="SERVICIOS">Servicios</option>
+							<option value="MANUFACTURA">Manufactura</option>
+							<option value="SALUD">Salud</option>
+							<option value="TELECOMUNICACIONES">Telecomunicaciones</option>
+							<option value="ALIMENTO">Alimentos</option>
 						</select>
 						<br />
 						<label
@@ -777,7 +778,7 @@ const Register = () => {
 							className="form-control"
 							name="Factor"
 							onChange={handleChange}
-							value={(datos.Factor = sum)}
+							value={(datos.Factor = sum).toLocaleString("es")}
 						/>
 						<br />
 						<label
@@ -1153,7 +1154,7 @@ const Register = () => {
 							Registrar
 						</button>
 						<br />
-						{error ? <div>soy un error, todos los campos deben ser validos</div> : null}
+						{error ? <div>soy un error, todos los campos deben ser validos</div> : 0}
 					</div>
 				</div>
 			</div>
