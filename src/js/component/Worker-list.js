@@ -10,8 +10,8 @@ const WorkersList = () => {
 		showModal: false,
 		idToDelete: null
 	});
-
 	const { store, actions } = useContext(Context);
+
 	// debugger;
 	return (
 		<div>
@@ -270,15 +270,7 @@ const WorkersList = () => {
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 											Pago de estacionamiento
 										</th>
-										<th
-											style={{
-												padding: "0.3em",
-												border: "1px solid #000",
-												width: "35%",
-												background: "#eee"
-											}}>
-											Comisiones por ventas
-										</th>
+
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 											H.C.M 100% Emp./Fmlia
 										</th>
@@ -325,523 +317,610 @@ const WorkersList = () => {
 										bordertop: "1px solid #000",
 										borderBottom: "1px solid #000"
 									}}>
-									{store.workers.map(worker => (
-										<tr key={worker.id}>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderRight: " 1px solid #000",
-													background: "#eee",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.id}
-											</td>
+									{store.workers.map(
+										worker => (
+											console.log(new Intl.NumberFormat("en-US").format(worker.basic_salary)),
+											(
+												<tr key={worker.id}>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderRight: " 1px solid #000",
+															background: "#eee",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{worker.id}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.init_date}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.init_date}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.Consultor}
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{worker.Consultor.toUpperCase()}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.candidate}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{worker.candidate.toUpperCase()}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.cedula}
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.cedula}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.status}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{worker.status}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.phone_number}
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.phone_number}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.email}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.email}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.catchment_source}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.catchment_source.toUpperCase()}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.managment}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{worker.managment.toUpperCase()}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.vacant}
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{worker.vacant.toUpperCase()}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.interview_date}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.interview_date}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.actual_charge}
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.actual_charge.toUpperCase()}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.company}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{worker.company.toUpperCase()}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.sector}
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.sector}
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.coin}
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{new Intl.NumberFormat("es-ES").format(worker.coin)} $
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.basic_salary} Bs
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{new Intl.NumberFormat("es-ES").format(worker.basic_salary)} bs
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.variable_salary} Bs
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													captionSide: "bottom",
-													background: "#eee",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.cesta_ticket} Bs
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{new Intl.NumberFormat("es-ES").format(worker.variable_salary)}{" "}
+														bs
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															captionSide: "bottom",
+															background: "#eee",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)} bs
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Profit_Days} dias
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.Profit_Days} dias
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													background: "#eee",
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.vacations} dias
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															background: "#eee",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.vacations} dias
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Vacation_Bonus} dias
-											</td>
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.Vacation_Bonus} dias
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
-													padding: "0.3em",
-													captionSide: "bottom",
-													background: "#eee",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{" "}
-												{worker.Factor} Bs
-											</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
+															padding: "0.3em",
+															captionSide: "bottom",
+															background: "#eee",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{" "}
+														{new Intl.NumberFormat("es-ES").format(worker.Factor)} meses
+													</td>
 
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Estimated_annual_package} $
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{new Intl.NumberFormat("es-ES").format(
+															worker.Estimated_annual_package
+														)}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Production_bonus}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.Production_bonus}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Transport_bonus}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.Transport_bonus}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Savings_Bank}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.Savings_Bank}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.parking_payment}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.parking_payment}
+													</td>
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.sales_commissions}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.full_HCM_Emp_Family}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.full_HCM_Emp_Family}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.partial_HCM_Emp_Family}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.partial_HCM_Emp_Family}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Vehicle_insurance}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.Vehicle_insurance}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.life_insurance}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.life_insurance}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.dinning_room}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.dinning_room}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.food_bags}
-											</td>
-											<td
-												style={{
-													padding: "0.3em",
-													borderBottom: "1px solid #000",
-													borderCollapse: "collapse",
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.food_bags}
+													</td>
+													<td
+														style={{
+															padding: "0.3em",
+															borderBottom: "1px solid #000",
+															borderCollapse: "collapse",
 
-													captionSide: "bottom",
-													border: "1px solid #000",
-													borderRight: " 1px solid #000"
-												}}
-												className="text small text-truncate">
-												{worker.Observations}
-											</td>
-										</tr>
-									))}
+															captionSide: "bottom",
+															border: "1px solid #000",
+															borderRight: " 1px solid #000"
+														}}
+														className="text small text-truncate">
+														{worker.Observations.toUpperCase()}
+													</td>
+												</tr>
+											)
+										)
+									)}
 								</tbody>
 							</table>
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Basic_salary"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Salario basico:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Variable_salary"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Salario Variable:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Cesta_ticket"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Cesta ticket:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Factor"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Factor:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + parseFloat(worker.Factor), 0)
+								.toFixed(2)
+								.toLocaleString("es")}
+						</div>
+						<div
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+							}}
+							id="workers"
+							key={"Estimated_annual_package"}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Paquete anual estimado:
+							{store.workers
+
+								.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package), 0)
+								.toLocaleString("es")}
 						</div>
 					</div>
 				</div>
