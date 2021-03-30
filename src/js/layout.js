@@ -18,6 +18,7 @@ import Register from "./component/Worker-register";
 import Workers from "./component/Salary";
 import { SalaryCard } from "./component/SalaryCard";
 import { Modal } from "./component/Modal";
+import Change from "./component/Change";
 
 //create your first component
 const Layout = () => {
@@ -39,6 +40,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/SignIn">
 							<SignIn />
+						</Route>
+						<Route exact path="/change">
+							<Change />
 						</Route>
 						<Route exact path="/Modal">
 							<Modal />

@@ -2,22 +2,12 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { useHistory } from "react-router-dom";
 
-const Register = () => {
+const Change = () => {
 	const initialState = {
-		init_date: "",
-		Consultor: "",
-		candidate: "",
-
-		cedula: null,
 		status: "",
-		phone_number: null,
-		email: "",
-		catchment_source: "",
 		managment: "",
 		vacant: "",
-
 		interview_date: "",
-
 		actual_charge: "",
 		company: "",
 		sector: "",
@@ -25,22 +15,18 @@ const Register = () => {
 		basic_salary: 0,
 		variable_salary: 0,
 		cesta_ticket: 0,
-
 		Profit_Days: 0,
 		vacations: 0,
 		Vacation_Bonus: 0,
 		Factor: null,
 		Estimated_annual_package: null,
 		Observations: "",
-
 		Production_bonus: "No",
 		Transport_bonus: "No",
 		Savings_Bank: "No",
-
 		parking_payment: "No",
 		full_HCM_Emp_Family: "No",
 		partial_HCM_Emp_Family: "No",
-
 		Vehicle_insurance: "No",
 		life_insurance: "No",
 		dinning_room: "No",
@@ -67,15 +53,10 @@ const Register = () => {
 	};
 
 	const handleSubmit = e => {
-		if (datos.candidate.trim() === "" || datos.Consultor.trim() === "" || datos.vacant.trim() === "") {
-			setError(true);
-			return;
-		} else {
-			console.log("enviamos formulario");
-			setError(false);
-			actions.registroWorker(datos);
-			history.push("/Worker-list");
-		}
+		console.log("enviamos formulario");
+		setError(false);
+		actions.cambioWorker(datos);
+		history.push("/Worker-list");
 	};
 	return (
 		<div>
@@ -93,141 +74,6 @@ const Register = () => {
 						Por favor especifica los datos para registrarlos
 					</p>
 					<div className="form-group">
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Consultor{" "}
-						</label>
-						<br />
-						<input
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							type="text"
-							className="form-control"
-							name="Consultor"
-							onChange={handleChange}
-							value={datos.Consultor.toUpperCase()}
-						/>
-						<br />
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Nombre del Candidato{" "}
-						</label>
-						<br />
-						<input
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							type="text"
-							className="form-control"
-							name="candidate"
-							onChange={handleChange}
-							value={datos.candidate.toUpperCase()}
-						/>
-						<br />
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Cedula{" "}
-						</label>
-						<br />
-						<input
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							type="number"
-							className="form-control"
-							name="cedula"
-							onChange={handleChange}
-							value={datos.cedula}
-						/>
-						<br />
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Telefono{" "}
-						</label>
-						<br />
-						<input
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							type="number"
-							className="form-control"
-							name="phone_number"
-							onChange={handleChange}
-							value={datos.phone_number}
-						/>
-						<br />
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Correo electronico{" "}
-						</label>
-						<br />
-						<input
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							type="text"
-							className="form-control"
-							name="email"
-							onChange={handleChange}
-							value={datos.email}
-						/>
-						<br />
 						<label
 							style={{
 								float: "left",
@@ -255,45 +101,7 @@ const Register = () => {
 							value={datos.vacant.toUpperCase()}
 						/>
 						<br />
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Mes de inicio:
-						</label>
-						<br />
-						<select
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							className="form-control"
-							name="init_date"
-							value={datos.init_date}
-							onChange={handleChange}>
-							<option value="">Vacio</option>
-							<option value="ENERO">Enero</option>
-							<option value="FEBRERO">Febrero</option>
-							<option value="MARZO">Marzo</option>
-							<option value="ABRIL">Abril</option>
-							<option value="MAYO">Mayo</option>
-							<option value="JUNIO">Junio</option>
-							<option value="JULIO">Julio</option>
-							<option value="AGOSTO">Agosto</option>
-							<option value="SEPTIEMBRE">Septiembre</option>
-							<option value="OCTUBRE">Octubre</option>
-							<option value="NOVIEMBRE">Noviembre</option>
-							<option value="DICIEMBRE">Diciembre</option>
-						</select>
-						<br />
+
 						<label
 							style={{
 								float: "left",
@@ -337,69 +145,7 @@ const Register = () => {
 							<option value="POR AGENDAR ENTREVISTA">Por agendar entrevsita</option>
 							<option value="PRE-EMPLEO">Pre-empleo</option>
 						</select>
-						<br />
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Fuente de captacion:{" "}
-						</label>
-						<br />
-						<input
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							type="text"
-							className="form-control"
-							name="catchment_source"
-							onChange={handleChange}
-							value={datos.catchment_source.toUpperCase()}
-						/>
-						<br />
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Gerencia:
-						</label>
-						<br />
-						<select
-							style={{
-								float: "left",
-								width: "80%",
-								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black"
-							}}
-							className="form-control"
-							name="managment"
-							onChange={handleChange}
-							value={datos.managment}>
-							<option value="">Vacio</option>
-							<option value="ADMINISTRACION">Administracion</option>
-							<option value="GERENCIA GENERAL">Generencia General</option>
-							<option value="GESTION HUMANA">Generencia General</option>
-							<option value="INFRAESTRUCTURA">Generencia General</option>
-							<option value="MERCADEO Y VENTAS">Mercadeo y ventas</option>
-							<option value="SERVICIO AL CLIENTE">Servicio al cliente</option>
-							<option value="TECNOLOGIA FUNCIONAL">Tecnologia funcional</option>
-							<option value="TECNOLOGIA TECNICA">Tecnologia tecnica</option>
-							<option value="PLATAFORMA">Plataforma</option>
-						</select>
+
 						<br />
 						<label
 							style={{
@@ -428,7 +174,7 @@ const Register = () => {
 							value={datos.interview_date}
 						/>
 						<br />
-						<label
+						{/* <label
 							style={{
 								float: "left",
 								width: "80%",
@@ -517,7 +263,7 @@ const Register = () => {
 							<option value="TELECOMUNICACIONES">Telecomunicaciones</option>
 							<option value="ALIMENTO">Alimentos</option>
 						</select>
-						<br />
+						<br /> */}
 						<label
 							style={{
 								float: "left",
@@ -763,7 +509,7 @@ const Register = () => {
 						/>
 						<br />
 
-						<label
+						{/* <label
 							style={{
 								float: "left",
 								width: "80%",
@@ -1088,7 +834,7 @@ const Register = () => {
 							name="Observations"
 							onChange={handleChange}
 							value={datos.Observations.toUpperCase()}
-						/>
+						/> */}
 						<br />
 						<br />
 						<button
@@ -1116,4 +862,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default Change;

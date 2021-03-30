@@ -42,7 +42,7 @@ const Workers = () => {
 	const hanldePuesto = e => {
 		setPuesto({
 			...puesto,
-			[e.target.name]: e.target.value
+			[e.target.name]: e.target.values
 		});
 	};
 
@@ -91,7 +91,11 @@ const Workers = () => {
 						}}
 						onChange={e => setGerencia({ name: e.target.value })}
 						value={gerencia.name}>
-						<option defaultValue="">Gerencia</option>
+						<option value="">Vacio</option>
+						<option value="ADMINISTRACION">Administracion</option>
+						<option value="GERENCIA GENERAL">Generencia General</option>
+						<option value="GESTION HUMANA">Generencia General</option>
+						<option value="INFRAESTRUCTURA">Generencia General</option>
 						<option value="MERCADEO Y VENTAS">Mercadeo y ventas</option>
 						<option value="SERVICIO AL CLIENTE">Servicio al cliente</option>
 						<option value="TECNOLOGIA FUNCIONAL">Tecnologia funcional</option>
@@ -109,12 +113,17 @@ const Workers = () => {
 						onChange={e => setFilter({ name: e.target.value })}
 						value={filter.name}>
 						<option value="">Sector</option>
+						<option value="">Vacio</option>
 						<option value="OTRO">Otro</option>
 						<option value="FINANCIERO">Financiero</option>
 						<option value="TECNOLOGICO">Tecnologico</option>
 						<option value="CONSULTORIA">Consultoria</option>
 						<option value="EDUCATIVO">Educativo</option>
 						<option value="SERVICIOS">Servicios</option>
+						<option value="MANUFACTURA">Manufactura</option>
+						<option value="SALUD">Salud</option>
+						<option value="TELECOMUNICACIONES">Telecomunicaciones</option>
+						<option value="ALIMENTO">Alimentos</option>
 					</select>
 
 					<select
@@ -213,6 +222,7 @@ const Workers = () => {
 					aria-expanded="true">
 					Salario basico:
 					{store.workers
+
 						.filter(
 							worker =>
 								worker.sector == filter.name ||
@@ -252,6 +262,7 @@ const Workers = () => {
 						.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)
 						.toLocaleString("es")}
 				</div>
+
 				<div
 					style={{
 						float: "center",
@@ -276,6 +287,7 @@ const Workers = () => {
 						)
 
 						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)
+
 						.toLocaleString("es")}
 				</div>
 				<div

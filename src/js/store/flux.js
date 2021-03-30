@@ -1,4 +1,4 @@
-// const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:5000";
 // const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
@@ -12,6 +12,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const respuesta = await fetch(`${BASE_URL}/signup_worker`, {
 						method: "POST",
+						body: JSON.stringify(datos),
+						headers: { "Content-Type": "application/json" }
+					});
+					let resultado = await respuesta.json();
+					console.log(resultado);
+				} catch (error) {
+					console.log("explote", error);
+				}
+			},
+
+			cambioWorker: async datos => {
+				try {
+					const respuesta = await fetch(`${BASE_URL}/worker/<int:id>`, {
+						method: "PATCH",
 						body: JSON.stringify(datos),
 						headers: { "Content-Type": "application/json" }
 					});

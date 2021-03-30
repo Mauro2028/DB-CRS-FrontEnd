@@ -50,7 +50,26 @@ const Selection = () => {
 									height: "100px"
 								}}
 								className="btn">
-								Ver lista de personas
+								Ver lista de prospectos
+							</button>
+						</Link>
+						<Link to="/Change">
+							<button
+								style={{
+									padding: "10px",
+									fontweight: "700",
+									fontsize: "30px",
+									color: "#ffffff",
+									backgroundColor: "#1883ba",
+									borderRadius: "6px",
+									border: "2px solid #0016b0",
+									display: "display-flex",
+									justifyContent: "space-around",
+									width: "200px",
+									height: "100px"
+								}}
+								className="btn">
+								Actualizar datos de prospectos
 							</button>
 						</Link>
 						<Link to="/workers">
@@ -90,7 +109,7 @@ const Selection = () => {
 									alignItems: "center"
 								}}
 								className="btn btn-primary">
-								Registrar personas
+								Registrar prospectos
 							</button>
 						</Link>
 					</div>

@@ -38,7 +38,7 @@ const WorkersList = () => {
 										backgroundColor: "#1883ba",
 										marginRight: "30px"
 									}}>
-									Añadir trabajador
+									Añadir prospecto
 								</button>
 							</Link>
 							<Link to="/workers">
@@ -63,7 +63,7 @@ const WorkersList = () => {
 
 						<div
 							style={{
-								marginLeft: "2200px",
+								marginLeft: "2500px",
 								boxSizing: "border-box",
 								display: "flex",
 								justifyContent: "center",
@@ -846,7 +846,7 @@ const WorkersList = () => {
 							Salario basico:
 							{store.workers
 
-								.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)
+								.reduce((prevValue, worker, workers) => prevValue + worker.basic_salary, 0)
 								.toLocaleString("es")}
 						</div>
 						<div
