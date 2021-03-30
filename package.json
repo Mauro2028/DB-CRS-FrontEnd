@@ -50,6 +50,7 @@
 		"html-loader": "^0.5.5",
 		"html-webpack-plugin": "^3.2.0",
 		"node-sass": "^4.14.1",
+		"child_process": "empty",
 		"parse-github-url": "^1.0.2",
 		"prettier": "^1.14.3",
 		"prettier-webpack-plugin": "^1.1.0",
@@ -77,11 +78,13 @@
 		]
 	},
 	"dependencies": {
+		"axios": "^0.21.1",
 		"bootstrap": "^4.3.1",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^5.2.0"
+		"react-router-dom": "^5.2.0",
+		"worker-farm": "^1.7.0"
 	}
 }
