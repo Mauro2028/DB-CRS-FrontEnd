@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { SalaryCard } from "./SalaryCard";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
-// import home from "../../styles";
+import { ProgressPlugin } from "webpack";
+import { useHistory } from "react-router-dom";
+import Axios from "axios";
+
+let history = useHistory();
 
 const WorkersList = () => {
 	const [state, setState] = useState({
@@ -11,6 +15,11 @@ const WorkersList = () => {
 		idToDelete: null
 	});
 	const { store, actions } = useContext(Context);
+
+    const Update=(id)=>{
+        console.log(id)
+        Props.history.push("/Change/"+id)
+    }
 
 	// debugger;
 	return (
@@ -60,7 +69,9 @@ const WorkersList = () => {
 								</button>
 							</Link>
 						</div>
-
+                        <div>
+                         <button onclick={Update()}></button>
+                        </div>
 						<div
 							style={{
 								marginLeft: "2500px",
@@ -940,3 +951,5 @@ export default WorkersList;
 // 								justifyContent: "center",
 // 								marginRight: "30 px",
 // 								color: "black"
+
+// https://www.youtube.com/watch?v=taxkiuT8WJM
