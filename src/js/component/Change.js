@@ -1,47 +1,50 @@
-import React, { useContext, useState } from "react";
+/* eslint-disable react/prop-types */
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { useHistory } from "react-router-dom";
+import Axios from "axios";
+import props from "prop-types";
 
-const Change = () => {
+const Change = props => {
 	const initialState = {
-		status: "",
-		managment: "",
-		vacant: "",
-		interview_date: "",
-		actual_charge: "",
-		company: "",
-		sector: "",
-		coin: 0,
-		basic_salary: 0,
-		variable_salary: 0,
-		cesta_ticket: 0,
-		Profit_Days: 0,
-		vacations: 0,
-		Vacation_Bonus: 0,
-		Factor: null,
-		Estimated_annual_package: null,
-		Observations: "",
-		Production_bonus: "No",
-		Transport_bonus: "No",
-		Savings_Bank: "No",
-		parking_payment: "No",
-		full_HCM_Emp_Family: "No",
-		partial_HCM_Emp_Family: "No",
-		Vehicle_insurance: "No",
-		life_insurance: "No",
-		dinning_room: "No",
-		food_bags: "No"
+		// status: "",
+		// managment: "",
+		vacant: ""
+		// interview_date: "",
+		// actual_charge: "",
+		// company: "",
+		// sector: "",
+		// coin: 0,
+		// basic_salary: 0,
+		// variable_salary: 0,
+		// cesta_ticket: 0,
+		// Profit_Days: 0,
+		// vacations: 0,
+		// Vacation_Bonus: 0,
+		// Factor: null,
+		// Estimated_annual_package: null
+		// Observations: "",
+		// Production_bonus: "No",
+		// Transport_bonus: "No",
+		// Savings_Bank: "No",
+		// parking_payment: "No",
+		// full_HCM_Emp_Family: "No",
+		// partial_HCM_Emp_Family: "No",
+		// Vehicle_insurance: "No",
+		// life_insurance: "No",
+		// dinning_room: "No",
+		// food_bags: "No"
 	};
-
+	const url = "http://localhost:5000/change/";
 	const [datos, setDatos] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
-	let pdm = datos.Profit_Days / 30;
-	let vbm = datos.Vacation_Bonus / 30;
-	let sum = (12 + pdm + vbm).toFixed(2);
-	let cta = parseInt(datos.cesta_ticket * 12, 10);
-	let sva = parseInt(datos.variable_salary * 12, 10);
-	let eap = parseInt(datos.basic_salary * datos.Factor + cta + sva);
+	// let pdm = datos.Profit_Days / 30;
+	// let vbm = datos.Vacation_Bonus / 30;
+	// let sum = (12 + pdm + vbm).toFixed(2);
+	// let cta = parseInt(datos.cesta_ticket * 12, 10);
+	// let sva = parseInt(datos.variable_salary * 12, 10);
+	// let eap = parseInt(datos.basic_salary * datos.Factor + cta + sva);
 	let history = useHistory();
 
 	const handleChange = e => {
@@ -52,12 +55,42 @@ const Change = () => {
 			console.log(datos);
 	};
 
-	const handleSubmit = e => {
-		console.log("enviamos formulario");
-		setError(false);
-		actions.cambioWorker(datos);
-		history.push("/Worker-list");
-	};
+	// const handleSubmit = e => {
+	// 	const id = props.id;
+	// 	Axios.put(url + id, datos)
+	// 		.then(res => {
+	// 			console.log(res.datos);
+	// 			const mydata = [...datos, res.datos];
+	// 			setDatos[mydata];
+	// 		})
+	// 		.catch(error => console.log(error));
+	// };
+
+	useEffect(({ match }) => {
+		const id = match.params.id;
+		Axios.get(url + id)
+			.then(res => {
+				console.log(res.datos);
+				setDatos(res.datos);
+			})
+			.catch(setError(true));
+	});
+	// const Detail = ({ match }) => (
+		//   <div>
+		//     <h2>Detalle</h2>
+		//     <p>Me han pasado la id {match.params.id} en la url</p>
+		//     <Link to='/'>Volver a la home</Link>
+		//   </div>
+		// )
+	// actions.cambioId();
+	// const handleSubmit = e => {
+	// 	e.preventDefault();
+	// 	console.log("enviamos formulario");
+	// 	setError(false);
+	// 	actions.cambioWorker(datos);
+	// 	history.push("/Worker-list");
+	// };
+
 	return (
 		<div>
 			<div className="containerPrincipal">
@@ -101,7 +134,7 @@ const Change = () => {
 							value={datos.vacant.toUpperCase()}
 						/>
 						<br />
-
+						{/* 
 						<label
 							style={{
 								float: "left",
@@ -173,7 +206,7 @@ const Change = () => {
 							onChange={handleChange}
 							value={datos.interview_date}
 						/>
-						<br />
+						<br />  */}
 						{/* <label
 							style={{
 								float: "left",
@@ -264,7 +297,7 @@ const Change = () => {
 							<option value="ALIMENTO">Alimentos</option>
 						</select>
 						<br /> */}
-						<label
+						{/* <label
 							style={{
 								float: "left",
 								width: "80%",
@@ -507,7 +540,7 @@ const Change = () => {
 							onChange={handleChange}
 							value={(datos.Estimated_annual_package = eap)}
 						/>
-						<br />
+						<br /> */}
 
 						{/* <label
 							style={{
@@ -848,8 +881,15 @@ const Change = () => {
 								marginBottom: "50px"
 							}}
 							className="btn"
-							onClick={() => {
-								handleSubmit();
+							onClick={e => {
+								e.preventDefault();
+								console.log("enviamos formulario");
+								setError(false);
+								actions.cambioWorker(datos);
+								history
+									.push("/Worker-list")
+
+									.catch(error => console.log(error));
 							}}>
 							Registrar
 						</button>

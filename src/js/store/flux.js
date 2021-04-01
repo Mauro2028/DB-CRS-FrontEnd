@@ -1,4 +1,5 @@
 const BASE_URL = "http://localhost:5000";
+import Axios from "axios";
 // const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
@@ -12,20 +13,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const respuesta = await fetch(`${BASE_URL}/signup_worker`, {
 						method: "POST",
-						body: JSON.stringify(datos),
-						headers: { "Content-Type": "application/json" }
-					});
-					let resultado = await respuesta.json();
-					console.log(resultado);
-				} catch (error) {
-					console.log("explote", error);
-				}
-			},
-
-			cambioWorker: async datos => {
-				try {
-					const respuesta = await fetch(`${BASE_URL}/worker/<int:id>`, {
-						method: "PATCH",
 						body: JSON.stringify(datos),
 						headers: { "Content-Type": "application/json" }
 					});
@@ -76,28 +63,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			registroSalary: async (id = null) => {
-				let url = BASE_URL + "/salary";
-				if (id != null) {
-					url += "/" + id;
-				}
-				let response = await fetch(url);
-				if (response.ok) {
-					let body = await response.json();
-					if (id == null) {
-						setStore({
-							workers: body
-						});
-					} else {
-						setStore({ worker: body });
-					}
-					return true;
-				} else {
-					console.log(response.status);
-					return false;
-				}
-			},
-
 			fetchWorker: async (id = null) => {
 				let url = BASE_URL + "/workers";
 				if (id != null) {
@@ -118,8 +83,85 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(response.status);
 					return false;
 				}
+				// , {
+				// 	method: "PATCH",
+				// 	body: JSON.stringify(datos),
+				// 	headers: { "Content-Type": "application/json" }
+				// });
+			},
+			cambioWorker: async (datos, id) => {
+				try {
+					const respuesta = await fetch(`${BASE_URL}/change/<int:id>`, {
+						method: "PATCH",
+						body: JSON.stringify(datos),
+						headers: { "Content-Type": "application/json" }
+					});
+					let resultado = await respuesta.json();
+					console.log(resultado);
+				} catch (error) {
+					console.log("explote", error);
+				}
 			},
 
+			cambioId: async (id = null) => {
+				let url = BASE_URL + "/change";
+				if (id != null) {
+					url += "/" + id;
+				}
+				let response = await fetch(url);
+				if (response.ok) {
+					let body = await response.json();
+					if (id == null) {
+						setStore({
+							workers: body
+						});
+					} else {
+						setStore({ worker: body });
+					}
+				}
+			},
+
+			// let response = await fetch(url);
+			// if (response.ok) {
+			// 	let body = await response.json();
+			// 	if (id == null) {
+			// 		setStore({
+			// 			workers: body
+			// 		});
+			// 	} else {
+			// 		setStore({ worker: body });
+			// 	}
+			// 	return true;
+			// } else {
+			// 	console.log(response.status);
+			// 	return false;
+			// }
+			// 	let resultado = await respuesta.json();
+			// 	console.log(resultado);
+			//  (error) {
+			// 	console.log("explote", error);
+			// },
+			// registroSalary: async (id = null) => {
+			// 	let url = BASE_URL + "/salary";
+			// 	if (id != null) {
+			// 		url += "/" + id;
+			// 	}
+			// 	let response = await fetch(url);
+			// 	if (response.ok) {
+			// 		let body = await response.json();
+			// 		if (id == null) {
+			// 			setStore({
+			// 				workers: body
+			// 			});
+			// 		} else {
+			// 			setStore({ worker: body });
+			// 		}
+			// 		return true;
+			// 	} else {
+			// 		console.log(response.status);
+			// 		return false;
+			// 	}
+			// },
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { SalaryCard } from "./SalaryCard";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
-// import home from "../../styles";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
+import Props from "prop-types";
 
 const WorkersList = () => {
 	const [state, setState] = useState({
@@ -11,6 +13,12 @@ const WorkersList = () => {
 		idToDelete: null
 	});
 	const { store, actions } = useContext(Context);
+	let history = useHistory();
+
+	const Update = (worker, id) => {
+		history.push("/change/" + worker.id);
+		console.log(id);
+	};
 
 	// debugger;
 	return (
@@ -60,7 +68,6 @@ const WorkersList = () => {
 								</button>
 							</Link>
 						</div>
-
 						<div
 							style={{
 								marginLeft: "2500px",
@@ -87,9 +94,18 @@ const WorkersList = () => {
 												border: "1px solid #000",
 												width: "25%",
 												background: "#eee"
+											}}
+										/>
+										<th
+											style={{
+												padding: "0.3em",
+												border: "1px solid #000",
+												width: "25%",
+												background: "#eee"
 											}}>
 											ID
 										</th>
+
 										<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>
 											Fecha de inicio
 										</th>
@@ -319,9 +335,21 @@ const WorkersList = () => {
 									}}>
 									{store.workers.map(
 										worker => (
-											console.log(new Intl.NumberFormat("en-US").format(worker.basic_salary)),
+											console.log(),
 											(
 												<tr key={worker.id}>
+													<td>
+														(
+														<button
+															className="btn"
+															onClick={() => {
+																history.push("/change/" + worker.id),
+																	console.log(worker.id);
+															}}>
+															Actualizar
+														</button>
+														),
+													</td>
 													<td
 														style={{
 															padding: "0.3em",
@@ -940,3 +968,57 @@ export default WorkersList;
 // 								justifyContent: "center",
 // 								marginRight: "30 px",
 // 								color: "black"
+
+// https://www.youtube.com/watch?v=taxkiuT8WJM
+
+// import React, { Component } from 'react';
+// import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
+// import { render } from 'react-dom';
+
+// /* Página home */
+// const Home = () => (
+//   <div>
+//     <h1>Home</h1>
+//     <Link to='/detail/123'>Detalle usando path params</Link><br />
+//     <Link to={{
+//       pathname: '/another-type-of-detail',
+//       state: { id: '456' }
+//     }}>Detalle usando state</Link>
+//   </div>
+// )
+
+// /* Página Detail que extrae la id de la ruta,
+//   para ello en nuestras rutas tenemos que especificar que la ruta
+//   tendrá en el path ese segmento.
+//   Es la opción más recomendada en este caso.
+// */
+// const Detail = ({ match }) => (
+//   <div>
+//     <h2>Detalle</h2>
+//     <p>Me han pasado la id {match.params.id} en la url</p>
+//     <Link to='/'>Volver a la home</Link>
+//   </div>
+// )
+
+// /* Página AnotherDetail que extrae la id del state,
+//   no necesitamos hacer nada especial en las rutas salvo crearla.
+// */
+// const AnotherDetail = ({ location }) => (
+//   <div>
+//     <h2>Detalle</h2>
+//     <p>Me han pasado la id {location.state.id} en el state</p>
+//     <Link to='/'>Volver a la home</Link>
+//   </div>
+// )
+
+// /* Render de react-dom para mostrar nuestra app */
+// render(
+//   <BrowserRouter>
+//     <Switch>
+//       <Route exact path='/' component={Home} />
+//       <Route path='/detail/:id' component={Detail} />
+//       <Route path='/another-type-of-detail' component={AnotherDetail} />
+//     </Switch>
+//   </BrowserRouter>,
+//   document.getElementById('root')
+// )
