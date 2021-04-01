@@ -13,6 +13,6 @@ export const Footer = () => (
 			height: "65px"
 		}}
 		className="footer mt-auto py-3 text-center">
-		<p>Gestion Humana</p>
+		<p>Gestion Humana xd</p>
 	</footer>
 );
