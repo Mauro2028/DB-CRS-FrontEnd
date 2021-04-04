@@ -25,13 +25,6 @@ const Workers = () => {
 			[e.target.name]: e.target.value
 		});
 	};
-	// const contar = worker => {
-	// 	worker.sector == filter.name ||
-	// 		worker.vacant == bailar.name ||
-	// 		worker.init_date == fecha.name ||
-	// 		worker.managment == gerencia.name ||
-	// 		worker.actual_charge == puesto.name;
-	// };
 
 	const handleCambio = e => {
 		setBailar({
@@ -150,37 +143,37 @@ const Workers = () => {
 						<option value="DICIEMBRE">Diciembre</option>
 					</select>
 				</div>
-				<div id="workers" key={"Lista"} className="panel-collapse collapse show" aria-expanded="true">
-					<ul className="list-group pull-down" id="workers">
-						{store.workers
-							.filter(
-								worker =>
-									worker.sector == filter.name ||
-									worker.vacant == bailar.name ||
-									worker.init_date == fecha.name ||
-									worker.managment == gerencia.name ||
-									worker.actual_charge == puesto.name
-							)
-							.map(
-								worker => (
-									console.log(),
-									(
-										<div>
-											<li id="worker" key={worker.id}>
-												<SalaryCard
-													name={worker.candidate}
-													key={worker.id}
-													worker={worker}
-													onDelete={() =>
-														setState({ showModal: true, idToDelete: contact.id })
-													}
-												/>
-											</li>
-										</div>
-									)
+				<div
+					id="workers"
+					// style={{
+					// 	// marginLeft: "2500px",
+					// 	boxSizing: "border-box",
+					// 	display: "inline-grid",
+					// 	justifyContent: "center",
+					// 	marginTop: "10px"
+					// }}
+					key={"Lista"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant == bailar.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge == puesto.name
+						)
+						.map(
+							worker => (
+								console.log(),
+								(
+									<div>
+										<SalaryCard name={worker.candidate} key={worker.id} worker={worker} />
+									</div>
 								)
-							)}
-					</ul>
+							)
+						)}
 				</div>
 				<div
 					style={{

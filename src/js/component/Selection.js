@@ -53,25 +53,6 @@ const Selection = () => {
 								Ver lista de prospectos
 							</button>
 						</Link>
-						<Link to="/Change">
-							<button
-								style={{
-									padding: "10px",
-									fontweight: "700",
-									fontsize: "30px",
-									color: "#ffffff",
-									backgroundColor: "#1883ba",
-									borderRadius: "6px",
-									border: "2px solid #0016b0",
-									display: "display-flex",
-									justifyContent: "space-around",
-									width: "200px",
-									height: "100px"
-								}}
-								className="btn">
-								Actualizar datos de prospectos
-							</button>
-						</Link>
 						<Link to="/workers">
 							<button
 								style={{

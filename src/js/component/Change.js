@@ -26,16 +26,16 @@ const Change = props => {
 		Factor: null,
 		Estimated_annual_package: null,
 		Observations: "",
-		Production_bonus: "No"
-		// Transport_bonus: "No",
-		// Savings_Bank: "No",
-		// parking_payment: "No",
-		// full_HCM_Emp_Family: "No",
-		// partial_HCM_Emp_Family: "No",
-		// Vehicle_insurance: "No",
-		// life_insurance: "No",
-		// dinning_room: "No",
-		// food_bags: "No"
+		Production_bonus: "No",
+		Transport_bonus: "No",
+		Savings_Bank: "No",
+		parking_payment: "No",
+		full_HCM_Emp_Family: "No",
+		partial_HCM_Emp_Family: "No",
+		Vehicle_insurance: "No",
+		life_insurance: "No",
+		dinning_room: "No",
+		food_bags: "No"
 	};
 
 	const [datos, setDatos] = useState(initialState);
@@ -57,7 +57,6 @@ const Change = props => {
 			console.log(datos);
 	};
 
-	
 	const { id } = useParams();
 	console.log(id);
 
@@ -90,7 +89,7 @@ const Change = props => {
 							Vacante{" "}
 						</label>
 						<br />
-		
+
 						<input
 							style={{
 								float: "left",
@@ -540,6 +539,278 @@ const Change = props => {
 							<option value="No">No</option>
 							<option value="X">Si</option>
 						</select>
+						<br />
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Bono de transporte:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="Transport_bonus"
+							value={datos.Transport_bonus}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Caja de ahorro:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="Savings_Bank"
+							value={datos.Savings_Bank}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Pago de estacionamiento:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="parking_payment"
+							value={datos.parking_payment}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Comisiones por ventas::
+						</label>
+						<br />
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							H.C.M 100% Emp./Fmlia:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="full_HCM_Emp_Family"
+							value={datos.full_HCM_Emp_Family}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+
+						<br />
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							H.C.M parcial Emp./Fmlia:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="partial_HCM_Emp_Family"
+							value={datos.partial_HCM_Emp_Family}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+
+						<br />
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Seguro de Vehículo:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="Vehicle_insurance"
+							value={datos.Vehicle_insurance}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Seguro de Vida:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="life_insurance"
+							value={datos.life_insurance}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+						<br />
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Comedor:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="dinning_room"
+							value={datos.dinning_room}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+						<br />
+
+						<label
+							style={{
+								float: "left",
+								width: "80%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "17px"
+							}}>
+							Subsidios alimenticios:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "80%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black"
+							}}
+							className="form-control"
+							name="food_bags"
+							value={datos.food_bags}
+							onChange={handleChange}>
+							<option value="No">No</option>
+							<option value="X">Si</option>
+						</select>
+						<br />
 
 						<label
 							style={{
@@ -599,276 +870,3 @@ const Change = props => {
 };
 
 export default withRouter(Change);
-
-// <br />
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Bono de transporte:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="Transport_bonus"
-// 							value={datos.Transport_bonus}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Caja de ahorro:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="Savings_Bank"
-// 							value={datos.Savings_Bank}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Pago de estacionamiento:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="parking_payment"
-// 							value={datos.parking_payment}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Comisiones por ventas::
-// 						</label>
-// 						<br />
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							H.C.M 100% Emp./Fmlia:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="full_HCM_Emp_Family"
-// 							value={datos.full_HCM_Emp_Family}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-
-// 						<br />
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							H.C.M parcial Emp./Fmlia:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="partial_HCM_Emp_Family"
-// 							value={datos.partial_HCM_Emp_Family}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-
-// 						<br />
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Seguro de Vehículo:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="Vehicle_insurance"
-// 							value={datos.Vehicle_insurance}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Seguro de Vida:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="life_insurance"
-// 							value={datos.life_insurance}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-// 						<br />
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Comedor:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="dinning_room"
-// 							value={datos.dinning_room}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-// 						<br />
-
-// 						<label
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								paddingRight: "24px",
-// 								marginLeft: "20px",
-// 								color: "black",
-// 								fontSize: "17px"
-// 							}}>
-// 							Subsidios alimenticios:
-// 						</label>
-// 						<br />
-// 						<select
-// 							style={{
-// 								float: "left",
-// 								width: "80%",
-// 								marginLeft: "20px",
-// 								backgroundColor: "#f6f6f6",
-// 								borderColor: "black"
-// 							}}
-// 							className="form-control"
-// 							name="food_bags"
-// 							value={datos.food_bags}
-// 							onChange={handleChange}>
-// 							<option value="No">No</option>
-// 							<option value="X">Si</option>
-// 						</select>
-// 						<br />

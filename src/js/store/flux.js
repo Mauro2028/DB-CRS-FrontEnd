@@ -87,7 +87,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(response.status);
 					return false;
 				}
-				
 			},
 			cambioWorker: async (datos, id) => {
 				let url = `${BASE_URL}/change/${id}`;
