@@ -81,7 +81,7 @@ const Register = () => {
 		<div>
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
-					<h2 style={{ marginLeft: "10px" }}>Datos del trabajador</h2>
+					<h2 style={{ marginLeft: "10px" }}>Datos del prospecto</h2>
 					<p
 						style={{
 							marginTop: "10px",
@@ -875,18 +875,6 @@ const Register = () => {
 							<option value="No">No</option>
 							<option value="X">Si</option>
 						</select>
-
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Comisiones por ventas::
-						</label>
 						<br />
 
 						<label
@@ -1095,11 +1083,12 @@ const Register = () => {
 							style={{
 								float: "right",
 								width: "250px",
+								height: "50px",
 								marginTop: "40px",
 								color: "#ffffff",
 								backgroundColor: "#1883ba",
 								marginRight: "70px",
-								marginBottom: "50px"
+								marginBottom: "100px"
 							}}
 							className="btn"
 							onClick={() => {
@@ -1108,7 +1097,6 @@ const Register = () => {
 							Registrar
 						</button>
 						<br />
-						{error ? <div>soy un error, todos los campos deben ser validos</div> : 0}
 					</div>
 				</div>
 			</div>

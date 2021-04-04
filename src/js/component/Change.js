@@ -64,7 +64,7 @@ const Change = props => {
 		<div>
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
-					<h2 style={{ marginLeft: "10px" }}>Datos del trabajador</h2>
+					<h2 style={{ marginLeft: "10px" }}>Datos del prospecto</h2>
 
 					<p
 						style={{
@@ -74,7 +74,7 @@ const Change = props => {
 							fontFamily: "inherit"
 						}}>
 						{" "}
-						Por favor especifica los datos para registrarlos
+						Por favor especifica los datos para actualizarlos
 					</p>
 					<div className="form-group">
 						<label
@@ -623,18 +623,6 @@ const Change = props => {
 							<option value="No">No</option>
 							<option value="X">Si</option>
 						</select>
-
-						<label
-							style={{
-								float: "left",
-								width: "80%",
-								paddingRight: "24px",
-								marginLeft: "20px",
-								color: "black",
-								fontSize: "17px"
-							}}>
-							Comisiones por ventas::
-						</label>
 						<br />
 
 						<label
@@ -845,11 +833,12 @@ const Change = props => {
 							style={{
 								float: "right",
 								width: "250px",
+								height: "50px",
 								marginTop: "40px",
 								color: "#ffffff",
 								backgroundColor: "#1883ba",
 								marginRight: "70px",
-								marginBottom: "50px"
+								marginBottom: "100px"
 							}}
 							className="btn"
 							onClick={e => {
@@ -859,7 +848,7 @@ const Change = props => {
 								actions.cambioWorker(datos, id);
 								history.push("/Worker-list");
 							}}>
-							Registrar
+							Actualizar
 						</button>
 						<br />
 					</div>
