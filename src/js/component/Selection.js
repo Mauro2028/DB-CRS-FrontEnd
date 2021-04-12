@@ -17,7 +17,7 @@ const Selection = () => {
 					<div className="parrafo">
 						<p
 							style={{
-								fontSize: "25px",
+								fontSize: "30px",
 								marginLeft: "10px",
 								fontFamily: "inherit"
 							}}>
@@ -39,11 +39,12 @@ const Selection = () => {
 								style={{
 									padding: "10px",
 									fontweight: "700",
-									fontsize: "30px",
+									fontSize: "20px",
 									color: "#ffffff",
 									backgroundColor: "#1883ba",
+
 									borderRadius: "6px",
-									border: "2px solid #0016b0",
+									border: "3px solid #0016b0",
 									display: "display-flex",
 									justifyContent: "space-around",
 									width: "200px",
@@ -58,11 +59,11 @@ const Selection = () => {
 								style={{
 									padding: "10px",
 									fontweight: "600",
-									fontsize: "20px",
+									fontSize: "20px",
 									color: "#ffffff",
 									backgroundColor: "#1883ba",
 									borderRadius: "6px",
-									border: "2px solid #0016b0",
+									border: "3px solid #0016b0",
 									display: "flex",
 									justifyContent: "space-around",
 									width: "200px",
@@ -78,11 +79,11 @@ const Selection = () => {
 								style={{
 									padding: "10px",
 									fontweight: "600",
-									fontsize: "20px",
+									fontSize: "20px",
 									color: "#ffffff",
 									backgroundColor: "#1883ba",
 									borderRadius: "6px",
-									border: "2px solid #0016b0",
+									border: "3px solid #0016b0",
 									display: "flex",
 									justifyContent: "space-around",
 									width: "200px",

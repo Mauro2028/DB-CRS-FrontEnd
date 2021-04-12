@@ -11,10 +11,10 @@ export const Footer = () => (
 			color: "white",
 			marginTop: "100px",
 			textAlign: "center",
-			fontSize: "20px",
+			fontSize: "25px",
 			height: "65px"
 		}}
 		className="footer mt-auto py-3 text-center">
-		<p>Gestion Humana</p>
+		<p>Gestión Humana</p>
 	</footer>
 );

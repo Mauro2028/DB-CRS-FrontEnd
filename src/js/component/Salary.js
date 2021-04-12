@@ -890,6 +890,35 @@ const Workers = () => {
 						width: "30%",
 						marginLeft: "20px",
 						backgroundColor: "#f6f6f6",
+						fontSize: "18px",
+						marginBottom: "100px"
+					}}
+					id="Total"
+					key={"Total"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Total:
+					{store.workers
+						.map(worker => worker)
+						.filter(
+							worker =>
+								worker.sector == filter.name ||
+								worker.vacant.startsWith(bailar.name) ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge.startsWith(puesto.name)
+						)
+						.reduce(
+							(prevValue, worker) => prevValue + Object.keys(worker).length / Object.keys(worker).length,
+							0
+						)}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "30%",
+						marginLeft: "20px",
+						backgroundColor: "#f6f6f6",
 						fontSize: "18px"
 					}}
 					id="workers"
@@ -898,6 +927,7 @@ const Workers = () => {
 					aria-expanded="true">
 					Sueldo en moneda extranjera:
 					{store.workers
+						.map(worker => worker)
 						.filter(
 							worker =>
 								worker.sector == filter.name ||
@@ -907,7 +937,12 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.coin, 0)
+						.reduce(
+							(prevvalue, worker, prevValue) =>
+								(prevvalue + worker.coin) /
+								(prevValue + Object.keys(worker).length / Object.keys(worker).length),
+							0
+						)
 						.toLocaleString("es")}
 				</div>
 				<div
@@ -1014,7 +1049,12 @@ const Workers = () => {
 								worker.managment == gerencia.name ||
 								worker.actual_charge.startsWith(puesto.name)
 						)
-						.reduce((prevValue, worker) => prevValue + parseFloat(worker.Factor), 0)
+						.reduce(
+							(prevValue, worker) => prevValue + parseInt(worker.Factor),
+							0,
+							(prevValue, worker) => prevValue + Object.keys(worker).length / Object.keys(worker).length,
+							0
+						)
 						.toFixed(2)
 						.toLocaleString("es")}
 				</div>
@@ -1043,7 +1083,12 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package), 0)
+						.reduce(
+							(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package),
+							0,
+							(prevValue, worker) => prevValue + Object.keys(worker).length / Object.keys(worker).length,
+							0
+						)
 						.toLocaleString("es")}
 				</div>
 
@@ -1058,3 +1103,4 @@ const Workers = () => {
 };
 
 export default Workers;
+

@@ -50,7 +50,7 @@ export const Home = () => {
 								width: "80%",
 								paddingRight: "24px",
 								marginLeft: "20px",
-								fontSize: "17px"
+								fontSize: "25px"
 							}}>
 							Usuario:{" "}
 						</label>
@@ -63,8 +63,9 @@ export const Home = () => {
 							value={datos.user_name}
 							style={{
 								padding: "3px 10px",
-								border: "1px solid #f6f6f6",
+								border: "2px solid #000",
 								borderRadius: "3px",
+								fontSize: "20px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
 								borderColor: "black",
@@ -84,7 +85,7 @@ export const Home = () => {
 								paddingRight: "24px",
 								marginLeft: "20px",
 								marginTop: "20px",
-								fontSize: "17px"
+								fontSize: "25px"
 							}}>
 							Contraseña:{" "}
 						</label>
@@ -97,12 +98,13 @@ export const Home = () => {
 							value={datos.password}
 							style={{
 								padding: "3px 10px",
-								border: "1px solid #f6f6f6",
+								fontSize: "20px",
 								borderRadius: "3px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
 								borderColor: "black",
 								alignSelf: "center",
+								border: "2px solid #000",
 								float: "left",
 								width: "45%",
 								marginLeft: "20px",
@@ -117,13 +119,13 @@ export const Home = () => {
 								width: "30%",
 								padding: "8px 16px",
 								marginTop: "110px",
-								border: "1px solid #000",
+								border: "3px solid #000",
 								borderRadius: "5px",
 								display: "block",
 								color: "#fff",
 								backgroundColor: "#1883ba",
 								marginLeft: "30px",
-								fontSize: "18px"
+								fontSize: "23px"
 							}}
 							onClick={() => {
 								handleSubmit();
@@ -141,13 +143,13 @@ export const Home = () => {
 									width: "30%",
 									padding: "8px 16px",
 									marginTop: "5px",
-									border: "1px solid #000",
+									border: "3px solid #000",
 									borderRadius: "5px",
 									display: "block",
 									color: "#fff",
 									backgroundColor: "#1883ba",
 									marginLeft: "30px",
-									fontSize: "18px",
+									fontSize: "23px",
 									marginBottom: "180px"
 								}}>
 								Registrate

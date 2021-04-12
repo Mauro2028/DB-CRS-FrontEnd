@@ -47,7 +47,8 @@ const SignIn = () => {
 								width: "80%",
 								paddingright: "24px",
 								marginLeft: "20px",
-								fontSize: "17px",
+								fontSize: "23px",
+
 								display: "inlineblock",
 								borderColor: "black"
 							}}>
@@ -63,10 +64,11 @@ const SignIn = () => {
 							style={{
 								float: "left",
 								width: "50%",
+								border: "2px solid #000",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
-								borderColor: "black",
+
 								fontSize: "17px"
 							}}
 						/>
@@ -77,10 +79,9 @@ const SignIn = () => {
 								width: "80%",
 								paddingright: "24px",
 								marginLeft: "20px",
-
+								fontSize: "23px",
 								display: "inlineblock",
-								borderColor: "black",
-								fontSize: "17px"
+								borderColor: "black"
 							}}>
 							Nombre de Usuario:
 						</label>
@@ -97,7 +98,7 @@ const SignIn = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
-								borderColor: "black"
+								border: "2px solid #000"
 							}}
 						/>
 						<br />
@@ -107,7 +108,7 @@ const SignIn = () => {
 								width: "80%",
 								paddingright: "24px",
 								marginLeft: "20px",
-
+								fontSize: "23px",
 								display: "inlineblock"
 							}}>
 							Contraseña:{" "}
@@ -122,6 +123,7 @@ const SignIn = () => {
 							style={{
 								float: "left",
 								width: "50%",
+								border: "2px solid #000",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
@@ -136,14 +138,14 @@ const SignIn = () => {
 							style={{
 								width: "30%",
 								padding: "8px 16px",
-								marginTop: "50px",
-								border: "1px solid #000",
+								marginTop: "100px",
+								border: "3px solid #000",
 								borderRadius: "5px",
 								display: "block",
 								color: "#fff",
 								backgroundColor: "#1883ba",
 								marginLeft: "30px",
-								marginBottom: "100px"
+								marginBottom: "90px"
 							}}
 							onClick={() => {
 								handleSubmit();

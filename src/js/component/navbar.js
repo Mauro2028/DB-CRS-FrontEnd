@@ -9,7 +9,9 @@ export const Navbar = () => {
 				<img src={softech} width="250px" height="80px" marginleft="5px" />
 			</Link>
 
-			<h2 style={{ marginLeft: "10px" }}>Base de datos captación, reclutamiento y selección</h2>
+			<h2 style={{ marginLeft: "10px", fontSize: "35px" }}>
+				Base de datos captación, reclutamiento y selección.
+			</h2>
 		</nav>
 	);
 };
