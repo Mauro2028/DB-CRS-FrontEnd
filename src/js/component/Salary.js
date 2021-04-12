@@ -466,7 +466,7 @@ const Workers = () => {
 													}}
 													className="text small text-truncate">
 													{" "}
-													{worker.status}
+													{worker.status.toUpperCase()}
 												</td>
 
 												<td
@@ -629,7 +629,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.basic_salary)} bs
+													{new Intl.NumberFormat("es-ES").format(worker.basic_salary)}
 												</td>
 
 												<td
@@ -643,7 +643,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.variable_salary)} bs
+													{new Intl.NumberFormat("es-ES").format(worker.variable_salary)}
 												</td>
 												<td
 													style={{
@@ -657,7 +657,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)} bs
+													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)}
 												</td>
 
 												<td
@@ -671,7 +671,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.Profit_Days} dias
+													{worker.Profit_Days}
 												</td>
 
 												<td
@@ -686,7 +686,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.vacations} dias
+													{worker.vacations}
 												</td>
 
 												<td
@@ -700,7 +700,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.Vacation_Bonus} dias
+													{worker.Vacation_Bonus}
 												</td>
 
 												<td
