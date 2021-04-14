@@ -84,6 +84,7 @@
 		"react-dom": "^16.8.4",
 		"react-matches": "^0.2.1",
 		"react-polyfills": "0.0.1",
+		"react-redux": "^7.2.3",
 		"react-router": "^5.2.0",
 		"react-router-dom": "^5.2.0",
 		"worker-farm": "^1.7.0"

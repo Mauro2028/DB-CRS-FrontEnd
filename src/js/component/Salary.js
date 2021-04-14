@@ -466,7 +466,7 @@ const Workers = () => {
 													}}
 													className="text small text-truncate">
 													{" "}
-													{worker.status.toUpperCase()}
+													{worker.status}
 												</td>
 
 												<td
@@ -629,7 +629,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.basic_salary)}
+													{new Intl.NumberFormat("es-ES").format(worker.basic_salary)} bs
 												</td>
 
 												<td
@@ -643,7 +643,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.variable_salary)}
+													{new Intl.NumberFormat("es-ES").format(worker.variable_salary)} bs
 												</td>
 												<td
 													style={{
@@ -657,7 +657,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)}
+													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)} bs
 												</td>
 
 												<td
@@ -671,7 +671,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.Profit_Days}
+													{worker.Profit_Days} dias
 												</td>
 
 												<td
@@ -686,7 +686,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.vacations}
+													{worker.vacations} dias
 												</td>
 
 												<td
@@ -700,7 +700,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.Vacation_Bonus}
+													{worker.Vacation_Bonus} dias
 												</td>
 
 												<td
@@ -908,10 +908,7 @@ const Workers = () => {
 								worker.managment == gerencia.name ||
 								worker.actual_charge.startsWith(puesto.name)
 						)
-						.reduce(
-							(prevValue, worker) => prevValue + Object.keys(worker).length / Object.keys(worker).length,
-							0
-						)}
+						.reduce((prevValue, worker) => prevValue + 1, 0)}
 				</div>
 				<div
 					style={{
@@ -937,12 +934,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce(
-							(prevvalue, worker, prevValue) =>
-								(prevvalue + worker.coin) /
-								(prevValue + Object.keys(worker).length / Object.keys(worker).length),
-							0
-						)
+						.reduce((prevValue, worker) => prevValue + worker.coin / (prevValue), 0)
 						.toLocaleString("es")}
 				</div>
 				<div
@@ -1049,12 +1041,9 @@ const Workers = () => {
 								worker.managment == gerencia.name ||
 								worker.actual_charge.startsWith(puesto.name)
 						)
-						.reduce(
-							(prevValue, worker) => prevValue + parseInt(worker.Factor),
-							0,
-							(prevValue, worker) => prevValue + Object.keys(worker).length / Object.keys(worker).length,
-							0
-						)
+						.reduce((prevValue, worker) => {
+							return prevValue + worker.Factor / ((prevValue += 1) + 5);
+						}, 0)
 						.toFixed(2)
 						.toLocaleString("es")}
 				</div>
@@ -1103,4 +1092,3 @@ const Workers = () => {
 };
 
 export default Workers;
-
