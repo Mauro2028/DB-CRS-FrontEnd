@@ -15,6 +15,7 @@ const WorkersList = () => {
 	});
 	const { store, actions } = useContext(Context);
 	let history = useHistory();
+	const [prom, setProm] = useState(0);
 
 	const Update = (worker, id) => {
 		history.push("/change/" + worker.id);
@@ -25,67 +26,19 @@ const WorkersList = () => {
 	return (
 		<div>
 			<div className="container">
-				<div>
-					<div
+				<div id="workers" key={"Lista"}>
+					<table
+						className="table"
 						style={{
-							display: "inline-flex",
-							justifyContent: "end",
-							marginLeft: "-100px"
-						}}>
-						<Link to="/worker-register">
-							<button
-								className="btn"
-								style={{
-									width: "80%",
-									padding: "8px 16px",
-									marginTop: "50px",
-									border: "1px solid #000",
-									borderRadius: "5px",
-									display: "flex",
-									color: "#fff",
-									backgroundColor: "#1883ba",
-									marginRight: "30px"
-								}}>
-								Añadir prospecto
-							</button>
-						</Link>
-						<Link to="/workers">
-							<button
-								className="btn"
-								style={{
-									width: "100%",
-									padding: "8px 16px",
-									marginTop: "50px",
-									border: "1px solid #000",
-									borderRadius: "5px",
-									display: "flex",
-									color: "#fff",
-									backgroundColor: "#1883ba",
-									alignItems: "center",
-									height: "60%"
-								}}>
-								Ver reportes
-							</button>
-						</Link>
-					</div>
-					<div
-						style={{
-							marginLeft: "2500px",
+							width: "100%",
+							textalign: "left",
+							borderCollapse: "collapse",
 							boxSizing: "border-box",
-							display: "flex",
-							justifyContent: "center",
-							marginTop: "10px"
+							captionSide: "top",
+							fontFamily: "sans-serif",
+							border: "1px solid #000"
 						}}>
-						<table
-							className="table"
-							style={{
-								width: "100%",
-								textalign: "left",
-								borderCollapse: "collapse",
-								boxSizing: "border-box",
-								captionSide: "top",
-								border: "1px solid #000"
-							}}>
+						<div id="workers" key={"Lista"}>
 							<thead>
 								<tr>
 									<th
@@ -94,7 +47,8 @@ const WorkersList = () => {
 											border: "1px solid white",
 											width: "25%",
 											borderRight: "1px solid #000",
-											borderBottom: "1px solid #000"
+											borderBottom: "1px solid #000",
+											fontSize: "18px"
 										}}
 									/>
 									<th
@@ -103,7 +57,8 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											background: "#eee",
-											borderLeft: "#000"
+											borderLeft: "#000",
+											fontSize: "18px"
 										}}>
 										ID
 									</th>
@@ -116,7 +71,9 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "23px",
+											fontSize: "18px"
 										}}>
 										Consultor
 									</th>
@@ -124,7 +81,8 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "25%"
+											width: "25%",
+											fontSize: "18px"
 										}}>
 										Candidato
 									</th>
@@ -133,7 +91,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Cedula
 									</th>
@@ -141,7 +100,8 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "25%"
+											width: "25%",
+											fontSize: "18px"
 										}}>
 										Estatus
 									</th>
@@ -150,7 +110,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										N0 de telefono
 									</th>
@@ -158,7 +119,8 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "25%"
+											width: "25%",
+											fontSize: "18px"
 										}}>
 										Email
 									</th>
@@ -167,12 +129,19 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "45%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Fuente de captacion
 									</th>
 
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "25%",
+											fontSize: "18px"
+										}}>
 										Gerencia
 									</th>
 									<th
@@ -180,11 +149,18 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Vacante
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "45%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "45%",
+											fontSize: "18px"
+										}}>
 										Fecha de entrevista
 									</th>
 									<th
@@ -192,11 +168,18 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Cargo actual
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "25%",
+											fontSize: "18px"
+										}}>
 										Empresa
 									</th>
 									<th
@@ -204,11 +187,18 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Sector
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "55%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "55%",
+											fontSize: "18px"
+										}}>
 										Moneda extranjera
 									</th>
 									<th
@@ -216,11 +206,18 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Sueldo basico
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "35%",
+											fontSize: "18px"
+										}}>
 										Sueldo Variable
 									</th>
 									<th
@@ -228,11 +225,18 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Cesta Ticket
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "35%",
+											fontSize: "18px"
+										}}>
 										Dias de utilidades
 									</th>
 									<th
@@ -240,7 +244,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Disfrute de vacaciones
 									</th>
@@ -257,11 +262,18 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Factor
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "35%",
+											fontSize: "18px"
+										}}>
 										Paquete anual estimado
 									</th>
 									<th
@@ -269,11 +281,18 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Bono de produccion
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "35%",
+											fontSize: "18px"
+										}}>
 										Bono de transporte
 									</th>
 									<th
@@ -281,20 +300,28 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee"
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Caja de ahorro
 									</th>
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "35%",
+											fontSize: "18px"
+										}}>
 										Pago de estacionamiento
 									</th>
 
 									<th
 										style={{
 											padding: "0.3em",
-											background: "#eee",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										H.C.M 100% Emp./Fmlia
 									</th>
@@ -302,16 +329,18 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											fontSize: "18px"
 										}}>
 										H.C.M parcial Emp./Fmlia
 									</th>
 									<th
 										style={{
 											padding: "0.3em",
-											background: "#eee",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Seguro de Vehículo
 									</th>
@@ -319,16 +348,18 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											fontSize: "18px"
 										}}>
 										Seguro de Vida
 									</th>
 									<th
 										style={{
 											padding: "0.3em",
-											background: "#eee",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Comedor
 									</th>
@@ -336,16 +367,18 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											fontSize: "18px"
 										}}>
 										Subsidios alimenticios
 									</th>
 									<th
 										style={{
 											padding: "0.3em",
-											background: "#eee",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											background: "#eee",
+											fontSize: "18px"
 										}}>
 										Observaciones
 									</th>
@@ -369,7 +402,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														captionSide: "bottom",
 														borderBottom: "1px solid #000",
-
+														fontFamily: "sans-serif",
 														display: "flex",
 														alignContent: "center",
 														borderRight: " 1px solid white"
@@ -387,7 +420,8 @@ const WorkersList = () => {
 															alignItems: "center",
 															height: "60%",
 															alignContent: "center",
-															marginBottom: "30px"
+															marginBottom: "30px",
+															fontSize: "19px"
 														}}
 														className="btn"
 														onClick={() => {
@@ -407,7 +441,8 @@ const WorkersList = () => {
 														padding: "0.3em",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderLeft: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{" "}
@@ -419,10 +454,10 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.init_date}
@@ -437,7 +472,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{" "}
@@ -449,7 +485,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -468,7 +504,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.cedula}
@@ -479,7 +516,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -498,7 +535,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.phone_number}
@@ -509,7 +547,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -527,7 +565,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.catchment_source.toUpperCase()}
@@ -537,7 +576,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -556,7 +595,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{" "}
@@ -569,7 +609,7 @@ const WorkersList = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														padding: "0.3em",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -587,7 +627,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.actual_charge.toUpperCase()}
@@ -598,7 +639,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -617,7 +658,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.sector}
@@ -628,7 +670,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -646,7 +688,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{new Intl.NumberFormat("es-ES").format(worker.basic_salary)}
@@ -657,7 +700,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -674,7 +717,8 @@ const WorkersList = () => {
 														captionSide: "bottom",
 														background: "#eee",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)}
@@ -685,7 +729,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -703,7 +747,8 @@ const WorkersList = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.vacations}
@@ -714,7 +759,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -731,6 +776,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														captionSide: "bottom",
 														background: "#eee",
+														fontSize: "19px",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
@@ -744,7 +790,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -759,7 +805,8 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+														fontSize: "19px",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -772,7 +819,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -785,7 +832,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -798,7 +845,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -812,7 +859,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -825,7 +872,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -838,7 +885,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -851,7 +898,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -864,8 +911,9 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
+
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
@@ -877,10 +925,11 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
 														captionSide: "bottom",
+
 														border: "1px solid #000",
-														borderRight: " 1px solid #000"
+														borderRight: " 1px solid #000",
+														fontSize: "19px"
 													}}
 													className="text small text-truncate">
 													{worker.food_bags}
@@ -890,7 +939,8 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+														fontSize: "19px",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -903,12 +953,66 @@ const WorkersList = () => {
 									)
 								)}
 							</tbody>
-						</table>
+						</div>
+					</table>
+					<div>
+						<label
+							style={{
+								float: "center",
+								width: "30%",
+								fontFamily: "sans-serif",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "23px"
+								// marginBottom: "100px"
+							}}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Total de prospectos:
+							{store.workers.reduce((prevValue, worker) => prevValue + 1, 0)}
+						</label>
+					</div>
+
+					<button
+						style={{
+							float: "center",
+							width: "15%",
+							fontSize: "23px",
+							marginLeft: "20px",
+							fontFamily: "sans-serif",
+							backgroundColor: "lightgray",
+							marginBottom: "10px"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e => setProm(store.workers.reduce((prevValue, worker) => prevValue + 1, 0))}
+						value={prom.value}>
+						Promediar
+					</button>
+					<div
+						style={{
+							float: "center",
+							width: "30%",
+							marginLeft: "20px",
+							fontFamily: "sans-serif",
+							backgroundColor: "#f6f6f6",
+							fontSize: "23px"
+						}}
+						id="workers"
+						key={"coin"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Sueldo en moneda extranjera:
+						{store.workers
+
+							.reduce((prevValue, worker) => prevValue + worker.coin / prom, 0)
+							.toLocaleString("es")}
 					</div>
 					<div
 						style={{
 							float: "center",
 							width: "50%",
+							fontFamily: "sans-serif",
 							marginLeft: "20px",
 							backgroundColor: "#f6f6f6",
 							fontSize: "23px"
@@ -919,13 +1023,14 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Salario basico:
 						{store.workers
-							.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)
+							.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
 							.toLocaleString("es")}
 					</div>
 					<div
 						style={{
 							float: "center",
 							width: "50%",
+							fontFamily: "sans-serif",
 							marginLeft: "20px",
 							backgroundColor: "#f6f6f6",
 							fontSize: "23px"
@@ -937,7 +1042,7 @@ const WorkersList = () => {
 						Salario Variable:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)
+							.reduce((prevValue, worker) => prevValue + worker.variable_salary / prom, 0)
 							.toLocaleString("es")}
 					</div>
 					<div
@@ -945,6 +1050,7 @@ const WorkersList = () => {
 							float: "center",
 							width: "50%",
 							marginLeft: "20px",
+							fontFamily: "sans-serif",
 							backgroundColor: "#f6f6f6",
 							fontSize: "23px"
 						}}
@@ -955,13 +1061,14 @@ const WorkersList = () => {
 						Cesta ticket:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)
+							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / prom, 0)
 							.toLocaleString("es")}
 					</div>
 					<div
 						style={{
 							float: "center",
 							width: "50%",
+							fontFamily: "sans-serif",
 							marginLeft: "20px",
 							backgroundColor: "#f6f6f6",
 							fontSize: "23px"
@@ -973,7 +1080,7 @@ const WorkersList = () => {
 						Factor:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + parseFloat(worker.Factor), 0)
+							.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / prom, 0)
 							.toFixed(2)
 							.toLocaleString("es")}
 					</div>
@@ -983,6 +1090,7 @@ const WorkersList = () => {
 							width: "50%",
 							marginLeft: "20px",
 							backgroundColor: "#f6f6f6",
+							fontFamily: "sans-serif",
 							fontSize: "23px",
 							marginBottom: "100px"
 						}}
@@ -993,7 +1101,10 @@ const WorkersList = () => {
 						Paquete anual estimado:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package), 0)
+							.reduce(
+								(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / prom,
+								0
+							)
 							.toLocaleString("es")}
 					</div>
 				</div>

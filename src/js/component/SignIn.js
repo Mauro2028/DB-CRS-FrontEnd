@@ -34,9 +34,9 @@ const SignIn = () => {
 	return (
 		<div>
 			<div className="containerPrincipal">
-				<div style={{ marginLeft: "30px" }} className="containerSecundario">
+				<div style={{ marginLeft: "30px", fontFamily: "sans-serif" }} className="containerSecundario">
 					<h2>Registro</h2>
-					<p style={{ fontSize: "22px" }}>
+					<p style={{ fontSize: "27px", fontFamily: "sans-serif" }}>
 						{" "}
 						Por favor especifica tus datos para registrarte en nuestra plataforma
 					</p>
@@ -48,7 +48,7 @@ const SignIn = () => {
 								paddingright: "24px",
 								marginLeft: "20px",
 								fontSize: "23px",
-
+								fontFamily: "sans-serif",
 								display: "inlineblock",
 								borderColor: "black"
 							}}>
@@ -63,13 +63,13 @@ const SignIn = () => {
 							value={datos.full_name}
 							style={{
 								float: "left",
-								width: "50%",
+								width: "42%",
 								border: "2px solid #000",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
-
-								fontSize: "17px"
+								fontFamily: "sans-serif",
+								fontSize: "20px"
 							}}
 						/>
 						<br />
@@ -78,6 +78,7 @@ const SignIn = () => {
 								float: "left",
 								width: "80%",
 								paddingright: "24px",
+								fontFamily: "sans-serif",
 								marginLeft: "20px",
 								fontSize: "23px",
 								display: "inlineblock",
@@ -94,11 +95,13 @@ const SignIn = () => {
 							value={datos.user_name}
 							style={{
 								float: "left",
-								width: "50%",
+								width: "42%",
 								marginLeft: "20px",
+								fontFamily: "sans-serif",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
-								border: "2px solid #000"
+								border: "2px solid #000",
+								fontSize: "20px"
 							}}
 						/>
 						<br />
@@ -108,6 +111,7 @@ const SignIn = () => {
 								width: "80%",
 								paddingright: "24px",
 								marginLeft: "20px",
+								fontFamily: "sans-serif",
 								fontSize: "23px",
 								display: "inlineblock"
 							}}>
@@ -122,29 +126,32 @@ const SignIn = () => {
 							value={datos.password}
 							style={{
 								float: "left",
-								width: "50%",
+								width: "42%",
 								border: "2px solid #000",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
+								fontFamily: "sans-serif",
 								display: "inlineblock",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "20px"
 							}}
 						/>
 						<br />
-						<br />
-						<br />
+
 						<button
 							className="btn btn-primary"
 							style={{
 								width: "30%",
 								padding: "8px 16px",
-								marginTop: "100px",
+								marginTop: "150px",
 								border: "3px solid #000",
 								borderRadius: "5px",
 								display: "block",
+								fontSize: "23px",
 								color: "#fff",
 								backgroundColor: "#1883ba",
 								marginLeft: "30px",
+								fontFamily: "sans-serif",
 								marginBottom: "90px"
 							}}
 							onClick={() => {

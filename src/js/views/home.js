@@ -50,6 +50,7 @@ export const Home = () => {
 								width: "80%",
 								paddingRight: "24px",
 								marginLeft: "20px",
+								fontFamily: "sans-serif",
 								fontSize: "25px"
 							}}>
 							Usuario:{" "}
@@ -66,12 +67,13 @@ export const Home = () => {
 								border: "2px solid #000",
 								borderRadius: "3px",
 								fontSize: "20px",
+								fontFamily: "sans-serif",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
 								borderColor: "black",
 								alignSelf: "center",
 								float: "left",
-								width: "45%",
+								width: "42%",
 								marginLeft: "20px",
 								height: "35px"
 							}}
@@ -85,6 +87,7 @@ export const Home = () => {
 								paddingRight: "24px",
 								marginLeft: "20px",
 								marginTop: "20px",
+								fontFamily: "sans-serif",
 								fontSize: "25px"
 							}}>
 							Contraseña:{" "}
@@ -102,11 +105,12 @@ export const Home = () => {
 								borderRadius: "3px",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
+								fontFamily: "sans-serif",
 								borderColor: "black",
 								alignSelf: "center",
 								border: "2px solid #000",
 								float: "left",
-								width: "45%",
+								width: "42%",
 								marginLeft: "20px",
 								height: "37px"
 							}}
@@ -123,6 +127,7 @@ export const Home = () => {
 								borderRadius: "5px",
 								display: "block",
 								color: "#fff",
+								fontFamily: "sans-serif",
 								backgroundColor: "#1883ba",
 								marginLeft: "30px",
 								fontSize: "23px"
@@ -145,6 +150,7 @@ export const Home = () => {
 									marginTop: "5px",
 									border: "3px solid #000",
 									borderRadius: "5px",
+									fontFamily: "sans-serif",
 									display: "block",
 									color: "#fff",
 									backgroundColor: "#1883ba",

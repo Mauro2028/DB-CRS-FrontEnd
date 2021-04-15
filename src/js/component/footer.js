@@ -11,6 +11,7 @@ export const Footer = () => (
 			color: "white",
 			marginTop: "100px",
 			textAlign: "center",
+			fontFamily: "sans-serif",
 			fontSize: "25px",
 			height: "65px"
 		}}

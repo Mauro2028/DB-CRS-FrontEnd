@@ -87,7 +87,7 @@ const Register = () => {
 							marginTop: "10px",
 							fontSize: "25px",
 							marginLeft: "10px",
-							fontFamily: "inherit"
+							fontFamily: "sans-serif"
 						}}>
 						{" "}
 						Por favor especifica los datos para registrarlos
@@ -96,11 +96,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Consultor{" "}
 						</label>
@@ -108,10 +109,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -123,11 +125,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Nombre del Candidato{" "}
 						</label>
@@ -135,10 +138,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -150,11 +154,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Cedula{" "}
 						</label>
@@ -162,10 +167,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="number"
 							className="form-control"
@@ -177,11 +183,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Telefono{" "}
 						</label>
@@ -189,10 +196,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="number"
 							className="form-control"
@@ -204,11 +212,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Correo electronico{" "}
 						</label>
@@ -216,10 +225,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -231,11 +241,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Vacante{" "}
 						</label>
@@ -243,10 +254,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -258,11 +270,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Mes de inicio:
 						</label>
@@ -270,10 +283,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="init_date"
@@ -297,21 +312,24 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Estatus: <br />
 						</label>
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="status"
@@ -341,11 +359,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Fuente de captacion:{" "}
 						</label>
@@ -353,10 +372,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -368,11 +388,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Gerencia:
 						</label>
@@ -380,10 +401,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="managment"
@@ -404,11 +427,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Fecha de cita a entrevista :{" "}
 						</label>
@@ -416,10 +440,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -431,11 +456,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Cargo actual del candidato:{" "}
 						</label>
@@ -443,10 +469,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -458,11 +485,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Empresa:{" "}
 						</label>
@@ -470,10 +498,11 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif"
 							}}
 							type="text"
 							className="form-control"
@@ -485,21 +514,24 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Sector:
 						</label>
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="sector"
@@ -521,11 +553,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Sueldo en moneda extranjera:{" "}
 						</label>
@@ -533,10 +566,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -548,11 +583,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Sueldo basico:{" "}
 						</label>
@@ -560,10 +596,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -575,11 +613,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Sueldo variable:{" "}
 						</label>
@@ -587,10 +626,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -603,11 +644,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							cesta ticket:{" "}
 						</label>
@@ -615,10 +657,13 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -630,11 +675,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Dias de utilidades:{" "}
 						</label>
@@ -642,10 +688,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -657,11 +705,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Bono vacacional:{" "}
 						</label>
@@ -669,10 +718,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -684,11 +735,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Disfrute de vacaciones:{" "}
 						</label>
@@ -696,10 +748,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -711,11 +765,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Factor:{" "}
 						</label>
@@ -723,10 +778,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -738,11 +795,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Compensacion anual mixta:{" "}
 						</label>
@@ -750,10 +808,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="number"
 							className="form-control"
@@ -766,11 +826,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Bono de produccion:
 						</label>
@@ -778,10 +839,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="Production_bonus"
@@ -795,11 +858,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Bono de transporte:
 						</label>
@@ -807,10 +871,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="Transport_bonus"
@@ -823,11 +889,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Caja de ahorro:
 						</label>
@@ -835,10 +902,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="Savings_Bank"
@@ -851,11 +920,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Pago de estacionamiento:
 						</label>
@@ -863,10 +933,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="parking_payment"
@@ -880,11 +952,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							H.C.M 100% Emp./Fmlia:
 						</label>
@@ -892,10 +965,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="full_HCM_Emp_Family"
@@ -910,11 +985,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							H.C.M parcial Emp./Fmlia:
 						</label>
@@ -922,10 +998,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="partial_HCM_Emp_Family"
@@ -940,11 +1018,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Seguro de Vehículo:
 						</label>
@@ -952,10 +1031,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="Vehicle_insurance"
@@ -968,11 +1049,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Seguro de Vida:
 						</label>
@@ -980,10 +1062,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="life_insurance"
@@ -997,11 +1081,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Comedor:
 						</label>
@@ -1009,10 +1094,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="dinning_room"
@@ -1026,11 +1113,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Subsidios alimenticios:
 						</label>
@@ -1038,10 +1126,12 @@ const Register = () => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}
 							className="form-control"
 							name="food_bags"
@@ -1054,11 +1144,12 @@ const Register = () => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "23px",
+								fontFamily: "sans-serif"
 							}}>
 							Observaciones:{" "}
 						</label>
@@ -1066,10 +1157,12 @@ const Register = () => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
-								borderColor: "black"
+								borderColor: "black",
+								fontFamily: "sans-serif",
+								fontSize: "23px"
 							}}
 							type="text"
 							className="form-control"
@@ -1081,14 +1174,20 @@ const Register = () => {
 						<br />
 						<button
 							style={{
+								width: "28%",
+								padding: "8px 16px",
+								marginTop: "25px",
 								float: "right",
-								width: "250px",
-								height: "50px",
-								marginTop: "40px",
-								color: "#ffffff",
+								marginRight: "10px",
+								border: "3px solid #000",
+								borderRadius: "5px",
+								display: "block",
+								fontSize: "23px",
+								color: "#fff",
 								backgroundColor: "#1883ba",
-								marginRight: "70px",
-								marginBottom: "100px"
+								marginLeft: "30px",
+								fontFamily: "sans-serif",
+								marginBottom: "130px"
 							}}
 							className="btn"
 							onClick={() => {

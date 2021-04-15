@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import PropTypes, { object } from "prop-types";
+import { SalaryCard } from "./SalaryCard";
+import { Modal } from "../component/Modal";
+import { Context } from "../store/appContext.js";
 
 const Selection = () => {
+	const { store, actions } = useContext(Context);
+	let date = new Date();
+	let Year = date.getFullYear();
+	let Month = date.getMonth();
+	let Day = date.getDate();
+
 	return (
 		<div className="containerPrincipal">
 			<form>
@@ -17,9 +27,9 @@ const Selection = () => {
 					<div className="parrafo">
 						<p
 							style={{
-								fontSize: "30px",
+								fontSize: "40px",
 								marginLeft: "10px",
-								fontFamily: "inherit"
+								fontFamily: "sans-serif"
 							}}>
 							{/* Bienvenido a la aplicaion de captacion, reclutamiento y seleccion.
 							<br /> */}
@@ -39,16 +49,16 @@ const Selection = () => {
 								style={{
 									padding: "10px",
 									fontweight: "700",
-									fontSize: "20px",
+									fontSize: "25px",
 									color: "#ffffff",
 									backgroundColor: "#1883ba",
-
+									fontFamily: "sans-serif",
 									borderRadius: "6px",
 									border: "3px solid #0016b0",
 									display: "display-flex",
 									justifyContent: "space-around",
-									width: "200px",
-									height: "100px"
+									width: "250px",
+									height: "150px"
 								}}
 								className="btn">
 								Ver lista de prospectos
@@ -59,15 +69,16 @@ const Selection = () => {
 								style={{
 									padding: "10px",
 									fontweight: "600",
-									fontSize: "20px",
+									fontSize: "25px",
 									color: "#ffffff",
 									backgroundColor: "#1883ba",
 									borderRadius: "6px",
 									border: "3px solid #0016b0",
 									display: "flex",
+									fontFamily: "sans-serif",
 									justifyContent: "space-around",
-									width: "200px",
-									height: "100px",
+									width: "250px",
+									height: "150px",
 									alignItems: "center"
 								}}
 								className="btn btn-primary">
@@ -79,15 +90,17 @@ const Selection = () => {
 								style={{
 									padding: "10px",
 									fontweight: "600",
-									fontSize: "20px",
+									fontSize: "25px",
 									color: "#ffffff",
 									backgroundColor: "#1883ba",
 									borderRadius: "6px",
 									border: "3px solid #0016b0",
 									display: "flex",
+									fontFamily: "sans-serif",
 									justifyContent: "space-around",
-									width: "200px",
-									height: "100px",
+									width: "250px",
+									height: "150px",
+									fontBorder: "black",
 									alignItems: "center"
 								}}
 								className="btn btn-primary">
@@ -97,8 +110,38 @@ const Selection = () => {
 					</div>
 				</div>
 			</form>
+			<div
+				style={{
+					display: "flex",
+					width: "1000px",
+					alignItems: "center",
+					marginLeft: "60%",
+					fontSize: "40px",
+					fontFamily: "sans-serif"
+				}}>
+				Al dia de hoy: {""}
+				{Day}/{Month}/{Year}
+			</div>
+			<div
+				style={{
+					display: "flex",
+					width: "1000px",
+					alignItems: "center",
+					marginLeft: "60%",
+					fontSize: "40px",
+					fontFamily: "sans-serif",
+					marginBottom: "20px"
+				}}>
+				{" "}
+				Hay registrados {""}
+				{store.workers
+					.map(worker => (console.log(), worker => worker))
+					.reduce((prevValue, worker) => prevValue + 1, 0)}{" "}
+				{""} prospectos
+			</div>
 		</div>
 	);
 };
 
 export default Selection;
+
