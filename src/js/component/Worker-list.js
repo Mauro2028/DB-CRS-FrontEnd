@@ -15,6 +15,7 @@ const WorkersList = () => {
 	});
 	const { store, actions } = useContext(Context);
 	let history = useHistory();
+	const [prom, setProm] = useState(0);
 
 	const Update = (worker, id) => {
 		history.push("/change/" + worker.id);
@@ -25,67 +26,18 @@ const WorkersList = () => {
 	return (
 		<div>
 			<div className="container">
-				<div>
-					<div
+				<div id="workers" key={"Lista"}>
+					<table
+						className="table"
 						style={{
-							display: "inline-flex",
-							justifyContent: "end",
-							marginLeft: "-100px"
-						}}>
-						<Link to="/worker-register">
-							<button
-								className="btn"
-								style={{
-									width: "80%",
-									padding: "8px 16px",
-									marginTop: "50px",
-									border: "1px solid #000",
-									borderRadius: "5px",
-									display: "flex",
-									color: "#fff",
-									backgroundColor: "#1883ba",
-									marginRight: "30px"
-								}}>
-								Añadir prospecto
-							</button>
-						</Link>
-						<Link to="/workers">
-							<button
-								className="btn"
-								style={{
-									width: "100%",
-									padding: "8px 16px",
-									marginTop: "50px",
-									border: "1px solid #000",
-									borderRadius: "5px",
-									display: "flex",
-									color: "#fff",
-									backgroundColor: "#1883ba",
-									alignItems: "center",
-									height: "60%"
-								}}>
-								Ver reportes
-							</button>
-						</Link>
-					</div>
-					<div
-						style={{
-							marginLeft: "2500px",
+							width: "100%",
+							textalign: "left",
+							borderCollapse: "collapse",
 							boxSizing: "border-box",
-							display: "flex",
-							justifyContent: "center",
-							marginTop: "10px"
+							captionSide: "top",
+							border: "1px solid #000"
 						}}>
-						<table
-							className="table"
-							style={{
-								width: "100%",
-								textalign: "left",
-								borderCollapse: "collapse",
-								boxSizing: "border-box",
-								captionSide: "top",
-								border: "1px solid #000"
-							}}>
+						<div id="workers" key={"Lista"}>
 							<thead>
 								<tr>
 									<th
@@ -102,8 +54,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee",
-											borderLeft: "#000"
+											background: "#eee"
 										}}>
 										ID
 									</th>
@@ -289,64 +240,43 @@ const WorkersList = () => {
 										Pago de estacionamiento
 									</th>
 
-									<th
-										style={{
-											padding: "0.3em",
-											background: "#eee",
-											border: "1px solid #000",
-											width: "35%"
-										}}>
+									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 										H.C.M 100% Emp./Fmlia
 									</th>
 									<th
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											background: "#eee"
 										}}>
 										H.C.M parcial Emp./Fmlia
 									</th>
-									<th
-										style={{
-											padding: "0.3em",
-											background: "#eee",
-											border: "1px solid #000",
-											width: "35%"
-										}}>
+									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 										Seguro de Vehículo
 									</th>
 									<th
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											background: "#eee"
 										}}>
 										Seguro de Vida
 									</th>
-									<th
-										style={{
-											padding: "0.3em",
-											background: "#eee",
-											border: "1px solid #000",
-											width: "35%"
-										}}>
+									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 										Comedor
 									</th>
 									<th
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
-											width: "35%"
+											width: "35%",
+											background: "#eee"
 										}}>
 										Subsidios alimenticios
 									</th>
-									<th
-										style={{
-											padding: "0.3em",
-											background: "#eee",
-											border: "1px solid #000",
-											width: "35%"
-										}}>
+									<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
 										Observaciones
 									</th>
 								</tr>
@@ -407,7 +337,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														captionSide: "bottom",
 														border: "1px solid #000",
-														borderLeft: " 1px solid #000"
+														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
 													{" "}
@@ -486,7 +416,7 @@ const WorkersList = () => {
 													}}
 													className="text small text-truncate">
 													{" "}
-													{worker.status.toUpperCase()}
+													{worker.status}
 												</td>
 
 												<td
@@ -759,7 +689,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -785,7 +715,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -812,7 +742,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -838,7 +768,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -864,7 +794,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -877,7 +807,6 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -890,7 +819,7 @@ const WorkersList = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-														background: "#eee",
+
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -903,7 +832,55 @@ const WorkersList = () => {
 									)
 								)}
 							</tbody>
-						</table>
+						</div>
+					</table>
+					<div>
+						<label
+							style={{
+								float: "center",
+								width: "30%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								fontSize: "18px"
+								// marginBottom: "100px"
+							}}
+							className="panel-collapse collapse show"
+							aria-expanded="true">
+							Total de prospectos:
+							{store.workers.reduce((prevValue, worker) => prevValue + 1, 0)}
+						</label>
+					</div>
+
+					<button
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e => setProm(store.workers.reduce((prevValue, worker) => prevValue + 1, 0))}
+						value={prom.value}>
+						Promediar
+					</button>
+					<div
+						style={{
+							float: "center",
+							width: "30%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6",
+							fontSize: "18px"
+						}}
+						id="workers"
+						key={"coin"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Sueldo en moneda extranjera:
+						{store.workers
+
+							.reduce((prevValue, worker) => prevValue + worker.coin / prom, 0)
+							.toLocaleString("es")}
 					</div>
 					<div
 						style={{
@@ -919,7 +896,7 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Salario basico:
 						{store.workers
-							.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)
+							.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
 							.toLocaleString("es")}
 					</div>
 					<div
@@ -937,7 +914,7 @@ const WorkersList = () => {
 						Salario Variable:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)
+							.reduce((prevValue, worker) => prevValue + worker.variable_salary / prom, 0)
 							.toLocaleString("es")}
 					</div>
 					<div
@@ -955,7 +932,7 @@ const WorkersList = () => {
 						Cesta ticket:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)
+							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / prom, 0)
 							.toLocaleString("es")}
 					</div>
 					<div
@@ -973,7 +950,7 @@ const WorkersList = () => {
 						Factor:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + parseFloat(worker.Factor), 0)
+							.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / prom, 0)
 							.toFixed(2)
 							.toLocaleString("es")}
 					</div>
@@ -993,7 +970,10 @@ const WorkersList = () => {
 						Paquete anual estimado:
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package), 0)
+							.reduce(
+								(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / prom,
+								0
+							)
 							.toLocaleString("es")}
 					</div>
 				</div>

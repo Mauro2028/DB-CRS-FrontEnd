@@ -16,9 +16,8 @@ const Workers = () => {
 	const [puesto, setPuesto] = useState("");
 	const [fecha, setFecha] = useState("");
 	const [gerencia, setGerencia] = useState("");
-	const n = (f = 0) => {
-		worker = f++;
-	};
+	const [prom, setProm] = useState(0);
+
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -50,7 +49,6 @@ const Workers = () => {
 						onChange={e => setPuesto({ name: e.target.value.toUpperCase() })}
 						value={puesto.name}
 					/>
-
 					<select
 						style={{
 							float: "center",
@@ -629,7 +627,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.basic_salary)} bs
+													{new Intl.NumberFormat("es-ES").format(worker.basic_salary)}
 												</td>
 
 												<td
@@ -643,7 +641,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.variable_salary)} bs
+													{new Intl.NumberFormat("es-ES").format(worker.variable_salary)}
 												</td>
 												<td
 													style={{
@@ -657,7 +655,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)} bs
+													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)}
 												</td>
 
 												<td
@@ -671,7 +669,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.Profit_Days} dias
+													{worker.Profit_Days}
 												</td>
 
 												<td
@@ -686,7 +684,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.vacations} dias
+													{worker.vacations}
 												</td>
 
 												<td
@@ -700,7 +698,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{worker.Vacation_Bonus} dias
+													{worker.Vacation_Bonus}
 												</td>
 
 												<td
@@ -884,32 +882,61 @@ const Workers = () => {
 						</tbody>
 					</table>
 				</div>
-				<div
+
+				<div>
+					<label
+						style={{
+							float: "center",
+							width: "30%",
+							marginLeft: "20px",
+							backgroundColor: "#f6f6f6",
+							fontSize: "18px"
+							// marginBottom: "100px"
+						}}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Total de prospectos:
+						{store.workers
+
+							.filter(
+								worker =>
+									worker.sector == filter.name ||
+									worker.vacant.startsWith(bailar.name) ||
+									worker.init_date == fecha.name ||
+									worker.managment == gerencia.name ||
+									worker.actual_charge.startsWith(puesto.name)
+							)
+							.reduce((prevValue, worker) => prevValue + 1, 0)}
+					</label>
+				</div>
+
+				<button
 					style={{
 						float: "center",
-						width: "30%",
+						width: "15%",
 						marginLeft: "20px",
-						backgroundColor: "#f6f6f6",
-						fontSize: "18px",
-						marginBottom: "100px"
+						backgroundColor: "#f6f6f6"
 					}}
-					id="Total"
-					key={"Total"}
-					className="panel-collapse collapse show"
-					aria-expanded="true">
-					Total:
-					{store.workers
-						.map(worker => worker)
-						.filter(
-							worker =>
-								worker.sector == filter.name ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge.startsWith(puesto.name)
+					type="number"
+					placeholder="promediar"
+					onClick={e =>
+						setProm(
+							store.workers
+
+								.filter(
+									worker =>
+										worker.sector == filter.name ||
+										worker.vacant.startsWith(bailar.name) ||
+										worker.init_date == fecha.name ||
+										worker.managment == gerencia.name ||
+										worker.actual_charge.startsWith(puesto.name)
+								)
+								.reduce((prevValue, worker) => prevValue + 1, 0)
 						)
-						.reduce((prevValue, worker) => prevValue + 1, 0)}
-				</div>
+					}
+					value={prom.value}>
+					Promediar
+				</button>
 				<div
 					style={{
 						float: "center",
@@ -934,7 +961,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.coin / (prevValue), 0)
+						.reduce((prevValue, worker) => prevValue + worker.coin / prom, 0)
 						.toLocaleString("es")}
 				</div>
 				<div
@@ -961,7 +988,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.basic_salary, 0)
+						.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
 						.toLocaleString("es")}
 				</div>
 
@@ -988,7 +1015,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.variable_salary, 0)
+						.reduce((prevValue, worker) => prevValue + worker.variable_salary / prom, 0)
 						.toLocaleString("es")}
 				</div>
 
@@ -1015,7 +1042,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket, 0)
+						.reduce((prevValue, worker) => (prevValue + worker.cesta_ticket) / prom, 0)
 
 						.toLocaleString("es")}
 				</div>
@@ -1041,9 +1068,7 @@ const Workers = () => {
 								worker.managment == gerencia.name ||
 								worker.actual_charge.startsWith(puesto.name)
 						)
-						.reduce((prevValue, worker) => {
-							return prevValue + worker.Factor / ((prevValue += 1) + 5);
-						}, 0)
+						.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / prom, 0)
 						.toFixed(2)
 						.toLocaleString("es")}
 				</div>
@@ -1072,15 +1097,9 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce(
-							(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package),
-							0,
-							(prevValue, worker) => prevValue + Object.keys(worker).length / Object.keys(worker).length,
-							0
-						)
+						.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / prom, 0)
 						.toLocaleString("es")}
 				</div>
-
 				<Modal
 					show={state.showModal}
 					onClose={() => setState({ showModal: false, idToDelete: null })}
