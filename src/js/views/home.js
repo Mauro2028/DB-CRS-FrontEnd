@@ -51,7 +51,8 @@ export const Home = () => {
 								paddingRight: "24px",
 								marginLeft: "20px",
 								fontFamily: "sans-serif",
-								fontSize: "25px"
+								fontSize: "25px",
+								marginTop: "10px"
 							}}>
 							Usuario:{" "}
 						</label>
@@ -122,7 +123,7 @@ export const Home = () => {
 							style={{
 								width: "30%",
 								padding: "8px 16px",
-								marginTop: "110px",
+								marginTop: "130px",
 								border: "3px solid #000",
 								borderRadius: "5px",
 								display: "block",

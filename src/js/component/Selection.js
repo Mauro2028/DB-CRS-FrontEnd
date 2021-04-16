@@ -33,7 +33,7 @@ const Selection = () => {
 							}}>
 							{/* Bienvenido a la aplicaion de captacion, reclutamiento y seleccion.
 							<br /> */}
-							Que deseas hacer?
+							Bienvenido, que deseas hacer?
 						</p>
 					</div>
 					<div
@@ -116,7 +116,7 @@ const Selection = () => {
 					width: "1000px",
 					alignItems: "center",
 					marginLeft: "60%",
-					fontSize: "40px",
+					fontSize: "38px",
 					fontFamily: "sans-serif"
 				}}>
 				Al dia de hoy: {""}
@@ -128,7 +128,7 @@ const Selection = () => {
 					width: "1000px",
 					alignItems: "center",
 					marginLeft: "60%",
-					fontSize: "40px",
+					fontSize: "38px",
 					fontFamily: "sans-serif",
 					marginBottom: "20px"
 				}}>

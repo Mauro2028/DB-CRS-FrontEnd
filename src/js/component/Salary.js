@@ -22,15 +22,23 @@ const Workers = () => {
 
 	return (
 		<div>
-			<div className="container">
+			<div
+				className="container"
+				style={{
+					display: "table-caption",
+					justifyItems: "center"
+				}}>
 				<div>
 					<input
 						style={{
 							float: "center",
 							width: "15%",
-							marginLeft: "20px",
+							marginLeft: "10px",
 							backgroundColor: "#f6f6f6",
-							marginBottom: "10px"
+							fontSize: "20px",
+							fontFamily: "sans-serif",
+							marginBottom: "35px",
+							marginTop: "10px"
 						}}
 						type="text"
 						placeholder="vacante"
@@ -41,8 +49,12 @@ const Workers = () => {
 						style={{
 							float: "center",
 							width: "15%",
+							fontSize: "20px",
 							marginLeft: "20px",
-							backgroundColor: "#f6f6f6"
+							fontFamily: "sans-serif",
+							backgroundColor: "#f6f6f6",
+							marginBottom: "35px",
+							marginTop: "10px"
 						}}
 						type="text"
 						placeholder="Cargo actual"
@@ -53,21 +65,25 @@ const Workers = () => {
 						style={{
 							float: "center",
 							width: "15%",
+							fontSize: "20px",
+							fontFamily: "sans-serif",
 							marginLeft: "20px",
-							backgroundColor: "#f6f6f6"
+							backgroundColor: "#f6f6f6",
+							marginBottom: "35px",
+							marginTop: "10px"
 						}}
 						onChange={e => setGerencia({ name: e.target.value })}
 						value={gerencia.name}>
 						<option value="">Vacio</option>
-						<option value="ADMINISTRACION">Administracion</option>
-						<option value="GERENCIA GENERAL">Generencia General</option>
-						<option value="GESTION HUMANA">Generencia General</option>
-						<option value="INFRAESTRUCTURA">Generencia General</option>
-						<option value="MERCADEO Y VENTAS">Mercadeo y ventas</option>
-						<option value="SERVICIO AL CLIENTE">Servicio al cliente</option>
-						<option value="TECNOLOGIA FUNCIONAL">Tecnologia funcional</option>
-						<option value="TECNOLOGIA TECNICA">Tecnologia tecnica</option>
-						<option value="PLATAFORMA">Plataforma</option>
+						<option value="Administracion">ADMINISTRACION</option>
+						<option value="Gerencia General">GERENCIA GENERAL</option>
+						<option value="Gestion Humana">GESTION HUMANA </option>
+						<option value="Infraestructura">INFRAESTRUCTURA</option>
+						<option value="Mercadeo y Ventas"> MERCADEO Y VENTAS </option>
+						<option value="Servicio al Cliente">SERVICIO AL CLIENTE</option>
+						<option value="Tecnologia Funcional">TECNOLOGIA FUNCIONAL</option>
+						<option value="Tecnologia Tecnica">TECNOLOGIA TECNICA</option>
+						<option value="Plataforma">Plataforma</option>
 					</select>
 
 					<select
@@ -75,7 +91,11 @@ const Workers = () => {
 							float: "center",
 							width: "15%",
 							marginLeft: "20px",
-							backgroundColor: "#f6f6f6"
+							fontFamily: "sans-serif",
+							fontSize: "20px",
+							backgroundColor: "#f6f6f6",
+							marginBottom: "35px",
+							marginTop: "10px"
 						}}
 						onChange={e => setFilter({ name: e.target.value })}
 						value={filter.name}>
@@ -98,7 +118,10 @@ const Workers = () => {
 							float: "center",
 							width: "15%",
 							marginLeft: "20px",
-							backgroundColor: "#f6f6f6"
+							fontSize: "20px",
+							backgroundColor: "#f6f6f6",
+							marginBottom: "35px",
+							marginTop: "10px"
 						}}
 						onChange={e => setFecha({ name: e.target.value })}
 						value={fecha.name}>
@@ -123,8 +146,10 @@ const Workers = () => {
 						style={{
 							width: "100%",
 							textalign: "left",
+							fontSize: "18px",
 							borderCollapse: "collapse",
 							fontFamily: "sans-serif",
+							marginLeft: "10px",
 							boxSizing: "border-box",
 							captionSide: "top",
 							border: "1px solid #000"
@@ -136,6 +161,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
+										fontSize: "18px",
 										fontFamily: "sans-serif",
 										background: "#eee"
 									}}>
@@ -150,6 +176,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										fontSize: "18px",
 										fontFamily: "sans-serif",
 										background: "#eee"
 									}}>
@@ -160,6 +187,7 @@ const Workers = () => {
 										padding: "0.3em",
 										fontFamily: "sans-serif",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "25%"
 									}}>
 									Candidato
@@ -177,6 +205,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "25%"
 									}}>
 									Estatus
@@ -194,6 +223,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "25%"
 									}}>
 									Email
@@ -201,6 +231,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "45%",
 										background: "#eee"
@@ -208,11 +239,20 @@ const Workers = () => {
 									Fuente de captacion
 								</th>
 
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>Gerencia</th>
+								<th
+									style={{
+										padding: "0.3em",
+										fontSize: "18px",
+										border: "1px solid #000",
+										width: "25%"
+									}}>
+									Gerencia
+								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "25%",
 										background: "#eee"
 									}}>
@@ -226,6 +266,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										fontSize: "18px",
 										background: "#eee"
 									}}>
 									Cargo actual
@@ -235,42 +276,64 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "25%",
 										background: "#eee"
 									}}>
 									Sector
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "55%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										fontSize: "18px",
+										border: "1px solid #000",
+										width: "55%"
+									}}>
 									Moneda extranjera
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
 									Sueldo basico
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										fontSize: "18px",
+										border: "1px solid #000",
+										width: "35%"
+									}}>
 									Sueldo Variable
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
 									Cesta Ticket
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										fontSize: "18px",
+										border: "1px solid #000",
+										width: "35%"
+									}}>
 									Dias de utilidades
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
@@ -280,6 +343,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%"
 									}}>
 									Bono de vacaciones
@@ -288,36 +352,57 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
 									Factor
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										fontSize: "18px",
+										border: "1px solid #000",
+										width: "35%"
+									}}>
 									Paquete anual estimado
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
 									Bono de produccion
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										fontSize: "18px",
+										border: "1px solid #000",
+										width: "35%"
+									}}>
 									Bono de transporte
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
 									Caja de ahorro
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "35%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										fontSize: "18px",
+										border: "1px solid #000",
+										width: "35%"
+									}}>
 									Pago de estacionamiento
 								</th>
 
@@ -325,6 +410,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
@@ -334,6 +420,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%"
 									}}>
 									H.C.M parcial Emp./Fmlia
@@ -343,6 +430,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										fontSize: "18px",
 										background: "#eee"
 									}}>
 									Seguro de Vehículo
@@ -350,6 +438,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%"
 									}}>
@@ -358,6 +447,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
 										background: "#eee"
@@ -367,6 +457,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%"
 									}}>
@@ -376,6 +467,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										background: "#eee"
 									}}>
@@ -411,6 +503,7 @@ const Workers = () => {
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
 														padding: "0.3em",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -427,6 +520,7 @@ const Workers = () => {
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
 														captionSide: "bottom",
+														fontSize: "19px",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
@@ -442,6 +536,7 @@ const Workers = () => {
 														padding: "0.3em",
 														fontFamily: "sans-serif",
 														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -457,6 +552,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -472,6 +568,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														padding: "0.3em",
+														fontSize: "19px",
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
@@ -487,6 +584,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -503,6 +601,7 @@ const Workers = () => {
 														borderCollapse: "collapse",
 														padding: "0.3em",
 														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -517,6 +616,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -531,6 +631,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														padding: "0.3em",
+														fontSize: "19px",
 														fontFamily: "sans-serif",
 														background: "#eee",
 														captionSide: "bottom",
@@ -546,12 +647,12 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{" "}
 													{worker.managment.toUpperCase()}
 												</td>
 
@@ -563,6 +664,7 @@ const Workers = () => {
 														padding: "0.3em",
 														fontFamily: "sans-serif",
 														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -578,6 +680,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														padding: "0.3em",
+														fontSize: "19px",
 														fontFamily: "sans-serif",
 														captionSide: "bottom",
 														border: "1px solid #000",
@@ -595,6 +698,7 @@ const Workers = () => {
 														padding: "0.3em",
 														fontFamily: "sans-serif",
 														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -610,6 +714,7 @@ const Workers = () => {
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
 														captionSide: "bottom",
+														fontSize: "19px",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
@@ -626,6 +731,7 @@ const Workers = () => {
 														padding: "0.3em",
 														fontFamily: "sans-serif",
 														background: "#eee",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -639,13 +745,14 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
+														fontSize: "19px",
 														fontFamily: "sans-serif",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.coin)} $
+													{new Intl.NumberFormat("es-ES").format(worker.coin)}
 												</td>
 
 												<td
@@ -655,6 +762,7 @@ const Workers = () => {
 														borderCollapse: "collapse",
 														padding: "0.3em",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
@@ -670,6 +778,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -686,6 +795,7 @@ const Workers = () => {
 														fontFamily: "sans-serif",
 														captionSide: "bottom",
 														background: "#eee",
+														fontSize: "19px",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
@@ -699,6 +809,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -717,6 +828,7 @@ const Workers = () => {
 														background: "#eee",
 														captionSide: "bottom",
 														border: "1px solid #000",
+														fontSize: "19px",
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
@@ -730,6 +842,7 @@ const Workers = () => {
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
 														captionSide: "bottom",
+														fontSize: "19px",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
@@ -744,6 +857,7 @@ const Workers = () => {
 														borderCollapse: "collapse",
 														padding: "0.3em",
 														captionSide: "bottom",
+														fontSize: "19px",
 														background: "#eee",
 														fontFamily: "sans-serif",
 														border: "1px solid #000",
@@ -760,6 +874,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														fontFamily: "sans-serif",
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -774,7 +889,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -787,7 +902,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -800,7 +915,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -813,7 +928,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -827,7 +942,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -840,7 +955,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -853,7 +968,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -866,7 +981,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -879,7 +994,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -893,6 +1008,7 @@ const Workers = () => {
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
 														captionSide: "bottom",
+														fontSize: "19px",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
 													}}
@@ -904,7 +1020,7 @@ const Workers = () => {
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
 														borderCollapse: "collapse",
-
+														fontSize: "19px",
 														captionSide: "bottom",
 														border: "1px solid #000",
 														borderRight: " 1px solid #000"
@@ -924,16 +1040,16 @@ const Workers = () => {
 					<label
 						style={{
 							float: "center",
-							width: "30%",
+							width: "50%",
 							fontFamily: "sans-serif",
-							marginLeft: "20px",
+							marginLeft: "10px",
 							backgroundColor: "#f6f6f6",
-							fontSize: "23px"
+							fontSize: "25px"
 							// marginBottom: "100px"
 						}}
 						className="panel-collapse collapse show"
 						aria-expanded="true">
-						Total de prospectos:
+						Total de prospectos: {""}
 						{store.workers
 
 							.filter(
@@ -953,7 +1069,7 @@ const Workers = () => {
 						float: "center",
 						width: "15%",
 						fontSize: "23px",
-						marginLeft: "20px",
+						marginLeft: "10px",
 						fontFamily: "sans-serif",
 						backgroundColor: "lightgray",
 						marginBottom: "10px"
@@ -963,7 +1079,6 @@ const Workers = () => {
 					onClick={e =>
 						setProm(
 							store.workers
-
 								.filter(
 									worker =>
 										worker.sector == filter.name ||
@@ -981,17 +1096,17 @@ const Workers = () => {
 				<div
 					style={{
 						float: "center",
-						width: "30%",
-						marginLeft: "20px",
+						width: "50%",
+						marginLeft: "10px",
 						fontFamily: "sans-serif",
 						backgroundColor: "#f6f6f6",
-						fontSize: "23px"
+						fontSize: "25px"
 					}}
 					id="workers"
 					key={"coin"}
 					className="panel-collapse collapse show"
 					aria-expanded="true">
-					Sueldo en moneda extranjera:
+					Sueldo en moneda extranjera: {""}
 					{store.workers
 						.map(worker => worker)
 						.filter(
@@ -1009,17 +1124,17 @@ const Workers = () => {
 				<div
 					style={{
 						float: "center",
-						width: "30%",
+						width: "50%",
 						fontFamily: "sans-serif",
-						marginLeft: "20px",
+						marginLeft: "10px",
 						backgroundColor: "#f6f6f6",
-						fontSize: "23px"
+						fontSize: "25px"
 					}}
 					id="workers"
 					key={"Basic_salary"}
 					className="panel-collapse collapse show"
 					aria-expanded="true">
-					Salario basico:
+					Salario basico: {""}
 					{store.workers
 
 						.filter(
@@ -1038,17 +1153,17 @@ const Workers = () => {
 				<div
 					style={{
 						float: "center",
-						width: "30%",
+						width: "50%",
 						fontFamily: "sans-serif",
-						marginLeft: "20px",
+						marginLeft: "10px",
 						backgroundColor: "#f6f6f6",
-						fontSize: "23px"
+						fontSize: "25px"
 					}}
 					id="workers"
 					key={"Variable_salary"}
 					className="panel-collapse collapse show"
 					aria-expanded="true">
-					Salario Variable:
+					Salario Variable: {""}
 					{store.workers
 						.filter(
 							worker =>
@@ -1066,17 +1181,17 @@ const Workers = () => {
 				<div
 					style={{
 						float: "center",
-						width: "30%",
-						marginLeft: "20px",
+						width: "50%",
+						marginLeft: "10px",
 						fontFamily: "sans-serif",
 						backgroundColor: "#f6f6f6",
-						fontSize: "23px"
+						fontSize: "25px"
 					}}
 					id="workers"
 					key={"Cesta_ticket"}
 					className="panel-collapse collapse show"
 					aria-expanded="true">
-					Cesta ticket:
+					Cesta ticket: {""}
 					{store.workers
 						.filter(
 							worker =>
@@ -1094,17 +1209,17 @@ const Workers = () => {
 				<div
 					style={{
 						float: "center",
-						width: "30%",
-						marginLeft: "20px",
+						width: "50%",
+						marginLeft: "10px",
 						fontFamily: "sans-serif",
 						backgroundColor: "#f6f6f6",
-						fontSize: "23px"
+						fontSize: "25px"
 					}}
 					id="workers"
 					key={"Factor"}
 					className="panel-collapse collapse show"
 					aria-expanded="true">
-					Factor:
+					Factor: {""}
 					{store.workers
 						.filter(
 							worker =>
@@ -1121,10 +1236,10 @@ const Workers = () => {
 				<div
 					style={{
 						float: "center",
-						width: "30%",
-						marginLeft: "20px",
+						width: "50%",
+						marginLeft: "10px",
 						backgroundColor: "#f6f6f6",
-						fontSize: "23px",
+						fontSize: "25px",
 						fontFamily: "sans-serif",
 						marginBottom: "100px"
 					}}
@@ -1132,7 +1247,7 @@ const Workers = () => {
 					key={"Estimated_annual_package"}
 					className="panel-collapse collapse show"
 					aria-expanded="true">
-					Paquete anual estimado:
+					Paquete anual estimado: {""}
 					{store.workers
 
 						.filter(

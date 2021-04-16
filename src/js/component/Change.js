@@ -71,7 +71,7 @@ const Change = props => {
 							marginTop: "10px",
 							fontSize: "25px",
 							marginLeft: "10px",
-							fontFamily: "inherit"
+							fontFamily: "sans-serif"
 						}}>
 						{" "}
 						Por favor especifica los datos para actualizarlos
@@ -80,11 +80,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Vacante{" "}
 						</label>
@@ -93,9 +94,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="text"
@@ -108,20 +112,24 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Estatus: <br />
 						</label>
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -153,11 +161,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Fecha de cita a entrevista :{" "}
 						</label>
@@ -165,9 +174,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="text"
@@ -180,11 +192,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Cargo actual del candidato:{" "}
 						</label>
@@ -192,9 +205,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="text"
@@ -207,11 +223,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Empresa:{" "}
 						</label>
@@ -219,9 +236,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="text"
@@ -234,20 +254,24 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Sector:
 						</label>
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -270,11 +294,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Sueldo en moneda extranjera:{" "}
 						</label>
@@ -282,9 +307,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -297,11 +325,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Sueldo basico:{" "}
 						</label>
@@ -309,9 +338,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -324,11 +356,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Sueldo variable:{" "}
 						</label>
@@ -336,9 +369,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -352,11 +388,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							cesta ticket:{" "}
 						</label>
@@ -364,9 +401,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -379,11 +419,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Dias de utilidades:{" "}
 						</label>
@@ -391,9 +432,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -406,11 +450,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Bono vacacional:{" "}
 						</label>
@@ -418,9 +463,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -433,11 +481,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Disfrute de vacaciones:{" "}
 						</label>
@@ -445,9 +494,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -460,11 +512,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Factor:{" "}
 						</label>
@@ -472,9 +525,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -487,11 +543,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Compensacion anual mixta:{" "}
 						</label>
@@ -499,9 +556,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="number"
@@ -515,11 +575,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Bono de produccion:
 						</label>
@@ -527,9 +588,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -543,11 +607,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Bono de transporte:
 						</label>
@@ -555,9 +620,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -571,11 +639,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Caja de ahorro:
 						</label>
@@ -583,9 +652,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -599,10 +671,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								fontSize: "17px"
 							}}>
 							Pago de estacionamiento:
@@ -611,9 +685,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -628,11 +705,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							H.C.M 100% Emp./Fmlia:
 						</label>
@@ -640,9 +718,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -658,11 +739,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							H.C.M parcial Emp./Fmlia:
 						</label>
@@ -670,9 +752,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -688,11 +773,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Seguro de Vehículo:
 						</label>
@@ -700,9 +786,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -716,11 +805,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Seguro de Vida:
 						</label>
@@ -728,9 +818,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -745,11 +838,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Comedor:
 						</label>
@@ -757,9 +851,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -774,11 +871,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Subsidios alimenticios:
 						</label>
@@ -786,9 +884,12 @@ const Change = props => {
 						<select
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							className="form-control"
@@ -803,11 +904,12 @@ const Change = props => {
 						<label
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
 								paddingRight: "24px",
 								marginLeft: "20px",
 								color: "black",
-								fontSize: "17px"
+								fontSize: "25px",
+								fontFamily: "sans-serif"
 							}}>
 							Observaciones:{" "}
 						</label>
@@ -815,9 +917,12 @@ const Change = props => {
 						<input
 							style={{
 								float: "left",
-								width: "80%",
+								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
 								borderColor: "black"
 							}}
 							type="text"
@@ -831,14 +936,20 @@ const Change = props => {
 						<br />
 						<button
 							style={{
+								width: "28%",
+								padding: "8px 16px",
+								marginTop: "25px",
 								float: "right",
-								width: "250px",
-								height: "50px",
-								marginTop: "40px",
-								color: "#ffffff",
+								marginRight: "10px",
+								border: "3px solid #000",
+								borderRadius: "5px",
+								display: "block",
+								fontSize: "23px",
+								color: "#fff",
 								backgroundColor: "#1883ba",
-								marginRight: "70px",
-								marginBottom: "100px"
+								marginLeft: "30px",
+								fontFamily: "sans-serif",
+								marginBottom: "130px"
 							}}
 							className="btn"
 							onClick={e => {
