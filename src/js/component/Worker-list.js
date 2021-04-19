@@ -16,6 +16,11 @@ const WorkersList = () => {
 	const { store, actions } = useContext(Context);
 	let history = useHistory();
 	const [prom, setProm] = useState(0);
+	const [promvs, setPromvs] = useState(0);
+	const [promcs, setPromcs] = useState(0);
+	const [promf, setPromf] = useState(0);
+	const [promap, setPromap] = useState(0);
+	const [promcn, setPromcn] = useState(0);
 
 	const Update = (worker, id) => {
 		history.push("/change/" + worker.id);
@@ -54,7 +59,7 @@ const WorkersList = () => {
 											width: "25%",
 											borderRight: "1px solid #000",
 											borderBottom: "1px solid #000",
-											fontSize: "18px"
+											fontSize: "23px"
 										}}
 									/>
 									<th
@@ -62,14 +67,21 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee",
 											borderLeft: "#000",
-											fontSize: "18px"
+											ffontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										ID
 									</th>
 
-									<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>
+									<th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "25%",
+											backgroundColor: "#3B83BD",
+											fontSize: "23px"
+										}}>
 										Fecha de inicio
 									</th>
 									<th
@@ -77,9 +89,10 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
+
 											fontSize: "23px",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Consultor
 									</th>
@@ -88,7 +101,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Candidato
 									</th>
@@ -97,8 +111,9 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee",
-											fontSize: "18px"
+
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Cedula
 									</th>
@@ -107,7 +122,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Estatus
 									</th>
@@ -116,8 +132,9 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										N0 de telefono
 									</th>
@@ -126,7 +143,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Email
 									</th>
@@ -135,8 +153,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "45%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Fuente de captacion
 									</th>
@@ -146,7 +164,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Gerencia
 									</th>
@@ -155,8 +174,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Vacante
 									</th>
@@ -165,7 +184,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "45%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Fecha de entrevista
 									</th>
@@ -174,8 +194,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Cargo actual
 									</th>
@@ -184,7 +204,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Empresa
 									</th>
@@ -193,8 +214,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Sector
 									</th>
@@ -203,7 +224,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "55%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Moneda extranjera
 									</th>
@@ -212,8 +234,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Sueldo basico
 									</th>
@@ -222,7 +244,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Sueldo Variable
 									</th>
@@ -231,8 +254,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Cesta Ticket
 									</th>
@@ -241,7 +264,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Dias de utilidades
 									</th>
@@ -250,8 +274,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Disfrute de vacaciones
 									</th>
@@ -260,7 +284,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Bono de vacaciones
 									</th>
@@ -269,8 +294,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Factor
 									</th>
@@ -279,7 +304,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Paquete anual estimado
 									</th>
@@ -288,8 +314,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Bono de produccion
 									</th>
@@ -298,7 +324,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Bono de transporte
 									</th>
@@ -307,8 +334,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Caja de ahorro
 									</th>
@@ -317,7 +344,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Pago de estacionamiento
 									</th>
@@ -327,8 +355,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										H.C.M 100% Emp./Fmlia
 									</th>
@@ -337,7 +365,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										H.C.M parcial Emp./Fmlia
 									</th>
@@ -346,8 +375,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Seguro de Vehículo
 									</th>
@@ -356,7 +385,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Seguro de Vida
 									</th>
@@ -365,8 +395,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
 										}}>
 										Comedor
 									</th>
@@ -375,7 +405,9 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "18px"
+											color: "graphite",
+											fontSize: "23px",
+											backgroundColor: "#3b83bd"
 										}}>
 										Subsidios alimenticios
 									</th>
@@ -384,8 +416,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											background: "#eee",
-											fontSize: "18px"
+											fontSize: "23px",
+											backgroundColor: "#3b83bd"
 										}}>
 										Observaciones
 									</th>
@@ -979,23 +1011,140 @@ const WorkersList = () => {
 							{store.workers.reduce((prevValue, worker) => prevValue + 1, 0)}
 						</label>
 					</div>
-
-					<button
-						style={{
-							float: "center",
-							width: "15%",
-							fontSize: "25px",
-							marginLeft: "10px",
-							fontFamily: "sans-serif",
-							backgroundColor: "lightgray",
-							marginBottom: "10px"
-						}}
-						type="number"
-						placeholder="promediar"
-						onClick={e => setProm(store.workers.reduce((prevValue, worker) => prevValue + 1, 0))}
-						value={prom.value}>
-						Promediar
-					</button>
+					<div style={{ display: "inline-flex" }}>
+						<button
+							style={{
+								float: "center",
+								width: "700px",
+								fontSize: "23px",
+								marginLeft: "10px",
+								fontFamily: "sans-serif",
+								backgroundColor: "lightgray",
+								marginBottom: "10px"
+							}}
+							type="number"
+							placeholder="promediar"
+							onClick={e =>
+								setPromcn(
+									store.workers
+										.filter(worker => worker.coin != 0)
+										.reduce((prevValue, worker) => prevValue + 1, 0)
+								)
+							}
+							value={promcn.value}>
+							Promediar sueldo en moneda extranjera
+						</button>
+						<button
+							style={{
+								float: "center",
+								width: "40%",
+								fontSize: "23px",
+								marginLeft: "10px",
+								fontFamily: "sans-serif",
+								backgroundColor: "lightgray",
+								marginBottom: "10px"
+							}}
+							type="number"
+							placeholder="promediar"
+							onClick={e =>
+								setProm(
+									store.workers
+										.filter(worker => worker.basic_salary != 0)
+										.reduce((prevValue, worker) => prevValue + 1, 0)
+								)
+							}
+							value={prom.value}>
+							Promediar salario basico
+						</button>
+						<button
+							style={{
+								float: "center",
+								width: "40%",
+								fontSize: "23px",
+								marginLeft: "10px",
+								fontFamily: "sans-serif",
+								backgroundColor: "lightgray",
+								marginBottom: "10px"
+							}}
+							type="number"
+							placeholder="promediar"
+							onClick={e =>
+								setPromvs(
+									store.workers
+										.filter(worker => worker.variable_salary != 0)
+										.reduce((prevValue, worker) => prevValue + 1, 0)
+								)
+							}
+							value={promvs.value}>
+							Promediar salario variable
+						</button>
+						<button
+							style={{
+								float: "center",
+								width: "30%",
+								fontSize: "23px",
+								marginLeft: "10px",
+								fontFamily: "sans-serif",
+								backgroundColor: "lightgray",
+								marginBottom: "10px"
+							}}
+							type="number"
+							placeholder="promediar"
+							onClick={e =>
+								setPromcs(
+									store.workers
+										.filter(worker => worker.cesta_ticket != 0)
+										.reduce((prevValue, worker) => prevValue + 1, 0)
+								)
+							}
+							value={promcs.value}>
+							Promediar cesta ticket
+						</button>
+						<button
+							style={{
+								float: "center",
+								width: "30%",
+								fontSize: "23px",
+								marginLeft: "10px",
+								fontFamily: "sans-serif",
+								backgroundColor: "lightgray",
+								marginBottom: "10px"
+							}}
+							type="number"
+							placeholder="promediar"
+							onClick={e =>
+								setPromf(
+									store.workers
+										.filter(worker => worker.Factor != 0)
+										.reduce((prevValue, worker) => prevValue + 1, 0)
+								)
+							}
+							value={promf.value}>
+							Promediar factor
+						</button>
+						<button
+							style={{
+								float: "center",
+								width: "700px",
+								fontSize: "23px",
+								marginLeft: "10px",
+								fontFamily: "sans-serif",
+								backgroundColor: "lightgray",
+								marginBottom: "10px"
+							}}
+							type="number"
+							placeholder="promediar"
+							onClick={e =>
+								setPromap(
+									store.workers
+										.filter(worker => worker.Estimated_annual_package != 0)
+										.reduce((prevValue, worker) => prevValue + 1, 0)
+								)
+							}
+							value={promap.value}>
+							Promediar Paquete anual estimado
+						</button>
+					</div>
 					<div
 						style={{
 							float: "center",
@@ -1012,7 +1161,7 @@ const WorkersList = () => {
 						Sueldo en moneda extranjera: {""}
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + worker.coin / prom, 0)
+							.reduce((prevValue, worker) => prevValue + worker.coin / promcn, 0)
 							.toLocaleString("es")}
 					</div>
 					<div
@@ -1030,9 +1179,11 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Salario basico: {""}
 						{store.workers
+
 							.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
 							.toLocaleString("es")}
 					</div>
+
 					<div
 						style={{
 							float: "center",
@@ -1049,9 +1200,10 @@ const WorkersList = () => {
 						Salario Variable: {""}
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + worker.variable_salary / prom, 0)
+							.reduce((prevValue, worker) => prevValue + worker.variable_salary / promvs, 0)
 							.toLocaleString("es")}
 					</div>
+
 					<div
 						style={{
 							float: "center",
@@ -1068,15 +1220,16 @@ const WorkersList = () => {
 						Cesta ticket: {""}
 						{store.workers
 
-							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / prom, 0)
+							.reduce((prevValue, worker) => (prevValue + worker.cesta_ticket) / promcs, 0)
+
 							.toLocaleString("es")}
 					</div>
 					<div
 						style={{
 							float: "center",
 							width: "50%",
-							fontFamily: "sans-serif",
 							marginLeft: "10px",
+							fontFamily: "sans-serif",
 							backgroundColor: "#f6f6f6",
 							fontSize: "25px"
 						}}
@@ -1086,8 +1239,7 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Factor: {""}
 						{store.workers
-
-							.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / prom, 0)
+							.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / promf, 0)
 							.toFixed(2)
 							.toLocaleString("es")}
 					</div>
@@ -1097,8 +1249,8 @@ const WorkersList = () => {
 							width: "50%",
 							marginLeft: "10px",
 							backgroundColor: "#f6f6f6",
-							fontFamily: "sans-serif",
 							fontSize: "25px",
+							fontFamily: "sans-serif",
 							marginBottom: "100px"
 						}}
 						id="workers"
@@ -1107,9 +1259,8 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Paquete anual estimado: {""}
 						{store.workers
-
 							.reduce(
-								(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / prom,
+								(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / promap,
 								0
 							)
 							.toLocaleString("es")}

@@ -17,6 +17,11 @@ const Workers = () => {
 	const [fecha, setFecha] = useState("");
 	const [gerencia, setGerencia] = useState("");
 	const [prom, setProm] = useState(0);
+	const [promvs, setPromvs] = useState(0);
+	const [promcs, setPromcs] = useState(0);
+	const [promf, setPromf] = useState(0);
+	const [promap, setPromap] = useState(0);
+	const [promcn, setPromcn] = useState(0);
 
 	const { store, actions } = useContext(Context);
 
@@ -161,14 +166,21 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
-										fontSize: "18px",
-										fontFamily: "sans-serif",
-										background: "#eee"
+										borderLeft: "#000",
+										ffontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									ID
 								</th>
 
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										border: "1px solid #000",
+										width: "25%",
+										backgroundColor: "#3B83BD",
+										fontSize: "23px"
+									}}>
 									Fecha de inicio
 								</th>
 								<th
@@ -176,65 +188,72 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
-										fontSize: "18px",
-										fontFamily: "sans-serif",
-										background: "#eee"
+
+										fontSize: "23px",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Consultor
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontFamily: "sans-serif",
 										border: "1px solid #000",
-										fontSize: "18px",
-										width: "25%"
+										width: "25%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Candidato
 								</th>
 								{/* <th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "25%",
+
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
+										}}>
+										Cedula
+									</th> */}
+								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
-										background: "#eee"
-									}}>
-									Cedula
-								</th> */}
-								<th
-									style={{
-										padding: "0.3em",
-										border: "1px solid #000",
-										fontSize: "18px",
-										width: "25%"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Estatus
 								</th>
 								{/* <th
-									style={{
-										padding: "0.3em",
-										border: "1px solid #000",
-										width: "35%",
-										background: "#eee"
-									}}>
-									N0 de telefono
-								</th> */}
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "35%",
+
+											fontSize: "23px",
+											backgroundColor: "#3B83BD"
+										}}>
+										N0 de telefono
+									</th> */}
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
-										width: "25%"
+										width: "25%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Email
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
 										width: "45%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Fuente de captacion
 								</th>
@@ -242,9 +261,10 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "25%"
+										width: "25%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Gerencia
 								</th>
@@ -252,13 +272,20 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "25%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Vacante
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "45%" }}>
+								<th
+									style={{
+										padding: "0.3em",
+										border: "1px solid #000",
+										width: "45%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
+									}}>
 									Fecha de entrevista
 								</th>
 								<th
@@ -266,28 +293,38 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
-										fontSize: "18px",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Cargo actual
 								</th>
-								<th style={{ padding: "0.3em", border: "1px solid #000", width: "25%" }}>Empresa</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "25%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
+									}}>
+									Empresa
+								</th>
+								<th
+									style={{
+										padding: "0.3em",
+										border: "1px solid #000",
+										width: "25%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Sector
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "55%"
+										width: "55%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Moneda extranjera
 								</th>
@@ -295,18 +332,19 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Sueldo basico
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Sueldo Variable
 								</th>
@@ -314,18 +352,19 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Cesta Ticket
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Dias de utilidades
 								</th>
@@ -333,9 +372,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Disfrute de vacaciones
 								</th>
@@ -343,8 +382,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Bono de vacaciones
 								</th>
@@ -352,18 +392,19 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Factor
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Paquete anual estimado
 								</th>
@@ -371,18 +412,19 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Bono de produccion
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Bono de transporte
 								</th>
@@ -390,18 +432,19 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Caja de ahorro
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Pago de estacionamiento
 								</th>
@@ -410,9 +453,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									H.C.M 100% Emp./Fmlia
 								</th>
@@ -420,8 +463,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									H.C.M parcial Emp./Fmlia
 								</th>
@@ -430,36 +474,39 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
-										fontSize: "18px",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Seguro de Vehículo
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%"
+										width: "35%",
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Seguro de Vida
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3B83BD"
 									}}>
 									Comedor
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%"
+										width: "35%",
+										color: "graphite",
+										fontSize: "23px",
+										backgroundColor: "#3b83bd"
 									}}>
 									Subsidios alimenticios
 								</th>
@@ -467,9 +514,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										background: "#eee"
+										fontSize: "23px",
+										backgroundColor: "#3b83bd"
 									}}>
 									Observaciones
 								</th>
@@ -1063,36 +1110,187 @@ const Workers = () => {
 							.reduce((prevValue, worker) => prevValue + 1, 0)}
 					</label>
 				</div>
-
-				<button
-					style={{
-						float: "center",
-						width: "15%",
-						fontSize: "23px",
-						marginLeft: "10px",
-						fontFamily: "sans-serif",
-						backgroundColor: "lightgray",
-						marginBottom: "10px"
-					}}
-					type="number"
-					placeholder="promediar"
-					onClick={e =>
-						setProm(
-							store.workers
-								.filter(
-									worker =>
-										worker.sector == filter.name ||
-										worker.vacant.startsWith(bailar.name) ||
-										worker.init_date == fecha.name ||
-										worker.managment == gerencia.name ||
-										worker.actual_charge.startsWith(puesto.name)
-								)
-								.reduce((prevValue, worker) => prevValue + 1, 0)
-						)
-					}
-					value={prom.value}>
-					Promediar
-				</button>
+				<div style={{ display: "inline-flex" }}>
+					<button
+						style={{
+							float: "center",
+							width: "700px",
+							fontSize: "23px",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "lightgray",
+							marginBottom: "10px"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e =>
+							setPromcn(
+								store.workers
+									.filter(
+										worker =>
+											(worker.sector == filter.name && worker.coin != 0) ||
+											(worker.vacant.startsWith(bailar.name) && worker.coin != 0) ||
+											(worker.init_date == fecha.name && worker.coin != 0) ||
+											(worker.managment == gerencia.name && worker.coin != 0) ||
+											(worker.actual_charge.startsWith(puesto.name) && worker.coin != 0)
+									)
+									.reduce((prevValue, worker) => prevValue + 1, 0)
+							)
+						}
+						value={promcn.value}>
+						Promediar sueldo en moneda extranjera
+					</button>
+					<button
+						style={{
+							float: "center",
+							width: "40%",
+							fontSize: "23px",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "lightgray",
+							marginBottom: "10px"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e =>
+							setProm(
+								store.workers
+									.filter(
+										worker =>
+											(worker.sector == filter.name && worker.basic_salary != 0) ||
+											(worker.vacant.startsWith(bailar.name) && worker.basic_salary != 0) ||
+											(worker.init_date == fecha.name && worker.basic_salary != 0) ||
+											(worker.managment == gerencia.name && worker.basic_salary != 0) ||
+											(worker.actual_charge.startsWith(puesto.name) && worker.basic_salary != 0)
+									)
+									.reduce((prevValue, worker) => prevValue + 1, 0)
+							)
+						}
+						value={prom.value}>
+						Promediar salario basico
+					</button>
+					<button
+						style={{
+							float: "center",
+							width: "40%",
+							fontSize: "23px",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "lightgray",
+							marginBottom: "10px"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e =>
+							setPromvs(
+								store.workers
+									.filter(
+										worker =>
+											(worker.sector == filter.name && worker.variable_salary != 0) ||
+											(worker.vacant.startsWith(bailar.name) && worker.variable_salary != 0) ||
+											(worker.init_date == fecha.name && worker.variable_salary != 0) ||
+											(worker.managment == gerencia.name && worker.variable_salary != 0) ||
+											(worker.actual_charge.startsWith(puesto.name) &&
+												worker.variable_salary != 0)
+									)
+									.reduce((prevValue, worker) => prevValue + 1, 0)
+							)
+						}
+						value={promvs.value}>
+						Promediar salario variable
+					</button>
+					<button
+						style={{
+							float: "center",
+							width: "40%",
+							fontSize: "23px",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "lightgray",
+							marginBottom: "10px"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e =>
+							setPromcs(
+								store.workers
+									.filter(
+										worker =>
+											(worker.sector == filter.name && worker.cesta_ticket != 0) ||
+											(worker.vacant.startsWith(bailar.name) && worker.cesta_ticket != 0) ||
+											(worker.init_date == fecha.name && worker.cesta_ticket != 0) ||
+											(worker.managment == gerencia.name && worker.cesta_ticket != 0) ||
+											(worker.actual_charge.startsWith(puesto.name) &&
+												worker.variable_salary != 0)
+									)
+									.reduce((prevValue, worker) => prevValue + 1, 0)
+							)
+						}
+						value={promcs.value}>
+						Promediar cesta ticket
+					</button>
+					<button
+						style={{
+							float: "center",
+							width: "40%",
+							fontSize: "23px",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "lightgray",
+							marginBottom: "10px"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e =>
+							setPromf(
+								store.workers
+									.filter(
+										worker =>
+											(worker.sector == filter.name && worker.Factor != 0) ||
+											(worker.vacant.startsWith(bailar.name) && worker.Factor != 0) ||
+											(worker.init_date == fecha.name && worker.Factor != 0) ||
+											(worker.managment == gerencia.name && worker.Factor != 0) ||
+											(worker.actual_charge.startsWith(puesto.name) && worker.Factor != 0)
+									)
+									.reduce((prevValue, worker) => prevValue + 1, 0)
+							)
+						}
+						value={promf.value}>
+						Promediar factor
+					</button>
+					<button
+						style={{
+							float: "center",
+							width: "700px",
+							fontSize: "23px",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "lightgray",
+							marginBottom: "10px"
+						}}
+						type="number"
+						placeholder="promediar"
+						onClick={e =>
+							setPromap(
+								store.workers
+									.filter(
+										worker =>
+											(worker.sector == filter.name && worker.Estimated_annual_package != 0) ||
+											(worker.vacant.startsWith(bailar.name) &&
+												worker.Estimated_annual_package != 0) ||
+											(worker.init_date == fecha.name && worker.Estimated_annual_package != 0) ||
+											(worker.managment == gerencia.name &&
+												worker.Estimated_annual_package != 0) ||
+											(worker.actual_charge.startsWith(puesto.name) &&
+												worker.Estimated_annual_package != 0)
+									)
+									.reduce((prevValue, worker) => prevValue + 1, 0)
+							)
+						}
+						value={promap.value}>
+						Promediar Paquete anual estimado
+					</button>
+				</div>
 				<div
 					style={{
 						float: "center",
@@ -1118,7 +1316,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.coin / prom, 0)
+						.reduce((prevValue, worker) => prevValue + worker.coin / promcn, 0)
 						.toLocaleString("es")}
 				</div>
 				<div
@@ -1174,7 +1372,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + worker.variable_salary / prom, 0)
+						.reduce((prevValue, worker) => prevValue + worker.variable_salary / promvs, 0)
 						.toLocaleString("es")}
 				</div>
 
@@ -1195,14 +1393,14 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector === filter.name ||
+								worker.sector == filter.name ||
 								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date === fecha.name ||
-								worker.managment === gerencia.name ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => (prevValue + worker.cesta_ticket) / prom, 0)
+						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / promcs, 0)
 
 						.toLocaleString("es")}
 				</div>
@@ -1229,7 +1427,7 @@ const Workers = () => {
 								worker.managment == gerencia.name ||
 								worker.actual_charge.startsWith(puesto.name)
 						)
-						.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / prom, 0)
+						.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / promf, 0)
 						.toFixed(2)
 						.toLocaleString("es")}
 				</div>
@@ -1259,7 +1457,10 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce((prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / prom, 0)
+						.reduce(
+							(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / promap,
+							0
+						)
 						.toLocaleString("es")}
 				</div>
 				<Modal
