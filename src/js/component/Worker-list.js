@@ -1220,7 +1220,7 @@ const WorkersList = () => {
 						Cesta ticket: {""}
 						{store.workers
 
-							.reduce((prevValue, worker) => (prevValue + worker.cesta_ticket) / promcs, 0)
+							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / promcs, 0)
 
 							.toLocaleString("es")}
 					</div>
