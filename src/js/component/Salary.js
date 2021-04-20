@@ -198,6 +198,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontFamily: "sans-serif",
 										border: "1px solid #000",
 										width: "25%",
 										fontSize: "23px",
@@ -271,6 +272,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "25%",
 										fontSize: "23px",
@@ -281,6 +283,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "45%",
 										fontSize: "23px",
@@ -302,6 +305,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "25%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -332,6 +336,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -352,6 +357,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -372,6 +378,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -392,6 +399,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -412,6 +420,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -432,6 +441,7 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -463,11 +473,12 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
+										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
-									H.C.M parcial Emp./Fmlia
+									H.C.M Parcial Emp./Fmlia
 								</th>
 								<th
 									style={{
@@ -482,9 +493,9 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
-										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Seguro de Vida
@@ -492,6 +503,7 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
 										fontSize: "23px",
@@ -499,13 +511,13 @@ const Workers = () => {
 									}}>
 									Comedor
 								</th>
+
 								<th
 									style={{
 										padding: "0.3em",
+										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
-										color: "graphite",
-										fontSize: "23px",
 										backgroundColor: "#3b83bd"
 									}}>
 									Subsidios alimenticios

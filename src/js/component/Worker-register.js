@@ -56,6 +56,7 @@ const Register = () => {
 	let cta = parseInt(datos.cesta_ticket * 12, 10);
 	let sva = parseInt(datos.variable_salary * 12, 10);
 	let eap = parseInt(datos.basic_salary * datos.Factor + cta + sva);
+
 	let history = useHistory();
 
 	const handleChange = e => {
@@ -295,18 +296,18 @@ const Register = () => {
 							value={datos.init_date}
 							onChange={handleChange}>
 							<option value="">Vacio</option>
-							<option value="ENERO">Enero</option>
-							<option value="FEBRERO">Febrero</option>
-							<option value="MARZO">Marzo</option>
-							<option value="ABRIL">Abril</option>
-							<option value="MAYO">Mayo</option>
-							<option value="JUNIO">Junio</option>
-							<option value="JULIO">Julio</option>
-							<option value="AGOSTO">Agosto</option>
-							<option value="SEPTIEMBRE">Septiembre</option>
-							<option value="OCTUBRE">Octubre</option>
-							<option value="NOVIEMBRE">Noviembre</option>
-							<option value="DICIEMBRE">Diciembre</option>
+							<option value="ENERO">ENERO</option>
+							<option value="FEBRERO">FEBRERO</option>
+							<option value="MARZO">MARZO</option>
+							<option value="ABRIL">ABRIL</option>
+							<option value="MAYO">MAYO</option>
+							<option value="JUNIO">JUNIO</option>
+							<option value="JULIO">JULIO</option>
+							<option value="AGOSTO">AGOSTO</option>
+							<option value="SEPTIEMBRE">SEPTIEMBRE</option>
+							<option value="OCTUBRE">OCTUBRE</option>
+							<option value="NOVIEMBRE">NOVIEMBRE</option>
+							<option value="DICIEMBRE">DICIEMBRE</option>
 						</select>
 						<br />
 						<label
@@ -802,7 +803,7 @@ const Register = () => {
 								fontSize: "23px",
 								fontFamily: "sans-serif"
 							}}>
-							Compensacion anual mixta:{" "}
+							Paquete anual estimado:{" "}
 						</label>
 						<br />
 						<input
@@ -819,7 +820,14 @@ const Register = () => {
 							className="form-control"
 							name="Estimated_annual_package"
 							onChange={handleChange}
-							value={(datos.Estimated_annual_package = eap)}
+							value={
+								((datos.Estimated_annual_package = eap),
+								{
+									if(eap = 0) {
+										eap = null;
+									}
+								})
+							}
 						/>
 						<br />
 
@@ -850,7 +858,7 @@ const Register = () => {
 							name="Production_bonus"
 							value={datos.Production_bonus}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 
@@ -882,7 +890,7 @@ const Register = () => {
 							name="Transport_bonus"
 							value={datos.Transport_bonus}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 
@@ -913,7 +921,7 @@ const Register = () => {
 							name="Savings_Bank"
 							value={datos.Savings_Bank}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 
@@ -944,7 +952,7 @@ const Register = () => {
 							name="parking_payment"
 							value={datos.parking_payment}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 						<br />
@@ -976,7 +984,7 @@ const Register = () => {
 							name="full_HCM_Emp_Family"
 							value={datos.full_HCM_Emp_Family}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 
@@ -1009,7 +1017,7 @@ const Register = () => {
 							name="partial_HCM_Emp_Family"
 							value={datos.partial_HCM_Emp_Family}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 
@@ -1042,7 +1050,7 @@ const Register = () => {
 							name="Vehicle_insurance"
 							value={datos.Vehicle_insurance}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 
@@ -1073,7 +1081,7 @@ const Register = () => {
 							name="life_insurance"
 							value={datos.life_insurance}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 						<br />
@@ -1105,7 +1113,7 @@ const Register = () => {
 							name="dinning_room"
 							value={datos.dinning_room}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 						<br />
@@ -1137,7 +1145,7 @@ const Register = () => {
 							name="food_bags"
 							value={datos.food_bags}
 							onChange={handleChange}>
-							<option value="No">No</option>
+							<option value="">No</option>
 							<option value="X">Si</option>
 						</select>
 						<br />
@@ -1204,3 +1212,4 @@ const Register = () => {
 };
 
 export default Register;
+
