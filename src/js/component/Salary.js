@@ -105,7 +105,6 @@ const Workers = () => {
 						onChange={e => setFilter({ name: e.target.value })}
 						value={filter.name}>
 						<option value="">Sector</option>
-						<option value="">Vacio</option>
 						<option value="OTRO">Otro</option>
 						<option value="FINANCIERO">Financiero</option>
 						<option value="TECNOLOGICO">Tecnologico</option>
@@ -650,7 +649,7 @@ const Workers = () => {
 													}}
 													className="text small text-truncate">
 													{" "}
-													{worker.status}
+													{worker.status.toUpperCase()}
 												</td>
 
 												{/* <td

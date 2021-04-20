@@ -562,7 +562,7 @@ const WorkersList = () => {
 													}}
 													className="text small text-truncate">
 													{" "}
-													{worker.status}
+													{worker.status.toUpperCase()}
 												</td>
 
 												<td
