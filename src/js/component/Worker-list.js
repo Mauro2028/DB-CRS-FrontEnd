@@ -821,7 +821,7 @@ const WorkersList = () => {
 													}}
 													className="text small text-truncate">
 													{" "}
-													{new Intl.NumberFormat("es-ES").format(worker.Factor)} meses
+													{new Intl.NumberFormat("en-EN").format(worker.Factor)} meses
 												</td>
 
 												<td
@@ -1239,7 +1239,7 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Factor: {""}
 						{store.workers
-							.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / promf, 0)
+							.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
 							.toFixed(2)
 							.toLocaleString("es")}
 					</div>
@@ -1259,10 +1259,7 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Paquete anual estimado: {""}
 						{store.workers
-							.reduce(
-								(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / promap,
-								0
-							)
+							.reduce((prevValue, worker) => prevValue + worker.Estimated_annual_package / promap, 0)
 							.toLocaleString("es")}
 					</div>
 				</div>

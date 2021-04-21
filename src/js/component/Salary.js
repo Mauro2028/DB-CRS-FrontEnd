@@ -858,7 +858,7 @@ const Workers = () => {
 														borderRight: " 1px solid #000"
 													}}
 													className="text small text-truncate">
-													{new Intl.NumberFormat("es-ES").format(worker.cesta_ticket)}
+													{new Intl.NumberFormat("es-Es").format(worker.cesta_ticket)}
 												</td>
 
 												<td
@@ -1257,11 +1257,11 @@ const Workers = () => {
 								store.workers
 									.filter(
 										worker =>
-											(worker.sector == filter.name && worker.Factor != 0) ||
-											(worker.vacant.startsWith(bailar.name) && worker.Factor != 0) ||
-											(worker.init_date == fecha.name && worker.Factor != 0) ||
-											(worker.managment == gerencia.name && worker.Factor != 0) ||
-											(worker.actual_charge.startsWith(puesto.name) && worker.Factor != 0)
+											(worker.sector == filter.name && worker.Factor > 12) ||
+											(worker.vacant.startsWith(bailar.name) && worker.Factor > 12) ||
+											(worker.init_date == fecha.name && worker.Factor > 12) ||
+											(worker.managment == gerencia.name && worker.Factor >= 12) ||
+											(worker.actual_charge.startsWith(puesto.name) && worker.Factor > 12)
 									)
 									.reduce((prevValue, worker) => prevValue + 1, 0)
 							)
@@ -1432,13 +1432,13 @@ const Workers = () => {
 					{store.workers
 						.filter(
 							worker =>
-								worker.sector == filter.name ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge.startsWith(puesto.name)
+								(worker.sector == filter.name && worker.Factor > 12) ||
+								(worker.vacant.startsWith(bailar.name) && worker.Factor > 12) ||
+								(worker.init_date == fecha.name && worker.Factor > 12) ||
+								(worker.managment == gerencia.name && worker.Factor > 12) ||
+								(worker.actual_charge.startsWith(puesto.name) && worker.Factor > 12)
 						)
-						.reduce((prevValue, worker) => prevValue + parseInt(worker.Factor) / promf, 0)
+						.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
 						.toFixed(2)
 						.toLocaleString("es")}
 				</div>
@@ -1468,10 +1468,7 @@ const Workers = () => {
 								worker.actual_charge.startsWith(puesto.name)
 						)
 
-						.reduce(
-							(prevValue, worker) => prevValue + parseInt(worker.Estimated_annual_package) / promap,
-							0
-						)
+						.reduce((prevValue, worker) => prevValue + worker.Estimated_annual_package / promap, 0)
 						.toLocaleString("es")}
 				</div>
 				<Modal
