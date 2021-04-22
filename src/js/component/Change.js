@@ -16,26 +16,26 @@ const Change = props => {
 		actual_charge: "",
 		company: "",
 		sector: "",
-		coin: 0,
-		basic_salary: 0,
-		variable_salary: 0,
-		cesta_ticket: 0,
-		Profit_Days: 0,
-		vacations: 0,
-		Vacation_Bonus: 0,
+		coin: "",
+		basic_salary: "",
+		variable_salary: "",
+		cesta_ticket: "",
+		Profit_Days: "",
+		vacations: "",
+		Vacation_Bonus: "",
 		Factor: null,
 		Estimated_annual_package: null,
 		Observations: "",
-		Production_bonus: "No",
-		Transport_bonus: "No",
-		Savings_Bank: "No",
-		parking_payment: "No",
-		full_HCM_Emp_Family: "No",
-		partial_HCM_Emp_Family: "No",
-		Vehicle_insurance: "No",
-		life_insurance: "No",
-		dinning_room: "No",
-		food_bags: "No"
+		Production_bonus: "",
+		Transport_bonus: "",
+		Savings_Bank: "",
+		parking_payment: "",
+		full_HCM_Emp_Family: "",
+		partial_HCM_Emp_Family: "",
+		Vehicle_insurance: "",
+		life_insurance: "",
+		dinning_room: "",
+		food_bags: ""
 	};
 
 	const [datos, setDatos] = useState(initialState);
@@ -156,7 +156,44 @@ const Change = props => {
 							<option value="POR AGENDAR ENTREVISTA">Por agendar entrevsita</option>
 							<option value="PRE-EMPLEO">Pre-empleo</option>
 						</select>
-
+						<br />
+						<label
+							style={{
+								float: "left",
+								width: "70%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
+							}}>
+							Gerencia:
+						</label>
+						<br />
+						<select
+							style={{
+								float: "left",
+								width: "70%",
+								marginLeft: "20px",
+								backgroundColor: "#f6f6f6",
+								borderColor: "black",
+								fontSize: "23px",
+								fontFamily: "sans-serif"
+							}}
+							className="form-control"
+							name="managment"
+							onChange={handleChange}
+							value={datos.managment}>
+							<option value="Administracion">ADMINISTRACION</option>
+							<option value="Gerencia General">GERENCIA GENERAL</option>
+							<option value="Gestion Humana">GESTION HUMANA </option>
+							<option value="Infraestructura">INFRAESTRUCTURA</option>
+							<option value="Mercadeo y Ventas"> MERCADEO Y VENTAS </option>
+							<option value="Servicio al Cliente">SERVICIO AL CLIENTE</option>
+							<option value="Tecnologia Funcional">TECNOLOGIA FUNCIONAL</option>
+							<option value="Tecnologia Tecnica">TECNOLOGIA TECNICA</option>
+							<option value="Plataforma">Plataforma</option>
+						</select>
 						<br />
 						<label
 							style={{

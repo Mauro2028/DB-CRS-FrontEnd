@@ -1260,7 +1260,7 @@ const Workers = () => {
 											(worker.sector == filter.name && worker.Factor > 12) ||
 											(worker.vacant.startsWith(bailar.name) && worker.Factor > 12) ||
 											(worker.init_date == fecha.name && worker.Factor > 12) ||
-											(worker.managment == gerencia.name && worker.Factor >= 12) ||
+											(worker.managment == gerencia.name && worker.Factor > 12) ||
 											(worker.actual_charge.startsWith(puesto.name) && worker.Factor > 12)
 									)
 									.reduce((prevValue, worker) => prevValue + 1, 0)
@@ -1439,7 +1439,7 @@ const Workers = () => {
 								(worker.actual_charge.startsWith(puesto.name) && worker.Factor > 12)
 						)
 						.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
-						.toFixed(2)
+
 						.toLocaleString("es")}
 				</div>
 				<div
@@ -1482,3 +1482,4 @@ const Workers = () => {
 };
 
 export default Workers;
+

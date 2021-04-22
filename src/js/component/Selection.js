@@ -61,7 +61,7 @@ const Selection = () => {
 									height: "150px"
 								}}
 								className="btn">
-								Ver lista de prospectos
+								VER LISTA DE PROSPECTOS
 							</button>
 						</Link>
 						<Link to="/workers">
@@ -82,7 +82,7 @@ const Selection = () => {
 									alignItems: "center"
 								}}
 								className="btn btn-primary">
-								Ver registros
+								VER REGISTROS
 							</button>
 						</Link>
 						<Link to="/worker-register">
@@ -104,7 +104,7 @@ const Selection = () => {
 									alignItems: "center"
 								}}
 								className="btn btn-primary">
-								Registrar prospectos
+								REGISTRAR PROSPECTOS
 							</button>
 						</Link>
 					</div>

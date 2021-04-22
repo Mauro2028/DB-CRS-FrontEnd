@@ -821,7 +821,7 @@ const WorkersList = () => {
 													}}
 													className="text small text-truncate">
 													{" "}
-													{new Intl.NumberFormat("en-EN").format(worker.Factor)} meses
+													{new Intl.NumberFormat("es-ES").format(worker.Factor)} meses
 												</td>
 
 												<td
@@ -1115,7 +1115,7 @@ const WorkersList = () => {
 							onClick={e =>
 								setPromf(
 									store.workers
-										.filter(worker => worker.Factor != 0)
+										.filter(worker => worker.Factor > 12)
 										.reduce((prevValue, worker) => prevValue + 1, 0)
 								)
 							}
@@ -1239,8 +1239,9 @@ const WorkersList = () => {
 						aria-expanded="true">
 						Factor: {""}
 						{store.workers
+							.filter(worker => worker.Factor > 12)
 							.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
-							.toFixed(2)
+
 							.toLocaleString("es")}
 					</div>
 					<div
@@ -1274,3 +1275,4 @@ const WorkersList = () => {
 };
 
 export default WorkersList;
+

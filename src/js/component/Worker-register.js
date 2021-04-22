@@ -7,7 +7,6 @@ const Register = () => {
 		init_date: "",
 		Consultor: "",
 		candidate: "",
-
 		cedula: null,
 		status: "",
 		phone_number: null,
@@ -15,36 +14,30 @@ const Register = () => {
 		catchment_source: "",
 		managment: "",
 		vacant: "",
-
 		interview_date: "",
-
 		actual_charge: "",
 		company: "",
 		sector: "",
-		coin: 0,
-		basic_salary: 0,
-		variable_salary: 0,
-		cesta_ticket: 0,
-
-		Profit_Days: 0,
-		vacations: 0,
-		Vacation_Bonus: 0,
+		coin: "",
+		basic_salary: "",
+		variable_salary: "",
+		cesta_ticket: "",
+		Profit_Days: "",
+		vacations: "",
+		Vacation_Bonus: "",
 		Factor: null,
 		Estimated_annual_package: null,
 		Observations: "",
-
-		Production_bonus: "No",
-		Transport_bonus: "No",
-		Savings_Bank: "No",
-
-		parking_payment: "No",
-		full_HCM_Emp_Family: "No",
-		partial_HCM_Emp_Family: "No",
-
-		Vehicle_insurance: "No",
-		life_insurance: "No",
-		dinning_room: "No",
-		food_bags: "No"
+		Production_bonus: "",
+		Transport_bonus: "",
+		Savings_Bank: "",
+		parking_payment: "",
+		full_HCM_Emp_Family: "",
+		partial_HCM_Emp_Family: "",
+		Vehicle_insurance: "",
+		life_insurance: "",
+		dinning_room: "",
+		food_bags: ""
 	};
 
 	const [datos, setDatos] = useState(initialState);
@@ -114,7 +107,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -143,7 +137,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -172,7 +167,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="number"
 							className="form-control"
@@ -201,7 +197,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="number"
 							className="form-control"
@@ -230,7 +227,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -259,7 +257,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -377,7 +376,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -413,16 +413,15 @@ const Register = () => {
 							name="managment"
 							onChange={handleChange}
 							value={datos.managment}>
-							<option value="">Vacio</option>
-							<option value="ADMINISTRACION">Administracion</option>
-							<option value="GERENCIA GENERAL">Generencia General</option>
-							<option value="GESTION HUMANA">Generencia General</option>
-							<option value="INFRAESTRUCTURA">Generencia General</option>
-							<option value="MERCADEO Y VENTAS">Mercadeo y ventas</option>
-							<option value="SERVICIO AL CLIENTE">Servicio al cliente</option>
-							<option value="TECNOLOGIA FUNCIONAL">Tecnologia funcional</option>
-							<option value="TECNOLOGIA TECNICA">Tecnologia tecnica</option>
-							<option value="PLATAFORMA">Plataforma</option>
+							<option value="Administracion">ADMINISTRACION</option>
+							<option value="Gerencia General">GERENCIA GENERAL</option>
+							<option value="Gestion Humana">GESTION HUMANA </option>
+							<option value="Infraestructura">INFRAESTRUCTURA</option>
+							<option value="Mercadeo y Ventas"> MERCADEO Y VENTAS </option>
+							<option value="Servicio al Cliente">SERVICIO AL CLIENTE</option>
+							<option value="Tecnologia Funcional">TECNOLOGIA FUNCIONAL</option>
+							<option value="Tecnologia Tecnica">TECNOLOGIA TECNICA</option>
+							<option value="Plataforma">Plataforma</option>
 						</select>
 						<br />
 						<label
@@ -445,7 +444,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -474,7 +474,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -503,7 +504,8 @@ const Register = () => {
 								marginLeft: "20px",
 								backgroundColor: "#f6f6f6",
 								borderColor: "black",
-								fontFamily: "sans-serif"
+								fontFamily: "sans-serif",
+								fontSize: "25px"
 							}}
 							type="text"
 							className="form-control"
@@ -820,14 +822,7 @@ const Register = () => {
 							className="form-control"
 							name="Estimated_annual_package"
 							onChange={handleChange}
-							value={
-								((datos.Estimated_annual_package = eap),
-								{
-									if(eap = 0) {
-										eap = null;
-									}
-								})
-							}
+							value={(datos.Estimated_annual_package = eap)}
 						/>
 						<br />
 
@@ -1212,3 +1207,4 @@ const Register = () => {
 };
 
 export default Register;
+
