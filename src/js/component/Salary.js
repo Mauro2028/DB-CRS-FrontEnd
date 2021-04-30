@@ -1,7 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import PropTypes, { object } from "prop-types";
-import { SalaryCard } from "./SalaryCard";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
 
@@ -11,8 +8,8 @@ const Workers = () => {
 		idToDelete: null
 	});
 
-	const [filter, setFilter] = useState("");
-	const [bailar, setBailar] = useState("");
+	const [sector, setSector] = useState("");
+	const [vacante, setVacante] = useState("");
 	const [puesto, setPuesto] = useState("");
 	const [fecha, setFecha] = useState("");
 	const [gerencia, setGerencia] = useState("");
@@ -47,8 +44,8 @@ const Workers = () => {
 						}}
 						type="text"
 						placeholder="vacante"
-						onChange={e => setBailar({ name: e.target.value.toUpperCase() })}
-						value={bailar.name}
+						onChange={e => setVacante({ name: e.target.value.toUpperCase() })}
+						value={vacante.name}
 					/>
 					<input
 						style={{
@@ -79,7 +76,7 @@ const Workers = () => {
 						}}
 						onChange={e => setGerencia({ name: e.target.value })}
 						value={gerencia.name}>
-						<option value="">Vacio</option>
+						<option value="">Gerencia</option>
 						<option value="Administracion">ADMINISTRACION</option>
 						<option value="Gerencia General">GERENCIA GENERAL</option>
 						<option value="Gestion Humana">GESTION HUMANA </option>
@@ -88,7 +85,7 @@ const Workers = () => {
 						<option value="Servicio al Cliente">SERVICIO AL CLIENTE</option>
 						<option value="Tecnologia Funcional">TECNOLOGIA FUNCIONAL</option>
 						<option value="Tecnologia Tecnica">TECNOLOGIA TECNICA</option>
-						<option value="Plataforma">Plataforma</option>
+						<option value="Plataforma">PLATAFORMA</option>
 					</select>
 
 					<select
@@ -102,8 +99,8 @@ const Workers = () => {
 							marginBottom: "35px",
 							marginTop: "10px"
 						}}
-						onChange={e => setFilter({ name: e.target.value })}
-						value={filter.name}>
+						onChange={e => setSector({ name: e.target.value })}
+						value={sector.name}>
 						<option value="">Sector</option>
 						<option value="OTRO">Otro</option>
 						<option value="FINANCIERO">Financiero</option>
@@ -237,7 +234,7 @@ const Workers = () => {
 										}}>
 										N0 de telefono
 									</th> */}
-								<th
+								{/* <th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
@@ -246,7 +243,7 @@ const Workers = () => {
 										backgroundColor: "#3B83BD"
 									}}>
 									Email
-								</th>
+								</th> */}
 								<th
 									style={{
 										padding: "0.3em",
@@ -279,7 +276,7 @@ const Workers = () => {
 									}}>
 									Vacante
 								</th>
-								<th
+								{/* <th
 									style={{
 										padding: "0.3em",
 										fontSize: "18px",
@@ -289,7 +286,7 @@ const Workers = () => {
 										backgroundColor: "#3B83BD"
 									}}>
 									Fecha de entrevista
-								</th>
+								</th> */}
 								<th
 									style={{
 										padding: "0.3em",
@@ -350,7 +347,7 @@ const Workers = () => {
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
-									Sueldo Variable
+									Sueldo variable
 								</th>
 								<th
 									style={{
@@ -361,7 +358,7 @@ const Workers = () => {
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
-									Cesta Ticket
+									Cesta ticket
 								</th>
 								<th
 									style={{
@@ -541,8 +538,8 @@ const Workers = () => {
 							{store.workers
 								.filter(
 									worker =>
-										worker.sector == filter.name ||
-										worker.vacant.startsWith(bailar.name) ||
+										worker.sector == sector.name ||
+										worker.vacant.startsWith(vacante.name) ||
 										worker.init_date == fecha.name ||
 										worker.managment == gerencia.name ||
 										worker.actual_charge.startsWith(puesto.name)
@@ -668,7 +665,7 @@ const Workers = () => {
 													{worker.phone_number}
 												</td> */}
 
-												<td
+												{/* <td
 													style={{
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
@@ -681,7 +678,7 @@ const Workers = () => {
 													}}
 													className="text small text-truncate">
 													{worker.email}
-												</td>
+												</td> */}
 
 												<td
 													style={{
@@ -732,7 +729,7 @@ const Workers = () => {
 													{worker.vacant.toUpperCase()}
 												</td>
 
-												<td
+												{/* <td
 													style={{
 														padding: "0.3em",
 														borderBottom: "1px solid #000",
@@ -746,7 +743,7 @@ const Workers = () => {
 													}}
 													className="text small text-truncate">
 													{worker.interview_date}
-												</td>
+												</td> */}
 
 												<td
 													style={{
@@ -1093,35 +1090,282 @@ const Workers = () => {
 						</tbody>
 					</table>
 				</div>
+				<div
+					style={{
+						float: "center",
+						width: "50%",
+						fontFamily: "sans-serif",
+						marginLeft: "10px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "25px"
+						// marginBottom: "100px"
+					}}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Total de prospectos: {""}
+					{store.workers
 
+						.filter(
+							worker =>
+								worker.sector == sector.name ||
+								worker.vacant.startsWith(vacante.name) ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge.startsWith(puesto.name)
+						)
+						.reduce((prevValue, worker) => prevValue + 1, 0)}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "50%",
+						marginLeft: "10px",
+						fontFamily: "sans-serif",
+						backgroundColor: "#f6f6f6",
+						fontSize: "25px"
+					}}
+					id="workers"
+					key={"coin"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Sueldo en moneda extranjera: {""}
+					{store.workers
+						.map(worker => worker)
+						.filter(
+							worker =>
+								worker.sector == sector.name ||
+								worker.vacant.startsWith(vacante.name) ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge.startsWith(puesto.name)
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.coin / promcn, 0)
+						.toLocaleString("es")}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "50%",
+						fontFamily: "sans-serif",
+						marginLeft: "10px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "25px"
+					}}
+					id="workers"
+					key={"Basic_salary"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Salario basico: {""}
+					{store.workers
+
+						.filter(
+							worker =>
+								worker.sector == sector.name ||
+								worker.vacant.startsWith(vacante.name) ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge.startsWith(puesto.name)
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
+						.toLocaleString("es")}
+				</div>
+
+				<div
+					style={{
+						float: "center",
+						width: "50%",
+						fontFamily: "sans-serif",
+						marginLeft: "10px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "25px"
+					}}
+					id="workers"
+					key={"Variable_salary"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Salario Variable: {""}
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == sector.name ||
+								worker.vacant.startsWith(vacante.name) ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge.startsWith(puesto.name)
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.variable_salary / promvs, 0)
+						.toLocaleString("es")}
+				</div>
+
+				<div
+					style={{
+						float: "center",
+						width: "50%",
+						marginLeft: "10px",
+						fontFamily: "sans-serif",
+						backgroundColor: "#f6f6f6",
+						fontSize: "25px"
+					}}
+					id="workers"
+					key={"Cesta_ticket"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Cesta ticket: {""}
+					{store.workers
+						.filter(
+							worker =>
+								worker.sector == sector.name ||
+								worker.vacant.startsWith(vacante.name) ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge.startsWith(puesto.name)
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / promcs, 0)
+
+						.toLocaleString("es")}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "50%",
+						marginLeft: "10px",
+						fontFamily: "sans-serif",
+						backgroundColor: "#f6f6f6",
+						fontSize: "25px"
+					}}
+					id="workers"
+					key={"Factor"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Factor: {""}
+					{store.workers
+						.filter(
+							worker =>
+								(worker.sector == sector.name && worker.Factor > 12) ||
+								(worker.vacant.startsWith(vacante.name) && worker.Factor > 12) ||
+								(worker.init_date == fecha.name && worker.Factor > 12) ||
+								(worker.managment == gerencia.name && worker.Factor > 12) ||
+								(worker.actual_charge.startsWith(puesto.name) && worker.Factor > 12)
+						)
+						.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
+
+						.toLocaleString("es")}
+				</div>
+				<div
+					style={{
+						float: "center",
+						width: "50%",
+						marginLeft: "10px",
+						backgroundColor: "#f6f6f6",
+						fontSize: "25px",
+						fontFamily: "sans-serif",
+						marginBottom: "15px"
+					}}
+					id="workers"
+					key={"Estimated_annual_package"}
+					className="panel-collapse collapse show"
+					aria-expanded="true">
+					Paquete anual estimado: {""}
+					{store.workers
+
+						.filter(
+							worker =>
+								worker.sector == sector.name ||
+								worker.vacant.startsWith(vacante.name) ||
+								worker.init_date == fecha.name ||
+								worker.managment == gerencia.name ||
+								worker.actual_charge.startsWith(puesto.name)
+						)
+
+						.reduce((prevValue, worker) => prevValue + worker.Estimated_annual_package / promap, 0)
+						.toLocaleString("es")}
+				</div>
 				<div>
-					<label
+					<input
 						style={{
 							float: "center",
-							width: "50%",
-							fontFamily: "sans-serif",
-							marginLeft: "10px",
+							width: "17%",
+							marginLeft: "20px",
+							fontSize: "20px",
 							backgroundColor: "#f6f6f6",
-							fontSize: "25px"
-							// marginBottom: "100px"
+							marginTop: "8px"
 						}}
-						className="panel-collapse collapse show"
-						aria-expanded="true">
-						Total de prospectos: {""}
-						{store.workers
+						type="text"
+						placeholder="Vacante"
+						onChange={e => setVacante({ name: e.target.value })}
+						value={vacante.name}
+					/>
+					<input
+						style={{
+							float: "center",
+							width: "17%",
+							fontSize: "20px",
+							marginLeft: "20px",
+							fontFamily: "sans-serif",
+							backgroundColor: "#f6f6f6",
+							marginTop: "6px"
+						}}
+						type="text"
+						placeholder="Cargo actual"
+						onChange={e => setPuesto({ name: e.target.value.toUpperCase() })}
+						value={puesto.name}
+					/>
+					<input
+						style={{
+							float: "center",
+							width: "17%",
+							marginLeft: "20px",
+							fontSize: "20px",
+							backgroundColor: "#f6f6f6",
 
-							.filter(
-								worker =>
-									worker.sector == filter.name ||
-									worker.vacant.startsWith(bailar.name) ||
-									worker.init_date == fecha.name ||
-									worker.managment == gerencia.name ||
-									worker.actual_charge.startsWith(puesto.name)
-							)
-							.reduce((prevValue, worker) => prevValue + 1, 0)}
-					</label>
+							marginTop: "8px"
+						}}
+						type="text"
+						placeholder="Gerencia"
+						onChange={e => setGerencia({ name: e.target.value })}
+						value={gerencia.name}
+					/>
+					<input
+						style={{
+							float: "center",
+							width: "15%",
+							marginLeft: "20px",
+							fontSize: "20px",
+							backgroundColor: "#f6f6f6",
+
+							marginTop: "8px"
+						}}
+						type="text"
+						placeholder="Sector"
+						onChange={e => setSector({ name: e.target.value })}
+						value={sector.name}
+					/>
+					<input
+						style={{
+							float: "center",
+							width: "17%",
+							marginLeft: "20px",
+							fontSize: "20px",
+							backgroundColor: "#f6f6f6",
+
+							marginTop: "8px"
+						}}
+						type="text"
+						placeholder="Mes"
+						onChange={e => setFecha({ name: e.target.value })}
+						value={fecha.name}
+					/>
 				</div>
-				<div style={{ display: "inline-flex" }}>
+				<div
+					style={{
+						display: "inline-flex",
+						marginBottom: "70px",
+						marginTop: "28px"
+					}}>
 					<button
 						style={{
 							float: "center",
@@ -1139,8 +1383,8 @@ const Workers = () => {
 								store.workers
 									.filter(
 										worker =>
-											(worker.sector == filter.name && worker.coin != 0) ||
-											(worker.vacant.startsWith(bailar.name) && worker.coin != 0) ||
+											(worker.sector == sector.name && worker.coin != 0) ||
+											(worker.vacant.startsWith(vacante.name) && worker.coin != 0) ||
 											(worker.init_date == fecha.name && worker.coin != 0) ||
 											(worker.managment == gerencia.name && worker.coin != 0) ||
 											(worker.actual_charge.startsWith(puesto.name) && worker.coin != 0)
@@ -1168,8 +1412,8 @@ const Workers = () => {
 								store.workers
 									.filter(
 										worker =>
-											(worker.sector == filter.name && worker.basic_salary != 0) ||
-											(worker.vacant.startsWith(bailar.name) && worker.basic_salary != 0) ||
+											(worker.sector == sector.name && worker.basic_salary != 0) ||
+											(worker.vacant.startsWith(vacante.name) && worker.basic_salary != 0) ||
 											(worker.init_date == fecha.name && worker.basic_salary != 0) ||
 											(worker.managment == gerencia.name && worker.basic_salary != 0) ||
 											(worker.actual_charge.startsWith(puesto.name) && worker.basic_salary != 0)
@@ -1197,8 +1441,8 @@ const Workers = () => {
 								store.workers
 									.filter(
 										worker =>
-											(worker.sector == filter.name && worker.variable_salary != 0) ||
-											(worker.vacant.startsWith(bailar.name) && worker.variable_salary != 0) ||
+											(worker.sector == sector.name && worker.variable_salary != 0) ||
+											(worker.vacant.startsWith(vacante.name) && worker.variable_salary != 0) ||
 											(worker.init_date == fecha.name && worker.variable_salary != 0) ||
 											(worker.managment == gerencia.name && worker.variable_salary != 0) ||
 											(worker.actual_charge.startsWith(puesto.name) &&
@@ -1227,8 +1471,8 @@ const Workers = () => {
 								store.workers
 									.filter(
 										worker =>
-											(worker.sector == filter.name && worker.cesta_ticket != 0) ||
-											(worker.vacant.startsWith(bailar.name) && worker.cesta_ticket != 0) ||
+											(worker.sector == sector.name && worker.cesta_ticket != 0) ||
+											(worker.vacant.startsWith(vacante.name) && worker.cesta_ticket != 0) ||
 											(worker.init_date == fecha.name && worker.cesta_ticket != 0) ||
 											(worker.managment == gerencia.name && worker.cesta_ticket != 0) ||
 											(worker.actual_charge.startsWith(puesto.name) &&
@@ -1257,8 +1501,8 @@ const Workers = () => {
 								store.workers
 									.filter(
 										worker =>
-											(worker.sector == filter.name && worker.Factor > 12) ||
-											(worker.vacant.startsWith(bailar.name) && worker.Factor > 12) ||
+											(worker.sector == sector.name && worker.Factor > 12) ||
+											(worker.vacant.startsWith(vacante.name) && worker.Factor > 12) ||
 											(worker.init_date == fecha.name && worker.Factor > 12) ||
 											(worker.managment == gerencia.name && worker.Factor > 12) ||
 											(worker.actual_charge.startsWith(puesto.name) && worker.Factor > 12)
@@ -1286,8 +1530,8 @@ const Workers = () => {
 								store.workers
 									.filter(
 										worker =>
-											(worker.sector == filter.name && worker.Estimated_annual_package != 0) ||
-											(worker.vacant.startsWith(bailar.name) &&
+											(worker.sector == sector.name && worker.Estimated_annual_package != 0) ||
+											(worker.vacant.startsWith(vacante.name) &&
 												worker.Estimated_annual_package != 0) ||
 											(worker.init_date == fecha.name && worker.Estimated_annual_package != 0) ||
 											(worker.managment == gerencia.name &&
@@ -1302,175 +1546,6 @@ const Workers = () => {
 						Promediar Paquete anual estimado
 					</button>
 				</div>
-				<div
-					style={{
-						float: "center",
-						width: "50%",
-						marginLeft: "10px",
-						fontFamily: "sans-serif",
-						backgroundColor: "#f6f6f6",
-						fontSize: "25px"
-					}}
-					id="workers"
-					key={"coin"}
-					className="panel-collapse collapse show"
-					aria-expanded="true">
-					Sueldo en moneda extranjera: {""}
-					{store.workers
-						.map(worker => worker)
-						.filter(
-							worker =>
-								worker.sector == filter.name ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge.startsWith(puesto.name)
-						)
-
-						.reduce((prevValue, worker) => prevValue + worker.coin / promcn, 0)
-						.toLocaleString("es")}
-				</div>
-				<div
-					style={{
-						float: "center",
-						width: "50%",
-						fontFamily: "sans-serif",
-						marginLeft: "10px",
-						backgroundColor: "#f6f6f6",
-						fontSize: "25px"
-					}}
-					id="workers"
-					key={"Basic_salary"}
-					className="panel-collapse collapse show"
-					aria-expanded="true">
-					Salario basico: {""}
-					{store.workers
-
-						.filter(
-							worker =>
-								worker.sector == filter.name ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge.startsWith(puesto.name)
-						)
-
-						.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
-						.toLocaleString("es")}
-				</div>
-
-				<div
-					style={{
-						float: "center",
-						width: "50%",
-						fontFamily: "sans-serif",
-						marginLeft: "10px",
-						backgroundColor: "#f6f6f6",
-						fontSize: "25px"
-					}}
-					id="workers"
-					key={"Variable_salary"}
-					className="panel-collapse collapse show"
-					aria-expanded="true">
-					Salario Variable: {""}
-					{store.workers
-						.filter(
-							worker =>
-								worker.sector == filter.name ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge.startsWith(puesto.name)
-						)
-
-						.reduce((prevValue, worker) => prevValue + worker.variable_salary / promvs, 0)
-						.toLocaleString("es")}
-				</div>
-
-				<div
-					style={{
-						float: "center",
-						width: "50%",
-						marginLeft: "10px",
-						fontFamily: "sans-serif",
-						backgroundColor: "#f6f6f6",
-						fontSize: "25px"
-					}}
-					id="workers"
-					key={"Cesta_ticket"}
-					className="panel-collapse collapse show"
-					aria-expanded="true">
-					Cesta ticket: {""}
-					{store.workers
-						.filter(
-							worker =>
-								worker.sector == filter.name ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge.startsWith(puesto.name)
-						)
-
-						.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / promcs, 0)
-
-						.toLocaleString("es")}
-				</div>
-				<div
-					style={{
-						float: "center",
-						width: "50%",
-						marginLeft: "10px",
-						fontFamily: "sans-serif",
-						backgroundColor: "#f6f6f6",
-						fontSize: "25px"
-					}}
-					id="workers"
-					key={"Factor"}
-					className="panel-collapse collapse show"
-					aria-expanded="true">
-					Factor: {""}
-					{store.workers
-						.filter(
-							worker =>
-								(worker.sector == filter.name && worker.Factor > 12) ||
-								(worker.vacant.startsWith(bailar.name) && worker.Factor > 12) ||
-								(worker.init_date == fecha.name && worker.Factor > 12) ||
-								(worker.managment == gerencia.name && worker.Factor > 12) ||
-								(worker.actual_charge.startsWith(puesto.name) && worker.Factor > 12)
-						)
-						.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
-
-						.toLocaleString("es")}
-				</div>
-				<div
-					style={{
-						float: "center",
-						width: "50%",
-						marginLeft: "10px",
-						backgroundColor: "#f6f6f6",
-						fontSize: "25px",
-						fontFamily: "sans-serif",
-						marginBottom: "100px"
-					}}
-					id="workers"
-					key={"Estimated_annual_package"}
-					className="panel-collapse collapse show"
-					aria-expanded="true">
-					Paquete anual estimado: {""}
-					{store.workers
-
-						.filter(
-							worker =>
-								worker.sector == filter.name ||
-								worker.vacant.startsWith(bailar.name) ||
-								worker.init_date == fecha.name ||
-								worker.managment == gerencia.name ||
-								worker.actual_charge.startsWith(puesto.name)
-						)
-
-						.reduce((prevValue, worker) => prevValue + worker.Estimated_annual_package / promap, 0)
-						.toLocaleString("es")}
-				</div>
 				<Modal
 					show={state.showModal}
 					onClose={() => setState({ showModal: false, idToDelete: null })}
@@ -1483,3 +1558,4 @@ const Workers = () => {
 
 export default Workers;
 
+// 3301

@@ -1,12 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import { SalaryCard } from "./SalaryCard";
 import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
 import Props from "prop-types";
-import { withRouter } from "react-router-dom";
 
 const WorkersList = () => {
 	const [state, setState] = useState({
@@ -247,7 +243,7 @@ const WorkersList = () => {
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
-										Sueldo Variable
+										Sueldo variable
 									</th>
 									<th
 										style={{
@@ -257,7 +253,7 @@ const WorkersList = () => {
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
-										Cesta Ticket
+										Cesta ticket
 									</th>
 									<th
 										style={{
@@ -994,24 +990,145 @@ const WorkersList = () => {
 							</tbody>
 						</div>
 					</table>
-					<div>
-						<label
-							style={{
-								float: "center",
-								width: "50%",
-								fontFamily: "sans-serif",
-								marginLeft: "10px",
-								backgroundColor: "#f6f6f6",
-								fontSize: "25px"
-								// marginBottom: "100px"
-							}}
-							className="panel-collapse collapse show"
-							aria-expanded="true">
-							Total de prospectos: {""}
-							{store.workers.reduce((prevValue, worker) => prevValue + 1, 0)}
-						</label>
+					<div
+						style={{
+							float: "center",
+							width: "50%",
+							fontFamily: "sans-serif",
+							marginLeft: "10px",
+							backgroundColor: "#f6f6f6",
+							fontSize: "25px",
+							marginTop: "20px"
+						}}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Total de prospectos: {""}
+						{store.workers.reduce((prevValue, worker) => prevValue + 1, 0)}
 					</div>
-					<div style={{ display: "inline-flex" }}>
+					<div
+						style={{
+							float: "center",
+							width: "50%",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "#f6f6f6",
+							fontSize: "25px"
+						}}
+						id="workers"
+						key={"coin"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Sueldo en moneda extranjera: {""}
+						{store.workers
+
+							.reduce((prevValue, worker) => prevValue + worker.coin / promcn, 0)
+							.toLocaleString("es")}
+					</div>
+					<div
+						style={{
+							float: "center",
+							width: "50%",
+							fontFamily: "sans-serif",
+							marginLeft: "10px",
+							backgroundColor: "#f6f6f6",
+							fontSize: "25px"
+						}}
+						id="workers"
+						key={"Basic_salary"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Salario basico: {""}
+						{store.workers
+
+							.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
+							.toLocaleString("es")}
+					</div>
+
+					<div
+						style={{
+							float: "center",
+							width: "50%",
+							fontFamily: "sans-serif",
+							marginLeft: "10px",
+							backgroundColor: "#f6f6f6",
+							fontSize: "25px"
+						}}
+						id="workers"
+						key={"Variable_salary"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Salario Variable: {""}
+						{store.workers
+
+							.reduce((prevValue, worker) => prevValue + worker.variable_salary / promvs, 0)
+							.toLocaleString("es")}
+					</div>
+
+					<div
+						style={{
+							float: "center",
+							width: "50%",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "#f6f6f6",
+							fontSize: "25px"
+						}}
+						id="workers"
+						key={"Cesta_ticket"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Cesta ticket: {""}
+						{store.workers
+
+							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / promcs, 0)
+
+							.toLocaleString("es")}
+					</div>
+					<div
+						style={{
+							float: "center",
+							width: "50%",
+							marginLeft: "10px",
+							fontFamily: "sans-serif",
+							backgroundColor: "#f6f6f6",
+							fontSize: "25px"
+						}}
+						id="workers"
+						key={"Factor"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Factor: {""}
+						{store.workers
+							.filter(worker => worker.Factor > 12)
+							.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
+
+							.toLocaleString("es")}
+					</div>
+					<div
+						style={{
+							float: "center",
+							width: "50%",
+							marginLeft: "10px",
+							backgroundColor: "#f6f6f6",
+							fontSize: "25px",
+							fontFamily: "sans-serif",
+							marginBottom: "20px"
+						}}
+						id="workers"
+						key={"Estimated_annual_package"}
+						className="panel-collapse collapse show"
+						aria-expanded="true">
+						Paquete anual estimado: {""}
+						{store.workers
+							.reduce((prevValue, worker) => prevValue + worker.Estimated_annual_package / promap, 0)
+							.toLocaleString("es")}
+					</div>
+					<div
+						style={{
+							display: "inline-flex",
+							marginBottom: "70px",
+							marginTop: "28px"
+						}}>
 						<button
 							style={{
 								float: "center",
@@ -1145,124 +1262,6 @@ const WorkersList = () => {
 							Promediar Paquete anual estimado
 						</button>
 					</div>
-					<div
-						style={{
-							float: "center",
-							width: "50%",
-							marginLeft: "10px",
-							fontFamily: "sans-serif",
-							backgroundColor: "#f6f6f6",
-							fontSize: "25px"
-						}}
-						id="workers"
-						key={"coin"}
-						className="panel-collapse collapse show"
-						aria-expanded="true">
-						Sueldo en moneda extranjera: {""}
-						{store.workers
-
-							.reduce((prevValue, worker) => prevValue + worker.coin / promcn, 0)
-							.toLocaleString("es")}
-					</div>
-					<div
-						style={{
-							float: "center",
-							width: "50%",
-							fontFamily: "sans-serif",
-							marginLeft: "10px",
-							backgroundColor: "#f6f6f6",
-							fontSize: "25px"
-						}}
-						id="workers"
-						key={"Basic_salary"}
-						className="panel-collapse collapse show"
-						aria-expanded="true">
-						Salario basico: {""}
-						{store.workers
-
-							.reduce((prevValue, worker) => prevValue + worker.basic_salary / prom, 0)
-							.toLocaleString("es")}
-					</div>
-
-					<div
-						style={{
-							float: "center",
-							width: "50%",
-							fontFamily: "sans-serif",
-							marginLeft: "10px",
-							backgroundColor: "#f6f6f6",
-							fontSize: "25px"
-						}}
-						id="workers"
-						key={"Variable_salary"}
-						className="panel-collapse collapse show"
-						aria-expanded="true">
-						Salario Variable: {""}
-						{store.workers
-
-							.reduce((prevValue, worker) => prevValue + worker.variable_salary / promvs, 0)
-							.toLocaleString("es")}
-					</div>
-
-					<div
-						style={{
-							float: "center",
-							width: "50%",
-							marginLeft: "10px",
-							fontFamily: "sans-serif",
-							backgroundColor: "#f6f6f6",
-							fontSize: "25px"
-						}}
-						id="workers"
-						key={"Cesta_ticket"}
-						className="panel-collapse collapse show"
-						aria-expanded="true">
-						Cesta ticket: {""}
-						{store.workers
-
-							.reduce((prevValue, worker) => prevValue + worker.cesta_ticket / promcs, 0)
-
-							.toLocaleString("es")}
-					</div>
-					<div
-						style={{
-							float: "center",
-							width: "50%",
-							marginLeft: "10px",
-							fontFamily: "sans-serif",
-							backgroundColor: "#f6f6f6",
-							fontSize: "25px"
-						}}
-						id="workers"
-						key={"Factor"}
-						className="panel-collapse collapse show"
-						aria-expanded="true">
-						Factor: {""}
-						{store.workers
-							.filter(worker => worker.Factor > 12)
-							.reduce((prevValue, worker) => prevValue + worker.Factor / promf, 0)
-
-							.toLocaleString("es")}
-					</div>
-					<div
-						style={{
-							float: "center",
-							width: "50%",
-							marginLeft: "10px",
-							backgroundColor: "#f6f6f6",
-							fontSize: "25px",
-							fontFamily: "sans-serif",
-							marginBottom: "100px"
-						}}
-						id="workers"
-						key={"Estimated_annual_package"}
-						className="panel-collapse collapse show"
-						aria-expanded="true">
-						Paquete anual estimado: {""}
-						{store.workers
-							.reduce((prevValue, worker) => prevValue + worker.Estimated_annual_package / promap, 0)
-							.toLocaleString("es")}
-					</div>
 				</div>
 			</div>
 			<Modal
@@ -1275,4 +1274,3 @@ const WorkersList = () => {
 };
 
 export default WorkersList;
-
