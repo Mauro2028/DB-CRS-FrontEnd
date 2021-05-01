@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-
 import { useHistory } from "react-router-dom";
 
 export const Home = () => {
@@ -49,6 +48,7 @@ export const Home = () => {
 								float: "left",
 								width: "80%",
 								paddingRight: "24px",
+
 								marginLeft: "20px",
 								fontFamily: "sans-serif",
 								fontSize: "25px",
@@ -68,6 +68,7 @@ export const Home = () => {
 								border: "2px solid #000",
 								borderRadius: "3px",
 								fontSize: "20px",
+
 								fontFamily: "sans-serif",
 								backgroundColor: "#f6f6f6",
 								display: "inlineblock",
@@ -76,7 +77,7 @@ export const Home = () => {
 								float: "left",
 								width: "42%",
 								marginLeft: "20px",
-								height: "35px"
+								height: "40px"
 							}}
 						/>
 						<br />
@@ -102,6 +103,7 @@ export const Home = () => {
 							value={datos.password}
 							style={{
 								padding: "3px 10px",
+
 								fontSize: "20px",
 								borderRadius: "3px",
 								backgroundColor: "#f6f6f6",
@@ -113,7 +115,7 @@ export const Home = () => {
 								float: "left",
 								width: "42%",
 								marginLeft: "20px",
-								height: "37px"
+								height: "40px"
 							}}
 						/>
 						<br />

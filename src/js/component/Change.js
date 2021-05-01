@@ -1,10 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
-import { Route, useHistory, useParams, useRouteMatch } from "react-router-dom";
-import Axios from "axios";
-import props from "prop-types";
-import { Link } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 const Change = props => {
@@ -65,7 +62,6 @@ const Change = props => {
 			<div className="containerPrincipal">
 				<div className="containerSecundario">
 					<h2 style={{ marginLeft: "10px" }}>Datos del prospecto</h2>
-
 					<p
 						style={{
 							marginTop: "10px",
@@ -137,9 +133,21 @@ const Change = props => {
 							onChange={handleChange}
 							value={datos.status}>
 							<option value="">Vacio</option>
+							<option value="EN ESPERA A CONECTAR EN LINKEDIN">En espera a conectar en linkedin</option>
+							<option value="NO APLICA PARA NUESTRAS VACANTES">No aplica para nuestras vacantes</option>
+							<option value="NO CUMPLE CON EL PERFIL">No cumple con el perfil</option>
+							<option value="POR CITAR A ENTREVISTA">Por citar a entrevista</option>
+							<option value="ENVIO SU CV MAS NO CUMPLE CON EL PERFIL">
+								Envio su CV mas no cumple con el perfil
+							</option>
+							<option value="EN PROCESO A CONECTAR EN LINKEDIN">En proceso a conectar en linkedin</option>
 							<option value="CITADO A ENTREVISTA">Citado a entrevista</option>
+							<option value="PASADO AL AREA TECNICA">Pasado al area tecnica</option>
+							<option value="CITADO A ENTREVISTA TECNICA">Citado a entrevista tecnica</option>
 							<option value="EL AREA NO LO QUISO EVALUAR">El area no lo quiso evaluar</option>
 							<option value="ELEGIBLE A ENTREVISTA TECNICA">Elegible entrevista tecnica</option>
+							<option value="ELEGIBLE A ENTREVISTA GH">Elegible entrevista GH</option>
+							<option value="NO ELEGIBLE, NO VIVE EN CARACAS">No elegible, no vive en caracas</option>
 							<option value="EN PROCESO">En proceso</option>
 							<option value="NO ACEPTO OFERTA LABORAL">No acepto oferta laboral</option>
 							<option value="NO ASISTIO A ENTREVISTA LABORAL">No asistio a entrevista laboral</option>
@@ -174,16 +182,18 @@ const Change = props => {
 							style={{
 								float: "left",
 								width: "70%",
+								paddingRight: "24px",
 								marginLeft: "20px",
-								backgroundColor: "#f6f6f6",
-								borderColor: "black",
-								fontSize: "23px",
-								fontFamily: "sans-serif"
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
+								borderColor: "black"
 							}}
 							className="form-control"
 							name="managment"
 							onChange={handleChange}
 							value={datos.managment}>
+							<option value="">Vacio</option>
 							<option value="Administracion">ADMINISTRACION</option>
 							<option value="Gerencia General">GERENCIA GENERAL</option>
 							<option value="Gestion Humana">GESTION HUMANA </option>
@@ -192,7 +202,7 @@ const Change = props => {
 							<option value="Servicio al Cliente">SERVICIO AL CLIENTE</option>
 							<option value="Tecnologia Funcional">TECNOLOGIA FUNCIONAL</option>
 							<option value="Tecnologia Tecnica">TECNOLOGIA TECNICA</option>
-							<option value="Plataforma">Plataforma</option>
+							<option value="Plataforma">PLATAFORMA</option>
 						</select>
 						<br />
 						<label
@@ -1006,4 +1016,4 @@ const Change = props => {
 	);
 };
 
-export default withRouter(Change);
+export default Change;

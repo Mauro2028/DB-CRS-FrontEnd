@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import PropTypes, { object } from "prop-types";
-import { SalaryCard } from "./SalaryCard";
-import { Modal } from "../component/Modal";
 import { Context } from "../store/appContext.js";
 
 const Selection = () => {
@@ -44,6 +41,28 @@ const Selection = () => {
 							marginBottom: "280px"
 						}}
 						className=" buttons">
+						<Link to="/worker-register">
+							<button
+								style={{
+									padding: "10px",
+									fontweight: "600",
+									fontSize: "25px",
+									color: "#ffffff",
+									backgroundColor: "#1883ba",
+									borderRadius: "6px",
+									border: "3px solid #0016b0",
+									display: "flex",
+									fontFamily: "sans-serif",
+									justifyContent: "space-around",
+									width: "250px",
+									height: "150px",
+									fontBorder: "black",
+									alignItems: "center"
+								}}
+								className="btn btn-primary">
+								REGISTRAR PROSPECTOS
+							</button>
+						</Link>
 						<Link to="/Worker-list">
 							<button
 								style={{
@@ -85,28 +104,6 @@ const Selection = () => {
 								VER REGISTROS
 							</button>
 						</Link>
-						<Link to="/worker-register">
-							<button
-								style={{
-									padding: "10px",
-									fontweight: "600",
-									fontSize: "25px",
-									color: "#ffffff",
-									backgroundColor: "#1883ba",
-									borderRadius: "6px",
-									border: "3px solid #0016b0",
-									display: "flex",
-									fontFamily: "sans-serif",
-									justifyContent: "space-around",
-									width: "250px",
-									height: "150px",
-									fontBorder: "black",
-									alignItems: "center"
-								}}
-								className="btn btn-primary">
-								REGISTRAR PROSPECTOS
-							</button>
-						</Link>
 					</div>
 				</div>
 			</form>
@@ -120,7 +117,7 @@ const Selection = () => {
 					fontFamily: "sans-serif"
 				}}>
 				Al dia de hoy: {""}
-				{Day}/{Month}/{Year}
+				{Day}/{Month + 1}/{Year}
 			</div>
 			<div
 				style={{
