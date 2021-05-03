@@ -103,15 +103,15 @@ const Workers = () => {
 						value={sector.name}>
 						<option value="">Sector</option>
 						<option value="OTRO">Otro</option>
-						<option value="FINANCIERO">Financiero</option>
-						<option value="TECNOLOGICO">Tecnologico</option>
-						<option value="CONSULTORIA">Consultoria</option>
-						<option value="EDUCATIVO">Educativo</option>
-						<option value="SERVICIOS">Servicios</option>
-						<option value="MANUFACTURA">Manufactura</option>
-						<option value="SALUD">Salud</option>
-						<option value="TELECOMUNICACIONES">Telecomunicaciones</option>
-						<option value="ALIMENTO">Alimentos</option>
+						<option value="FINANCIERO">FINANCIERO</option>
+						<option value="TECNOLOGICO">TECNOLOGICO</option>
+						<option value="CONSULTORIA">CONSULTORIA</option>
+						<option value="EDUCATIVO">EDUCATIVO</option>
+						<option value="SERVICIOS">SERVICIOS</option>
+						<option value="MANUFACTURA">MANUFACTURA</option>
+						<option value="SALUD">SALUD</option>
+						<option value="TELECOMUNICACIONES">TELECOMUNICACIONES</option>
+						<option value="ALIMENTO">ALIMENTO</option>
 					</select>
 
 					<select
