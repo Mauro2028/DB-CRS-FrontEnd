@@ -7,9 +7,9 @@ const Register = () => {
 		init_date: "",
 		Consultor: "",
 		candidate: "",
-		cedula: null,
+		cedula: "",
 		status: "",
-		phone_number: null,
+		phone_number: "",
 		email: "",
 		catchment_source: "",
 		managment: "",
@@ -25,8 +25,8 @@ const Register = () => {
 		Profit_Days: "",
 		vacations: "",
 		Vacation_Bonus: "",
-		Factor: null,
-		Estimated_annual_package: null,
+		Factor: "",
+		Estimated_annual_package: "",
 		Observations: "",
 		Production_bonus: "",
 		Transport_bonus: "",
@@ -61,15 +61,10 @@ const Register = () => {
 	};
 
 	const handleSubmit = e => {
-		if (datos.candidate.trim() === "" || datos.Consultor.trim() === "" || datos.vacant.trim() === "") {
-			setError(true);
-			return;
-		} else {
-			console.log("enviamos formulario");
-			setError(false);
-			actions.registroWorker(datos);
-			history.push("/Worker-list");
-		}
+		console.log("enviamos formulario");
+		setError(false);
+		actions.registroWorker(datos);
+		history.push("/Worker-list");
 	};
 	return (
 		<div>
@@ -336,9 +331,21 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.status}>
 							<option value="">Vacio</option>
+							<option value="EN ESPERA A CONECTAR EN LINKEDIN">En espera a conectar en linkedin</option>
+							<option value="NO APLICA PARA NUESTRAS VACANTES">No aplica para nuestras vacantes</option>
+							<option value="NO CUMPLE CON EL PERFIL">No cumple con el perfil</option>
+							<option value="POR CITAR A ENTREVISTA">Por citar a entrevista</option>
+							<option value="ENVIO SU CV MAS NO CUMPLE CON EL PERFIL">
+								Envio su CV mas no cumple con el perfil
+							</option>
+							<option value="EN PROCESO A CONECTAR EN LINKEDIN">En proceso a conectar en linkedin</option>
 							<option value="CITADO A ENTREVISTA">Citado a entrevista</option>
+							<option value="PASADO AL AREA TECNICA">Pasado al area tecnica</option>
+							<option value="CITADO A ENTREVISTA TECNICA">Citado a entrevista tecnica</option>
 							<option value="EL AREA NO LO QUISO EVALUAR">El area no lo quiso evaluar</option>
 							<option value="ELEGIBLE A ENTREVISTA TECNICA">Elegible entrevista tecnica</option>
+							<option value="ELEGIBLE A ENTREVISTA GH">Elegible entrevista GH</option>
+							<option value="NO ELEGIBLE, NO VIVE EN CARACAS">No elegible, no vive en caracas</option>
 							<option value="EN PROCESO">En proceso</option>
 							<option value="NO ACEPTO OFERTA LABORAL">No acepto oferta laboral</option>
 							<option value="NO ASISTIO A ENTREVISTA LABORAL">No asistio a entrevista laboral</option>
@@ -354,6 +361,7 @@ const Register = () => {
 							</option>
 							<option value="POR AGENDAR ENTREVISTA">Por agendar entrevsita</option>
 							<option value="PRE-EMPLEO">Pre-empleo</option>
+							<option value="INGRESO">Ingreso</option>
 						</select>
 						<br />
 						<label
@@ -413,6 +421,7 @@ const Register = () => {
 							name="managment"
 							onChange={handleChange}
 							value={datos.managment}>
+							<option value="">Vacio</option>
 							<option value="Administracion">ADMINISTRACION</option>
 							<option value="Gerencia General">GERENCIA GENERAL</option>
 							<option value="Gestion Humana">GESTION HUMANA </option>
@@ -421,7 +430,7 @@ const Register = () => {
 							<option value="Servicio al Cliente">SERVICIO AL CLIENTE</option>
 							<option value="Tecnologia Funcional">TECNOLOGIA FUNCIONAL</option>
 							<option value="Tecnologia Tecnica">TECNOLOGIA TECNICA</option>
-							<option value="Plataforma">Plataforma</option>
+							<option value="Plataforma">PLATAFORMA</option>
 						</select>
 						<br />
 						<label

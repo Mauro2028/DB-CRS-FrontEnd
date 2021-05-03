@@ -65,7 +65,7 @@ const Change = props => {
 					<p
 						style={{
 							marginTop: "10px",
-							fontSize: "25px",
+							fontSize: "28px",
 							marginLeft: "10px",
 							fontFamily: "sans-serif"
 						}}>
@@ -163,6 +163,7 @@ const Change = props => {
 							</option>
 							<option value="POR AGENDAR ENTREVISTA">Por agendar entrevsita</option>
 							<option value="PRE-EMPLEO">Pre-empleo</option>
+							<option value="INGRESO">Ingreso</option>
 						</select>
 						<br />
 						<label
