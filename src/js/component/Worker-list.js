@@ -53,6 +53,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid white",
 											width: "25%",
+
 											borderRight: "1px solid #000",
 											borderBottom: "1px solid #000",
 											fontSize: "23px"
@@ -63,6 +64,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											borderLeft: "#000",
 											ffontSize: "23px",
 											backgroundColor: "#3B83BD"
@@ -75,6 +77,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											backgroundColor: "#3B83BD",
 											fontSize: "23px"
 										}}>
@@ -85,7 +88,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-
+											color: "white",
 											fontSize: "23px",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
@@ -97,6 +100,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -107,7 +111,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
-
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -118,6 +122,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -128,7 +133,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -139,6 +144,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -149,6 +155,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "45%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -160,6 +167,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -170,6 +178,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -180,6 +189,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "45%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -190,6 +200,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -200,6 +211,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -210,6 +222,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "25%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -221,6 +234,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "55%",
 											fontSize: "23px",
+											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
 										Moneda extranjera
@@ -230,6 +244,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -240,6 +255,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -250,6 +266,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -261,6 +278,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											fontSize: "23px",
+											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
 										Dias de utilidades
@@ -270,6 +288,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -280,6 +299,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -291,6 +311,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											fontSize: "23px",
+											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
 										Factor
@@ -299,6 +320,7 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
+											color: "white",
 											width: "35%",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
@@ -310,6 +332,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -321,6 +344,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											fontSize: "23px",
+											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
 										Bono de transporte
@@ -331,6 +355,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											fontSize: "23px",
+											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
 										Caja de ahorro
@@ -340,6 +365,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -351,6 +377,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -361,6 +388,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -372,6 +400,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											fontSize: "23px",
+											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
 										Seguro de Vehículo
@@ -380,6 +409,7 @@ const WorkersList = () => {
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
+											color: "white",
 											width: "35%",
 											fontSize: "23px",
 											backgroundColor: "#3B83BD"
@@ -392,6 +422,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											fontSize: "23px",
+											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
 										Comedor
@@ -401,6 +432,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											color: "graphite",
 											fontSize: "23px",
 											backgroundColor: "#3b83bd"
@@ -412,6 +444,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											color: "white",
 											fontSize: "23px",
 											backgroundColor: "#3b83bd"
 										}}>

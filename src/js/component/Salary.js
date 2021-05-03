@@ -163,6 +163,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "25%",
 										borderLeft: "#000",
+										color: "white",
 										ffontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -175,6 +176,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "25%",
 										backgroundColor: "#3B83BD",
+										color: "white",
 										fontSize: "23px"
 									}}>
 									Fecha de inicio
@@ -184,7 +186,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
-
+										color: "white",
 										fontSize: "23px",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -197,6 +199,7 @@ const Workers = () => {
 										fontFamily: "sans-serif",
 										border: "1px solid #000",
 										width: "25%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -218,6 +221,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -249,6 +253,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "45%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -260,6 +265,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -271,6 +277,7 @@ const Workers = () => {
 										fontSize: "18px",
 										border: "1px solid #000",
 										width: "25%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -292,6 +299,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -303,6 +311,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										fontSize: "18px",
 										width: "25%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -313,6 +322,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -323,6 +333,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "55%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -333,6 +344,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										fontSize: "18px",
+										color: "white",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -344,6 +356,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -354,6 +367,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										fontSize: "18px",
+										color: "white",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -365,6 +379,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -376,6 +391,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										fontSize: "18px",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -387,6 +403,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										fontSize: "23px",
+										color: "white",
 										backgroundColor: "#3B83BD"
 									}}>
 									Bono de vacaciones
@@ -397,6 +414,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										fontSize: "18px",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -407,6 +425,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -418,6 +437,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										fontSize: "18px",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -428,6 +448,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -438,6 +459,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										fontSize: "18px",
+										color: "white",
 										width: "35%",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
@@ -449,6 +471,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -461,6 +484,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										fontSize: "23px",
+										color: "white",
 										backgroundColor: "#3B83BD"
 									}}>
 									H.C.M 100% Emp./Fmlia
@@ -472,6 +496,7 @@ const Workers = () => {
 										fontSize: "18px",
 										width: "35%",
 										fontSize: "23px",
+										color: "white",
 										backgroundColor: "#3B83BD"
 									}}>
 									H.C.M Parcial Emp./Fmlia
@@ -482,6 +507,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										fontSize: "23px",
+										color: "white",
 										backgroundColor: "#3B83BD"
 									}}>
 									Seguro de Vehículo
@@ -492,6 +518,7 @@ const Workers = () => {
 										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										backgroundColor: "#3B83BD"
 									}}>
 									Seguro de Vida
@@ -502,6 +529,7 @@ const Workers = () => {
 										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -514,6 +542,7 @@ const Workers = () => {
 										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										backgroundColor: "#3b83bd"
 									}}>
 									Subsidios alimenticios
@@ -523,6 +552,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										color: "white",
 										fontSize: "23px",
 										backgroundColor: "#3b83bd"
 									}}>
