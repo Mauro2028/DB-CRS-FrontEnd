@@ -65,7 +65,7 @@ const Change = props => {
 					<p
 						style={{
 							marginTop: "10px",
-							fontSize: "25px",
+							fontSize: "28px",
 							marginLeft: "10px",
 							fontFamily: "sans-serif"
 						}}>
