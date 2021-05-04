@@ -178,6 +178,7 @@ const Workers = () => {
 										color: "white",
 										backgroundColor: "#3B83BD",
 										color: "white",
+										backgroundColor: "#3B83BD",
 										fontSize: "23px"
 									}}>
 									Fecha de inicio
