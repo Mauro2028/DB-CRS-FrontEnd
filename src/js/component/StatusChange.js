@@ -7,43 +7,12 @@ import { withRouter } from "react-router-dom";
 const StatusChange = props => {
 	const initialState = {
 		status: "",
-		managment: "",
-		vacant: "",
-		interview_date: "",
-		actual_charge: "",
-		company: "",
-		sector: "",
-		coin: "",
-		basic_salary: "",
-		variable_salary: "",
-		cesta_ticket: "",
-		Profit_Days: "",
-		vacations: "",
-		Vacation_Bonus: "",
-		Factor: null,
-		Estimated_annual_package: null,
-		Observations: "",
-		Production_bonus: "",
-		Transport_bonus: "",
-		Savings_Bank: "",
-		parking_payment: "",
-		full_HCM_Emp_Family: "",
-		partial_HCM_Emp_Family: "",
-		Vehicle_insurance: "",
-		life_insurance: "",
-		dinning_room: "",
-		food_bags: ""
+		Observations: ""
 	};
 
 	const [datos, setDatos] = useState(initialState);
 	const [error, setError] = useState(false);
 	const { store, actions } = useContext(Context);
-	let pdm = datos.Profit_Days / 30;
-	let vbm = datos.Vacation_Bonus / 30;
-	let sum = (12 + pdm + vbm).toFixed(2);
-	let cta = parseInt(datos.cesta_ticket * 12, 10);
-	let sva = parseInt(datos.variable_salary * 12, 10);
-	let eap = parseInt(datos.basic_salary * datos.Factor + cta + sva);
 	let history = useHistory();
 
 	const handleChange = e => {
@@ -111,7 +80,36 @@ const StatusChange = props => {
 							<option value="INGRESO">INGRESO</option>
 							<option value="OTRO">OTRO</option>
 						</select>
-
+						<label
+							style={{
+								float: "left",
+								width: "70%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif"
+							}}>
+							Observaciones:{" "}
+						</label>
+						<br />
+						<input
+							style={{
+								float: "left",
+								width: "60%",
+								paddingRight: "24px",
+								marginLeft: "20px",
+								color: "black",
+								fontSize: "25px",
+								fontFamily: "sans-serif",
+								borderColor: "black"
+							}}
+							type="text"
+							className="form-control"
+							name="Observations"
+							onChange={handleChange}
+							value={datos.Observations.toUpperCase()}
+						/>
 						<br />
 						<button
 							style={{
@@ -128,7 +126,7 @@ const StatusChange = props => {
 								backgroundColor: "#1883ba",
 								marginLeft: "30px",
 								fontFamily: "sans-serif",
-								marginTop: "100px",
+								marginTop: "190px",
 								marginBottom: "130px"
 							}}
 							className="btn"
