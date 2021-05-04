@@ -7,9 +7,9 @@ const Register = () => {
 		init_date: "",
 		Consultor: "",
 		candidate: "",
-		cedula: null,
+		cedula: "",
 		status: "",
-		phone_number: null,
+		phone_number: "",
 		email: "",
 		catchment_source: "",
 		managment: "",
@@ -25,8 +25,8 @@ const Register = () => {
 		Profit_Days: "",
 		vacations: "",
 		Vacation_Bonus: "",
-		Factor: null,
-		Estimated_annual_package: null,
+		Factor: "",
+		Estimated_annual_package: "",
 		Observations: "",
 		Production_bonus: "",
 		Transport_bonus: "",
@@ -61,15 +61,10 @@ const Register = () => {
 	};
 
 	const handleSubmit = e => {
-		if (datos.candidate.trim() === "" || datos.Consultor.trim() === "" || datos.vacant.trim() === "") {
-			setError(true);
-			return;
-		} else {
-			console.log("enviamos formulario");
-			setError(false);
-			actions.registroWorker(datos);
-			history.push("/Worker-list");
-		}
+		console.log("enviamos formulario");
+		setError(false);
+		actions.registroWorker(datos);
+		history.push("/Worker-list");
 	};
 	return (
 		<div>
@@ -157,7 +152,7 @@ const Register = () => {
 								fontSize: "23px",
 								fontFamily: "sans-serif"
 							}}>
-							Cedula{" "}
+							Cédula{" "}
 						</label>
 						<br />
 						<input
@@ -336,37 +331,15 @@ const Register = () => {
 							onChange={handleChange}
 							value={datos.status}>
 							<option value="">Vacio</option>
-							<option value="EN ESPERA A CONECTAR EN LINKEDIN">En espera a conectar en linkedin</option>
-							<option value="NO APLICA PARA NUESTRAS VACANTES">No aplica para nuestras vacantes</option>
-							<option value="NO CUMPLE CON EL PERFIL">No cumple con el perfil</option>
-							<option value="POR CITAR A ENTREVISTA">Por citar a entrevista</option>
-							<option value="ENVIO SU CV MAS NO CUMPLE CON EL PERFIL">
-								Envio su CV mas no cumple con el perfil
-							</option>
-							<option value="EN PROCESO A CONECTAR EN LINKEDIN">En proceso a conectar en linkedin</option>
-							<option value="CITADO A ENTREVISTA">Citado a entrevista</option>
-							<option value="PASADO AL AREA TECNICA">Pasado al area tecnica</option>
-							<option value="CITADO A ENTREVISTA TECNICA">Citado a entrevista tecnica</option>
-							<option value="EL AREA NO LO QUISO EVALUAR">El area no lo quiso evaluar</option>
-							<option value="ELEGIBLE A ENTREVISTA TECNICA">Elegible entrevista tecnica</option>
-							<option value="ELEGIBLE A ENTREVISTA GH">Elegible entrevista GH</option>
-							<option value="NO ELEGIBLE, NO VIVE EN CARACAS">No elegible, no vive en caracas</option>
-							<option value="EN PROCESO">En proceso</option>
-							<option value="NO ACEPTO OFERTA LABORAL">No acepto oferta laboral</option>
-							<option value="NO ASISTIO A ENTREVISTA LABORAL">No asistio a entrevista laboral</option>
-							<option value="NO ELEGIBLE A ENTREVISTA LABORAL">No elegible entrevista laboral</option>
-							<option value="NO ELEGIBLE A ENTREVISTA TECNICA">No elegible entrevista tecnica</option>
-							<option value="NO ELEGIBLE A ENTREVISTA GH">No elegible entrevista GH</option>
-							<option value="NO INTERESADO">No interesado</option>
-							<option value="NO RESPONDE CONTACTO PARA ENTREVISTA GH">
-								No responde contacto para entrevista GH
-							</option>
-							<option value="NO RESPONDE CONTACTO PARA ENTREVISTA TECNICA">
-								No responde contacto para entrevista tecnica
-							</option>
-							<option value="POR AGENDAR ENTREVISTA">Por agendar entrevsita</option>
-							<option value="PRE-EMPLEO">Pre-empleo</option>
-							<option value="INGRESO">Ingreso</option>
+							<option value="CITADO">CITADO</option>
+							<option value="RECHAZADO ET">RECHAZADO ET</option>
+							<option value="RECHADO GH">RECHAZADO GH</option>
+							<option value="NO ACEPTO OFERTA">NO ACEPTO OFERTA</option>
+							<option value="ABANDONO PROCESO">ABANDONO PROCESO</option>
+							<option value="NO ASISTIO A ENTREVISTA">NO ASISTIO A ENTREVISTA</option>
+							<option value="EN PROCESO">EN PROCESO</option>
+							<option value="INGRESO">INGRESO</option>
+							<option value="OTRO">OTRO</option>
 						</select>
 						<br />
 						<label
@@ -850,7 +823,7 @@ const Register = () => {
 								fontSize: "23px",
 								fontFamily: "sans-serif"
 							}}>
-							Bono de produccion:
+							Bono de producción:
 						</label>
 						<br />
 						<select

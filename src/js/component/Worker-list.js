@@ -23,6 +23,10 @@ const WorkersList = () => {
 		console.log(id);
 	};
 
+	// const id = () => {
+	// 	store.workers.map(worker => (id = worker.id));
+	// };
+
 	// debugger;
 	return (
 		<div>
@@ -66,7 +70,7 @@ const WorkersList = () => {
 											width: "25%",
 											color: "white",
 											borderLeft: "#000",
-											ffontSize: "23px",
+											ffontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										ID
@@ -89,8 +93,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Consultor
@@ -101,7 +104,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Candidato
@@ -112,10 +115,10 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
-										Cedula
+										Cédula
 									</th>
 									<th
 										style={{
@@ -123,7 +126,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Estatus
@@ -134,10 +137,10 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
-										N0 de telefono
+										Número de telefono
 									</th>
 									<th
 										style={{
@@ -145,7 +148,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Email
@@ -156,10 +159,10 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "45%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
-										Fuente de captacion
+										Fuente de captación
 									</th>
 
 									<th
@@ -168,7 +171,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Gerencia
@@ -179,7 +182,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Vacante
@@ -190,7 +193,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "45%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Fecha de entrevista
@@ -201,7 +204,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Cargo actual
@@ -212,7 +215,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Empresa
@@ -223,7 +226,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "25%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Sector
@@ -233,7 +236,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "55%",
-											fontSize: "23px",
+											fontSize: "27px",
 											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -245,7 +248,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Sueldo basico
@@ -256,7 +259,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Sueldo variable
@@ -267,7 +270,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Cesta ticket
@@ -277,7 +280,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
 											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -289,7 +292,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Disfrute de vacaciones
@@ -299,8 +302,9 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											fontSize: "27px",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Bono de vacaciones
@@ -310,7 +314,8 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
+											fontSize: "27px",
 											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -322,7 +327,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											color: "white",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Paquete anual estimado
@@ -332,18 +337,19 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
+											fontSize: "27px",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
-										Bono de produccion
+										Bono de producción
 									</th>
 									<th
 										style={{
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
 											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -354,7 +360,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
 											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -366,7 +372,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Pago de estacionamiento
@@ -378,7 +384,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										H.C.M 100% Emp./Fmlia
@@ -389,7 +395,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										H.C.M parcial Emp./Fmlia
@@ -399,7 +405,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
 											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -411,7 +417,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											color: "white",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3B83BD"
 										}}>
 										Seguro de Vida
@@ -421,7 +427,7 @@ const WorkersList = () => {
 											padding: "0.3em",
 											border: "1px solid #000",
 											width: "35%",
-											fontSize: "23px",
+											fontSize: "27px",
 											color: "white",
 											backgroundColor: "#3B83BD"
 										}}>
@@ -433,8 +439,8 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											color: "graphite",
-											fontSize: "23px",
+
+											fontSize: "27px",
 											backgroundColor: "#3b83bd"
 										}}>
 										Subsidios alimenticios
@@ -445,7 +451,7 @@ const WorkersList = () => {
 											border: "1px solid #000",
 											width: "35%",
 											color: "white",
-											fontSize: "23px",
+											fontSize: "27px",
 											backgroundColor: "#3b83bd"
 										}}>
 										Observaciones
@@ -465,21 +471,20 @@ const WorkersList = () => {
 												<td
 													style={{
 														padding: "0.3em",
-
 														borderCollapse: "collapse",
 														padding: "0.3em",
 														captionSide: "bottom",
 														borderBottom: "1px solid #000",
 														fontFamily: "sans-serif",
-														display: "flex",
+														display: "table",
 														alignContent: "center",
 														borderRight: " 1px solid white"
 													}}>
 													<button
 														style={{
-															width: "100%",
+															width: "90%",
 															padding: "8px 16px",
-															marginTop: "50px",
+															// marginTop: "50px",
 															border: "1px solid #000",
 															borderRadius: "5px",
 															display: "flex",
@@ -488,7 +493,10 @@ const WorkersList = () => {
 															alignItems: "center",
 															height: "60%",
 															alignContent: "center",
-															marginBottom: "30px",
+															marginBottom: "10px",
+															marginLeft: "7px",
+															marginRight: "7px",
+															marginTop: "7px",
 															fontSize: "19px"
 														}}
 														className="btn"
@@ -497,6 +505,56 @@ const WorkersList = () => {
 																console.log(worker.id);
 														}}>
 														Actualizar
+													</button>
+													<button
+														style={{
+															width: "90%",
+															padding: "8px 16px",
+															// marginTop: "50px",
+															border: "1px solid #000",
+															borderRadius: "5px",
+															display: "flex",
+															color: "#fff",
+															backgroundColor: "green",
+															alignItems: "center",
+															height: "50%",
+															alignContent: "center",
+															marginBottom: "10px",
+															marginRight: "10px",
+															marginLeft: "7px",
+															fontSize: "19px"
+														}}
+														className="btn"
+														onClick={() => {
+															history.push("/StatusChange/" + worker.id),
+																console.log(worker.id);
+														}}>
+														Actualizar Estatus
+													</button>
+													<button
+														style={{
+															width: "90%",
+															padding: "8px 16px",
+															// marginTop: "50px",
+															border: "1px solid #000",
+															borderRadius: "5px",
+															display: "flex",
+															color: "#fff",
+															backgroundColor: "red",
+															alignItems: "center",
+															height: "60%",
+															alignContent: "center",
+															marginBottom: "10px",
+															marginLeft: "7px",
+															// marginLeft: "10px",
+															fontSize: "19px"
+														}}
+														className="btn"
+														onClick={() => {
+															actions.borrarWorker(worker.id);
+															console.log(worker.id);
+														}}>
+														Borrar
 													</button>
 												</td>
 												<td
@@ -1166,7 +1224,7 @@ const WorkersList = () => {
 							style={{
 								float: "center",
 								width: "700px",
-								fontSize: "23px",
+								fontSize: "27px",
 								marginLeft: "10px",
 								fontFamily: "sans-serif",
 								backgroundColor: "lightgray",
@@ -1188,7 +1246,7 @@ const WorkersList = () => {
 							style={{
 								float: "center",
 								width: "40%",
-								fontSize: "23px",
+								fontSize: "27px",
 								marginLeft: "10px",
 								fontFamily: "sans-serif",
 								backgroundColor: "lightgray",
@@ -1210,7 +1268,7 @@ const WorkersList = () => {
 							style={{
 								float: "center",
 								width: "40%",
-								fontSize: "23px",
+								fontSize: "27px",
 								marginLeft: "10px",
 								fontFamily: "sans-serif",
 								backgroundColor: "lightgray",
@@ -1232,7 +1290,7 @@ const WorkersList = () => {
 							style={{
 								float: "center",
 								width: "30%",
-								fontSize: "23px",
+								fontSize: "27px",
 								marginLeft: "10px",
 								fontFamily: "sans-serif",
 								backgroundColor: "lightgray",
@@ -1254,7 +1312,7 @@ const WorkersList = () => {
 							style={{
 								float: "center",
 								width: "30%",
-								fontSize: "23px",
+								fontSize: "27px",
 								marginLeft: "10px",
 								fontFamily: "sans-serif",
 								backgroundColor: "lightgray",
@@ -1276,7 +1334,7 @@ const WorkersList = () => {
 							style={{
 								float: "center",
 								width: "700px",
-								fontSize: "23px",
+								fontSize: "27px",
 								marginLeft: "10px",
 								fontFamily: "sans-serif",
 								backgroundColor: "lightgray",

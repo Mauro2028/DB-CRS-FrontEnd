@@ -162,9 +162,9 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
-										borderLeft: "#000",
 										color: "white",
-										ffontSize: "23px",
+										borderLeft: "#000",
+										ffontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									ID
@@ -175,6 +175,7 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "25%",
+										color: "white",
 										backgroundColor: "#3B83BD",
 										color: "white",
 										fontSize: "23px"
@@ -187,8 +188,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										color: "white",
-										fontSize: "23px",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Consultor
@@ -196,11 +196,10 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
-										fontFamily: "sans-serif",
 										border: "1px solid #000",
 										width: "25%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Candidato
@@ -222,11 +221,20 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "25%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Estatus
 								</th>
+								{/* <th
+										style={{
+											padding: "0.3em",
+											border: "1px solid #000",
+											width: "35%",
+											color: "white",
+											fontSize: "27px",
+											backgroundColor: "#3B83BD"
+										}}> */}
 								{/* <th
 										style={{
 											padding: "0.3em",
@@ -254,7 +262,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "45%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Fuente de captacion
@@ -266,7 +274,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "25%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Gerencia
@@ -274,11 +282,10 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
 										width: "25%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Vacante
@@ -300,7 +307,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Cargo actual
@@ -309,10 +316,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "25%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Empresa
@@ -323,7 +329,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "25%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Sector
@@ -333,8 +339,8 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "55%",
+										fontSize: "27px",
 										color: "white",
-										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Moneda extranjera
@@ -343,10 +349,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
-										color: "white",
 										width: "35%",
-										fontSize: "23px",
+										color: "white",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Sueldo basico
@@ -357,7 +362,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Sueldo variable
@@ -366,10 +371,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
-										color: "white",
 										width: "35%",
-										fontSize: "23px",
+										color: "white",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Cesta ticket
@@ -379,8 +383,8 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										fontSize: "27px",
 										color: "white",
-										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Dias de utilidades
@@ -389,10 +393,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Disfrute de vacaciones
@@ -402,8 +405,9 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
-										fontSize: "23px",
+										fontSize: "27px",
 										color: "white",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Bono de vacaciones
@@ -412,10 +416,10 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
+										fontSize: "27px",
+										fontSize: "27px",
 										color: "white",
-										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Factor
@@ -424,9 +428,9 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										width: "35%",
 										color: "white",
-										fontSize: "23px",
+										width: "35%",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Paquete anual estimado
@@ -435,21 +439,21 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
+										fontSize: "27px",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
-									Bono de produccion
+									Bono de producción
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
+										fontSize: "27px",
 										color: "white",
-										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Bono de transporte
@@ -458,11 +462,10 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
-										color: "white",
 										width: "35%",
-										fontSize: "23px",
-										backgroundColor: "#3B83BD"
+										fontSize: "27px",
+										color: "white",
+										backgroundColor: "#305282"
 									}}>
 									Caja de ahorro
 								</th>
@@ -472,7 +475,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Pago de estacionamiento
@@ -483,8 +486,8 @@ const Workers = () => {
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
-										fontSize: "23px",
 										color: "white",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									H.C.M 100% Emp./Fmlia
@@ -493,20 +496,19 @@ const Workers = () => {
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
-										fontSize: "18px",
 										width: "35%",
-										fontSize: "23px",
 										color: "white",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
-									H.C.M Parcial Emp./Fmlia
+									H.C.M parcial Emp./Fmlia
 								</th>
 								<th
 									style={{
 										padding: "0.3em",
 										border: "1px solid #000",
 										width: "35%",
-										fontSize: "23px",
+										fontSize: "27px",
 										color: "white",
 										backgroundColor: "#3B83BD"
 									}}>
@@ -515,10 +517,10 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
-										width: "35%",
 										color: "white",
+										width: "35%",
+										fontSize: "27px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Seguro de Vida
@@ -526,23 +528,22 @@ const Workers = () => {
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
+										fontSize: "27px",
 										color: "white",
-										fontSize: "23px",
 										backgroundColor: "#3B83BD"
 									}}>
 									Comedor
 								</th>
-
 								<th
 									style={{
 										padding: "0.3em",
-										fontSize: "18px",
 										border: "1px solid #000",
 										width: "35%",
 										color: "white",
+
+										fontSize: "27px",
 										backgroundColor: "#3b83bd"
 									}}>
 									Subsidios alimenticios
@@ -553,7 +554,7 @@ const Workers = () => {
 										border: "1px solid #000",
 										width: "35%",
 										color: "white",
-										fontSize: "23px",
+										fontSize: "27px",
 										backgroundColor: "#3b83bd"
 									}}>
 									Observaciones
@@ -1589,3 +1590,4 @@ const Workers = () => {
 export default Workers;
 
 // 3301
+

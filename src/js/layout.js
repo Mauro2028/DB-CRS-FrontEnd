@@ -19,6 +19,7 @@ import Workers from "./component/Salary";
 import { SalaryCard } from "./component/SalaryCard";
 import { Modal } from "./component/Modal";
 import Change from "./component/Change";
+import StatusChange from "./component/StatusChange";
 
 //create your first component
 const Layout = () => {
@@ -55,6 +56,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/Selection">
 							<Selection />
+						</Route>
+						<Route exact path="/StatusChange/:id">
+							<StatusChange />
 						</Route>
 						{/* /* <Route exact path="/Worker-Data">
 							<Worker-Data />

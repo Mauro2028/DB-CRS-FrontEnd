@@ -1,10 +1,5 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://192.168.0.114:5000";
 // const BASE_URL = "https://5000-jade-booby-0vpexvsg.ws-us03.gitpod.io";
-import React, { useState, useEffect, useContext } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import change from "../component/Change";
-import { Router } from "react-router-dom";
-import props from "prop-types";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -96,6 +91,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const respuesta = await fetch(url, {
 						method: "PATCH",
 						body: JSON.stringify(datos),
+						headers: { "Content-Type": "application/json" }
+					});
+					let resultado = await respuesta.json();
+					console.log(resultado);
+				} catch (error) {
+					console.log("explote", error);
+				}
+			},
+			cambioStatus: async (datos, id) => {
+				let url = `${BASE_URL}/statuschange/${id}`;
+				console.log(url);
+				try {
+					const respuesta = await fetch(url, {
+						method: "PATCH",
+						body: JSON.stringify(datos),
+						headers: { "Content-Type": "application/json" }
+					});
+					let resultado = await respuesta.json();
+					console.log(resultado);
+				} catch (error) {
+					console.log("explote", error);
+				}
+			},
+			borrarWorker: async id => {
+				let url = `${BASE_URL}/worker/${id}`;
+				console.log(url);
+				try {
+					const respuesta = await fetch(url, {
+						method: "DELETE",
 						headers: { "Content-Type": "application/json" }
 					});
 					let resultado = await respuesta.json();
